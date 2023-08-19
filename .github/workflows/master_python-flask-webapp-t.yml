@@ -11,7 +11,7 @@ name: Build and deploy Python app to Azure Web App
 
 env:
   AZURE_WEBAPP_NAME: python-flask-webapp-t   # set this to your application's name
-  PYTHON_VERSION: '11'               # set this to the Python version to use
+  PYTHON_VERSION: '3.11'               # set this to the Python version to use
 
 on:
   push:
