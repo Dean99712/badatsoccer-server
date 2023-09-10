@@ -11,8 +11,100 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
     <script src="https://kit.fontawesome.com/6061af4b47.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    @media (max-width: 425px) {
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+
+            .select-section {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+
+                .selection {
+                    border-radius: 10px;
+                    padding: 1em;
+                    border: none;
+                    box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+
+                    & option:active {
+                        background-color: lightgreen;
+                    }
+                }
+            }
+
+            .teams-section {
+                display: flex;
+                flex-direction: column;
+                margin: 1em 0 1em 0;
+                gap: 0.5em;
+
+                .team {
+                    display: flex;
+                    justify-content: space-between;
+
+                    & button {
+                        border: none;
+                        background-color: lightgreen;
+                        color: white;
+                        padding: 10px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+            .save-clear-section {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+
+                .save-clear-button {
+                    border: none;
+                    padding: 0.8em;
+                    width: 5em;
+                    border-radius: 5px;
+
+                }
+
+                #save {
+                    background-color: lightgreen;
+                    color: white;
+                }
+
+                #clear {
+                    background-color: indianred;
+                    color: white;
+                }
+            }
+
+            #customers {
+                box-shadow: rgba(0, 0, 0, 0.2) 0 12px 28px 0, rgba(0, 0, 0, 0.1) 0 2px 4px 0, rgba(255, 255, 255, 0.05) 0 0 0 1px inset;
+                border-radius: 20px;
+                margin: 1em 0 1em 0;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            #customers td, #customers th {
+                text-align: center;
+                border-bottom: 1px solid #ddd;
+                padding: 1em;
+            }
+
+            #customers th {
+                color: #969696;
+                padding: 1.5em;
+                text-align: center;
+                font-weight: 600;
+            }
+        }
+    }
+
+</style>
 <body>
 <div class="container">
     <div class="select-section">
