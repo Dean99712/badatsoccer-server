@@ -16,7 +16,7 @@ def hello_world():  # put application's code here
 @app.route('/get')
 def connection():
     cursor = con.cursor()
-    cursor.execute(f'SELECT * FROM "user"')
+    cursor.execute(f'SELECT * FROM [dbo].[user]')
 
     dataset = cursor.fetchall()
     print(dataset)
@@ -32,7 +32,7 @@ def create_user():
             data = request.get_json()
 
             cursor = con.cursor()
-            insert_query = "INSERT INTO [user] (user_id, email, name, password) VALUES (?, ?, ?, ?)"
+            insert_query = "INSERT INTO [dbo].[user] (user_id, email, name, password) VALUES (?, ?, ?, ?)"
             cursor.execute(insert_query, (
                 data['user_id'], data['email'], data['name'], data['password']))
 
