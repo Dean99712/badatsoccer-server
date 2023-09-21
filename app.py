@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 con = pyodbc.connect(
-    f'DRIVER={cnf.Driver};SERVER={cnf.Server}, {cnf.Port};DATABASE={cnf.Database};Uid={cnf.Uid};Pwd={cnf.Pwd};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;')
+    f'DRIVER={cnf.Driver};SERVER={cnf.Server}, {cnf.Port};DATABASE={cnf.Database};Uid={cnf.Uid};Pwd={cnf.Pwd};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"Trusted_Connection=yes;" "Auto_Commit=true;"')
 
 SERVICE_ACCOUNT_FILE = 'client_secret.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
