@@ -25,18 +25,6 @@ def hello_world():
     return "Hello World!"
 
 
-@app.route('/get_scores')
-def get_scores():
-    cursor = con.cursor()
-    cursor.execute(f'SELECT * FROM [dbo].[scores]')
-
-    rows = cursor.fetchall()
-
-    data = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-
-    return jsonify(data)
-
-
 @app.route('/get')
 def connection():
     cursor = con.cursor()
@@ -71,6 +59,19 @@ def add_score():
 
         except Exception as e:
             return jsonify({"error": str(e)}), 400
+
+
+@app.route('/get_scores')
+def get_scores():
+
+    cursor = con.cursor()
+    cursor.execute(f'SELECT * FROM [dbo].[scores]')
+
+    rows = cursor.fetchall()
+
+    data = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
+
+    return jsonify(data)
 
 
 @app.route('/read_sheet')
