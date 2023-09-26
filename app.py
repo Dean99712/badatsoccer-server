@@ -6,10 +6,10 @@ import googleapiclient.discovery
 from google.oauth2.service_account import Credentials
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
 con = pyodbc.connect(
-    f'DRIVER={cnf.Driver};SERVER={cnf.Server}, {cnf.Port};DATABASE={cnf.Database};Uid={cnf.Uid};Pwd={cnf.Pwd};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"Trusted_Connection=yes;" "Auto_Commit=true;"')
+    f'DRIVER={cnf.Driver};SERVER={cnf.Server}, {cnf.Port};DATABASE={cnf.Database};Uid={cnf.Uid};Pwd={cnf.Pwd};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=60;"Trusted_Connection=yes;" "Auto_Commit=true;"')
 
 SERVICE_ACCOUNT_FILE = 'client_secret.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
@@ -25,16 +25,57 @@ def hello_world():
     return "Hello World!"
 
 
-@app.route('/get')
-def connection():
-    cursor = con.cursor()
-    cursor.execute(f'SELECT * FROM [dbo].[user]')
+@app.route('/get_all_fields')
+def get_all_fields():
+    try:
+        cursor = con.cursor()
+        query = 'SELECT DISTINCT field FROM [dbo].[team_selection]'
+        cursor.execute(query)
 
-    rows = cursor.fetchall()
+        rows = cursor.fetchall()
 
-    data = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
+        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
 
-    return jsonify(data)
+        return jsonify(result), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+
+@app.route('/get_field')
+def get_fields():
+    try:
+        cursor = con.cursor()
+        query = 'SELECT DISTINCT team, field FROM [dbo].[team_selection] WHERE field = ?'
+        value = request.args.get("field")
+        cursor.execute(query, value)
+
+        rows = cursor.fetchall()
+
+        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
+
+        return jsonify(result), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+
+@app.route('/get_team_by_field')
+def get_team_by_field():
+    try:
+        cursor = con.cursor()
+        query = 'SELECT DISTINCT team  FROM [dbo].[team_selection] WHERE field = ?'
+        value = request.args.get("field")
+        cursor.execute(query, value)
+
+        rows = cursor.fetchall()
+
+        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
+
+        return jsonify(result), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
 
 
 @app.route('/add_score', methods=['POST'])
@@ -63,15 +104,17 @@ def add_score():
 
 @app.route('/get_scores')
 def get_scores():
+    try:
+        cursor = con.cursor()
+        cursor.execute(f'SELECT * FROM [dbo].[scores]')
 
-    cursor = con.cursor()
-    cursor.execute(f'SELECT * FROM [dbo].[scores]')
+        rows = cursor.fetchall()
 
-    rows = cursor.fetchall()
+        data = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
 
-    data = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-
-    return jsonify(data)
+        return jsonify(data), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
 
 
 @app.route('/read_sheet')
