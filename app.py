@@ -87,10 +87,10 @@ def add_score():
             data = request.get_json()
 
             cursor = con.cursor()
-            insert_query = "INSERT INTO [dbo].[scores] (team_a, score_a, team_b, score_b, entered_by, entered_time, field) VALUES (?, ?, ?, ?, ?, ?, ?)"
+            insert_query = "INSERT INTO [dbo].[scores] (team_a, score_a, team_b, score_b, entered_by, entered_date, entered_time, field) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
             cursor.execute(insert_query, (
                 data['team_a'], data['score_a'], data['team_b'], data['score_b'], data['entered_by'],
-                data['entered_time'], data['field']))
+                data['entered_date'], data['entered_time'], data['field']))
 
             con.commit()
             cursor.close()
@@ -106,7 +106,7 @@ def add_score():
 def get_scores():
     try:
         cursor = con.cursor()
-        cursor.execute(f'SELECT * FROM [dbo].[scores]')
+        cursor.execute(f'SELECT * FROM [dbo].[scores] ORDER BY entered_time DESC')
 
         rows = cursor.fetchall()
 
@@ -115,6 +115,109 @@ def get_scores():
         return jsonify(data), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 400
+
+
+@app.route('/get_scores_dates')
+def get_scores_dates():
+    try:
+        cursor = con.cursor()
+        query = 'SELECT DISTINCT entered_date FROM [dbo].[scores]'
+        cursor.execute(query)
+
+        rows = cursor.fetchall()
+
+        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
+
+        return jsonify(result), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+
+@app.route('/get_scores_by_date')
+def get_scores_by_date():
+    try:
+        cursor = con.cursor()
+        query = 'SELECT * FROM [dbo].[scores] WHERE entered_date = ?'
+        value = request.args.get("entered_date")
+        cursor.execute(query, value)
+
+        rows = cursor.fetchall()
+
+        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
+
+        return jsonify(result), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+
+@app.route('/delete_score', methods=['DELETE'])
+def delete_score():
+    score_id = request.args.get("score_id")
+
+    score_id = int(score_id)
+    try:
+        cursor = con.cursor()
+        query = 'DELETE FROM [dbo].[scores] WHERE score_id = ?'
+        cursor.execute(query, score_id)
+
+        con.commit()
+
+        message = "The score has been deleted successfully!"
+        if cursor.rowcount == 0:
+            return jsonify({"error": "Score not found!"}), 404
+
+        return jsonify(message), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+
+@app.route('/update_score', methods=['PATCH'])
+def update_score():
+    try:
+
+        score_id = request.args.get('score_id')
+
+        data = request.get_json()
+
+        score_id = int(score_id)
+
+        update_columns = []
+        params = []
+
+        if 'score_a' in data:
+            update_columns.append('score_a = ?')
+            params.append(data['score_a'])
+        if 'score_b' in data:
+            update_columns.append('score_b = ?')
+            params.append(data['score_b'])
+        if 'entered_date' in data:
+            update_columns.append('entered_date = ?')
+            params.append(data['entered_date'])
+        if 'entered_time' in data:
+            update_columns.append('entered_time = ?')
+            params.append(data['entered_time'])
+
+        if not update_columns:
+            return jsonify({'error': 'No valid fields provided'}), 400
+
+        sql_query = f"""
+            UPDATE [dbo].[scores]
+            SET {', '.join(update_columns)}
+            WHERE score_id = ?
+        """
+        params.append(score_id)
+        cursor = con.cursor()
+        cursor.execute(sql_query, *params)
+        con.commit()
+
+        if cursor.rowcount == 0:
+            return jsonify({'error': 'Score not found'}), 404
+        return jsonify({'message': 'Score updated successfully'}), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 
 @app.route('/read_sheet')
