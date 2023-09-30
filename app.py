@@ -138,7 +138,7 @@ def get_scores_dates():
 def get_scores_by_date():
     try:
         cursor = con.cursor()
-        query = 'SELECT * FROM [dbo].[scores] WHERE entered_date = ?'
+        query = 'SELECT * FROM [dbo].[scores] WHERE entered_date = ? ORDER BY entered_time DESC'
         value = request.args.get("entered_date")
         cursor.execute(query, value)
 
