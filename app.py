@@ -117,6 +117,26 @@ def get_scores():
         return jsonify({"error": str(e)}), 400
 
 
+@app.route('/get_score_by_id')
+def get_score_by_id():
+    try:
+        cursor = con.cursor()
+        query = 'SELECT * FROM [dbo].[scores] WHERE score_id = ?'
+        value = request.args.get("score_id")
+        cursor.execute(query, value)
+
+        rows = cursor.fetchall()
+
+        data = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
+
+        if cursor.rowcount == 0:
+            return jsonify({"error": "Score not found!"}), 404
+        return jsonify(data), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+
 @app.route('/get_scores_dates')
 def get_scores_dates():
     try:
