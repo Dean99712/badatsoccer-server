@@ -8,9 +8,6 @@ from google.oauth2.service_account import Credentials
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
-con = pyodbc.connect(
-    f'DRIVER={cnf.Driver};SERVER={cnf.Server}, {cnf.Port};DATABASE={cnf.Database};Uid={cnf.Uid};Pwd={cnf.Pwd};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=60;"Trusted_Connection=yes;" "Auto_Commit=true;"')
-
 SERVICE_ACCOUNT_FILE = 'client_secret.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
@@ -18,6 +15,12 @@ credentials = Credentials.from_service_account_file(
     SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
 service = googleapiclient.discovery.build('sheets', 'v4', credentials=credentials)
+
+
+def connection():
+    con = pyodbc.connect(
+        f'DRIVER={cnf.Driver};SERVER={cnf.Server}, {cnf.Port};DATABASE={cnf.Database};Uid={cnf.Uid};Pwd={cnf.Pwd};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=60;"Trusted_Connection=yes;" "Auto_Commit=true;"')
+    return con
 
 
 @app.route('/')
@@ -28,6 +31,7 @@ def hello_world():
 @app.route('/get_all_fields')
 def get_all_fields():
     try:
+        con = connection()
         cursor = con.cursor()
         query = 'SELECT DISTINCT field FROM [dbo].[team_selection]'
         cursor.execute(query)
@@ -35,6 +39,8 @@ def get_all_fields():
         rows = cursor.fetchall()
 
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
+
+        con.close()
 
         return jsonify(result), 200
 
@@ -45,6 +51,7 @@ def get_all_fields():
 @app.route('/get_field')
 def get_fields():
     try:
+        con = connection()
         cursor = con.cursor()
         query = 'SELECT DISTINCT team, field FROM [dbo].[team_selection] WHERE field = ?'
         value = request.args.get("field")
@@ -53,7 +60,7 @@ def get_fields():
         rows = cursor.fetchall()
 
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-
+        con.close()
         return jsonify(result), 200
 
     except Exception as e:
@@ -63,6 +70,8 @@ def get_fields():
 @app.route('/get_team_by_field')
 def get_team_by_field():
     try:
+        con = connection()
+
         cursor = con.cursor()
         query = 'SELECT DISTINCT team  FROM [dbo].[team_selection] WHERE field = ?'
         value = request.args.get("field")
@@ -71,7 +80,7 @@ def get_team_by_field():
         rows = cursor.fetchall()
 
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-
+        con.close()
         return jsonify(result), 200
 
     except Exception as e:
@@ -83,6 +92,7 @@ def add_score():
     if request.method == 'POST':
 
         try:
+            con = connection()
 
             data = request.get_json()
 
@@ -105,13 +115,15 @@ def add_score():
 @app.route('/get_scores')
 def get_scores():
     try:
+        con = connection()
+
         cursor = con.cursor()
         cursor.execute(f'SELECT * FROM [dbo].[scores] ORDER BY entered_time DESC')
 
         rows = cursor.fetchall()
 
         data = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-
+        con.close()
         return jsonify(data), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 400
@@ -120,6 +132,8 @@ def get_scores():
 @app.route('/get_score_by_id')
 def get_score_by_id():
     try:
+        con = connection()
+
         cursor = con.cursor()
         query = 'SELECT * FROM [dbo].[scores] WHERE score_id = ?'
         value = request.args.get("score_id")
@@ -128,7 +142,7 @@ def get_score_by_id():
         rows = cursor.fetchall()
 
         data = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-
+        con.close()
         if cursor.rowcount == 0:
             return jsonify({"error": "Score not found!"}), 404
         return jsonify(data), 200
@@ -140,6 +154,7 @@ def get_score_by_id():
 @app.route('/get_scores_dates')
 def get_scores_dates():
     try:
+        con = connection()
         cursor = con.cursor()
         query = 'SELECT DISTINCT entered_date FROM [dbo].[scores]'
         cursor.execute(query)
@@ -147,7 +162,7 @@ def get_scores_dates():
         rows = cursor.fetchall()
 
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-
+        con.close()
         return jsonify(result), 200
 
     except Exception as e:
@@ -157,6 +172,8 @@ def get_scores_dates():
 @app.route('/get_scores_by_date')
 def get_scores_by_date():
     try:
+        con = connection()
+
         cursor = con.cursor()
         query = 'SELECT * FROM [dbo].[scores] WHERE entered_date = ? ORDER BY entered_time DESC'
         value = request.args.get("entered_date")
@@ -165,7 +182,7 @@ def get_scores_by_date():
         rows = cursor.fetchall()
 
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-
+        con.close()
         return jsonify(result), 200
 
     except Exception as e:
@@ -178,6 +195,8 @@ def delete_score():
 
     score_id = int(score_id)
     try:
+        con = connection()
+
         cursor = con.cursor()
         query = 'DELETE FROM [dbo].[scores] WHERE score_id = ?'
         cursor.execute(query, score_id)
@@ -187,7 +206,7 @@ def delete_score():
         message = "The score has been deleted successfully!"
         if cursor.rowcount == 0:
             return jsonify({"error": "Score not found!"}), 404
-
+        con.close()
         return jsonify(message), 200
 
     except Exception as e:
@@ -197,6 +216,7 @@ def delete_score():
 @app.route('/update_score', methods=['PATCH'])
 def update_score():
     try:
+        con = connection()
 
         score_id = request.args.get('score_id')
 
@@ -233,6 +253,7 @@ def update_score():
         cursor.execute(sql_query, *params)
         con.commit()
 
+        con.close()
         if cursor.rowcount == 0:
             return jsonify({'error': 'Score not found'}), 404
         return jsonify({'message': 'Score updated successfully'}), 200
@@ -258,6 +279,7 @@ def index():
 def create_user():
     if request.method == 'POST':
         try:
+            con = connection()
 
             data = request.get_json()
 
