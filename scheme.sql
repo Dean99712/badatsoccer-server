@@ -33,8 +33,8 @@ CREATE TABLE scores
     team_b varchar(255),
     score_b int not null,
     entered_by varchar(255),
-    entered_date varchar(255),
-    entered_time varchar(255),
+    entered_date varchar(50),
+    entered_time varchar(50),
     field nvarchar(255) not null,
     primary key(score_id)
 );

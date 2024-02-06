@@ -4,6 +4,7 @@ from flask_cors import CORS
 from config import Config as cnf
 import googleapiclient.discovery
 from google.oauth2.service_account import Credentials
+from datetime import datetime
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
@@ -21,6 +22,11 @@ def connection():
     con = pyodbc.connect(
         f'DRIVER={cnf.Driver};SERVER={cnf.Server}, {cnf.Port};DATABASE={cnf.Database};Uid={cnf.Uid};Pwd={cnf.Pwd};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=60;"Trusted_Connection=yes;" "Auto_Commit=true;"')
     return con
+
+
+def convert_date_format(iso_str):
+    date_obj = datetime.strptime(iso_str, "%Y-%m-%dT%H:%M:%S.%fZ")
+    return date_obj
 
 
 @app.route('/')
@@ -97,7 +103,13 @@ def add_score():
             data = request.get_json()
 
             cursor = con.cursor()
-            insert_query = "INSERT INTO [dbo].[scores] (team_a, score_a, team_b, score_b, entered_by, entered_date, entered_time, field) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+
+            insert_query = (
+                "INSERT INTO [dbo].[scores] (team_a, score_a, team_b, score_b, entered_by, entered_date, entered_time, field)"
+                " VALUES (?, ?, ?, ?, ?, ?, ?, ?)")
+
+            data['entered_date'] = convert_date_format(data['entered_date'])
+
             cursor.execute(insert_query, (
                 data['team_a'], data['score_a'], data['team_b'], data['score_b'], data['entered_by'],
                 data['entered_date'], data['entered_time'], data['field']))
@@ -156,7 +168,11 @@ def get_scores_dates():
     try:
         con = connection()
         cursor = con.cursor()
-        query = 'SELECT DISTINCT entered_date FROM [dbo].[scores]'
+        query = ('SELECT * FROM '
+                 '(SELECT DISTINCT entered_date FROM [dbo].[scores])'
+                 ' AS subquery'
+                 ' ORDER BY entered_date;')
+
         cursor.execute(query)
 
         rows = cursor.fetchall()
