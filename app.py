@@ -26,7 +26,9 @@ def connection():
 
 def convert_date_format(iso_str):
     date_obj = datetime.strptime(iso_str, "%Y-%m-%dT%H:%M:%S.%fZ")
-    return date_obj
+    formatted_date = date_obj.strftime("%Y-%m-%d")
+    return formatted_date
+    # return date_obj
 
 
 @app.route('/')
@@ -174,6 +176,26 @@ def get_scores_dates():
                  ' ORDER BY entered_date;')
 
         cursor.execute(query)
+
+        rows = cursor.fetchall()
+
+        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
+        con.close()
+        return jsonify(result), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+
+@app.route('/get_scores_by_field_name')
+def get_scores_by_field_name():
+    try:
+        con = connection()
+        cursor = con.cursor()
+        query = 'SELECT * FROM [dbo].[scores] WHERE field = ? AND entered_date = ? ORDER BY entered_time DESC'
+        field = request.args.get("field")
+        entered_date = request.args.get("entered_date")
+        cursor.execute(query, (field, entered_date))
 
         rows = cursor.fetchall()
 
