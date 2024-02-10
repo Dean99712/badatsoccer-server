@@ -38,3 +38,14 @@ CREATE TABLE scores
     field nvarchar(255) not null,
     primary key(score_id)
 );
+
+CREATE TABLE games
+(
+    game_id int not null identity(1,1),
+    field nvarchar(50) not null,
+    date varchar(50) not null,
+    team_1 varchar(50) not null,
+    team_2 varchar(50) not null,
+    team_3 varchar(50) not null,
+    primary key (game_id)
+);

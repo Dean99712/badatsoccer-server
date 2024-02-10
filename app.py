@@ -28,7 +28,6 @@ def convert_date_format(iso_str):
     date_obj = datetime.strptime(iso_str, "%Y-%m-%dT%H:%M:%S.%fZ")
     formatted_date = date_obj.strftime("%Y-%m-%d")
     return formatted_date
-    # return date_obj
 
 
 @app.route('/')
@@ -41,7 +40,7 @@ def get_all_fields():
     try:
         con = connection()
         cursor = con.cursor()
-        query = 'SELECT DISTINCT field FROM [dbo].[team_selection]'
+        query = 'SELECT DISTINCT field FROM [dbo].[games]'
         cursor.execute(query)
 
         rows = cursor.fetchall()
@@ -61,7 +60,7 @@ def get_fields():
     try:
         con = connection()
         cursor = con.cursor()
-        query = 'SELECT DISTINCT team, field FROM [dbo].[team_selection] WHERE field = ?'
+        query = 'SELECT DISTINCT team_1, team_2, team_3 FROM [dbo].[games] WHERE field = ?'
         value = request.args.get("field")
         cursor.execute(query, value)
 
@@ -81,7 +80,7 @@ def get_team_by_field():
         con = connection()
 
         cursor = con.cursor()
-        query = 'SELECT DISTINCT team  FROM [dbo].[team_selection] WHERE field = ?'
+        query = 'SELECT DISTINCT team_1, team_2, team_3 from [dbo].[games] WHERE field = ?'
         value = request.args.get("field")
         cursor.execute(query, value)
 
@@ -160,28 +159,6 @@ def get_score_by_id():
         if cursor.rowcount == 0:
             return jsonify({"error": "Score not found!"}), 404
         return jsonify(data), 200
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
-
-
-@app.route('/get_scores_dates')
-def get_scores_dates():
-    try:
-        con = connection()
-        cursor = con.cursor()
-        query = ('SELECT * FROM '
-                 '(SELECT DISTINCT entered_date FROM [dbo].[scores])'
-                 ' AS subquery'
-                 ' ORDER BY entered_date;')
-
-        cursor.execute(query)
-
-        rows = cursor.fetchall()
-
-        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-        con.close()
-        return jsonify(result), 200
 
     except Exception as e:
         return jsonify({"error": str(e)}), 400
@@ -297,6 +274,54 @@ def update_score():
         return jsonify({'message': 'Score updated successfully'}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+
+@app.route('/add_game', methods=['POST'])
+def add_game():
+    if request.method == 'POST':
+        try:
+            con = connection()
+
+            data = request.get_json()
+
+            cursor = con.cursor()
+
+            insert_query = (
+                "INSERT INTO [dbo].[games] (date, field, team_1, team_2, team_3)"
+                " VALUES (?, ?, ?, ?, ?)")
+
+            cursor.execute(insert_query, (data['date'], data['field'], data['team_1'], data['team_2'], data['team_3']))
+
+            con.commit()
+            cursor.close()
+
+            response = {"message": "Data inserted successfully"}
+            return jsonify(response), 200
+
+        except Exception as e:
+            return jsonify({"error": str(e)}), 400
+
+
+@app.route('/get_games_dates')
+def get_games_dates():
+    try:
+        con = connection()
+        cursor = con.cursor()
+        query = ('SELECT * FROM '
+                 '(SELECT DISTINCT date FROM [dbo].[games])'
+                 ' AS subquery'
+                 ' ORDER BY date;')
+
+        cursor.execute(query)
+
+        rows = cursor.fetchall()
+
+        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
+        con.close()
+        return jsonify(result), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
 
 
 @app.route('/read_sheet')
