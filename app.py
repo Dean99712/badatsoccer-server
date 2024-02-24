@@ -25,7 +25,8 @@ def connection():
 
 
 def convert_date_format(iso_str):
-    date_obj = datetime.strptime(iso_str, "%Y-%m-%dT%H:%M:%S.%fZ")
+    # date_obj = datetime.strptime(iso_str, "%Y-%m-%dT%H:%M:%S.%fZ")
+    date_obj = datetime.strptime(iso_str, "%Y-%m-%d")
     formatted_date = date_obj.strftime("%Y-%m-%d")
     return formatted_date
 
@@ -63,7 +64,6 @@ def get_fields():
         query = 'SELECT DISTINCT team_1, team_2, team_3 FROM [dbo].[games] WHERE field = ?'
         value = request.args.get("field")
         cursor.execute(query, value)
-
         rows = cursor.fetchall()
 
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
@@ -164,7 +164,7 @@ def get_score_by_id():
         return jsonify({"error": str(e)}), 400
 
 
-@app.route('/get_scores_by_field_name')
+@app.route('/get_scores_by_field_name_and_date')
 def get_scores_by_field_name():
     try:
         con = connection()
