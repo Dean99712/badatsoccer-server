@@ -13,4 +13,3 @@ insert into team_selection(player_id, player_name, team, tournament, field) valu
 insert into team_selection(player_id, player_name, team, tournament, field) values (13, 'Dror Tesler', 'White Team', 'Awful C', N'מגרש 5');
 insert into team_selection(player_id, player_name, team, tournament, field) values (14, 'Eyal kulik', 'Pink Team', 'Awful C', N'מגרש 5');
 insert into team_selection(player_id, player_name, team, tournament, field) values (15, 'Ofir Winer', 'Black Team', 'Awful C', N'מגרש 5');
-
