@@ -13,6 +13,7 @@
     <orderEntry type="library" name="6061af4b47" level="application" />
   </component>
   <component name="PackageRequirementsSettings">
+    <option name="removeUnused" value="true" />
     <option name="modifyBaseFiles" value="true" />
   </component>
   <component name="TemplatesService">
