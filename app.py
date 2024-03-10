@@ -1,24 +1,14 @@
 from datetime import datetime
 
-import googleapiclient.discovery
 import pyodbc
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from google.oauth2.service_account import Credentials
 
 from auth import get_google_sheet, get_data_from_sheet
 from config import Config as cnf
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
-
-SERVICE_ACCOUNT_FILE = 'credentials.json'
-SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-
-credentials = Credentials.from_service_account_file(
-    SERVICE_ACCOUNT_FILE, scopes=SCOPES)
-
-service = googleapiclient.discovery.build('sheets', 'v4', credentials=credentials)
 
 
 def connection():

@@ -12,6 +12,9 @@
     <orderEntry type="library" name="all" level="application" />
     <orderEntry type="library" name="6061af4b47" level="application" />
   </component>
+  <component name="PackageRequirementsSettings">
+    <option name="modifyBaseFiles" value="true" />
+  </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
     <option name="TEMPLATE_FOLDERS">
