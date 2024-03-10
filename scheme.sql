@@ -20,8 +20,14 @@ CREATE TABLE team_selection
     player_id int not null identity(1,1),
     player_name varchar(255) not null,
     team varchar(255),
+    stamina            int not null,
+    technique          int not null,
+    ball_leader        int not null,
+    aggression         int not null,
     tournament varchar(255),
-    field nvarchar(255) not null,
+    version            varchar(50),
+    tournament_to_pick varchar(255),
+    team_to_pick       varchar(255),
     primary key (player_id)
 );
 

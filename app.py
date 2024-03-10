@@ -1,15 +1,18 @@
+from datetime import datetime
+
+import googleapiclient.discovery
 import pyodbc
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from config import Config as cnf
-import googleapiclient.discovery
 from google.oauth2.service_account import Credentials
-from datetime import datetime
+
+from auth import get_google_sheet, get_data_from_sheet
+from config import Config as cnf
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
-SERVICE_ACCOUNT_FILE = 'client_secret.json'
+SERVICE_ACCOUNT_FILE = 'credentials.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 credentials = Credentials.from_service_account_file(
@@ -31,8 +34,36 @@ def convert_date_format(iso_str):
 
 
 @app.route('/')
-def hello_world():
-    return "Hello World!"
+def home():
+    return "Welcome to the Bad at Soccer API!"
+
+
+@app.route('/insert_sheet_data')
+def insert_data_from_sheet():
+    try:
+        con = connection()
+        cursor = con.cursor()
+
+        sheet_id = "1TnsWwX_n2nXTDvZAGVQ_tnrKKk8oZZoYggy8fSF8b9Q"
+
+        sheet = get_google_sheet(sheet_id)
+
+        data = get_data_from_sheet(sheet)
+        for i, row in data.iterrows():
+            columns = ', '.join(row.keys())
+            placeholders = ', '.join('?' for _ in row)
+            values = tuple(row)
+
+            insert_query = f"INSERT INTO team_selection ({columns}) VALUES ({placeholders})"
+            cursor.execute(insert_query, values)
+
+        cursor.commit()
+        cursor.close()
+
+        return "Data inserted successfully!", 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
 
 
 @app.route('/get_all_fields')
