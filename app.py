@@ -1,14 +1,16 @@
-from datetime import datetime
-
 import pyodbc
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
+import game_service as gs
+import logger as log
+import scores_service as scs
 from auth import get_google_sheet, get_data_from_sheet
 from config import Config as cnf
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(app,
+     resources={r"/*": {"origins": ["http://localhost:3000", "https://witty-mud-09afa6410.3.azurestaticapps.net"]}})
 
 
 def connection():
@@ -17,15 +19,18 @@ def connection():
     return con
 
 
-def convert_date_format(iso_str):
-    date_obj = datetime.strptime(iso_str, "%Y-%m-%d")
-    formatted_date = date_obj.strftime("%Y-%m-%d")
-    return formatted_date
-
-
 @app.route('/')
 def home():
-    return "Welcome to the Bad at Soccer API!"
+    message = 'Welcome to the Bad at Soccer API!'
+    log.logger.info('Welcome to the Bad at Soccer API!')
+    return message
+
+
+@app.route('/sheet_log')
+def logs():
+    with open('scraper.log', 'r') as log_file:
+        log_contents = log_file.read()
+    return jsonify(log_contents)
 
 
 @app.route('/insert_sheet_data')
@@ -39,6 +44,7 @@ def insert_data_from_sheet():
         sheet = get_google_sheet(sheet_id)
 
         data = get_data_from_sheet(sheet)
+
         for i, row in data.iterrows():
             columns = ', '.join(row.keys())
             placeholders = ', '.join('?' for _ in row)
@@ -50,9 +56,11 @@ def insert_data_from_sheet():
         cursor.commit()
         cursor.close()
 
-        return "Data inserted successfully!", 200
+        log.logger.info("Sheet loaded successfully!")
+        return "Sheet loaded successfully!", 200
 
     except Exception as e:
+        log.logger.error(e)
         return jsonify({"error": str(e)}), 400
 
 
@@ -116,72 +124,17 @@ def get_team_by_field():
 
 @app.route('/add_score', methods=['POST'])
 def add_score():
-    if request.method == 'POST':
-
-        try:
-            con = connection()
-
-            data = request.get_json()
-
-            cursor = con.cursor()
-
-            insert_query = (
-                "INSERT INTO [dbo].[scores] (team_a, score_a, team_b, score_b, entered_by, entered_date, entered_time, field)"
-                " VALUES (?, ?, ?, ?, ?, ?, ?, ?)")
-
-            data['entered_date'] = convert_date_format(data['entered_date'])
-
-            cursor.execute(insert_query, (
-                data['team_a'], data['score_a'], data['team_b'], data['score_b'], data['entered_by'],
-                data['entered_date'], data['entered_time'], data['field']))
-
-            con.commit()
-            cursor.close()
-
-            response = {"message": "Data inserted successfully"}
-            return jsonify(response), 200
-
-        except Exception as e:
-            return jsonify({"error": str(e)}), 400
+    return scs.add_score(connection())
 
 
 @app.route('/get_scores')
 def get_scores():
-    try:
-        con = connection()
-
-        cursor = con.cursor()
-        cursor.execute(f'SELECT * FROM [dbo].[scores] ORDER BY entered_time DESC')
-
-        rows = cursor.fetchall()
-
-        data = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-        con.close()
-        return jsonify(data), 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
+    return scs.get_scores(connection())
 
 
 @app.route('/get_score_by_id')
 def get_score_by_id():
-    try:
-        con = connection()
-
-        cursor = con.cursor()
-        query = 'SELECT * FROM [dbo].[scores] WHERE score_id = ?'
-        value = request.args.get("score_id")
-        cursor.execute(query, value)
-
-        rows = cursor.fetchall()
-
-        data = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-        con.close()
-        if cursor.rowcount == 0:
-            return jsonify({"error": "Score not found!"}), 404
-        return jsonify(data), 200
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
+    return scs.get_score_by_id(connection())
 
 
 @app.route('/get_scores_by_field_name_and_date')
@@ -218,6 +171,7 @@ def get_scores_by_date():
 
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
         con.close()
+
         return jsonify(result), 200
 
     except Exception as e:
@@ -242,6 +196,7 @@ def delete_score():
         if cursor.rowcount == 0:
             return jsonify({"error": "Score not found!"}), 404
         con.close()
+
         return jsonify(message), 200
 
     except Exception as e:
@@ -292,6 +247,7 @@ def update_score():
         if cursor.rowcount == 0:
             return jsonify({'error': 'Score not found'}), 404
         return jsonify({'message': 'Score updated successfully'}), 200
+
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
@@ -346,59 +302,25 @@ def get_games_dates():
 
 @app.route('/get_games_statistics_by_team_and_date')
 def get_games_statistics_by_team_and_date():
-    try:
-        con = connection()
-        cursor = con.cursor()
-        query = ('SELECT '
-                 'Q1.team_1,'
-                 ' Q1.team_2,'
-                 ' Q1.team_3,'
-                 'CASE '
-                 'WHEN '
-                 'Q1.team_1 = Q2.team_a THEN Q2.score_a '
-                 'WHEN Q1.team_1 = Q2.team_b THEN Q2.score_b '
-                 'ELSE NULL '
-                 'END AS team_1_score,'
-                 'CASE WHEN Q1.team_2 = Q2.team_a THEN Q2.score_a'
-                 ' WHEN Q1.team_2 = Q2.team_b THEN Q2.score_b'
-                 ' ELSE NULL END AS team_2_score,'
-                 ' CASE '
-                 'WHEN '
-                 'Q1.team_3 = Q2.team_a THEN Q2.score_a'
-                 ' WHEN Q1.team_3 = Q2.team_b THEN Q2.score_b'
-                 ' ELSE NULL '
-                 ' END AS team_3_score '
-                 'FROM [dbo].[games] AS Q1'
-                 ' JOIN [dbo].[scores] AS Q2 ON Q1.field = Q2.field AND Q2.entered_date = Q1.date '
-                 'WHERE Q1.date = ? AND Q2.field = ?')
-
-        entered_date = request.args.get("entered_date")
-        field = request.args.get("field")
-
-        cursor.execute(query, (entered_date, field))
-
-        rows = cursor.fetchall()
-
-        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-        con.close()
-        return jsonify(result), 200
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
+    return gs.get_games_statistics_by_team_and_date(connection())
 
 
-@app.route('/read_sheet')
-def index():
-    spreadsheet_id = '18XJbsh2uWjwSd2JfPV9HcWgzJBL3jLyJi09l4jthkeA'
-    sheets = service.spreadsheets()
-    result = sheets.get(spreadsheetId=spreadsheet_id).execute()
-    cell_date = result.get("sheets")
-
-    for row in cell_date:
-        for column in row:
-            print(column)
-        print(row)
-    return jsonify(cell_date)
+# @app.route('/read_sheet')
+# def index():
+#     try:
+#         spreadsheet_id = '18XJbsh2uWjwSd2JfPV9HcWgzJBL3jLyJi09l4jthkeA'
+#         sheets = service.spreadsheets()
+#         result = sheets.get(spreadsheetId=spreadsheet_id).execute()
+#         cell_date = result.get("sheets")
+#
+#         for row in cell_date:
+#             for column in row:
+#                 print(column)
+#             print(row)
+#         return jsonify(cell_date)
+#     except Exception as e:
+#         log.logger.error(e)
+#         return jsonify({"error": str(e)}), 400
 
 
 @app.route('/create_user', methods=['POST'])
@@ -418,6 +340,7 @@ def create_user():
             cursor.close()
 
             response = {"message": "Data inserted successfully"}
+
             return jsonify(response), 200
 
         except Exception as e:
@@ -426,4 +349,3 @@ def create_user():
 
 if __name__ == '__main__':
     app.run(debug=True)
-   
