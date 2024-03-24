@@ -73,3 +73,65 @@
 24-Mar-24 10:25:24 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 10:25:24] "GET /sheet_log HTTP/1.1" 200 -
 24-Mar-24 10:27:34 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
 24-Mar-24 10:27:34 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 10:27:35 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 10:27:35 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 10:28:31 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 10:28:31] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 10:31:57 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 10:31:57] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 10:32:02 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 10:32:02] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 10:33:15 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 10:33:15] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 10:33:18 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 10:33:18] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 10:33:23 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 10:33:23] "GET /get_games_statistics_by_team_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 10:33:24 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 10:33:24] "GET /get_games_statistics_by_team_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 10:41:30 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 10:41:30] "GET /get_games_statistics_by_team_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 10:48:56 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 10:48:56] "GET /get_games_statistics_by_team_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 11:10:28 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\ftp_server.py', reloading
+24-Mar-24 11:10:28 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 11:10:30 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 11:10:30 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 11:14:08 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\ftp_server.py', reloading
+24-Mar-24 11:14:09 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 11:14:10 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 11:14:10 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 11:14:19 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\ftp_server.py', reloading
+24-Mar-24 11:14:19 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 11:14:20 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 11:14:20 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 11:15:40 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\ftp_server.py', reloading
+24-Mar-24 11:15:40 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 11:15:41 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 11:15:41 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 11:16:22 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 11:16:22 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 11:16:23 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 11:16:24 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 11:16:41 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 11:16:41] "[35m[1mGET / HTTP/1.1[0m" 500 -
+24-Mar-24 11:19:53 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 11:19:53] "[35m[1mGET / HTTP/1.1[0m" 500 -
+24-Mar-24 11:19:57 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 11:19:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+24-Mar-24 11:20:12 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+24-Mar-24 11:20:12 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+24-Mar-24 11:20:12 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 11:20:13 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 11:20:13 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 11:20:17 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 11:20:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+24-Mar-24 11:20:23 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 11:20:23 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 11:20:24 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 11:20:24 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 11:20:24 - logger - INFO - Welcome to the Bad at Soccer API!
+24-Mar-24 11:20:24 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 11:20:24] "GET / HTTP/1.1" 200 -
+24-Mar-24 11:20:47 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\ftp_server.py', reloading
+24-Mar-24 11:20:47 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 11:20:48 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 11:20:48 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 11:20:54 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 11:20:54 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 11:20:55 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 11:20:55 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 11:20:55 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 11:20:55] "[35m[1mGET / HTTP/1.1[0m" 500 -
+24-Mar-24 11:43:01 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 11:43:01 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 11:43:02 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 11:43:02 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 11:43:13 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\ftp_server.py', reloading
+24-Mar-24 11:43:14 - werkzeug - INFO -  * Restarting with stat

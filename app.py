@@ -2,6 +2,7 @@ import pyodbc
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
+import ftp_server as ftp
 import game_service as gs
 import logger as log
 import scores_service as scs
@@ -23,6 +24,7 @@ def connection():
 @app.route('/')
 def home():
     message = 'Welcome to the Bad at Soccer API!'
+    ftp.ftp_connect()
     log.logger.info('Welcome to the Bad at Soccer API!')
     return message
 
@@ -78,10 +80,11 @@ def get_all_fields():
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
 
         con.close()
-
+        log.logger.info('Fields retrieved successfully!')
         return jsonify(result), 200
 
     except Exception as e:
+        log.logger.error(e)
         return jsonify({"error": str(e)}), 400
 
 
