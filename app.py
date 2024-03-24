@@ -100,9 +100,11 @@ def get_fields():
 
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
         con.close()
+        log.logger.info('Field retrieved successfully!')
         return jsonify(result), 200
 
     except Exception as e:
+        log.logger.error(e)
         return jsonify({"error": str(e)}), 400
 
 

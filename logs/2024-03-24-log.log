@@ -135,3 +135,9 @@
 24-Mar-24 11:43:02 - werkzeug - INFO -  * Debugger PIN: 930-492-694
 24-Mar-24 11:43:13 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\ftp_server.py', reloading
 24-Mar-24 11:43:14 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 11:43:15 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 11:43:15 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 11:47:52 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 11:47:52 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 11:47:53 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 11:47:53 - werkzeug - INFO -  * Debugger PIN: 930-492-694
