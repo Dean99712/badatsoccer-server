@@ -9,7 +9,6 @@ from auth import get_google_sheet, get_data_from_sheet
 from config import Config as cnf
 
 app = Flask(__name__)
-app.logger.addHandler(log.file_handler)
 CORS(app,
      resources={r"/*": {"origins": ["http://localhost:3000", "https://witty-mud-09afa6410.3.azurestaticapps.net"]}})
 
@@ -23,7 +22,7 @@ def connection():
 @app.route('/')
 def home():
     message = 'Welcome to the Bad at Soccer API!'
-    log.logger.info('Welcome to the Bad at Soccer API!')
+    log.logger.info(message)
     return message
 
 
@@ -57,11 +56,9 @@ def insert_data_from_sheet():
         cursor.commit()
         cursor.close()
 
-        log.logger.info("Sheet loaded successfully!")
         return "Sheet loaded successfully!", 200
 
     except Exception as e:
-        log.logger.error(e)
         return jsonify({"error": str(e)}), 400
 
 
@@ -78,11 +75,9 @@ def get_all_fields():
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
 
         con.close()
-        log.logger.info('Fields retrieved successfully!')
         return jsonify(result), 200
 
     except Exception as e:
-        log.logger.error(e)
         return jsonify({"error": str(e)}), 400
 
 
@@ -98,11 +93,9 @@ def get_fields():
 
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
         con.close()
-        log.logger.info('Field retrieved successfully!')
         return jsonify(result), 200
 
     except Exception as e:
-        log.logger.error(e)
         return jsonify({"error": str(e)}), 400
 
 
@@ -274,8 +267,8 @@ def add_game():
 
             con.commit()
             cursor.close()
-
-            response = {"message": "Data inserted successfully"}
+            message = "Data inserted successfully"
+            response = {message}
             return jsonify(response), 200
 
         except Exception as e:
