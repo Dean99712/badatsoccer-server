@@ -15,7 +15,7 @@ CORS(app,
      resources={r"/*": {"origins": ["http://localhost:3000", "https://witty-mud-09afa6410.3.azurestaticapps.net"]}})
 
 handler = logging.FileHandler('logger.log')
-handler.setLevel(logging.INFO)
+handler.setLevel(logging.DEBUG)
 app.logger.addHandler(handler)
 
 
@@ -40,7 +40,7 @@ def logs():
     # return jsonify(log_contents)
     with open('application.log', 'r') as log_file:
         # Tail the log file, adjust as needed
-        log_data = log_file.readlines()[-100:]  # Last 100 lines
+        log_data = log_file.readlines()[-100:]
     return jsonify(log_data)
 
 
