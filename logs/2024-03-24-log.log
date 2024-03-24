@@ -243,3 +243,5 @@
 24-Mar-24 14:03:08 - werkzeug - INFO -  * Restarting with stat
 24-Mar-24 14:03:08 - werkzeug - WARNING -  * Debugger is active!
 24-Mar-24 14:03:08 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 14:04:04 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:04:04] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 14:04:05 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:04:05] "GET /sheet_log HTTP/1.1" 200 -
