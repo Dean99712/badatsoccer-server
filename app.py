@@ -23,7 +23,6 @@ def connection():
 @app.route('/')
 def home():
     message = 'Welcome to the Bad at Soccer API!'
-    # ftp.ftp_connect()
     log.logger.info('Welcome to the Bad at Soccer API!')
     return message
 

@@ -4,7 +4,7 @@ import logging
 date = datetime.datetime.now().strftime('%Y-%m-%d')
 location = f'./logs/{date}-log.log'
 
-logging.basicConfig(filename=location, level=logging.DEBUG,
+logging.basicConfig(filename=location, level=logging.INFO,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 # log_file_path = f'./logs/{date}-log.log'
