@@ -196,3 +196,50 @@
 24-Mar-24 13:51:14 - werkzeug - INFO -  * Debugger PIN: 930-492-694
 24-Mar-24 13:51:15 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
 24-Mar-24 13:51:15 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 13:51:16 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 13:51:16 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 13:51:29 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:51:29] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:51:32 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:51:32] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:51:35 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:51:35] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:51:38 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:51:38] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:51:42 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:51:42] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:51:45 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:51:45] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:51:48 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:51:48] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:51:51 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:51:51] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:51:53 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:51:53] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:54:47 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:54:47] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:54:50 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:54:50] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:54:54 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:54:54] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:54:57 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:54:57] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:55:02 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 13:55:02 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:55:02] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 13:55:02 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:55:02] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:55:02 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:55:02] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:55:02 - logger - INFO - Field retrieved successfully!
+24-Mar-24 13:55:02 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:55:02] "GET /get_field?field=מגרש+1 HTTP/1.1" 200 -
+24-Mar-24 13:55:02 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:55:02] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:55:03 - logger - INFO - Field retrieved successfully!
+24-Mar-24 13:55:03 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:55:03] "GET /get_field?field=מגרש+1 HTTP/1.1" 200 -
+24-Mar-24 13:55:04 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:55:04] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 14:00:18 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 14:00:18 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 14:00:19 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 14:00:19 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 14:00:20 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:00:20] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 14:00:22 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 14:00:22 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:00:22] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 14:00:22 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:00:22] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 14:00:22 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:00:22] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 14:00:23 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:00:23] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 14:00:27 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:00:27] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 14:00:30 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:00:30] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 14:00:33 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:00:33] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 14:00:36 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:00:36] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 14:00:39 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:00:39] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 14:00:43 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:00:43] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 14:00:44 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:00:44] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 14:02:46 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 14:02:46] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 14:03:08 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\ftp_server.py', reloading
+24-Mar-24 14:03:08 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 14:03:08 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 14:03:08 - werkzeug - INFO -  * Debugger PIN: 930-492-694

@@ -32,6 +32,7 @@ def home():
 def logs():
     with open(log.location, 'r') as log_file:
         log_contents = log_file.read()
+    print(log_contents)
     return jsonify(log_contents)
 
 
