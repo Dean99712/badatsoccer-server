@@ -7,11 +7,9 @@ import logger as log
 import scores_service as scs
 from auth import get_google_sheet, get_data_from_sheet
 from config import Config as cnf
-from applicationinsights.flask.ext import AppInsights
 
 app = Flask(__name__)
-app.config['APPINSIGHTS_INSTRUMENTATIONKEY'] = 'your_instrumentation_key_here'
-appinsights = AppInsights(app)
+app.logger.addHandler(log.logger)
 CORS(app,
      resources={r"/*": {"origins": ["http://localhost:3000", "https://witty-mud-09afa6410.3.azurestaticapps.net"]}})
 
@@ -31,7 +29,7 @@ def home():
 
 @app.route('/sheet_log')
 def logs():
-    with open('scraper.log', 'r') as log_file:
+    with open(log.location, 'r') as log_file:
         log_contents = log_file.read()
     return jsonify(log_contents)
 
