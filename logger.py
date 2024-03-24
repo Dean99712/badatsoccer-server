@@ -7,10 +7,10 @@ location = f'./logs/{date}-log.log'
 logging.basicConfig(filename=location, level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
-# log_file_path = f'./logs/{date}-log.log'
-# file_handler = RotatingFileHandler(log_file_path, maxBytes=1024 * 1024 * 100, backupCount=10)
-# file_handler.setLevel(logging.INFO)
-# formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
-# file_handler.setFormatter(formatter)
+
+def log_message(request, status_code):
+    time = datetime.datetime.now().strftime('%d/%b/%Y %H:%M:%S')
+    return f'{time} - logging - {logging.INFO} - - [{date}] "{request.method} {request.path} HTTP/1.1" {status_code} -'
+
 
 logger = logging.getLogger(__name__)

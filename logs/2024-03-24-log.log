@@ -1,0 +1,198 @@
+24-Mar-24 12:04:16 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 12:04:16 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 12:04:17 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 12:04:17 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 12:04:18 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 12:04:18 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 12:04:19 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 12:04:19 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 12:21:35 - logger - INFO - Welcome to the Bad at Soccer API!
+24-Mar-24 12:21:35 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:21:35] "GET / HTTP/1.1" 200 -
+24-Mar-24 12:41:58 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\logger.py', reloading
+24-Mar-24 12:41:58 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 12:41:59 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 12:41:59 - werkzeug - INFO -  * Debugger PIN: 220-364-857
+24-Mar-24 12:43:45 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\logger.py', reloading
+24-Mar-24 12:43:45 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 12:43:46 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 12:43:46 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 12:47:02 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\logger.py', reloading
+24-Mar-24 12:47:02 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 12:47:03 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 12:47:03 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 12:47:23 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 12:47:23 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 12:47:24 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 12:47:24 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 12:48:23 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\logger.py', reloading
+24-Mar-24 12:48:24 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 12:48:24 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 12:48:24 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 12:48:41 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 12:48:41 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 12:48:41 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 12:48:41 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 12:48:53 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:48:53] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 12:48:53 - logger - ERROR - 'list' object has no attribute 'status'
+24-Mar-24 12:48:53 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:48:53] "[31m[1mGET /get_all_fields HTTP/1.1[0m" 400 -
+24-Mar-24 12:48:53 - logger - INFO - Field retrieved successfully!
+24-Mar-24 12:48:53 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:48:53] "GET /get_field?field=מגרש+1 HTTP/1.1" 200 -
+24-Mar-24 12:48:53 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:48:53] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 12:48:54 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:48:54] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 12:48:55 - logger - INFO - Field retrieved successfully!
+24-Mar-24 12:48:55 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:48:55] "GET /get_field?field=מגרש+1 HTTP/1.1" 200 -
+24-Mar-24 12:48:55 - logger - ERROR - 'list' object has no attribute 'status'
+24-Mar-24 12:48:55 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:48:55] "[31m[1mGET /get_all_fields HTTP/1.1[0m" 400 -
+24-Mar-24 12:48:56 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:48:56] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 12:48:57 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:48:57] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 12:48:57 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:48:57] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 12:48:58 - logger - ERROR - 'list' object has no attribute 'status'
+24-Mar-24 12:48:58 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:48:58] "[31m[1mGET /get_all_fields HTTP/1.1[0m" 400 -
+24-Mar-24 12:48:58 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:48:58] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 12:49:02 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:49:02] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 12:49:05 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:49:05] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 12:49:08 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:49:08] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 12:49:10 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:49:10] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 12:49:14 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:49:14] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 12:50:10 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\logger.py', reloading
+24-Mar-24 12:50:10 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 12:50:11 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 12:50:11 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 12:51:44 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 12:51:44 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 12:51:45 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 12:51:45 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 12:51:45 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 12:51:45] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 12:52:33 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\logger.py', reloading
+24-Mar-24 12:52:33 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 12:52:34 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 12:52:34 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 12:52:44 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 12:52:44 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 12:52:45 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 12:52:45 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 13:03:48 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\logger.py', reloading
+24-Mar-24 13:03:48 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 13:03:49 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 13:03:49 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 13:05:55 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:05:55] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:06:00 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:06:00] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:10:15 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 13:10:15 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 13:10:16 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 13:10:16 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 13:10:20 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:10:20] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:10:23 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:10:23] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:10:24 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:10:24] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:10:25 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:10:25] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:10:31 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:10:31] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:10:31 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 13:10:31 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:10:31] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 13:10:31 - logger - INFO - Field retrieved successfully!
+24-Mar-24 13:10:31 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:10:31] "GET /get_field?field=מגרש+1 HTTP/1.1" 200 -
+24-Mar-24 13:10:31 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:10:31] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:10:32 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:10:32] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:10:32 - logger - INFO - Field retrieved successfully!
+24-Mar-24 13:10:32 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:10:32] "GET /get_field?field=מגרש+1 HTTP/1.1" 200 -
+24-Mar-24 13:10:33 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:10:33] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:11:05 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:11:05] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:11:05 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:11:05] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:11:05 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 13:11:05 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:11:05] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 13:13:41 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 13:13:41 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:13:41] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 13:13:42 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:13:42] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:13:42 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:13:42] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:13:45 - logger - INFO - Field retrieved successfully!
+24-Mar-24 13:13:45 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:13:45] "GET /get_field?field=מגרש+1 HTTP/1.1" 200 -
+24-Mar-24 13:13:45 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 13:13:45 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:13:45] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 13:13:45 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:13:45] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:13:46 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:13:46] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:13:46 - logger - INFO - Field retrieved successfully!
+24-Mar-24 13:13:46 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:13:46] "GET /get_field?field=מגרש+1 HTTP/1.1" 200 -
+24-Mar-24 13:13:47 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:13:47] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:13:47 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:13:47] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:22:02 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 13:22:02 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 13:22:03 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 13:22:03 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 13:22:05 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 13:22:05 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:22:05] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 13:22:05 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:22:05] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:22:06 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:22:06] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:22:35 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 13:22:35 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 13:22:36 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 13:22:36 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 13:22:38 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:22:38] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:22:38 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 13:22:38 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:22:38] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 13:22:38 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:22:38] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:24:30 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 13:24:30 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 13:24:31 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 13:24:31 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 13:24:34 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 13:24:34 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:24:34] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 13:24:34 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:24:34] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:24:34 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:24:34] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:35:31 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 13:35:32 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 13:42:27 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 13:45:53 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 13:46:37 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 13:46:38 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 13:46:38 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 13:46:40 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:46:40] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:46:40 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 13:46:40 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:46:40] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 13:46:40 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:46:40] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:46:43 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:46:43] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:46:43 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 13:46:43 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:46:43] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 13:46:44 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:46:44] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:47:25 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 13:47:25 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:25] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 13:47:25 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:25] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:47:25 - logger - INFO - Field retrieved successfully!
+24-Mar-24 13:47:25 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:25] "GET /get_field?field=מגרש+1 HTTP/1.1" 200 -
+24-Mar-24 13:47:26 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:26] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:47:26 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:26] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:47:26 - logger - INFO - Field retrieved successfully!
+24-Mar-24 13:47:26 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:26] "GET /get_field?field=מגרש+1 HTTP/1.1" 200 -
+24-Mar-24 13:47:27 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:27] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:47:35 - logger - INFO - Welcome to the Bad at Soccer API!
+24-Mar-24 13:47:35 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:35] "GET / HTTP/1.1" 200 -
+24-Mar-24 13:47:39 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:39] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:47:39 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 13:47:39 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:39] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 13:47:39 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:39] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:47:40 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:40] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:47:40 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 13:47:40 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:40] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 13:47:40 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:40] "GET /get_scores_by_field_name_and_date?field=מגרש+1&entered_date=2024-02-18 HTTP/1.1" 200 -
+24-Mar-24 13:47:41 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:41] "GET /get_games_dates HTTP/1.1" 200 -
+24-Mar-24 13:47:41 - logger - INFO - Fields retrieved successfully!
+24-Mar-24 13:47:41 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:41] "GET /get_all_fields HTTP/1.1" 200 -
+24-Mar-24 13:47:41 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:41] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:47:45 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:45] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:47:48 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:48] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:47:51 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:47:51] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:50:00 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:50:00] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:50:03 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:50:03] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:50:06 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:50:06] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:50:09 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:50:09] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:50:12 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:50:12] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:50:16 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:50:16] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:50:19 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:50:19] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:50:22 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:50:22] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:50:25 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:50:25] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:50:28 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:50:28] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:50:32 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2024 13:50:32] "GET /sheet_log HTTP/1.1" 200 -
+24-Mar-24 13:51:13 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 13:51:13 - werkzeug - INFO -  * Restarting with stat
+24-Mar-24 13:51:14 - werkzeug - WARNING -  * Debugger is active!
+24-Mar-24 13:51:14 - werkzeug - INFO -  * Debugger PIN: 930-492-694
+24-Mar-24 13:51:15 - werkzeug - INFO -  * Detected change in 'C:\\Users\\dean2\\PycharmProjects\\flaskProject1\\app.py', reloading
+24-Mar-24 13:51:15 - werkzeug - INFO -  * Restarting with stat
