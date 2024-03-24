@@ -1,16 +1,22 @@
+import logging
+
 import pyodbc
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 import game_service as gs
-import logger as log
 import scores_service as scs
 from auth import get_google_sheet, get_data_from_sheet
 from config import Config as cnf
 
 app = Flask(__name__)
+
 CORS(app,
      resources={r"/*": {"origins": ["http://localhost:3000", "https://witty-mud-09afa6410.3.azurestaticapps.net"]}})
+
+handler = logging.FileHandler('logger.log')
+handler.setLevel(logging.INFO)
+app.logger.addHandler(handler)
 
 
 def connection():
@@ -22,15 +28,20 @@ def connection():
 @app.route('/')
 def home():
     message = 'Welcome to the Bad at Soccer API!'
-    log.logger.info(message)
+    app.logger.info(message)
     return message
 
 
 @app.route('/sheet_log')
 def logs():
-    with open(log.location, 'r') as log_file:
-        log_contents = log_file.read()
-    return jsonify(log_contents)
+    # with open(log.location, 'r') as log_file:
+
+    #     log_contents = log_file.read()
+    # return jsonify(log_contents)
+    with open('application.log', 'r') as log_file:
+        # Tail the log file, adjust as needed
+        log_data = log_file.readlines()[-100:]  # Last 100 lines
+    return jsonify(log_data)
 
 
 @app.route('/insert_sheet_data')
