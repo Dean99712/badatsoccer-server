@@ -9,7 +9,7 @@ from auth import get_google_sheet, get_data_from_sheet
 from config import Config as cnf
 
 app = Flask(__name__)
-app.logger.addHandler(log.logger)
+app.logger.addHandler(log.file_handler)
 CORS(app,
      resources={r"/*": {"origins": ["http://localhost:3000", "https://witty-mud-09afa6410.3.azurestaticapps.net"]}})
 
