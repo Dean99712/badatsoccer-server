@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<deployment>
+    <id>bca63e84-7e65-4c7d-be4d-5faa1746c0ae</id>
+    <author>N/A</author>
+    <deployer>GITHUB_ZIP_DEPLOY</deployer>
+    <authorEmail>N/A</authorEmail>
+    <message>
+        {"type":"deployment","sha":"3daa50272e195b35bab8fbf5c13c345852fe5ddd","repoName":"Dean99712/badatsoccer-server","actor":"Dean99712","slotName":"Production","commitMessage":"ftp
+        auth update"}
+    </message>
+    <progress></progress>
+    <status>Success</status>
+    <statusText></statusText>
+    <lastSuccessEndTime>2024-03-24T12:34:20.6152948Z</lastSuccessEndTime>
+    <receivedTime>2024-03-24T12:30:09.7899449Z</receivedTime>
+    <startTime>2024-03-24T12:30:11.0993162Z</startTime>
+    <endTime>2024-03-24T12:34:20.6152948Z</endTime>
+    <complete>True</complete>
+    <is_temp>False</is_temp>
+    <is_readonly>True</is_readonly>
+    <buildSummary/>
+</deployment>

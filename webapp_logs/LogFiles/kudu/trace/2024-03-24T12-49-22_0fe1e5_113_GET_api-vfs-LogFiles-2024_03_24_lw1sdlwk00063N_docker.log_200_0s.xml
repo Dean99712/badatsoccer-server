@@ -1,0 +1,10 @@
+<step title="Incoming Request" date="2024-03-24T12:49:22.062" instance="0fe1e5"
+      url="/api/vfs/LogFiles/2024_03_24_lw1sdlwk00063N_docker.log" method="GET" type="request" pid="86,1,31"
+      Host="python-flask-webapp-t.scm.azurewebsites.net" Authorization="Bas..."
+      X-ARR-LOG-ID="b7eee768-8f20-4029-83f7-33d3cda18a9c" CLIENT-IP="20.119.16.34:6168" X-Client-IP="20.119.16.34"
+      X-SITE-DEPLOYMENT-ID="python-flask-webapp-t" WAS-DEFAULT-HOSTNAME="python-flask-webapp-t.scm.azurewebsites.net"
+      X-MS-PLATFORM-INTERNAL="True" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.2"
+      X-WAWS-Unencoded-URL="/api/vfs/LogFiles/2024_03_24_lw1sdlwk00063N_docker.log" X-Client-Port="6168">
+    <step title="Outgoing response" date="2024-03-24T12:49:22.075" type="response" statusCode="200" statusText="OK"/>
+    <!-- duration: 6ms -->
+</step><!-- duration: 21ms -->

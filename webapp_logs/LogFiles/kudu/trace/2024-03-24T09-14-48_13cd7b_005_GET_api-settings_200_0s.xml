@@ -1,0 +1,15 @@
+<step title="Incoming Request" date="2024-03-24T09:14:48.182" instance="13cd7b" url="/api/settings" method="GET"
+      type="request" pid="87,1,23" Host="python-flask-webapp-t.scm.azurewebsites.net"
+      User-Agent="GITHUBACTIONS_DeployWebAppToAzure_cc89b21438b02de564a4dc08852f9df2c502643db9e806b29bc1ef2b741b9b6d"
+      Authorization="Bas..." Content-Type="application/json; charset=utf-8" Content-Length="0"
+      X-ARR-LOG-ID="8a20ff5f-832d-4f1f-823e-76f5c1e49143" CLIENT-IP="20.81.159.57:8326" X-Client-IP="20.81.159.57"
+      X-SITE-DEPLOYMENT-ID="python-flask-webapp-t" WAS-DEFAULT-HOSTNAME="python-flask-webapp-t.scm.azurewebsites.net"
+      X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3"
+      X-WAWS-Unencoded-URL="/api/settings" X-Client-Port="8326">
+    <step title="Cleanup Xml Logs" date="2024-03-24T09:14:48.189">
+        <step title="Cleanup Infos" date="2024-03-24T09:14:48.205" totalFiles="398"
+              totalCleanup="238"/><!-- duration: 6ms -->
+    </step><!-- duration: 27ms -->
+    <step title="Outgoing response" date="2024-03-24T09:14:48.241" type="response" statusCode="200"
+          statusText="OK"/><!-- duration: 10ms -->
+</step><!-- duration: 74ms -->

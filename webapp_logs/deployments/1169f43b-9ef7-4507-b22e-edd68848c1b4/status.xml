@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<deployment>
+    <id>1169f43b-9ef7-4507-b22e-edd68848c1b4</id>
+    <author>N/A</author>
+    <deployer>GITHUB_ZIP_DEPLOY</deployer>
+    <authorEmail>N/A</authorEmail>
+    <message>
+        {"type":"deployment","sha":"134df78946e35a2e48497745c1f331a1af898649","repoName":"Dean99712/badatsoccer-server","actor":"Dean99712","slotName":"Production","commitMessage":"Update
+        app.py"}
+    </message>
+    <progress></progress>
+    <status>Success</status>
+    <statusText></statusText>
+    <lastSuccessEndTime>2024-03-24T13:54:19.9536624Z</lastSuccessEndTime>
+    <receivedTime>2024-03-24T13:49:41.2074741Z</receivedTime>
+    <startTime>2024-03-24T13:49:42.5039933Z</startTime>
+    <endTime>2024-03-24T13:54:19.9536624Z</endTime>
+    <complete>True</complete>
+    <is_temp>False</is_temp>
+    <is_readonly>True</is_readonly>
+    <buildSummary/>
+</deployment>

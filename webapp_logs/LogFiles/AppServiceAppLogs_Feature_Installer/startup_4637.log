@@ -1,0 +1,25 @@
+2024-03-10 16:09:07,098  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+2024-03-10 16:09:07,099  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
+2024-03-10 16:09:07,118  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
+2024-03-10 16:09:07,499  [Thread-3 (] [DEBUG] : Waiting for the logs flag to be set
+2024-03-10 16:20:11,265  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+2024-03-10 16:20:11,266  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
+2024-03-10 16:20:11,267  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
+2024-03-10 16:20:13,655  [Thread-3 (] [DEBUG] : Waiting for the logs flag to be set
+2024-03-10 16:21:31,757  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+2024-03-10 16:21:31,783  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
+2024-03-10 16:21:31,783  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
+2024-03-10 16:21:32,966  [Thread-3 (] [DEBUG] : Waiting for the logs flag to be set
+2024-03-10 16:23:06,910  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+2024-03-10 16:23:06,912  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
+2024-03-10 16:23:06,929  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
+2024-03-10 16:23:07,924  [Thread-3 (] [DEBUG] : Waiting for the logs flag to be set
+2024-03-10 16:32:46,822  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+2024-03-10 16:32:46,828  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
+2024-03-10 16:32:46,828  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
+2024-03-10 16:33:56,324  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+2024-03-10 16:33:56,325  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
+2024-03-10 16:33:56,326  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
+2024-03-10 16:45:35,957  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+2024-03-10 16:45:35,959  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
+2024-03-10 16:45:35,959  [MainThread] [DEBUG] : Initialized AppServiceAppLogging

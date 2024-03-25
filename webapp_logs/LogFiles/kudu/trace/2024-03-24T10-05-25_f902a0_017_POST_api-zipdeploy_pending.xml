@@ -1,0 +1,29 @@
+<step title="Incoming Request" date="2024-03-24T10:05:25.033" instance="f902a0"
+      url="/api/zipdeploy?isAsync=true&amp;deployer=GITHUB_ZIP_DEPLOY&amp;message=%7B%22type%22%3A%22deployment%22%2C%22sha%22%3A%22e928f98763854ec3207fa0ee8dabf311b886e5ff%22%2C%22repoName%22%3A%22Dean99712%2Fbadatsoccer-server%22%2C%22actor%22%3A%22Dean99712%22%2C%22slotName%22%3A%22Production%22%2C%22commitMessage%22%3A%22log%20file%20handler%22%7D"
+      method="POST" type="request" pid="87,1,15" Host="python-flask-webapp-t.scm.azurewebsites.net"
+      User-Agent="GITHUBACTIONS_DeployWebAppToAzure_cc89b21438b02de564a4dc08852f9df2c502643db9e806b29bc1ef2b741b9b6d"
+      Authorization="Bas..." Content-Type="application/octet-stream"
+      Cookie="ARRAffinity=f902a04a85d38b0fa81789a73bd7f0fd35ab4400956424760d2a2f982ef05b43;Path=/;HttpOnly;Secure;Domain=python-flask-webapp-t.scm.azurewebsites.net; ARRAffinitySameSite=f902a04a85d38b0fa81789a73bd7f0fd35ab4400956424760d2a2f982ef05b43;Path=/;HttpOnly;SameSite=None;Secure;Domain=python-flask-webapp-t.scm.azurewebsites.net"
+      Transfer-Encoding="chunked" X-ARR-LOG-ID="3785554b-2dc7-488e-8737-9ea740cad26a" CLIENT-IP="40.76.254.132:29760"
+      X-Client-IP="40.76.254.132" X-SITE-DEPLOYMENT-ID="python-flask-webapp-t"
+      WAS-DEFAULT-HOSTNAME="python-flask-webapp-t.scm.azurewebsites.net" X-Forwarded-Proto="https"
+      X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3"
+      X-WAWS-Unencoded-URL="/api/zipdeploy?isAsync=true&amp;deployer=GITHUB_ZIP_DEPLOY&amp;message=%7B%22type%22%3A%22deployment%22%2C%22sha%22%3A%22e928f98763854ec3207fa0ee8dabf311b886e5ff%22%2C%22repoName%22%3A%22Dean99712%2Fbadatsoccer-server%22%2C%22actor%22%3A%22Dean99712%22%2C%22slotName%22%3A%22Production%22%2C%22commitMessage%22%3A%22log%20file%20handler%22%7D"
+      X-Client-Port="29760">
+    <step title="ZipPushDeploy" date="2024-03-24T10:05:25.131">
+        <step title="ZipDeploy. Extract zip. Remote build." date="2024-03-24T10:05:25.142"/><!-- duration: 2ms -->
+        <step title="None repository commit" date="2024-03-24T10:05:25.176">
+            <step title="Commit id: 6ddbb757-4853-4004-85d3-be8846d5553d" date="2024-03-24T10:05:25.178" Message="N/A"
+                  AuthorName="N/A" AuthorEmail="N/A"/><!-- duration: 1ms -->
+        </step><!-- duration: 5ms -->
+        <step title="Removing previous build artifact&apos;s manifest file" date="2024-03-24T10:05:25.189">
+            <step title="Writing artifact to /tmp/zipdeploy/e718f551-0be9-4593-b8a9-cc340c695900.zip"
+                  date="2024-03-24T10:05:25.244"/><!-- duration: 130ms -->
+            <step title="Start deployment in the background" date="2024-03-24T10:05:25.396">
+                <step title="Acquiring Deployment Lock" date="2024-03-24T10:05:25.425"/><!-- duration: 16ms -->
+                <step title="Acquired Deployment Lock" date="2024-03-24T10:05:25.463"/><!-- duration: 2ms -->
+            </step><!-- duration: 1496ms -->
+        </step><!-- duration: 1754ms -->
+        <step title="Outgoing response" date="2024-03-24T10:05:26.971" type="response" statusCode="202"
+              statusText="Accepted"/><!-- duration: 8ms -->
+    </step><!-- duration: 1859ms -->

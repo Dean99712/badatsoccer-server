@@ -29,22 +29,20 @@ def home():
 
 @app.route('/logs')
 def get_logs():
-    log_lines = []
-    with open('/home/LogFiles/application.log', 'r') as log_file:
+    with open(log.LOG_PATH, 'r') as log_file:
         log_lines = log_file.readlines()[-100:]
     return jsonify(log_lines)
 
 
-@app.route('/sheet_log')
+@app.route('/log')
 def logs():
-    # with open(log.location, 'r') as log_file:
-
-    #     log_contents = log_file.read()
-    # return jsonify(log_contents)
-    with open('application.log', 'r') as log_file:
-        # Tail the log file, adjust as needed
-        log_data = log_file.readlines()[-100:]
-    return jsonify(log_data)
+    with open(f'{log.LOGS_DIR}/{log.LOG_PATH}', 'r') as log_file:
+        log_contents = log_file.read()
+    return jsonify(log_contents)
+    # with open(log.log_path, 'r') as log_file:
+    #     # Tail the log file, adjust as needed
+    #     log_data = log_file.readlines()[-100:]
+    # return jsonify(log_data)
 
 
 @app.route('/insert_sheet_data')
@@ -89,9 +87,11 @@ def get_all_fields():
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
 
         con.close()
+        log.logger.info('Fields retrieved successfully!')
         return jsonify(result), 200
 
     except Exception as e:
+        log.logger.error(e)
         return jsonify({"error": str(e)}), 400
 
 

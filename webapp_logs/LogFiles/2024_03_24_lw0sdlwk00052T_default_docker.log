@@ -1,0 +1,729 @@
+2024-03-24T10:03:00.622918962Z    _____                               
+2024-03-24T10:03:00.622947463Z   /  _  \ __________ _________   ____  
+2024-03-24T10:03:00.622952464Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T10:03:00.622956564Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T10:03:00.622960464Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T10:03:00.622964765Z         \/      \/                  \/ 
+2024-03-24T10:03:00.622968665Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T10:03:00.622972365Z 
+2024-03-24T10:03:00.622975965Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T10:03:00.622979566Z Python 3.11.7
+2024-03-24T10:03:00.622983266Z Note: Any data outside '/home' is not persisted
+2024-03-24T10:03:01.705133996Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T10:03:01.795802664Z App Command Line not configured, will attempt auto-detect
+2024-03-24T10:03:01.803114845Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T10:03:01.815649670Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2024-03-24T10:03:01.817966323Z Build Operation ID: 1de42617de7329d8
+2024-03-24T10:03:01.824176732Z Output is compressed. Extracting it...
+2024-03-24T10:03:01.824209234Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T10:03:01.832975511Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8dc4be8ad70b123'...
+2024-03-24T10:03:28.344834561Z App path is set to '/tmp/8dc4be8ad70b123'
+2024-03-24T10:03:28.354680239Z Detected an app based on Flask
+2024-03-24T10:03:28.356538048Z Generating `gunicorn` command for 'app:app'
+2024-03-24T10:03:28.365395367Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T10:03:28.479065135Z Using packages from virtual environment antenv located at /tmp/8dc4be8ad70b123/antenv.
+2024-03-24T10:03:28.479099237Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8dc4be8ad70b123/antenv/lib/python3.11/site-packages'
+2024-03-24T10:03:29.659508379Z [2024-03-24 10:03:29 +0000] [73] [INFO] Starting gunicorn 21.2.0
+2024-03-24T10:03:29.687291809Z [2024-03-24 10:03:29 +0000] [73] [INFO] Listening at: http://0.0.0.0:8000 (73)
+2024-03-24T10:03:29.689282825Z [2024-03-24 10:03:29 +0000] [73] [INFO] Using worker: sync
+2024-03-24T10:03:29.700789400Z [2024-03-24 10:03:29 +0000] [76] [INFO] Booting worker with pid: 76
+2024-03-24T10:03:40.359580502Z 169.254.130.1 - - [24/Mar/2024:10:03:40 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:03:41.108169378Z 169.254.130.4 - - [24/Mar/2024:10:03:41 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:03:46.914055367Z 169.254.130.4 - - [24/Mar/2024:10:03:46 +0000] "GET / HTTP/1.1" 500 265 "https://sandbox-45-5.reactblade.portal.azure.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T10:03:48.300790036Z 169.254.130.4 - - [24/Mar/2024:10:03:48 +0000] "GET / HTTP/1.1" 500 265 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T10:03:59.345326850Z 169.254.130.4 - - [24/Mar/2024:10:03:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:04:59.359593346Z 169.254.130.4 - - [24/Mar/2024:10:04:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:05:59.657478165Z 169.254.130.4 - - [24/Mar/2024:10:05:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:07:00.430431277Z 169.254.130.4 - - [24/Mar/2024:10:07:00 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:07:59.967349871Z 169.254.130.4 - - [24/Mar/2024:10:07:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:09:00.356739839Z 169.254.130.4 - - [24/Mar/2024:10:09:00 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:09:59.378408821Z 169.254.130.4 - - [24/Mar/2024:10:09:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:10:59.916436471Z 169.254.130.4 - - [24/Mar/2024:10:10:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:10:17.534988185Z    _____                               
+2024-03-24T10:10:17.535018288Z   /  _  \ __________ _________   ____  
+2024-03-24T10:10:17.535023488Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T10:10:17.535028188Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T10:10:17.535032389Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T10:10:17.535036689Z         \/      \/                  \/ 
+2024-03-24T10:10:17.535040689Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T10:10:17.535044689Z 
+2024-03-24T10:10:17.535048590Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T10:10:17.535052590Z Python 3.11.7
+2024-03-24T10:10:17.535056490Z Note: Any data outside '/home' is not persisted
+2024-03-24T10:10:19.235751436Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T10:10:19.642405422Z App Command Line not configured, will attempt auto-detect
+2024-03-24T10:10:19.642428924Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T10:10:19.649478418Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2024-03-24T10:10:19.649504320Z Build Operation ID: ac17b11766f517ed
+2024-03-24T10:10:19.649509420Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T10:10:19.649541222Z Output is compressed. Extracting it...
+2024-03-24T10:10:19.649545922Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8dc4be9f0e83213'...
+2024-03-24T10:10:45.813194239Z App path is set to '/tmp/8dc4be9f0e83213'
+2024-03-24T10:10:45.819472784Z Detected an app based on Flask
+2024-03-24T10:10:45.819488986Z Generating `gunicorn` command for 'app:app'
+2024-03-24T10:10:45.819515287Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T10:10:46.188393658Z Using packages from virtual environment antenv located at /tmp/8dc4be9f0e83213/antenv.
+2024-03-24T10:10:46.188435161Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8dc4be9f0e83213/antenv/lib/python3.11/site-packages'
+2024-03-24T10:10:49.308345203Z [2024-03-24 10:10:49 +0000] [71] [INFO] Starting gunicorn 21.2.0
+2024-03-24T10:10:49.377890536Z [2024-03-24 10:10:49 +0000] [71] [INFO] Listening at: http://0.0.0.0:8000 (71)
+2024-03-24T10:10:49.386570252Z [2024-03-24 10:10:49 +0000] [71] [INFO] Using worker: sync
+2024-03-24T10:10:49.409946611Z [2024-03-24 10:10:49 +0000] [74] [INFO] Booting worker with pid: 74
+2024-03-24T10:11:03.395711468Z 169.254.130.1 - - [24/Mar/2024:10:11:03 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:11:04.172902047Z 169.254.130.6 - - [24/Mar/2024:10:11:04 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:11:59.357844630Z 169.254.130.6 - - [24/Mar/2024:10:11:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:12:59.435852651Z 169.254.130.6 - - [24/Mar/2024:10:12:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:13:59.448114844Z 169.254.130.6 - - [24/Mar/2024:10:13:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:14:59.376256709Z 169.254.130.6 - - [24/Mar/2024:10:14:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:15:59.386591423Z 169.254.130.6 - - [24/Mar/2024:10:15:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:16:59.341113912Z 169.254.130.6 - - [24/Mar/2024:10:16:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:18:59.398046732Z 169.254.130.6 - - [24/Mar/2024:10:18:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:19:59.372268621Z 169.254.130.6 - - [24/Mar/2024:10:19:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:21:58.524412566Z 169.254.130.6 - - [24/Mar/2024:10:21:58 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:21:59.347662351Z 169.254.130.6 - - [24/Mar/2024:10:21:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:22:01.916780299Z 169.254.130.6 - - [24/Mar/2024:10:22:01 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:22:05.177790650Z 169.254.130.6 - - [24/Mar/2024:10:22:05 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:22:08.459061181Z 169.254.130.6 - - [24/Mar/2024:10:22:08 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:22:11.676238941Z 169.254.130.6 - - [24/Mar/2024:10:22:11 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:22:15.009195438Z 169.254.130.6 - - [24/Mar/2024:10:22:14 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:22:18.296356495Z 169.254.130.6 - - [24/Mar/2024:10:22:18 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:22:21.695768918Z 169.254.130.6 - - [24/Mar/2024:10:22:21 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:22:24.973687036Z 169.254.130.6 - - [24/Mar/2024:10:22:24 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:22:26.731959203Z 169.254.130.6 - - [24/Mar/2024:10:22:26 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:22:29.972016869Z 169.254.130.6 - - [24/Mar/2024:10:22:29 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:22:33.207556985Z 169.254.130.6 - - [24/Mar/2024:10:22:33 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:22:55.167321051Z 169.254.130.6 - - [24/Mar/2024:10:22:55 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:22:58.449865382Z 169.254.130.6 - - [24/Mar/2024:10:22:58 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:22:59.357680371Z 169.254.130.6 - - [24/Mar/2024:10:22:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:23:59.394873082Z 169.254.130.6 - - [24/Mar/2024:10:23:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:24:05.056179450Z 169.254.130.6 - - [24/Mar/2024:10:24:05 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:24:08.312361646Z 169.254.130.6 - - [24/Mar/2024:10:24:08 +0000] "GET /sheet_log HTTP/1.1" 200 1396 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:24:09.257151231Z 169.254.130.6 - - [24/Mar/2024:10:24:09 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 224 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:24:09.513727315Z 169.254.130.6 - - [24/Mar/2024:10:24:09 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 224 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:24:10.949792967Z 169.254.130.6 - - [24/Mar/2024:10:24:10 +0000] "GET /get_field?field=%D7%9E%D7%92%D7%A8%D7%A9+4 HTTP/1.1" 200 59 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:24:11.236860426Z 169.254.130.6 - - [24/Mar/2024:10:24:11 +0000] "GET /get_all_fields HTTP/1.1" 200 158 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:24:11.417112906Z 169.254.130.6 - - [24/Mar/2024:10:24:11 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:24:11.492963074Z 169.254.130.6 - - [24/Mar/2024:10:24:11 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:24:11.703993851Z 169.254.130.6 - - [24/Mar/2024:10:24:11 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:24:11.900322727Z 169.254.130.6 - - [24/Mar/2024:10:24:11 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:24:31.507608037Z 169.254.130.6 - - [24/Mar/2024:10:24:31 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:24:31.587239931Z 169.254.130.6 - - [24/Mar/2024:10:24:31 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:24:31.678796303Z 169.254.130.6 - - [24/Mar/2024:10:24:31 +0000] "GET /get_all_fields HTTP/1.1" 200 158 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:24:34.043282910Z 169.254.130.6 - - [24/Mar/2024:10:24:34 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:24:37.264307270Z 169.254.130.6 - - [24/Mar/2024:10:24:37 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:24:40.466009301Z 169.254.130.6 - - [24/Mar/2024:10:24:40 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:24:43.699802159Z 169.254.130.6 - - [24/Mar/2024:10:24:43 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:24:46.965381339Z 169.254.130.6 - - [24/Mar/2024:10:24:46 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:24:50.201032942Z 169.254.130.6 - - [24/Mar/2024:10:24:50 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:24:53.457676517Z 169.254.130.6 - - [24/Mar/2024:10:24:53 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:24:57.448556803Z 169.254.130.6 - - [24/Mar/2024:10:24:57 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:24:59.340064524Z 169.254.130.6 - - [24/Mar/2024:10:24:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:25:00.952345647Z 169.254.130.6 - - [24/Mar/2024:10:25:00 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:25:04.207564670Z 169.254.130.6 - - [24/Mar/2024:10:25:04 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:25:07.484434655Z 169.254.130.6 - - [24/Mar/2024:10:25:07 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:25:10.690964132Z 169.254.130.6 - - [24/Mar/2024:10:25:10 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:25:13.951096633Z 169.254.130.6 - - [24/Mar/2024:10:25:13 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:25:17.147226514Z 169.254.130.6 - - [24/Mar/2024:10:25:17 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:25:20.407384988Z 169.254.130.6 - - [24/Mar/2024:10:25:20 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:25:23.606510873Z 169.254.130.6 - - [24/Mar/2024:10:25:23 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:25:26.868762404Z 169.254.130.6 - - [24/Mar/2024:10:25:26 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:25:30.063085174Z 169.254.130.6 - - [24/Mar/2024:10:25:30 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:25:33.301922511Z 169.254.130.6 - - [24/Mar/2024:10:25:33 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:25:36.602790027Z 169.254.130.6 - - [24/Mar/2024:10:25:36 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:25:39.817626324Z 169.254.130.6 - - [24/Mar/2024:10:25:39 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:25:43.062827417Z 169.254.130.6 - - [24/Mar/2024:10:25:43 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:25:46.282179034Z 169.254.130.6 - - [24/Mar/2024:10:25:46 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:25:49.497529291Z 169.254.130.6 - - [24/Mar/2024:10:25:49 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:25:52.726508379Z 169.254.130.6 - - [24/Mar/2024:10:25:52 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:25:55.948296480Z 169.254.130.6 - - [24/Mar/2024:10:25:55 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:25:59.186399015Z 169.254.130.6 - - [24/Mar/2024:10:25:59 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:25:59.350877081Z 169.254.130.6 - - [24/Mar/2024:10:25:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:26:02.404862338Z 169.254.130.6 - - [24/Mar/2024:10:26:02 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:26:05.621355007Z 169.254.130.6 - - [24/Mar/2024:10:26:05 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:26:08.879473787Z 169.254.130.6 - - [24/Mar/2024:10:26:08 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:26:12.117668168Z 169.254.130.6 - - [24/Mar/2024:10:26:12 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:26:15.680071438Z 169.254.130.6 - - [24/Mar/2024:10:26:15 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:26:19.451678149Z 169.254.130.6 - - [24/Mar/2024:10:26:19 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:26:22.685935766Z 169.254.130.6 - - [24/Mar/2024:10:26:22 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:26:25.901596559Z 169.254.130.6 - - [24/Mar/2024:10:26:25 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:26:29.132434285Z 169.254.130.6 - - [24/Mar/2024:10:26:29 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:26:32.348338482Z 169.254.130.6 - - [24/Mar/2024:10:26:32 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:26:35.544126984Z 169.254.130.6 - - [24/Mar/2024:10:26:35 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:26:38.783859760Z 169.254.130.6 - - [24/Mar/2024:10:26:38 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:26:42.025141812Z 169.254.130.6 - - [24/Mar/2024:10:26:42 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:26:45.284490307Z 169.254.130.6 - - [24/Mar/2024:10:26:45 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:26:48.491583893Z 169.254.130.6 - - [24/Mar/2024:10:26:48 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:26:51.725754369Z 169.254.130.6 - - [24/Mar/2024:10:26:51 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:26:54.943598388Z 169.254.130.6 - - [24/Mar/2024:10:26:54 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:26:58.206155101Z 169.254.130.6 - - [24/Mar/2024:10:26:58 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:26:59.356731540Z 169.254.130.6 - - [24/Mar/2024:10:26:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:27:01.431433816Z 169.254.130.6 - - [24/Mar/2024:10:27:01 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:27:03.091959189Z 169.254.130.6 - - [24/Mar/2024:10:27:03 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:27:03.745545729Z 169.254.130.6 - - [24/Mar/2024:10:27:03 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:27:07.030691709Z 169.254.130.6 - - [24/Mar/2024:10:27:07 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:27:10.229808617Z 169.254.130.6 - - [24/Mar/2024:10:27:10 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:27:13.548672945Z 169.254.130.6 - - [24/Mar/2024:10:27:13 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:27:16.795954203Z 169.254.130.6 - - [24/Mar/2024:10:27:16 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:27:20.081589433Z 169.254.130.6 - - [24/Mar/2024:10:27:20 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:27:23.315530178Z 169.254.130.6 - - [24/Mar/2024:10:27:23 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:27:26.563760061Z 169.254.130.6 - - [24/Mar/2024:10:27:26 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:27:29.910707758Z 169.254.130.6 - - [24/Mar/2024:10:27:29 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:27:33.100332388Z 169.254.130.6 - - [24/Mar/2024:10:27:33 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:27:36.307866751Z 169.254.130.6 - - [24/Mar/2024:10:27:36 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:27:40.472029046Z 169.254.130.6 - - [24/Mar/2024:10:27:40 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:27:50.294043460Z 169.254.130.6 - - [24/Mar/2024:10:27:50 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:27:59.329484996Z 169.254.130.6 - - [24/Mar/2024:10:27:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:28:06.157163230Z 169.254.130.6 - - [24/Mar/2024:10:28:06 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:28:10.224190912Z 169.254.130.6 - - [24/Mar/2024:10:28:10 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:28:13.537750929Z 169.254.130.6 - - [24/Mar/2024:10:28:13 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:28:16.939210913Z 169.254.130.6 - - [24/Mar/2024:10:28:16 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:28:20.536813615Z 169.254.130.6 - - [24/Mar/2024:10:28:20 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:28:24.051070103Z 169.254.130.6 - - [24/Mar/2024:10:28:24 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:28:27.258609328Z 169.254.130.6 - - [24/Mar/2024:10:28:27 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:28:30.640682398Z 169.254.130.6 - - [24/Mar/2024:10:28:30 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:28:33.980642537Z 169.254.130.6 - - [24/Mar/2024:10:28:33 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:28:37.300767970Z 169.254.130.6 - - [24/Mar/2024:10:28:37 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:28:40.616742663Z 169.254.130.6 - - [24/Mar/2024:10:28:40 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:28:43.944301627Z 169.254.130.6 - - [24/Mar/2024:10:28:43 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:28:47.363710063Z 169.254.130.6 - - [24/Mar/2024:10:28:47 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:28:50.959240874Z 169.254.130.6 - - [24/Mar/2024:10:28:50 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:28:54.264176611Z 169.254.130.6 - - [24/Mar/2024:10:28:54 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:28:57.521771860Z 169.254.130.6 - - [24/Mar/2024:10:28:57 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:28:59.346486511Z 169.254.130.6 - - [24/Mar/2024:10:28:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:29:00.970682490Z 169.254.130.6 - - [24/Mar/2024:10:29:00 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:29:04.197469916Z 169.254.130.6 - - [24/Mar/2024:10:29:04 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:29:07.416208356Z 169.254.130.6 - - [24/Mar/2024:10:29:07 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:29:10.604087365Z 169.254.130.6 - - [24/Mar/2024:10:29:10 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:29:13.836968026Z 169.254.130.6 - - [24/Mar/2024:10:29:13 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:29:17.072480131Z 169.254.130.6 - - [24/Mar/2024:10:29:17 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:29:20.302025065Z 169.254.130.6 - - [24/Mar/2024:10:29:20 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:29:23.518379148Z 169.254.130.6 - - [24/Mar/2024:10:29:23 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:29:26.792733232Z 169.254.130.6 - - [24/Mar/2024:10:29:26 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:29:29.981508206Z 169.254.130.6 - - [24/Mar/2024:10:29:29 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:29:33.212822621Z 169.254.130.6 - - [24/Mar/2024:10:29:33 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:29:36.429806399Z 169.254.130.6 - - [24/Mar/2024:10:29:36 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:29:39.647731983Z 169.254.130.6 - - [24/Mar/2024:10:29:39 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:29:42.859695552Z 169.254.130.6 - - [24/Mar/2024:10:29:42 +0000] "GET /sheet_log HTTP/1.1" 200 1602 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:29:45.319731101Z 169.254.130.6 - - [24/Mar/2024:10:29:45 +0000] "GET /get_field?field=%D7%9E%D7%92%D7%A8%D7%A9+4 HTTP/1.1" 200 59 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:29:45.584140565Z 169.254.130.6 - - [24/Mar/2024:10:29:45 +0000] "GET /get_all_fields HTTP/1.1" 200 158 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:29:45.767478322Z 169.254.130.6 - - [24/Mar/2024:10:29:45 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:29:45.798179007Z 169.254.130.6 - - [24/Mar/2024:10:29:45 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+2024-03-24T10:29:45.828686380Z 169.254.130.6 - - [24/Mar/2024:10:29:45 +0000] "GET / HTTP/1.1" 200 33 "-" "ReadyForRequest/1.0 (LocalCache)"
+2024-03-24T10:29:45.931176143Z 169.254.130.6 - - [24/Mar/2024:10:29:45 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:29:45.950031624Z 169.254.130.6 - - [24/Mar/2024:10:29:45 +0000] "GET / HTTP/1.1" 200 33 "-" "ReadyForRequest/1.0 (AppInit)"
+2024-03-24T10:29:46.042548010Z 169.254.130.6 - - [24/Mar/2024:10:29:46 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:29:46.175662453Z 169.254.130.6 - - [24/Mar/2024:10:29:46 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:29:50.858647536Z 169.254.130.6 - - [24/Mar/2024:10:29:50 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+2024-03-24T10:29:51.389151602Z 169.254.130.6 - - [24/Mar/2024:10:29:51 +0000] "GET /sheet_log HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:29:54.539479646Z 169.254.130.6 - - [24/Mar/2024:10:29:54 +0000] "GET /sheet_log HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:29:55.876574281Z 169.254.130.6 - - [24/Mar/2024:10:29:55 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+2024-03-24T10:29:59.330107597Z 169.254.130.6 - - [24/Mar/2024:10:29:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:30:00.905327165Z 169.254.130.6 - - [24/Mar/2024:10:30:00 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:30:05.910071035Z 169.254.130.6 - - [24/Mar/2024:10:30:05 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:30:10.934609827Z 169.254.130.6 - - [24/Mar/2024:10:30:10 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:30:15.953396014Z 169.254.130.6 - - [24/Mar/2024:10:30:15 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:30:20.976431697Z 169.254.130.6 - - [24/Mar/2024:10:30:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:30:25.991426551Z 169.254.130.6 - - [24/Mar/2024:10:30:25 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:30:31.133536100Z 169.254.130.6 - - [24/Mar/2024:10:30:31 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:30:36.177960996Z 169.254.130.6 - - [24/Mar/2024:10:30:36 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:30:41.204406586Z 169.254.130.6 - - [24/Mar/2024:10:30:41 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:30:46.204285246Z 169.254.130.6 - - [24/Mar/2024:10:30:46 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:30:51.225535058Z 169.254.130.6 - - [24/Mar/2024:10:30:51 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:30:56.261793971Z 169.254.130.6 - - [24/Mar/2024:10:30:56 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:30:59.351219609Z 169.254.130.6 - - [24/Mar/2024:10:30:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:31:01.276640538Z 169.254.130.6 - - [24/Mar/2024:10:31:01 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:31:06.295161919Z 169.254.130.6 - - [24/Mar/2024:10:31:06 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:31:11.313619444Z 169.254.130.6 - - [24/Mar/2024:10:31:11 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:31:16.357435628Z 169.254.130.6 - - [24/Mar/2024:10:31:16 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:31:21.438874420Z 169.254.130.6 - - [24/Mar/2024:10:31:21 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:31:26.449315183Z 169.254.130.6 - - [24/Mar/2024:10:31:26 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:31:31.477348947Z 169.254.130.6 - - [24/Mar/2024:10:31:31 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:31:36.143184928Z 169.254.130.6 - - [24/Mar/2024:10:31:36 +0000] "GET /sheet_log HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:31:36.506280708Z 169.254.130.6 - - [24/Mar/2024:10:31:36 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:31:39.361540153Z 169.254.130.6 - - [24/Mar/2024:10:31:39 +0000] "GET /sheet_log HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:31:41.534027091Z 169.254.130.6 - - [24/Mar/2024:10:31:41 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+2024-03-24T10:31:42.582061579Z 169.254.130.6 - - [24/Mar/2024:10:31:42 +0000] "GET /sheet_log HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:31:45.812556878Z 169.254.130.6 - - [24/Mar/2024:10:31:45 +0000] "GET /sheet_log HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:31:49.006296552Z 169.254.130.6 - - [24/Mar/2024:10:31:49 +0000] "GET /sheet_log HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:31:52.223488994Z 169.254.130.6 - - [24/Mar/2024:10:31:52 +0000] "GET /sheet_log HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:31:55.437750943Z 169.254.130.6 - - [24/Mar/2024:10:31:55 +0000] "GET /sheet_log HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:31:58.689329898Z 169.254.130.6 - - [24/Mar/2024:10:31:58 +0000] "GET /sheet_log HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:31:59.444023221Z 169.254.130.6 - - [24/Mar/2024:10:31:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:32:01.905548649Z 169.254.130.6 - - [24/Mar/2024:10:32:01 +0000] "GET /sheet_log HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:03.966739561Z 169.254.130.6 - - [24/Mar/2024:10:32:03 +0000] "GET /sheet_log HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:32:06.975772985Z 169.254.130.6 - - [24/Mar/2024:10:32:06 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 224 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:07.350424994Z 169.254.130.6 - - [24/Mar/2024:10:32:07 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 224 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:32:10.529154038Z 169.254.130.6 - - [24/Mar/2024:10:32:10 +0000] "GET /sheet_log HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:13.764607024Z 169.254.130.6 - - [24/Mar/2024:10:32:13 +0000] "GET /sheet_log HTTP/1.1" 200 1883 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:13.834194537Z 169.254.130.6 - - [24/Mar/2024:10:32:13 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+2024-03-24T10:32:13.864905733Z 169.254.130.6 - - [24/Mar/2024:10:32:13 +0000] "GET / HTTP/1.1" 200 33 "-" "ReadyForRequest/1.0 (LocalCache)"
+2024-03-24T10:32:13.916100059Z 169.254.130.6 - - [24/Mar/2024:10:32:13 +0000] "GET / HTTP/1.1" 200 33 "-" "ReadyForRequest/1.0 (AppInit)"
+
+2024-03-24T10:32:16.983146475Z 169.254.130.6 - - [24/Mar/2024:10:32:16 +0000] "GET /sheet_log HTTP/1.1" 200 2027 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:18.843700112Z 169.254.130.6 - - [24/Mar/2024:10:32:18 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:32:20.025231302Z 169.254.130.6 - - [24/Mar/2024:10:32:20 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 224 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:20.516611094Z 169.254.130.6 - - [24/Mar/2024:10:32:20 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 224 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:23.872914347Z 169.254.130.6 - - [24/Mar/2024:10:32:23 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+2024-03-24T10:32:24.317146277Z 169.254.130.6 - - [24/Mar/2024:10:32:24 +0000] "GET /get_field?field=%D7%9E%D7%92%D7%A8%D7%A9+4 HTTP/1.1" 200 59 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:32:24.709986956Z 169.254.130.6 - - [24/Mar/2024:10:32:24 +0000] "GET /get_all_fields HTTP/1.1" 200 158 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:24.940048704Z 169.254.130.6 - - [24/Mar/2024:10:32:24 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:25.080651545Z 169.254.130.6 - - [24/Mar/2024:10:32:25 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:25.461190898Z 169.254.130.6 - - [24/Mar/2024:10:32:25 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:28.077142743Z 169.254.130.6 - - [24/Mar/2024:10:32:28 +0000] "GET /get_score_by_id?score_id=177 HTTP/1.1" 200 186 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:28.911797081Z 169.254.130.6 - - [24/Mar/2024:10:32:28 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:32:31.833280290Z 169.254.130.6 - - [24/Mar/2024:10:32:31 +0000] "GET /sheet_log HTTP/1.1" 200 2164 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:33.914511365Z 169.254.130.6 - - [24/Mar/2024:10:32:33 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:32:35.055615874Z 169.254.130.6 - - [24/Mar/2024:10:32:35 +0000] "GET /sheet_log HTTP/1.1" 200 2164 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:38.268223928Z 169.254.130.6 - - [24/Mar/2024:10:32:38 +0000] "GET /sheet_log HTTP/1.1" 200 2164 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:32:38.922290066Z 169.254.130.6 - - [24/Mar/2024:10:32:38 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:32:43.971019918Z 169.254.130.6 - - [24/Mar/2024:10:32:43 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:32:48.987449457Z 169.254.130.6 - - [24/Mar/2024:10:32:48 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:32:54.018102192Z 169.254.130.6 - - [24/Mar/2024:10:32:54 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:32:59.053589285Z 169.254.130.6 - - [24/Mar/2024:10:32:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:32:59.371476216Z 169.254.130.6 - - [24/Mar/2024:10:32:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:33:04.087971710Z 169.254.130.6 - - [24/Mar/2024:10:33:04 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:33:09.110107381Z 169.254.130.6 - - [24/Mar/2024:10:33:09 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:33:14.121172749Z 169.254.130.6 - - [24/Mar/2024:10:33:14 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:33:19.165240935Z 169.254.130.6 - - [24/Mar/2024:10:33:19 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:33:24.204989805Z 169.254.130.6 - - [24/Mar/2024:10:33:24 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:33:29.246500495Z 169.254.130.6 - - [24/Mar/2024:10:33:29 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:33:34.259404839Z 169.254.130.6 - - [24/Mar/2024:10:33:34 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:33:39.256440666Z 169.254.130.6 - - [24/Mar/2024:10:33:39 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:33:44.273690788Z 169.254.130.6 - - [24/Mar/2024:10:33:44 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:33:49.291444037Z 169.254.130.6 - - [24/Mar/2024:10:33:49 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:33:54.296482372Z 169.254.130.6 - - [24/Mar/2024:10:33:54 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:33:59.320907294Z 169.254.130.6 - - [24/Mar/2024:10:33:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+2024-03-24T10:33:59.340960026Z 169.254.130.6 - - [24/Mar/2024:10:33:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:34:04.317304292Z 169.254.130.6 - - [24/Mar/2024:10:34:04 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:34:09.354646759Z 169.254.130.6 - - [24/Mar/2024:10:34:09 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:34:59.358786725Z 169.254.130.6 - - [24/Mar/2024:10:34:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:35:59.353261177Z 169.254.130.6 - - [24/Mar/2024:10:35:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:36:59.396853147Z 169.254.130.6 - - [24/Mar/2024:10:36:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:37:59.364367335Z 169.254.130.6 - - [24/Mar/2024:10:37:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:38:59.369453454Z 169.254.130.6 - - [24/Mar/2024:10:38:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:39:59.354347492Z 169.254.130.6 - - [24/Mar/2024:10:39:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:40:59.336795251Z 169.254.130.6 - - [24/Mar/2024:10:40:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:41:13.744833522Z 169.254.130.6 - - [24/Mar/2024:10:41:13 +0000] "GET /sheet_log HTTP/1.1" 200 2164 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:41:13.794323060Z 169.254.130.6 - - [24/Mar/2024:10:41:13 +0000] "GET / HTTP/1.1" 200 33 "-" "ReadyForRequest/1.0 (LocalCache)"
+2024-03-24T10:41:13.804023395Z 169.254.130.6 - - [24/Mar/2024:10:41:13 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+2024-03-24T10:41:13.822545307Z 169.254.130.6 - - [24/Mar/2024:10:41:13 +0000] "GET / HTTP/1.1" 200 33 "-" "ReadyForRequest/1.0 (AppInit)"
+
+2024-03-24T10:41:16.987681193Z 169.254.130.6 - - [24/Mar/2024:10:41:16 +0000] "GET /sheet_log HTTP/1.1" 200 2308 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:41:18.857365017Z 169.254.130.6 - - [24/Mar/2024:10:41:18 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:41:23.901889434Z 169.254.130.6 - - [24/Mar/2024:10:41:23 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:41:28.920145114Z 169.254.130.6 - - [24/Mar/2024:10:41:28 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:41:33.939976719Z 169.254.130.6 - - [24/Mar/2024:10:41:33 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:41:38.980262007Z 169.254.130.6 - - [24/Mar/2024:10:41:38 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:41:43.992600951Z 169.254.130.6 - - [24/Mar/2024:10:41:43 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:41:49.019777270Z 169.254.130.6 - - [24/Mar/2024:10:41:49 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:41:54.048560431Z 169.254.130.6 - - [24/Mar/2024:10:41:54 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:41:59.058102715Z 169.254.130.6 - - [24/Mar/2024:10:41:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:41:59.377576442Z 169.254.130.6 - - [24/Mar/2024:10:41:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:42:04.091538401Z 169.254.130.6 - - [24/Mar/2024:10:42:04 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:42:09.120132905Z 169.254.130.6 - - [24/Mar/2024:10:42:09 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:42:14.132632263Z 169.254.130.6 - - [24/Mar/2024:10:42:14 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:42:19.184772064Z 169.254.130.6 - - [24/Mar/2024:10:42:19 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:42:24.281771399Z 169.254.130.6 - - [24/Mar/2024:10:42:24 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:42:34.363006349Z 169.254.130.6 - - [24/Mar/2024:10:42:34 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:42:39.383859279Z 169.254.130.6 - - [24/Mar/2024:10:42:39 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:42:44.443411257Z 169.254.130.6 - - [24/Mar/2024:10:42:44 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:42:49.488475789Z 169.254.130.6 - - [24/Mar/2024:10:42:49 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:42:54.505902028Z 169.254.130.6 - - [24/Mar/2024:10:42:54 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:42:59.370059314Z 169.254.130.6 - - [24/Mar/2024:10:42:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:42:59.514417212Z 169.254.130.6 - - [24/Mar/2024:10:42:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:43:04.543014897Z 169.254.130.6 - - [24/Mar/2024:10:43:04 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:43:09.575593166Z 169.254.130.6 - - [24/Mar/2024:10:43:09 +0000] "GET /home HTTP/1.1" 404 207 "-" "ReadyForRequest/1.0 (HealthCheck)"
+
+2024-03-24T10:43:44.747320328Z 169.254.130.6 - - [24/Mar/2024:10:43:44 +0000] "GET /sheet_log HTTP/1.1" 200 2308 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:43:45.472952042Z 169.254.130.6 - - [24/Mar/2024:10:43:45 +0000] "GET /sheet_log HTTP/1.1" 200 2308 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:44:59.364911710Z 169.254.130.6 - - [24/Mar/2024:10:44:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:45:59.370635826Z 169.254.130.6 - - [24/Mar/2024:10:45:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:47:59.348928382Z 169.254.130.6 - - [24/Mar/2024:10:47:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:48:45.121228826Z 169.254.130.6 - - [24/Mar/2024:10:48:45 +0000] "GET /sheet_log HTTP/1.1" 200 2308 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:50:59.361185853Z 169.254.130.6 - - [24/Mar/2024:10:50:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:52:59.368287666Z 169.254.130.6 - - [24/Mar/2024:10:52:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:53:59.345434713Z 169.254.130.6 - - [24/Mar/2024:10:53:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:54:39.076100187Z 169.254.130.6 - - [24/Mar/2024:10:54:39 +0000] "GET /sheet_log HTTP/1.1" 200 2308 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:54:42.297981039Z 169.254.130.6 - - [24/Mar/2024:10:54:42 +0000] "GET /sheet_log HTTP/1.1" 200 2308 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:54:45.557055594Z 169.254.130.6 - - [24/Mar/2024:10:54:45 +0000] "GET /sheet_log HTTP/1.1" 200 2308 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:54:47.388888852Z 169.254.130.6 - - [24/Mar/2024:10:54:47 +0000] "GET /sheet_log HTTP/1.1" 200 2308 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:55:50.965613385Z 169.254.130.6 - - [24/Mar/2024:10:55:50 +0000] "GET /sheet_log HTTP/1.1" 200 2308 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:55:54.249855923Z 169.254.130.6 - - [24/Mar/2024:10:55:54 +0000] "GET /sheet_log HTTP/1.1" 200 2308 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:55:55.976782537Z 169.254.130.6 - - [24/Mar/2024:10:55:55 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 224 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:55:56.335693325Z 169.254.130.6 - - [24/Mar/2024:10:55:56 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 224 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:55:58.387359791Z 169.254.130.6 - - [24/Mar/2024:10:55:58 +0000] "GET /get_field?field=%D7%9E%D7%92%D7%A8%D7%A9+4 HTTP/1.1" 200 59 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:55:58.716897256Z 169.254.130.6 - - [24/Mar/2024:10:55:58 +0000] "GET /get_all_fields HTTP/1.1" 200 158 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:55:58.969188467Z 169.254.130.6 - - [24/Mar/2024:10:55:58 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:55:59.081311704Z 169.254.130.6 - - [24/Mar/2024:10:55:59 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:55:59.304501310Z 169.254.130.6 - - [24/Mar/2024:10:55:59 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:55:59.436481447Z 169.254.130.6 - - [24/Mar/2024:10:55:59 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:55:59.446828024Z 169.254.130.6 - - [24/Mar/2024:10:55:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:56:00.490483823Z 169.254.130.6 - - [24/Mar/2024:10:56:00 +0000] "GET /sheet_log HTTP/1.1" 200 2445 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:56:03.744237134Z 169.254.130.6 - - [24/Mar/2024:10:56:03 +0000] "GET /sheet_log HTTP/1.1" 200 2445 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:56:07.000576016Z 169.254.130.6 - - [24/Mar/2024:10:56:06 +0000] "GET /sheet_log HTTP/1.1" 200 2445 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:56:08.002116815Z 169.254.130.6 - - [24/Mar/2024:10:56:07 +0000] "GET /get_field?field=%D7%9E%D7%92%D7%A8%D7%A9+4 HTTP/1.1" 200 59 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:56:08.133974151Z 169.254.130.6 - - [24/Mar/2024:10:56:08 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:56:08.237277417Z 169.254.130.6 - - [24/Mar/2024:10:56:08 +0000] "GET /get_all_fields HTTP/1.1" 200 158 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:56:08.338376939Z 169.254.130.6 - - [24/Mar/2024:10:56:08 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:56:08.451517149Z 169.254.130.6 - - [24/Mar/2024:10:56:08 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:56:09.866498426Z 169.254.130.6 - - [24/Mar/2024:10:56:09 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:56:13.105769394Z 169.254.130.6 - - [24/Mar/2024:10:56:13 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:56:16.358756359Z 169.254.130.6 - - [24/Mar/2024:10:56:16 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:56:19.619612169Z 169.254.130.6 - - [24/Mar/2024:10:56:19 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:56:22.881586061Z 169.254.130.6 - - [24/Mar/2024:10:56:22 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:56:26.107641094Z 169.254.130.6 - - [24/Mar/2024:10:56:26 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:56:29.375756007Z 169.254.130.6 - - [24/Mar/2024:10:56:29 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:56:32.659869917Z 169.254.130.6 - - [24/Mar/2024:10:56:32 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:56:35.870392676Z 169.254.130.6 - - [24/Mar/2024:10:56:35 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:56:39.128623801Z 169.254.130.6 - - [24/Mar/2024:10:56:39 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:56:42.396440054Z 169.254.130.6 - - [24/Mar/2024:10:56:42 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:56:45.672952608Z 169.254.130.6 - - [24/Mar/2024:10:56:45 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:56:48.908642880Z 169.254.130.6 - - [24/Mar/2024:10:56:48 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:56:52.174066273Z 169.254.130.6 - - [24/Mar/2024:10:56:52 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:56:55.393668217Z 169.254.130.6 - - [24/Mar/2024:10:56:55 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:56:58.628634387Z 169.254.130.6 - - [24/Mar/2024:10:56:58 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:56:59.386134602Z 169.254.130.6 - - [24/Mar/2024:10:56:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:57:01.912081645Z 169.254.130.6 - - [24/Mar/2024:10:57:01 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:57:05.151596441Z 169.254.130.6 - - [24/Mar/2024:10:57:05 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:57:08.412488311Z 169.254.130.6 - - [24/Mar/2024:10:57:08 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:57:11.613244100Z 169.254.130.6 - - [24/Mar/2024:10:57:11 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:57:14.895406973Z 169.254.130.6 - - [24/Mar/2024:10:57:14 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:57:18.154045132Z 169.254.130.6 - - [24/Mar/2024:10:57:18 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:57:21.444141367Z 169.254.130.6 - - [24/Mar/2024:10:57:21 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:57:24.770647832Z 169.254.130.6 - - [24/Mar/2024:10:57:24 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:57:27.981412855Z 169.254.130.6 - - [24/Mar/2024:10:57:27 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:57:31.193888971Z 169.254.130.6 - - [24/Mar/2024:10:57:31 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:57:34.426691084Z 169.254.130.6 - - [24/Mar/2024:10:57:34 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:57:37.667797592Z 169.254.130.6 - - [24/Mar/2024:10:57:37 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:57:40.942846391Z 169.254.130.6 - - [24/Mar/2024:10:57:40 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:57:44.193317068Z 169.254.130.6 - - [24/Mar/2024:10:57:44 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:57:47.483129905Z 169.254.130.6 - - [24/Mar/2024:10:57:47 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:57:50.714497326Z 169.254.130.6 - - [24/Mar/2024:10:57:50 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:57:53.964961880Z 169.254.130.6 - - [24/Mar/2024:10:57:53 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:57:57.229422439Z 169.254.130.6 - - [24/Mar/2024:10:57:57 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:57:59.365448173Z 169.254.130.6 - - [24/Mar/2024:10:57:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:58:00.447886706Z 169.254.130.6 - - [24/Mar/2024:10:58:00 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:58:03.699642363Z 169.254.130.6 - - [24/Mar/2024:10:58:03 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:58:06.908839066Z 169.254.130.6 - - [24/Mar/2024:10:58:06 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:58:10.146671678Z 169.254.130.6 - - [24/Mar/2024:10:58:10 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:58:13.391177611Z 169.254.130.6 - - [24/Mar/2024:10:58:13 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:58:16.641436498Z 169.254.130.6 - - [24/Mar/2024:10:58:16 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:58:19.884478795Z 169.254.130.6 - - [24/Mar/2024:10:58:19 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:58:23.120596189Z 169.254.130.6 - - [24/Mar/2024:10:58:23 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:58:26.372873678Z 169.254.130.6 - - [24/Mar/2024:10:58:26 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:58:29.614041658Z 169.254.130.6 - - [24/Mar/2024:10:58:29 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:58:32.865829916Z 169.254.130.6 - - [24/Mar/2024:10:58:32 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:58:36.108767874Z 169.254.130.6 - - [24/Mar/2024:10:58:36 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:58:39.378335257Z 169.254.130.6 - - [24/Mar/2024:10:58:39 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:58:42.627148306Z 169.254.130.6 - - [24/Mar/2024:10:58:42 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:58:45.839251025Z 169.254.130.6 - - [24/Mar/2024:10:58:45 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:58:49.058901574Z 169.254.130.6 - - [24/Mar/2024:10:58:49 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:58:52.288332884Z 169.254.130.6 - - [24/Mar/2024:10:58:52 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:58:55.533919911Z 169.254.130.6 - - [24/Mar/2024:10:58:55 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:58:58.732074947Z 169.254.130.6 - - [24/Mar/2024:10:58:58 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:58:59.364872529Z 169.254.130.6 - - [24/Mar/2024:10:58:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:59:01.976492046Z 169.254.130.6 - - [24/Mar/2024:10:59:01 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:59:05.225365798Z 169.254.130.6 - - [24/Mar/2024:10:59:05 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:59:08.451426565Z 169.254.130.6 - - [24/Mar/2024:10:59:08 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:59:11.684005826Z 169.254.130.6 - - [24/Mar/2024:10:59:11 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:59:14.932604324Z 169.254.130.6 - - [24/Mar/2024:10:59:14 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:59:18.158470698Z 169.254.130.6 - - [24/Mar/2024:10:59:18 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:59:21.439044918Z 169.254.130.6 - - [24/Mar/2024:10:59:21 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:59:24.764214140Z 169.254.130.6 - - [24/Mar/2024:10:59:24 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:59:27.989298664Z 169.254.130.6 - - [24/Mar/2024:10:59:27 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:59:31.247136698Z 169.254.130.6 - - [24/Mar/2024:10:59:31 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:59:34.452683539Z 169.254.130.6 - - [24/Mar/2024:10:59:34 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:59:37.730275532Z 169.254.130.6 - - [24/Mar/2024:10:59:37 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:59:40.980584333Z 169.254.130.6 - - [24/Mar/2024:10:59:40 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:59:44.237161969Z 169.254.130.6 - - [24/Mar/2024:10:59:44 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:59:47.782026490Z 169.254.130.6 - - [24/Mar/2024:10:59:47 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:59:51.037491367Z 169.254.130.6 - - [24/Mar/2024:10:59:51 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T10:59:54.318679248Z 169.254.130.6 - - [24/Mar/2024:10:59:54 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:59:57.610074596Z 169.254.130.6 - - [24/Mar/2024:10:59:57 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T10:59:59.358715017Z 169.254.130.6 - - [24/Mar/2024:10:59:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T11:00:00.859063258Z 169.254.130.6 - - [24/Mar/2024:11:00:00 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T11:00:04.096938671Z 169.254.130.6 - - [24/Mar/2024:11:00:04 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T11:00:07.343986883Z 169.254.130.6 - - [24/Mar/2024:11:00:07 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T11:00:10.561236740Z 169.254.130.6 - - [24/Mar/2024:11:00:10 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T11:00:13.823766696Z 169.254.130.6 - - [24/Mar/2024:11:00:13 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T11:00:17.029654148Z 169.254.130.6 - - [24/Mar/2024:11:00:17 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T11:00:20.283141450Z 169.254.130.6 - - [24/Mar/2024:11:00:20 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T11:00:23.570557392Z 169.254.130.6 - - [24/Mar/2024:11:00:23 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T11:00:26.811822206Z 169.254.130.6 - - [24/Mar/2024:11:00:26 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T11:00:30.016059685Z 169.254.130.6 - - [24/Mar/2024:11:00:30 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T11:00:33.244017178Z 169.254.130.6 - - [24/Mar/2024:11:00:33 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T11:00:36.473792192Z 169.254.130.6 - - [24/Mar/2024:11:00:36 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T11:00:39.700262415Z 169.254.130.6 - - [24/Mar/2024:11:00:39 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T11:00:42.924251713Z 169.254.130.6 - - [24/Mar/2024:11:00:42 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T11:00:46.154456371Z 169.254.130.6 - - [24/Mar/2024:11:00:46 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T11:00:49.411852058Z 169.254.130.6 - - [24/Mar/2024:11:00:49 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T11:01:59.375568199Z 169.254.130.6 - - [24/Mar/2024:11:01:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T11:04:59.397882536Z 169.254.130.6 - - [24/Mar/2024:11:04:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T11:05:59.330496675Z 169.254.130.6 - - [24/Mar/2024:11:05:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T11:07:59.731768854Z 169.254.130.6 - - [24/Mar/2024:11:07:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T11:09:59.381327173Z 169.254.130.6 - - [24/Mar/2024:11:09:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T11:10:18.259946431Z 169.254.130.6 - - [24/Mar/2024:11:10:18 +0000] "GET /sheet_log HTTP/1.1" 200 2582 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T11:10:59.355946533Z 169.254.130.6 - - [24/Mar/2024:11:10:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T11:11:59.345962559Z 169.254.130.6 - - [24/Mar/2024:11:11:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T11:12:59.379179883Z 169.254.130.6 - - [24/Mar/2024:11:12:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T11:13:59.331867984Z 169.254.130.6 - - [24/Mar/2024:11:13:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T11:14:59.359014793Z 169.254.130.6 - - [24/Mar/2024:11:14:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T11:15:59.380559290Z 169.254.130.6 - - [24/Mar/2024:11:15:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T11:18:59.375051889Z 169.254.130.6 - - [24/Mar/2024:11:18:59 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+

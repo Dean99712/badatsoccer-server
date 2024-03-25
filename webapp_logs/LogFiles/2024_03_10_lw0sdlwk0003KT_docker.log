@@ -1,0 +1,1509 @@
+2024-03-10T16:05:26.4409553Z Container start method called.
+2024-03-10T16:05:26.9868417Z Establishing network.
+2024-03-10T16:05:27.0626124Z Pulling image: mcr.microsoft.com/appsvc/kudulite:bullseye_20240207.2.tuxprod.
+2024-03-10T16:05:28.9352786Z Container is starting.
+2024-03-10T16:05:28.9458806Z Establishing network if not established already.
+2024-03-10T16:05:28.9479183Z Mounting volumes.
+2024-03-10T16:05:28.9679635Z Nested mountpoint 
+2024-03-10T16:05:29.0177778Z Nested mountpoint volatile/logs
+2024-03-10T16:05:29.0445909Z Nested mountpoint 
+2024-03-10T16:05:29.1225216Z Nested mountpoint 
+2024-03-10T16:05:29.1413497Z Nested mountpoint 
+2024-03-10T16:05:29.2207120Z Creating container.
+2024-03-10T16:05:29.2287688Z Creating pipes for streaming container io.
+2024-03-10T16:05:29.2341413Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_kudu_59c13698/stdout_f01f463a265a46ebaa78305f51e6a86a.
+2024-03-10T16:05:29.2413236Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_kudu_59c13698/stdout_f01f463a265a46ebaa78305f51e6a86a.
+2024-03-10T16:05:29.2495211Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_kudu_59c13698/stdout_f01f463a265a46ebaa78305f51e6a86a for reading in non-blocking mode.
+2024-03-10T16:05:29.2515248Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_kudu_59c13698/stdout_f01f463a265a46ebaa78305f51e6a86a.
+2024-03-10T16:05:29.2600803Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_kudu_59c13698/stdout_f01f463a265a46ebaa78305f51e6a86a.
+2024-03-10T16:05:29.2683360Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_kudu_59c13698/stderr_f8a9ea1a86cc40d5a974585da36a689c.
+2024-03-10T16:05:29.2706594Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_kudu_59c13698/stderr_f8a9ea1a86cc40d5a974585da36a689c.
+2024-03-10T16:05:29.2805180Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_kudu_59c13698/stderr_f8a9ea1a86cc40d5a974585da36a689c for reading in non-blocking mode.
+2024-03-10T16:05:29.2909204Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_kudu_59c13698/stderr_f8a9ea1a86cc40d5a974585da36a689c.
+2024-03-10T16:05:29.2986396Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_kudu_59c13698/stderr_f8a9ea1a86cc40d5a974585da36a689c.
+2024-03-10T16:05:30.3423071Z Starting container: python-flask-webapp-t_kudu_59c13698.
+2024-03-10T16:05:30.6707735Z Starting watchers and probes.
+2024-03-10T16:05:30.7943703Z Starting metrics collection.
+2024-03-10T16:05:30.8240438Z Container is running.
+2024-03-10T16:05:31.1001022Z Container start method finished after 4154 ms.
+2024-03-10T16:07:20.4907374Z Container start method called.
+2024-03-10T16:07:20.5499823Z Establishing network.
+2024-03-10T16:07:20.6269098Z Pulling image: mcr.microsoft.com/appsvc/python:3.11_20240207.3.tuxprod.
+2024-03-10T16:09:02.2884670Z Container is starting.
+2024-03-10T16:09:02.3194871Z Establishing network if not established already.
+2024-03-10T16:09:02.3455161Z Mounting volumes.
+2024-03-10T16:09:02.3678481Z Nested mountpoint 
+2024-03-10T16:09:02.4146403Z Nested mountpoint volatile/logs
+2024-03-10T16:09:02.4429642Z Nested mountpoint 
+2024-03-10T16:09:02.5133663Z Creating container.
+2024-03-10T16:09:02.5239115Z Creating pipes for streaming container io.
+2024-03-10T16:09:02.5426009Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_667c6313/stdout_440a52c691c745c78e4af49b10be4683.
+2024-03-10T16:09:02.5514804Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_667c6313/stdout_440a52c691c745c78e4af49b10be4683.
+2024-03-10T16:09:02.5623959Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_667c6313/stdout_440a52c691c745c78e4af49b10be4683 for reading in non-blocking mode.
+2024-03-10T16:09:02.5701923Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_667c6313/stdout_440a52c691c745c78e4af49b10be4683.
+2024-03-10T16:09:02.5727040Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_667c6313/stdout_440a52c691c745c78e4af49b10be4683.
+2024-03-10T16:09:02.5889054Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_667c6313/stderr_f4800f5391894120a3b70b0a8a7f73f9.
+2024-03-10T16:09:02.5910096Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_667c6313/stderr_f4800f5391894120a3b70b0a8a7f73f9.
+2024-03-10T16:09:02.6001045Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_667c6313/stderr_f4800f5391894120a3b70b0a8a7f73f9 for reading in non-blocking mode.
+2024-03-10T16:09:02.6034296Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_667c6313/stderr_f4800f5391894120a3b70b0a8a7f73f9.
+2024-03-10T16:09:02.6101797Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_667c6313/stderr_f4800f5391894120a3b70b0a8a7f73f9.
+2024-03-10T16:09:03.3129993Z Starting container: python-flask-webapp-t_667c6313.
+2024-03-10T16:09:03.6917907Z Starting watchers and probes.
+2024-03-10T16:09:03.7774157Z Starting metrics collection.
+2024-03-10T16:09:03.7895870Z Container is running.
+2024-03-10T16:09:06.7945913Z Container start method finished after 106228 ms.
+2024-03-10T16:19:52.5379337Z Container start method called.
+2024-03-10T16:19:52.6838114Z Establishing network.
+2024-03-10T16:19:52.7628163Z Pulling image: mcr.microsoft.com/appsvc/python:3.11_20240207.3.tuxprod.
+2024-03-10T16:19:52.9652663Z Container start method called.
+2024-03-10T16:19:53.0069431Z Establishing network.
+2024-03-10T16:19:53.0461111Z Pulling image: mcr.microsoft.com/appsvc/kudulite:bullseye_20240207.2.tuxprod.
+2024-03-10T16:19:56.8446061Z Container is starting.
+2024-03-10T16:19:56.8703809Z Establishing network if not established already.
+2024-03-10T16:19:56.8796462Z Mounting volumes.
+2024-03-10T16:19:56.9017153Z Nested mountpoint 
+2024-03-10T16:19:56.9599818Z Nested mountpoint volatile/logs
+2024-03-10T16:19:57.0073673Z Nested mountpoint 
+2024-03-10T16:19:57.0549304Z Nested mountpoint 
+2024-03-10T16:19:57.2915752Z Nested mountpoint 
+2024-03-10T16:19:57.3755848Z Creating container.
+2024-03-10T16:19:57.3860084Z Creating pipes for streaming container io.
+2024-03-10T16:19:57.3883515Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_kudu_dddc884b/stdout_166d685cda7a4133abdcab577d831f69.
+2024-03-10T16:19:57.4635032Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_kudu_dddc884b/stdout_166d685cda7a4133abdcab577d831f69.
+2024-03-10T16:19:57.4727643Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_kudu_dddc884b/stdout_166d2024-03-10T16:19:57.4944602Z Nested mountpoint 
+2024-03-10T16:19:57.5620630Z Creating container.
+2024-03-10T16:19:57.5634015Z Creating pipes for streaming container io.
+2024-03-10T16:19:57.5643282Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_b940f654/stdout_b72a06ed303e4f1abd8ffd4e597502a5.
+2024-03-10T16:19:57.5807282Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_b940f654/stdout_b72a06ed303e4f1abd8ffd4e597502a5.
+2024-03-10T16:19:57.5822530Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_b940f654/stdout_b72a06ed303e4f1abd8ffd4e597502a5 for reading in non-blocking mode.
+2024-03-10T16:19:57.5831410Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_b940f654/stdout_b72a06ed303e4f1abd8ffd4e597502a5.
+2024-03-10T16:19:57.5840673Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_b940f654/stdout_b72a06ed303e4f1abd8ffd4e597502a5.
+2024-03-10T16:19:57.6032572Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_b940f654/stderr_25d11c534d60458695fe2d63061ad7fb.
+2024-03-10T16:19:57.6116028Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_b940f654/stderr_25d11c534d60458695fe2d63061ad7fb.
+2024-03-10T16:19:57.6131136Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_b940f654/stderr_25d11c534d60458695fe2d63061ad7fb for reading in non-blocking mode.
+2024-03-10T16:19:57.6212244Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_b940f654/stderr_25d11c534d60458695fe2d63061ad7fb.
+2024-03-10T16:19:57.6228729Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_b940f654/stderr_25d11c534d60458695fe2d63061ad7fb.
+2024-03-10T16:19:58.7769422Z Starting container: python-flask-webapp-t_kudu_dddc884b.
+2024-03-10T16:19:59.1427642Z Starting watchers and probes.
+2024-03-10T16:19:59.1799959Z Starting metrics collection.
+2024-03-10T16:19:59.2272961Z Container is running.
+2024-03-10T16:19:59.3732420Z Container start method finished after 6339 ms.
+2024-03-10T16:20:02.3477580Z Starting watchers and probes.
+2024-03-10T16:20:02.3680258Z Starting metrics collection.
+2024-03-10T16:20:02.3975543Z Container is running.
+2024-03-10T16:20:03.3582990Z Container start method finished after 10712 ms.
+2024-03-10T16:20:23.6603576Z Container is terminating. Grace period: 0 seconds.
+2024-03-10T16:20:24.1197207Z Stop and delete container. Retry count = 0
+2024-03-10T16:20:24.1751473Z Stopping container: python-flask-webapp-t_kudu_59c13698.
+2024-03-10T16:20:25.6556286Z Deleting container: python-flask-webapp-t_kudu_59c13698. Retry count = 0
+2024-03-10T16:20:27.1189937Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:20:27.1989132Z Container is terminated. Total time elapsed: 3511 ms.
+2024-03-10T16:20:51.6255934Z Container is terminating. Grace period: 5 seconds.
+2024-03-10T16:20:51.6676746Z Stop and delete container. Retry count = 0
+2024-03-10T16:20:51.6757613Z Stopping container: python-flask-webapp-t_667c6313.
+2024-03-10T16:20:56.9394205Z Deleting container: python-flask-webapp-t_667c6313. Retry count = 0
+2024-03-10T16:20:57.5952029Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:20:57.6072050Z Container is terminated. Total time elapsed: 5970 ms.
+2024-03-10T16:21:00.5131155Z Container start method called.
+2024-03-10T16:21:00.7763475Z Establishing network.
+2024-03-10T16:21:00.9601624Z Pulling image: mcr.microsoft.com/appsvc/kudulite:bullseye_20240207.2.tuxprod.
+2024-03-10T16:21:02.4662955Z Container start method called.
+2024-03-10T16:21:02.5625988Z Establishing network.
+2024-03-10T16:21:02.5710821Z Pulling image: mcr.microsoft.com/appsvc/python:3.11_20240207.3.tuxprod.
+2024-03-10T16:21:06.9932786Z Container is starting.
+2024-03-10T16:21:07.0054275Z Establishing network if not established already.
+2024-03-10T16:21:07.0334241Z Mounting volumes.
+2024-03-10T16:21:07.0513685Z Nested mountpoint 
+2024-03-10T16:21:07.0730571Z Nested mountpoint volatile/logs
+2024-03-10T16:21:07.2935546Z Nested mountpoint 
+2024-03-10T16:21:07.3234827Z Nested mountpoint 
+2024-03-10T16:21:07.3454470Z Nested mountpoint 
+2024-03-10T16:21:07.5606490Z Creating container.
+2024-03-10T16:21:07.5951884Z Creating pipes for streaming container io.
+2024-03-10T16:21:07.6155194Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_kudu_07ccf24f/stdout_00d77543a1c4416daaa64eb3da9a7bba.
+2024-03-10T16:21:07.6242834Z Successfully created stdout named pipe 2024-03-10T16:21:07.7805453Z Nested mountpoint volatile/logs
+2024-03-10T16:21:07.8092694Z Nested mountpoint 
+2024-03-10T16:21:07.8968067Z Creating container.
+2024-03-10T16:21:07.8993932Z Creating pipes for streaming container io.
+2024-03-10T16:21:07.9186100Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_48af530b/stdout_ecc41f14844c411ea4dfd97a2f63c441.
+2024-03-10T16:21:07.9357919Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_48af530b/stdout_ecc41f14844c411ea4dfd97a2f63c441.
+2024-03-10T16:21:07.9554806Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_48af530b/stdout_ecc41f14844c411ea4dfd97a2f63c441 for reading in non-blocking mode.
+2024-03-10T16:21:07.9767410Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_48af530b/stdout_ecc41f14844c411ea4dfd97a2f63c441.
+2024-03-10T16:21:07.9861418Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_48af530b/stdout_ecc41f14844c411ea4dfd97a2f63c441.
+2024-03-10T16:21:07.9879221Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_48af530b/stderr_83673ad319d149f0b7051bf03e0c84ed.
+2024-03-10T16:21:08.0081282Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_48af530b/stderr_83673ad319d149f0b7051bf03e0c84ed.
+2024-03-10T16:21:08.0243146Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_48af530b/stderr_83673ad319d149f0b7051bf03e0c84ed for reading in non-blocking mode.
+2024-03-10T16:21:08.0347146Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_48af530b/stderr_83673ad319d149f0b7051bf03e0c84ed.
+2024-03-10T16:21:08.0445326Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_48af530b/stderr_83673ad319d149f0b7051bf03e0c84ed.
+2024-03-10T16:21:09.1880521Z Starting container: python-flask-webapp-t_kudu_07ccf24f.
+2024-03-10T16:21:09.2174468Z Container start up interrupted. Revert by terminate.
+2024-03-10T16:21:09.2469029Z Container is terminating. Grace period: 0 seconds.
+202024-03-10T16:21:09.2741701Z Container is terminating. Grace period: 5 seconds.
+2024-03-10T16:21:09.3033217Z Stop and delete container. Retry count = 0
+20242024-03-10T16:21:09.8138380Z Deleting container: python-flask-webapp-t_kudu_07ccf24f. Retry count = 0
+83Z Stop container failed with unexpected exception. Proceed regardless.
+2024-03-10T16:21:09.6253302Z Get exit code failed with unexpected exception. Proceed regardless.
+2024-03-10T16:21:09.6357059Z Deleting container: python-flask-webapp-t_48af530b. Retry count = 0
+2024-03-10T16:21:09.6562621Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:21:09.6653481Z Container is terminated. Total time elapsed: 371 ms.
+2024-03-10T16:21:11.8410946Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:21:11.8607044Z Container is terminated. Total time elapsed: 2596 ms.
+2024-03-10T16:21:13.1098940Z Container start method called.
+2024-03-10T16:21:13.1618642Z Establishing network.
+2024-03-10T16:21:13.2113641Z Pulling image: mcr.microsoft.com/appsvc/python:3.11_20240207.3.tuxprod.
+2024-03-10T16:21:14.5328559Z Container start method called.
+2024-03-10T16:21:14.6012715Z Establishing network.
+2024-03-10T16:21:14.6578862Z Pulling image: mcr.microsoft.com/appsvc/kudulite:bullseye_20240207.2.tuxprod.
+2024-03-10T16:21:18.6028238Z Container is starting.
+2024-03-10T16:21:18.6152737Z Establishing network if not established already.
+2024-03-10T16:21:18.6402808Z Mounting volumes.
+2024-03-10T16:21:18.6601670Z Nested mountpoint 
+2024-03-10T16:21:18.7284309Z Nested mountpoint volatile/logs
+2024-03-10T16:21:18.7557078Z Nested mountpoint 
+2024-03-10T16:21:18.9046139Z Creating container.
+2024-03-10T16:21:18.9209021Z Creating pipes for streaming container io.
+2024-03-10T16:21:18.9328244Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_7455942d/stdout_3cf6cac55bf1418a8157c8bc8d052270.
+2024-03-10T16:21:18.9497354Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_7455942d/stdout_3cf6cac55bf1418a8157c8bc8d052270.
+2024-03-10T16:21:18.9874862Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_7455942d/stdout_3cf6cac55bf1418a8157c8bc8d052270 for reading in non-blocking mode.
+2024-03-10T16:21:18.9973629Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_7455942d/stdout_3cf6cac55bf1418a8157c8bc8d052270.
+2024-03-10T16:21:19.0199481Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_7455942d/stdout_3cf6cac55bf1418a8157c8bc8d052270.
+2024-03-10T16:21:19.0364736Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_7455942d/stderr_63152f15684949a9a82c5e453f9aeaf3.
+2024-03-10T16:21:19.0471930Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_7455942d/stderr_63152f15684949a9a82c5e453f9aeaf3.
+2024-03-10T16:21:19.0498612Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_7455942d/stderr_63152f15684949a9a82c5e453f9aeaf3 for reading in non-blocking mode.
+2024-03-10T16:21:19.0578477Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_7455942d/stderr_63152f15684949a9a82c5e453f9aeaf3.
+2024-03-10T16:21:19.0677740Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_7455942d/stderr_63152f15684949a9a82c5e453f9aeaf3.
+2024-03-10T16:21:19.1221563Z Container is starting.
+2024-03-10T16:21:19.1312472Z Establishing network if not established already.
+2024-03-10T16:21:19.1389818Z Mounting volumes.
+2024-03-10T16:21:19.1422483Z Nested mountpoint 
+2024-03-10T16:21:19.1874240Z Nested mountpoint volatile/logs
+2024-03-10T16:21:19.2100346Z Nested mountpoint 
+2024-03-10T16:21:19.2466754Z Nested mountpoint 
+2024-03-10T16:21:19.2668956Z Nested mountpoint 
+2024-03-10T16:21:19.3573475Z Creating container.
+2024-03-10T16:21:19.3762119Z Creating pipes for streaming container io.
+2024-03-10T16:21:19.3853095Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_kudu_758d2e43/stdout_3f203c2415b641eba6e2f29523e4139f.
+2024-03-10T16:21:19.3875747Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_kudu_758d2e43/stdout_3f203c2415b641eba6e2f29523e4139f.
+2024-03-10T16:21:19.3961663Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_kudu_758d2e43/stdout_3f203c2415b641eba6e2f29523e4139f for reading in non-blocking mode.
+2024-03-10T16:21:19.4054050Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_kudu_758d2e43/stdout_3f203c2415b641eba6e2f29523e4139f.
+2024-03-10T16:21:19.4136169Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_kudu_758d2e43/stdout_3f203c2415b641eba6e2f29523e4139f.
+2024-03-10T16:21:19.4149560Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_kudu_758d2e43/stderr_57aa2e4ab9774b0587cbe020bfc0e269.
+2024-03-10T16:21:19.4237638Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_kudu_758d2e43/stderr_57aa2e4ab9774b0587cbe020bfc0e269.
+2024-03-10T16:21:19.4258469Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_kudu_758d2e43/stderr_57aa2e4ab9774b0587cbe020bfc0e269 for reading in non-blocking mode.
+2024-03-10T16:21:19.4352016Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_kudu_758d2e43/stderr_57aa2e4ab9774b0587cbe020bfc0e269.
+2024-03-10T16:21:19.4430694Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_kudu_758d2e43/stderr_57aa2e4ab9774b0587cbe020bfc0e269.
+2024-03-10T16:21:20.5675163Z Starting container: python-flask-webapp-t_7455942d.
+2024-03-10T16:21:20.8508850Z Starting watchers and probes.
+2024-03-10T16:21:20.8781974Z Starting metrics collection.
+2024-03-10T16:21:20.8996242Z Container is running.
+2024-03-10T16:21:22.8850594Z Starting container: python-flask-webapp-t_kudu_758d2e43.
+2024-03-10T16:21:23.6814434Z Starting watchers and probes.
+2024-03-10T16:21:23.7022047Z Starting metrics collection.
+2024-03-10T16:21:23.7103074Z Container is running.
+2024-03-10T16:21:23.9461811Z Container start method finished after 9346 ms.
+2024-03-10T16:21:34.7288837Z Container is terminating. Grace period: 5 seconds.
+2024-03-10T16:21:34.8258093Z Stop and delete container. Retry count = 0
+2024-03-10T16:21:34.8453083Z Stopping container: python-flask-webapp-t_b940f654.
+2024-03-10T16:21:39.5528054Z Container is terminating. Grace period: 0 seconds.
+2024-03-10T16:21:39.7283705Z Stop and delete container. Retry count = 0
+2024-03-10T16:21:39.7377835Z Stopping container: python-flask-webapp-t_kudu_dddc884b.
+2024-03-10T16:21:40.3346186Z Deleting container: python-flask-webapp-t_kudu_dddc884b. Retry count = 0
+2024-03-10T16:21:41.4028573Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:21:41.4116287Z Container is terminated. Total time elapsed: 6652 ms.
+2024-03-10T16:22:51.6268988Z Container start method called.
+2024-03-10T16:22:51.8015565Z Establishing network.
+2024-03-10T16:22:51.8591643Z Pulling image: mcr.microsoft.com/appsvc/python:3.11_20240207.3.tuxprod.
+2024-03-10T16:22:51.9875550Z Container start method called.
+2024-03-10T16:22:52.0631268Z Establishing network.
+2024-03-10T16:22:52.1604070Z Pulling image: mcr.microsoft.com/appsvc/kudulite:bullseye_20240207.2.tuxprod.
+2024-03-10T16:22:55.6754662Z Container is starting.
+2024-03-10T16:22:55.6852388Z Establishing network if not established already.
+2024-03-10T16:22:55.6865951Z Mounting volumes.
+2024-03-10T16:22:55.6875871Z Nested mountpoint 
+2024-03-10T16:22:55.7364543Z Nested mountpoint volatile/logs
+2024-03-10T16:22:55.7645134Z Nested mountpoint 
+2024-03-10T16:22:55.9214423Z Creating container.
+2024-03-10T16:22:55.9399142Z Creating pipes for streaming container io.
+2024-03-10T16:22:55.9490539Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_db226ac6/stdout_58a6bcd77a9948aa9a3f57d9a34a3ea7.
+2024-03-10T16:22:55.9587541Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_db226ac6/stdout_58a6bcd77a9948aa9a3f57d9a34a3ea7.
+2024-03-10T16:22:55.9676242Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_db226ac6/stdout_58a6bcd77a9948aa9a3f57d9a34a3ea7 for reading in non-blocking mode.
+2024-03-10T16:22:55.9863705Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_db226ac6/stdout_58a6bcd77a9948aa9a3f57d9a34a3ea7.
+2024-03-10T16:22:55.9890415Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_db226ac6/stdout_58a6bcd77a9948aa9a3f57d9a34a3ea7.
+2024-03-10T16:22:55.9972918Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_db226ac6/stderr_dd5f390baf8f43eab257c62d6a47fc71.
+2024-03-10T16:22:55.9991837Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_db226ac6/stderr_dd5f390baf8f43eab257c62d6a47fc71.
+2024-03-10T16:22:56.0082151Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_db226ac6/stderr_dd5f390baf8f43eab257c62d6a47fc71 for reading in non-blocking mode.
+2024-03-10T16:22:56.0188913Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_db226ac6/stderr_dd5f390baf8f43eab257c62d6a47fc71.
+2024-03-10T16:22:56.0277259Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_db226ac6/stderr_dd5f390baf8f43eab257c62d6a47fc71.
+2024-03-10T16:22:56.1142814Z Container is starting.
+2024-03-10T16:22:56.1249910Z Establishing network if not established already.
+2024-03-10T16:22:56.1537291Z Mounting volumes.
+2024-03-10T16:22:56.1821534Z Nested mountpoint 
+2024-03-10T16:22:56.2498503Z Nested mountpoint volatile/logs
+2024-03-10T16:22:56.2887284Z Nested mountpoint 
+2024-03-10T16:22:56.3745725Z Nested mountpoint 
+2024-03-10T16:22:56.4231847Z Nested mountpoint 
+2024-03-10T16:22:56.4722698Z Creating container.
+2024-03-10T16:22:56.4933649Z Creating pipes for streaming container io.
+2024-03-10T16:22:56.5029600Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_kudu_552f8886/stdout_a18f29f0f35d48c8bf8ffdec68cf44a6.
+2024-03-10T16:22:56.5411302Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_kudu_552f8886/stdout_a18f29f0f35d48c8bf8ffdec68cf44a6.
+2024-03-10T16:22:56.5519141Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_kudu_552f8886/stdout_a18f29f0f35d48c8bf8ffdec68cf44a6 for reading in non-blocking mode.
+2024-03-10T16:22:56.5695742Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_kudu_552f8886/stdout_a18f29f0f35d48c8bf8ffdec68cf44a6.
+2024-03-10T16:22:56.6088591Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_kudu_552f8886/stdout_a18f29f0f35d48c8bf8ffdec68cf44a6.
+2024-03-10T16:22:56.6114575Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_kudu_552f8886/stderr_0e57b4af2d524f138b0e082dfe8bb2be.
+2024-03-10T16:22:56.6188967Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_kudu_552f8886/stderr_0e57b4af2d524f138b0e082dfe8bb2be.
+2024-03-10T16:22:56.6200264Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_kudu_552f8886/stderr_0e57b4af2d524f138b0e082dfe8bb2be for reading in non-blocking mode.
+2024-03-10T16:22:56.6306035Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_kudu_552f8886/stderr_0e57b4af2d524f138b0e082dfe8bb2be.
+2024-03-10T16:22:56.6484834Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_kudu_552f8886/stderr_0e57b4af2d524f138b0e082dfe8bb2be.
+2024-03-10T16:22:57.5140371Z Starting container: python-flask-webapp-t_db226ac6.
+2024-03-10T16:22:57.8666614Z Starting watchers and probes.
+2024-03-10T16:22:58.0515764Z Starting metrics collection.
+2024-03-10T16:22:58.0710120Z Container is running.
+2024-03-10T16:22:58.4315941Z Container start method finished after 6631 ms.
+2024-03-10T16:22:58.8630438Z Starting watchers and probes.
+2024-03-10T16:22:58.9457617Z Starting metrics collection.
+2024-03-10T16:22:58.9479057Z Container is running.
+2024-03-10T16:22:59.1628210Z Container start method finished after 7106 ms.
+2024-03-10T16:23:17.5186515Z Container is terminating. Grace period: 0 seconds.
+2024-03-10T16:23:17.6727092Z Stop and delete container. Retry count = 0
+2024-03-10T16:23:17.7306781Z Stopping container: python-flask-webapp-t_kudu_758d2e43.
+2024-03-10T16:23:19.1087435Z Deleting container: python-flask-webapp-t_kudu_758d2e43. Retry count = 0
+2024-03-10T16:23:20.2775929Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:23:20.3047285Z Container is terminated. Total time elapsed: 2767 ms.
+2024-03-10T16:23:21.9689918Z Container is terminating. Grace period: 5 seconds.
+2024-03-10T16:23:22.0450224Z Stop and delete container. Retry count = 0
+2024-03-10T16:23:22.0547382Z Stopping container: python-flask-webapp-t_7455942d.
+2024-03-10T16:23:27.2822929Z Deleting container: python-flask-webapp-t_7455942d. Retry count = 0
+2024-03-10T16:23:28.0305647Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:23:28.0452770Z Container is terminated. Total time elapsed: 6022 ms.
+2024-03-10T16:32:25.8502948Z Container start method called.
+2024-03-10T16:32:25.9280435Z Establishing network.
+2024-03-10T16:32:25.9371219Z Pulling image: mcr.microsoft.com/appsvc/python:3.11_20240207.3.tuxprod.
+2024-03-10T16:32:29.6962609Z Container is starting.
+2024-03-10T16:32:29.7036354Z Establishing network if not established already.
+2024-03-10T16:32:29.7112844Z Mounting volumes.
+2024-03-10T16:32:29.7222332Z Nested mountpoint 
+2024-03-10T16:32:29.7436688Z Nested mountpoint volatile/logs
+2024-03-10T16:32:29.7808435Z Nested mountpoint 
+2024-03-10T16:32:29.9168992Z Creating container.
+2024-03-10T16:32:29.9193649Z Creating pipes for streaming container io.
+2024-03-10T16:32:29.9282643Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_0de163a0/stdout_bc68bfe5b5f1478e9c5d7c2d7b116029.
+2024-03-10T16:32:29.9367453Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_0de163a0/stdout_bc68bfe5b5f1478e9c5d7c2d7b116029.
+2024-03-10T16:32:29.9386236Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_0de163a0/stdout_bc68bfe5b5f1478e9c5d7c2d7b116029 for reading in non-blocking mode.
+2024-03-10T16:32:29.9469527Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_0de163a0/stdout_bc68bfe5b5f1478e9c5d7c2d7b116029.
+2024-03-10T16:32:29.9493583Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_0de163a0/stdout_bc68bfe5b5f1478e9c5d7c2d7b116029.
+2024-03-10T16:32:29.9586575Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_0de163a0/stderr_8b34815402fa40b79424f644da89b21d.
+2024-03-10T16:32:29.9665270Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_0de163a0/stderr_8b34815402fa40b79424f644da89b21d.
+2024-03-10T16:32:29.9683387Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_0de163a0/stderr_8b34815402fa40b79424f644da89b21d for reading in non-blocking mode.
+2024-03-10T16:32:29.9763583Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_0de163a0/stderr_8b34815402fa40b79424f644da89b21d.
+2024-03-10T16:32:29.9779850Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_0de163a0/stderr_8b34815402fa40b79424f644da89b21d.
+2024-03-10T16:32:30.5913746Z Starting container: python-flask-webapp-t_0de163a0.
+2024-03-10T16:32:31.0512577Z Starting watchers and probes.
+2024-03-10T16:32:31.3261409Z Starting metrics collection.
+2024-03-10T16:32:31.3730594Z Container is running.
+2024-03-10T16:32:34.8165477Z Container start method finished after 8898 ms.
+2024-03-10T16:32:47.6973525Z Container has finished running with exit code: 3.
+2024-03-10T16:32:47.7049944Z Container is terminating. Grace period: 5 seconds.
+2024-03-10T16:32:47.7211034Z Stop and delete container. Retry count = 0
+2024-03-10T16:32:47.7311353Z Stopping container: python-flask-webapp-t_0de163a0.
+2024-03-10T16:32:47.8667026Z Deleting container: python-flask-webapp-t_0de163a0. Retry count = 0
+2024-03-10T16:32:48.7696903Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:32:48.7742172Z Container is terminated. Total time elapsed: 1062 ms.
+2024-03-10T16:32:49.8119464Z Container is terminating. Grace period: 5 seconds.
+2024-03-10T16:32:49.9051394Z Stop and delete container. Retry count = 0
+2024-03-10T16:32:49.9237110Z Stopping container: python-flask-webapp-t_db226ac6.
+2024-03-10T16:32:55.0170957Z Deleting container: python-flask-webapp-t_db226ac6. Retry count = 0
+2024-03-10T16:32:55.5893868Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:32:55.5946850Z Container is terminated. Total time elapsed: 5769 ms.
+2024-03-10T16:33:25.2244226Z Container start method called.
+2024-03-10T16:33:25.2629072Z Establishing network.
+2024-03-10T16:33:25.2730285Z Pulling image: mcr.microsoft.com/appsvc/kudulite:bullseye_20240207.2.tuxprod.
+2024-03-10T16:33:28.1942684Z Container start method called.
+2024-03-10T16:33:28.2162059Z Establishing network.
+2024-03-10T16:33:28.2329278Z Pulling image: mcr.microsoft.com/appsvc/python:3.11_20240207.3.tuxprod.
+2024-03-10T16:33:28.9244735Z Container is starting.
+2024-03-10T16:33:28.9366907Z Establishing network if not established already.
+2024-03-10T16:33:28.9747569Z Mounting volumes.
+2024-03-10T16:33:28.9842434Z Nested mountpoint 
+2024-03-10T16:33:29.0432198Z Nested mountpoint volatile/logs
+2024-03-10T16:33:29.1032206Z Nested mountpoint 
+2024-03-10T16:33:29.1516321Z Nested mountpoint 
+2024-03-10T16:33:29.2557669Z Nested mountpoint 
+2024-03-10T16:33:29.2958971Z Creating container.
+2024-03-10T16:33:29.2972165Z Creating pipes for streaming container io.
+2024-03-10T16:33:29.3455127Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_kudu_9309beb7/stdout_38c7b12967e542669ebd570405244ff9.
+2024-03-10T16:33:29.3555602Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_kudu_9309beb7/stdout_38c7b12967e542669ebd570405244ff9.
+2024-03-10T16:33:29.3667059Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_kudu_9309beb7/stdout_38c7b12967e542669ebd570405244ff9 for reading in non-blocking mode.
+2024-03-10T16:33:29.4441863Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_kudu_9309beb7/stdout_38c7b12967e542669ebd570405244ff9.
+2024-03-10T16:33:29.4610414Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_kudu_9309beb7/stdout_38c7b12967e542669ebd570405244ff9.
+2024-03-10T16:33:29.4711005Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_kudu_9309beb7/stderr_fad64b7f1af34f34aa6a1fe6408e6bea.
+2024-03-10T16:33:29.4807163Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_kudu_9309beb7/stderr_fad64b7f1af34f34aa6a1fe6408e6bea.
+2024-03-10T16:33:29.4832423Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_kudu_9309beb7/stderr_fad64b7f1af34f34aa6a1fe6408e6bea for reading in non-blocking mode.
+2024-03-10T16:33:29.4923518Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_kudu_9309beb7/stderr_fad64b7f1af34f34aa6a1fe6408e6bea.
+2024-03-10T16:33:29.5308825Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_kudu_9309beb7/stderr_fad64b7f1af34f34aa6a1fe6408e6bea.
+2024-03-10T16:33:31.0121940Z Starting container: python-flask-webapp-t_kudu_9309beb7.
+2024-03-10T16:33:31.3239939Z Starting watchers and probes.
+2024-03-10T16:33:31.3599748Z Starting metrics collection.
+2024-03-10T16:33:31.3709404Z Container is running.
+2024-03-10T16:33:31.5281079Z Container start method finished after 6264 ms.
+2024-03-10T16:33:32.7872213Z Container is starting.
+2024-03-10T16:33:32.8034866Z Establishing network if not established already.
+2024-03-10T16:33:32.8129464Z Mounting volumes.
+2024-03-10T16:33:32.8149677Z Nested mountpoint 
+2024-03-10T16:33:32.8534866Z Nested mountpoint volatile/logs
+2024-03-10T16:33:32.8723633Z Nested mountpoint 
+2024-03-10T16:33:33.0214547Z Creating container.
+2024-03-10T16:33:33.0508920Z Creating pipes for streaming container io.
+2024-03-10T16:33:33.0789594Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_2617b4dc/stdout_371171810b714b808a8ed00620e70889.
+2024-03-10T16:33:33.1466530Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_2617b4dc/stdout_371171810b714b808a8ed00620e70889.
+2024-03-10T16:33:33.1574869Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_2617b4dc/stdout_371171810b714b808a8ed00620e70889 for reading in non-blocking mode.
+2024-03-10T16:33:33.1667318Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_2617b4dc/stdout_371171810b714b808a8ed00620e70889.
+2024-03-10T16:33:33.1777717Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_2617b4dc/stdout_371171810b714b808a8ed00620e70889.
+2024-03-10T16:33:33.1964531Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_2617b4dc/stderr_43ffa3cdaf2242728a903b91ee9ad975.
+2024-03-10T16:33:33.2176931Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_2617b4dc/stderr_43ffa3cdaf2242728a903b91ee9ad975.
+2024-03-10T16:33:33.2349673Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_2617b4dc/stderr_43ffa3cdaf2242728a903b91ee9ad975 for reading in non-blocking mode.
+2024-03-10T16:33:33.2659763Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_2617b4dc/stderr_43ffa3cdaf2242728a903b91ee9ad975.
+2024-03-10T16:33:33.2848374Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_2617b4dc/stderr_43ffa3cdaf2242728a903b91ee9ad975.
+2024-03-10T16:33:34.8918382Z Starting container: python-flask-webapp-t_2617b4dc.
+2024-03-10T16:33:35.4612604Z Starting watchers and probes.
+2024-03-10T16:33:35.5170568Z Starting metrics collection.
+2024-03-10T16:33:35.5193280Z Container is running.
+2024-03-10T16:33:35.8920466Z Container start method finished after 7674 ms.
+2024-03-10T16:33:48.4833013Z Container is terminating. Grace period: 0 seconds.
+2024-03-10T16:33:48.5519127Z Stop and delete container. Retry count = 0
+2024-03-10T16:33:48.5989016Z Stopping container: python-flask-webapp-t_kudu_552f8886.
+2024-03-10T16:33:49.4928415Z Deleting container: python-flask-webapp-t_kudu_552f8886. Retry count = 0
+2024-03-10T16:33:51.4940749Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:33:51.5408509Z Container is terminated. Total time elapsed: 2992 ms.
+2024-03-10T16:33:57.1907513Z Container has finished running with exit code: 3.
+2024-03-10T16:33:57.2179483Z Container is terminating. Grace period: 5 seconds.
+2024-03-10T16:33:57.2292456Z Stop and delete container. Retry count = 0
+2024-03-10T16:33:57.2481771Z Stopping container: python-flask-webapp-t_2617b4dc.
+2024-03-10T16:33:57.3562083Z Deleting container: python-flask-webapp-t_2617b4dc. Retry count = 0
+2024-03-10T16:33:58.9685978Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:33:59.0767013Z Container is terminated. Total time elapsed: 1847 ms.
+2024-03-10T16:34:07.6296260Z Container start method called.
+2024-03-10T16:34:07.6756346Z Establishing network.
+2024-03-10T16:34:07.6783227Z Pulling image: mcr.microsoft.com/appsvc/kudulite:bullseye_20240207.2.tuxprod.
+2024-03-10T16:34:12.002Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T16:34:12.012Z INFO  - e455cf41eadb Pulling fs layer
+2024-03-10T16:34:12.013Z INFO  - 3e4531da2f06 Pulling fs layer
+2024-03-10T16:34:12.014Z INFO  - fab276c5b688 Pulling fs layer
+2024-03-10T16:34:12.021Z INFO  - e7627caf8387 Pulling fs layer
+2024-03-10T16:34:12.021Z INFO  - 76cbd545fe97 Pulling fs layer
+2024-03-10T16:34:12.022Z INFO  - 7e1cd48051c5 Pulling fs layer
+2024-03-10T16:34:12.023Z INFO  - 2424767f91e7 Pulling fs layer
+2024-03-10T16:34:12.023Z INFO  - 030a88ad1147 Pulling fs layer
+2024-03-10T16:34:12.024Z INFO  - 65b9799a7114 Pulling fs layer
+2024-03-10T16:34:12.024Z INFO  - 794cd67e00af Pulling fs layer
+2024-03-10T16:34:12.031Z INFO  - 99eb07288124 Pulling fs layer
+2024-03-10T16:34:12.073Z INFO  - 27d8d88dc5fe Pulling fs layer
+2024-03-10T16:34:12.082Z INFO  - 4f4fb700ef54 Pulling fs layer
+2024-03-10T16:34:12.082Z INFO  - 8eac62777bff Pulling fs layer
+2024-03-10T16:34:12.082Z INFO  - 1e3292972000 Pulling fs layer
+2024-03-10T16:34:12.089Z INFO  - a4bd13f5316c Pulling fs layer
+2024-03-10T16:34:12.151Z INFO  - af49b434832c Pulling fs layer
+2024-03-10T16:34:12.151Z INFO  - 8056c343c77e Pulling fs layer
+2024-03-10T16:34:12.158Z INFO  - 5df0cf3d3f9a Pulling fs layer
+2024-03-10T16:34:12.158Z INFO  - 9d4e73ba95aa Pulling fs layer
+2024-03-10T16:34:12.259Z INFO  - 2d1d783fc119 Pulling fs layer
+2024-03-10T16:34:12.260Z INFO  - 6ca1483d6e6b Pulling fs layer
+2024-03-10T16:34:12.269Z INFO  - 318854ddcaf3 Pulling fs layer
+2024-03-10T16:34:12.288Z INFO  - f27dc4dc2fd1 Pulling fs layer
+2024-03-10T16:34:12.295Z INFO  - d01f4d564d10 Pulling fs layer
+2024-03-10T16:34:12.296Z INFO  - c6631cb758bb Pulling fs layer
+2024-03-10T16:34:12.297Z INFO  - 9b4618a4b3d7 Pulling fs layer
+2024-03-10T16:34:12.298Z INFO  - 6abcdc071cf9 Pulling fs layer
+2024-03-10T16:34:12.298Z INFO  - eb6eb10708a8 Pulling fs layer
+2024-03-10T16:34:12.299Z INFO  - c3c0f42ae16d Pulling fs layer
+2024-03-10T16:34:12.299Z INFO  - 19c77a8eeb05 Pulling fs layer
+2024-03-10T16:34:12.306Z INFO  - 7f16a7f0cc3b Pulling fs layer
+2024-03-10T16:34:12.306Z INFO  - eeb7a1346937 Pulling fs layer
+2024-03-10T16:34:12.307Z INFO  - 0042726f9bbd Pulling fs layer
+2024-03-10T16:34:12.308Z INFO  - f8c630c85fc7 Pulling fs layer
+2024-03-10T16:34:12.309Z INFO  - 8478730f39e0 Pulling fs layer
+2024-03-10T16:34:12.315Z INFO  - 70c54c808dec Pulling fs layer
+2024-03-10T16:34:12.316Z INFO  - 4535cc496438 Pulling fs layer
+2024-03-10T16:34:12.317Z INFO  - ff31a6bb9138 Pulling fs layer
+2024-03-10T16:34:12.317Z INFO  - 44790a7a865d Pulling fs layer
+2024-03-10T16:34:12.318Z INFO  - 9acaaf4b93b4 Pulling fs layer
+2024-03-10T16:34:12.325Z INFO  - fcb164292ffa Pulling fs layer
+2024-03-10T16:34:12.326Z INFO  - 2bac3defb6ee Pulling fs layer
+2024-03-10T16:34:12.326Z INFO  - 7e0d6c2144d2 Pulling fs layer
+2024-03-10T16:34:12.327Z INFO  - 282ae8d95333 Pulling fs layer
+2024-03-10T16:34:12.328Z INFO  - 02c6dfab9d1d Pulling fs layer
+2024-03-10T16:34:12.328Z INFO  - f223ac80ef1b Pulling fs layer
+2024-03-10T16:34:12.355Z INFO  - e7627caf8387 Downloading 3KB / 77KB
+2024-03-10T16:34:12.356Z INFO  - 2d1d783fc119 Waiting
+2024-03-10T16:34:12.357Z INFO  - 6ca1483d6e6b Waiting
+2024-03-10T16:34:12.363Z INFO  - 318854ddcaf3 Waiting
+2024-03-10T16:34:12.363Z INFO  - f27dc4dc2fd1 Waiting
+2024-03-10T16:34:12.364Z INFO  - c6631cb758bb Waiting
+2024-03-10T16:34:12.365Z INFO  - 9b4618a4b3d7 Waiting
+2024-03-10T16:34:12.365Z INFO  - 6abcdc071cf9 Waiting
+2024-03-10T16:34:12.366Z INFO  - eb6eb10708a8 Waiting
+2024-03-10T16:34:12.366Z INFO  - c3c0f42ae16d Waiting
+2024-03-10T16:34:12.373Z INFO  - 19c77a8eeb05 Waiting
+2024-03-10T16:34:12.374Z INFO  - 7f16a7f0cc3b Waiting
+2024-03-10T16:34:12.374Z INFO  - eeb7a1346937 Waiting
+2024-03-10T16:34:12.375Z INFO  - 0042726f9bbd Waiting
+2024-03-10T16:34:12.375Z INFO  - f8c630c85fc7 Waiting
+2024-03-10T16:34:12.377Z INFO  - 8478730f39e0 Waiting
+2024-03-10T16:34:12.383Z INFO  - 70c54c808dec Waiting
+2024-03-10T16:34:12.384Z INFO  - 4535cc496438 Waiting
+2024-03-10T16:34:12.384Z INFO  - ff31a6bb9138 Waiting
+2024-03-10T16:34:12.385Z INFO  - 9acaaf4b93b4 Waiting
+2024-03-10T16:34:12.386Z INFO  - fcb164292ffa Waiting
+2024-03-10T16:34:12.393Z INFO  - 2bac3defb6ee Waiting
+2024-03-10T16:34:12.394Z INFO  - 7e0d6c2144d2 Waiting
+2024-03-10T16:34:12.394Z INFO  - 282ae8d95333 Waiting
+2024-03-10T16:34:12.395Z INFO  - 02c6dfab9d1d Waiting
+2024-03-10T16:34:12.396Z INFO  - f223ac80ef1b Waiting
+2024-03-10T16:34:12.396Z INFO  - 65b9799a7114 Downloading 3KB / 19KB
+2024-03-10T16:34:12.402Z INFO  - d01f4d564d10 Waiting
+2024-03-10T16:34:12.403Z INFO  - 44790a7a865d Waiting
+2024-03-10T16:34:12.404Z INFO  - 8eac62777bff Downloading 1KB / 1KB
+2024-03-10T16:34:12.405Z INFO  - 4f4fb700ef54 Downloading 32B / 32B
+2024-03-10T16:34:12.405Z INFO  - 99eb07288124 Downloading 13KB / 13KB
+2024-03-10T16:34:12.422Z INFO  - e7627caf8387 Downloading 77KB / 77KB
+2024-03-10T16:34:12.423Z INFO  - a4bd13f5316c Downloading 423B / 423B
+2024-03-10T16:34:12.423Z INFO  - 76cbd545fe97 Downloading 50KB / 50KB
+2024-03-10T16:34:12.424Z INFO  - 65b9799a7114 Downloading 19KB / 19KB
+2024-03-10T16:34:12.425Z INFO  - 794cd67e00af Downloading 10KB / 10KB
+2024-03-10T16:34:12.431Z INFO  - 7e1cd48051c5 Downloading 13KB / 13KB
+2024-03-10T16:34:12.432Z INFO  - 2424767f91e7 Downloading 10KB / 10KB
+2024-03-10T16:34:12.433Z INFO  - 27d8d88dc5fe Downloading 10KB / 10KB
+2024-03-10T16:34:12.433Z INFO  - 1e3292972000 Downloading 2KB / 2KB
+2024-03-10T16:34:12.434Z INFO  - 8eac62777bff Verifying Checksum
+2024-03-10T16:34:12.434Z INFO  - 8eac62777bff Download complete
+2024-03-10T16:34:12.441Z INFO  - 4f4fb700ef54 Verifying Checksum
+2024-03-10T16:34:12.442Z INFO  - 4f4fb700ef54 Download complete
+2024-03-10T16:34:12.442Z INFO  - 99eb07288124 Verifying Checksum
+2024-03-10T16:34:12.443Z INFO  - 99eb07288124 Download complete
+2024-03-10T16:34:12.443Z INFO  - e7627caf8387 Verifying Checksum
+2024-03-10T16:34:12.444Z INFO  - e7627caf8387 Download complete
+2024-03-10T16:34:12.451Z INFO  - a4bd13f5316c Verifying Checksum
+2024-03-10T16:34:12.461Z INFO  - a4bd13f5316c Download complete
+2024-03-10T16:34:12.462Z INFO  - 76cbd545fe97 Verifying Checksum
+2024-03-10T16:34:12.462Z INFO  - 76cbd545fe97 Download complete
+2024-03-10T16:34:12.463Z INFO  - 65b9799a7114 Verifying Checksum
+2024-03-10T16:34:12.463Z INFO  - 65b9799a7114 Download complete
+2024-03-10T16:34:12.464Z INFO  - 794cd67e00af Verifying Checksum
+2024-03-10T16:34:12.471Z INFO  - 794cd67e00af Download complete
+2024-03-10T16:34:12.471Z INFO  - 7e1cd48051c5 Verifying Checksum
+2024-03-10T16:34:12.472Z INFO  - 7e1cd48051c5 Download complete
+2024-03-10T16:34:12.473Z INFO  - 27d8d88dc5fe Verifying Checksum
+2024-03-10T16:34:12.473Z INFO  - 27d8d88dc5fe Download complete
+2024-03-10T16:34:12.474Z INFO  - 1e3292972000 Verifying Checksum
+2024-03-10T16:34:12.480Z INFO  - 1e3292972000 Download complete
+2024-03-10T16:34:12.481Z INFO  - 2424767f91e7 Verifying Checksum
+2024-03-10T16:34:12.481Z INFO  - 2424767f91e7 Download complete
+2024-03-10T16:34:12.482Z INFO  - 030a88ad1147 Downloading 536KB / 56MB
+2024-03-10T16:34:12.513Z INFO  - af49b434832c Downloading 530B / 530B
+2024-03-10T16:34:12.519Z INFO  - 8056c343c77e Downloading 529B / 529B
+2024-03-10T16:34:12.519Z INFO  - fab276c5b688 Downloading 316KB / 316KB
+2024-03-10T16:34:12.520Z INFO  - 9d4e73ba95aa Downloading 4KB / 4KB
+2024-03-10T16:34:12.521Z INFO  - af49b434832c Verifying Checksum
+2024-03-10T16:34:12.522Z INFO  - af49b434832c Download complete
+2024-03-10T16:34:12.522Z INFO  - 8056c343c77e Verifying Checksum
+2024-03-10T16:34:12.529Z INFO  - 8056c343c77e Download complete
+2024-03-10T16:34:12.529Z INFO  - fab276c5b688 Verifying Checksum
+2024-03-10T16:34:12.530Z INFO  - fab276c5b688 Download complete
+2024-03-10T16:34:12.531Z INFO  - 9d4e73ba95aa Verifying Checksum
+2024-03-10T16:34:12.531Z INFO  - 9d4e73ba95aa Download complete
+2024-03-10T16:34:12.6002215Z Starting container: python-flask-webapp-t_kudu_2dc1dfac.
+2024-03-10T16:34:13.1098081Z Starting watchers and probes.
+2024-03-10T16:34:13.1583630Z Starting metrics collection.
+2024-03-10T16:34:13.2095025Z Container is running.
+2024-03-10T16:34:13.5332495Z Container start method finished after 5864 ms.
+ 419B
+2024-03-10T16:34:12.638Z INFO  - 7f16a7f0cc3b Verifying Checksum
+2024-03-10T16:34:12.639Z INFO  - 7f16a7f0cc3b Download complete
+2024-03-10T16:34:12.902Z INFO  - 3e4531da2f06 Downloading 1MB / 15MB
+2024-03-10T16:34:12.903Z INFO  - 5df0cf3d3f9a Downloading 529KB / 109MB
+2024-03-10T16:34:13.550Z INFO  - 030a88ad1147 Downloading 1MB / 56MB
+2024-03-10T16:34:13.569Z INFO  - eb6eb10708a8 Downloading 272B / 272B
+2024-03-10T16:34:13.571Z INFO  - 6abcdc071cf9 Downloading 270B / 270B
+2024-03-10T16:34:13.571Z INFO  - c3c0f42ae16d Downloading 836B / 836B
+2024-03-10T16:34:13.572Z INFO  - c6631cb758bb Downloading 1KB / 1KB
+2024-03-10T16:34:13.581Z INFO  - 9b4618a4b3d7 Downloading 133B / 133B
+2024-03-10T16:34:13.591Z INFO  - 19c77a8eeb05 Downloading 123B / 123B
+2024-03-10T16:34:13.592Z INFO  - eb6eb10708a8 Verifying Checksum
+2024-03-10T16:34:13.638Z INFO  - eb6eb10708a8 Download complete
+2024-03-10T16:34:13.639Z INFO  - 6abcdc071cf9 Verifying Checksum
+2024-03-10T16:34:13.639Z INFO  - 6abcdc071cf9 Download complete
+2024-03-10T16:34:13.657Z INFO  - c3c0f42ae16d Verifying Checksum
+2024-03-10T16:34:13.658Z INFO  - c3c0f42ae16d Download complete
+2024-03-10T16:34:13.659Z INFO  - c6631cb758bb Verifying Checksum
+2024-03-10T16:34:13.660Z INFO  - c6631cb758bb Download complete
+2024-03-10T16:34:13.727Z INFO  - 9b4618a4b3d7 Verifying Checksum
+2024-03-10T16:34:13.728Z INFO  - 9b4618a4b3d7 Download complete
+2024-03-10T16:34:13.746Z INFO  - 19c77a8eeb05 Verifying Checksum
+2024-03-10T16:34:13.746Z INFO  - 19c77a8eeb05 Download complete
+2024-03-10T16:34:13.754Z INFO  - 5df0cf3d3f9a Downloading 1MB / 109MB
+2024-03-10T16:34:13.754Z INFO  - f27dc4dc2fd1 Downloading 538KB / 69MB
+2024-03-10T16:34:13.755Z INFO  - 6ca1483d6e6b Downloading 723KB / 33MB
+2024-03-10T16:34:13.756Z INFO  - 70c54c808dec Downloading 1KB / 1KB
+2024-03-10T16:34:13.757Z INFO  - eeb7a1346937 Downloading 1KB / 1KB
+2024-03-10T16:34:13.764Z INFO  - 8478730f39e0 Downloading 121B / 121B
+2024-03-10T16:34:13.765Z INFO  - f8c630c85fc7 Downloading 1KB / 1KB
+2024-03-10T16:34:13.765Z INFO  - 0042726f9bbd Downloading 888B / 888B
+2024-03-10T16:34:13.766Z INFO  - 4535cc496438 Downloading 1KB / 1KB
+2024-03-10T16:34:13.767Z INFO  - 70c54c808dec Verifying Checksum
+2024-03-10T16:34:13.773Z INFO  - 70c54c808dec Download complete
+2024-03-10T16:34:13.774Z INFO  - eeb7a1346937 Verifying Checksum
+2024-03-10T16:34:13.783Z INFO  - eeb7a1346937 Download complete
+2024-03-10T16:34:13.784Z INFO  - 8478730f39e0 Verifying Checksum
+2024-03-10T16:34:13.785Z INFO  - 8478730f39e0 Download complete
+2024-03-10T16:34:13.786Z INFO  - f8c630c85fc7 Verifying Checksum
+2024-03-10T16:34:13.786Z INFO  - f8c630c85fc7 Download complete
+2024-03-10T16:34:13.793Z INFO  - 0042726f9bbd Verifying Checksum
+2024-03-10T16:34:13.793Z INFO  - 0042726f9bbd Download complete
+2024-03-10T16:34:13.794Z INFO  - 4535cc496438 Verifying Checksum
+2024-03-10T16:34:13.795Z INFO  - 4535cc496438 Download complete
+2024-03-10T16:34:13.796Z INFO  - 2d1d783fc119 Downloading 760KB / 36MB
+2024-03-10T16:34:13.796Z INFO  - 030a88ad1147 Downloading 2MB / 56MB
+2024-03-10T16:34:13.803Z INFO  - e455cf41eadb Downloading 3MB / 52MB
+2024-03-10T16:34:13.804Z INFO  - 3e4531da2f06 Downloading 3MB / 15MB
+2024-03-10T16:34:13.805Z INFO  - ff31a6bb9138 Downloading 357B / 357B
+2024-03-10T16:34:13.806Z INFO  - 9acaaf4b93b4 Downloading 138B / 138B
+2024-03-10T16:34:13.813Z INFO  - 44790a7a865d Downloading 842B / 842B
+2024-03-10T16:34:13.813Z INFO  - ff31a6bb9138 Verifying Checksum
+2024-03-10T16:34:13.814Z INFO  - ff31a6bb9138 Download complete
+2024-03-10T16:34:13.815Z INFO  - 9acaaf4b93b4 Verifying Checksum
+2024-03-10T16:34:13.815Z INFO  - 9acaaf4b93b4 Download complete
+2024-03-10T16:34:13.816Z INFO  - 44790a7a865d Verifying Checksum
+2024-03-10T16:34:13.823Z INFO  - 44790a7a865d Download complete
+2024-03-10T16:34:14.049Z INFO  - 6ca1483d6e6b Downloading 1MB / 33MB
+2024-03-10T16:34:14.099Z INFO  - f27dc4dc2fd1 Downloading 1MB / 69MB
+2024-03-10T16:34:14.101Z INFO  - 7e0d6c2144d2 Downloading 3KB / 11KB
+2024-03-10T16:34:14.107Z INFO  - 2bac3defb6ee Downloading 143B / 143B
+2024-03-10T16:34:14.107Z INFO  - fcb164292ffa Downloading 2KB / 2KB
+2024-03-10T16:34:14.108Z INFO  - 7e0d6c2144d2 Downloading 11KB / 11KB
+2024-03-10T16:34:14.109Z INFO  - 2bac3defb6ee Verifying Checksum
+2024-03-10T16:34:14.109Z INFO  - 2bac3defb6ee Download complete
+2024-03-10T16:34:14.110Z INFO  - fcb164292ffa Verifying Checksum
+2024-03-10T16:34:14.118Z INFO  - fcb164292ffa Download complete
+2024-03-10T16:34:14.120Z INFO  - 7e0d6c2144d2 Verifying Checksum
+2024-03-10T16:34:14.146Z INFO  - 7e0d6c2144d2 Download complete
+2024-03-10T16:34:14.147Z INFO  - f223ac80ef1b Downloading 1KB / 1KB
+2024-03-10T16:34:14.149Z INFO  - f223ac80ef1b Verifying Checksum
+2024-03-10T16:34:14.149Z INFO  - f223ac80ef1b Download complete
+2024-03-10T16:34:14.150Z INFO  - 5df0cf3d3f9a Downloading 2MB / 109MB
+2024-03-10T16:34:14.157Z INFO  - 030a88ad1147 Downloading 3MB / 56MB
+2024-03-10T16:34:14.185Z INFO  - 318854ddcaf3 Downloading 1MB / 5MB
+2024-03-10T16:34:14.310Z INFO  - 5df0cf3d3f9a Downloading 3MB / 109MB
+2024-03-10T16:34:14.311Z INFO  - 2d1d783fc119 Downloading 1MB / 36MB
+2024-03-10T16:34:14.312Z INFO  - 02c6dfab9d1d Downloading 3KB / 16KB
+2024-03-10T16:34:14.313Z INFO  - 02c6dfab9d1d Downloading 16KB / 16KB
+2024-03-10T16:34:14.314Z INFO  - 02c6dfab9d1d Verifying Checksum
+2024-03-10T16:34:14.320Z INFO  - 02c6dfab9d1d Download complete
+2024-03-10T16:34:14.587Z INFO  - 030a88ad1147 Downloading 5MB / 56MB
+2024-03-10T16:34:14.589Z INFO  - 318854ddcaf3 Downloading 2MB / 5MB
+2024-03-10T16:34:14.665Z INFO  - 6ca1483d6e6b Downloading 2MB / 33MB
+2024-03-10T16:34:14.704Z INFO  - 318854ddcaf3 Downloading 2MB / 5MB
+2024-03-10T16:34:15.037Z INFO  - e455cf41eadb Downloading 5MB / 52MB
+2024-03-10T16:34:15.038Z INFO  - 3e4531da2f06 Downloading 4MB / 15MB
+2024-03-10T16:34:15.046Z INFO  - 2d1d783fc119 Downloading 3MB / 36MB
+2024-03-10T16:34:15.047Z INFO  - 318854ddcaf3 Downloading 3MB / 5MB
+2024-03-10T16:34:15.048Z INFO  - f27dc4dc2fd1 Downloading 3MB / 69MB
+2024-03-10T16:34:15.155Z INFO  - 5df0cf3d3f9a Downloading 4MB / 109MB
+2024-03-10T16:34:15.177Z INFO  - 2d1d783fc119 Downloading 4MB / 36MB
+2024-03-10T16:34:15.214Z INFO  - 318854ddcaf3 Downloading 3MB / 5MB
+2024-03-10T16:34:15.447Z INFO  - e455cf41eadb Downloading 6MB / 52MB
+2024-03-10T16:34:15.466Z INFO  - 318854ddcaf3 Downloading 4MB / 5MB
+2024-03-10T16:34:15.466Z INFO  - 3e4531da2f06 Downloading 5MB / 15MB
+2024-03-10T16:34:15.730Z INFO  - 5df0cf3d3f9a Downloading 5MB / 109MB
+2024-03-10T16:34:15.807Z INFO  - f27dc4dc2fd1 Downloading 4MB / 69MB
+2024-03-10T16:34:15.807Z INFO  - 282ae8d95333 Downloading 2MB / 4MB
+2024-03-10T16:34:15.833Z INFO  - 2d1d783fc119 Downloading 6MB / 36MB
+2024-03-10T16:34:16.270Z INFO  - 030a88ad1147 Downloading 8MB / 56MB
+2024-03-10T16:34:16.271Z INFO  - 6ca1483d6e6b Downloading 6MB / 33MB
+2024-03-10T16:34:16.272Z INFO  - 3e4531da2f06 Downloading 6MB / 15MB
+2024-03-10T16:34:16.278Z INFO  - e455cf41eadb Downloading 7MB / 52MB
+2024-03-10T16:34:16.279Z INFO  - 282ae8d95333 Downloading 3MB / 4MB
+2024-03-10T16:34:16.280Z INFO  - 318854ddcaf3 Verifying Checksum
+2024-03-10T16:34:16.281Z INFO  - 318854ddcaf3 Download complete
+2024-03-10T16:34:16.330Z INFO  - 3e4531da2f06 Downloading 7MB / 15MB
+2024-03-10T16:34:16.330Z INFO  - f27dc4dc2fd1 Downloading 5MB / 69MB
+2024-03-10T16:34:16.644Z INFO  - 5df0cf3d3f9a Downloading 6MB / 109MB
+2024-03-10T16:34:16.645Z INFO  - 3e4531da2f06 Downloading 7MB / 15MB
+2024-03-10T16:34:16.731Z INFO  - 6ca1483d6e6b Downloading 8MB / 33MB
+2024-03-10T16:34:16.732Z INFO  - 282ae8d95333 Verifying Checksum
+2024-03-10T16:34:16.732Z INFO  - 282ae8d95333 Download complete
+2024-03-10T16:34:16.992Z INFO  - 030a88ad1147 Downloading 10MB / 56MB
+2024-03-10T16:34:16.994Z INFO  - e455cf41eadb Downloading 8MB / 52MB
+2024-03-10T16:34:17.100Z INFO  - 030a88ad1147 Downloading 11MB / 56MB
+2024-03-10T16:34:17.102Z INFO  - f27dc4dc2fd1 Downloading 7MB / 69MB
+2024-03-10T16:34:17.110Z INFO  - 3e4531da2f06 Downloading 9MB / 15MB
+2024-03-10T16:34:17.111Z INFO  - 6ca1483d6e6b Downloading 9MB / 33MB
+2024-03-10T16:34:17.400Z INFO  - 2d1d783fc119 Downloading 10MB / 36MB
+2024-03-10T16:34:17.402Z INFO  - 030a88ad1147 Downloading 12MB / 56MB
+2024-03-10T16:34:17.548Z INFO  - f27dc4dc2fd1 Downloading 8MB / 69MB
+2024-03-10T16:34:17.550Z INFO  - e455cf41eadb Downloading 10MB / 52MB
+2024-03-10T16:34:17.742Z INFO  - 6ca1483d6e6b Downloading 11MB / 33MB
+2024-03-10T16:34:17.743Z INFO  - 3e4531da2f06 Downloading 11MB / 15MB
+2024-03-10T16:34:17.791Z INFO  - 5df0cf3d3f9a Downloading 9MB / 109MB
+2024-03-10T16:34:17.840Z INFO  - 030a88ad1147 Downloading 13MB / 56MB
+2024-03-10T16:34:17.988Z INFO  - 5df0cf3d3f9a Downloading 9MB / 109MB
+2024-03-10T16:34:17.989Z INFO  - 2d1d783fc119 Downloading 11MB / 36MB
+2024-03-10T16:34:17.990Z INFO  - 030a88ad1147 Downloading 14MB / 56MB
+2024-03-10T16:34:18.036Z INFO  - f27dc4dc2fd1 Downloading 10MB / 69MB
+2024-03-10T16:34:18.037Z INFO  - e455cf41eadb Downloading 11MB / 52MB
+2024-03-10T16:34:18.173Z INFO  - 3e4531da2f06 Downloading 12MB / 15MB
+2024-03-10T16:34:18.415Z INFO  - 3e4531da2f06 Downloading 13MB / 15MB
+2024-03-10T16:34:18.445Z INFO  - 2d1d783fc119 Downloading 12MB / 36MB
+2024-03-10T16:34:18.445Z INFO  - 6ca1483d6e6b Downloading 14MB / 33MB
+2024-03-10T16:34:18.473Z INFO  - f27dc4dc2fd1 Downloading 11MB / 69MB
+2024-03-10T16:34:18.561Z INFO  - 030a88ad1147 Downloading 16MB / 56MB
+2024-03-10T16:34:18.782Z INFO  - 3e4531da2f06 Downloading 13MB / 15MB
+2024-03-10T16:34:18.850Z INFO  - 5df0cf3d3f9a Downloading 11MB / 109MB
+2024-03-10T16:34:18.898Z INFO  - e455cf41eadb Downloading 12MB / 52MB
+2024-03-10T16:34:18.899Z INFO  - f27dc4dc2fd1 Downloading 11MB / 69MB
+2024-03-10T16:34:18.900Z INFO  - 6ca1483d6e6b Downloading 14MB / 33MB
+2024-03-10T16:34:18.908Z INFO  - f27dc4dc2fd1 Downloading 12MB / 69MB
+2024-03-10T16:34:18.908Z INFO  - 3e4531da2f06 Verifying Checksum
+2024-03-10T16:34:18.909Z INFO  - 3e4531da2f06 Download complete
+2024-03-10T16:34:19.025Z INFO  - 030a88ad1147 Downloading 17MB / 56MB
+2024-03-10T16:34:19.077Z INFO  - 2d1d783fc119 Downloading 14MB / 36MB
+2024-03-10T16:34:19.116Z INFO  - e455cf41eadb Downloading 13MB / 52MB
+2024-03-10T16:34:19.452Z INFO  - 030a88ad1147 Downloading 18MB / 56MB
+2024-03-10T16:34:19.453Z INFO  - 5df0cf3d3f9a Downloading 15MB / 109MB
+2024-03-10T16:34:19.460Z INFO  - e455cf41eadb Downloading 14MB / 52MB
+2024-03-10T16:34:19.620Z INFO  - 2d1d783fc119 Downloading 15MB / 36MB
+2024-03-10T16:34:19.621Z INFO  - 5df0cf3d3f9a Downloading 15MB / 109MB
+2024-03-10T16:34:19.960Z INFO  - f27dc4dc2fd1 Downloading 14MB / 69MB
+2024-03-10T16:34:19.961Z INFO  - 030a88ad1147 Downloading 19MB / 56MB
+2024-03-10T16:34:19.962Z INFO  - e455cf41eadb Downloading 16MB / 52MB
+2024-03-10T16:34:19.962Z INFO  - 2d1d783fc119 Downloading 17MB / 36MB
+2024-03-10T16:34:20.020Z INFO  - f27dc4dc2fd1 Downloading 15MB / 69MB
+2024-03-10T16:34:20.039Z INFO  - 030a88ad1147 Downloading 20MB / 56MB
+2024-03-10T16:34:20.176Z INFO  - 2d1d783fc119 Downloading 17MB / 36MB
+2024-03-10T16:34:20.198Z INFO  - f27dc4dc2fd1 Downloading 15MB / 69MB
+2024-03-10T16:34:20.350Z INFO  - e455cf41eadb Downloading 18MB / 52MB
+2024-03-10T16:34:20.351Z INFO  - f27dc4dc2fd1 Downloading 18MB / 69MB
+2024-03-10T16:34:20.352Z INFO  - 2d1d783fc119 Downloading 18MB / 36MB
+2024-03-10T16:34:20.352Z INFO  - 6ca1483d6e6b Downloading 19MB / 33MB
+2024-03-10T16:34:20.353Z INFO  - 030a88ad1147 Downloading 21MB / 56MB
+2024-03-10T16:34:20.403Z INFO  - e455cf41eadb Downloading 20MB / 52MB
+2024-03-10T16:34:20.478Z INFO  - 5df0cf3d3f9a Downloading 18MB / 109MB
+2024-03-10T16:34:20.478Z INFO  - f27dc4dc2fd1 Downloading 18MB / 69MB
+2024-03-10T16:34:20.497Z INFO  - 2d1d783fc119 Downloading 19MB / 36MB
+2024-03-10T16:34:20.537Z INFO  - 2d1d783fc119 Downloading 20MB / 36MB
+2024-03-10T16:34:20.638Z INFO  - 030a88ad1147 Downloading 22MB / 56MB
+2024-03-10T16:34:20.801Z INFO  - f27dc4dc2fd1 Downloading 19MB / 69MB
+2024-03-10T16:34:20.850Z INFO  - 6ca1483d6e6b Downloading 20MB / 33MB
+2024-03-10T16:34:20.851Z INFO  - e455cf41eadb Downloading 21MB / 52MB
+2024-03-10T16:34:20.852Z INFO  - 030a88ad1147 Downloading 23MB / 56MB
+2024-03-10T16:34:20.948Z INFO  - 6ca1483d6e6b Downloading 21MB / 33MB
+2024-03-10T16:34:20.949Z INFO  - e455cf41eadb Downloading 22MB / 52MB
+2024-03-10T16:34:20.949Z INFO  - 5df0cf3d3f9a Downloading 20MB / 109MB
+2024-03-10T16:34:21.020Z INFO  - 2d1d783fc119 Downloading 22MB / 36MB
+2024-03-10T16:34:21.172Z INFO  - f27dc4dc2fd1 Downloading 21MB / 69MB
+2024-03-10T16:34:21.173Z INFO  - 6ca1483d6e6b Downloading 22MB / 33MB
+2024-03-10T16:34:21.174Z INFO  - 030a88ad1147 Downloading 25MB / 56MB
+2024-03-10T16:34:21.310Z INFO  - 5df0cf3d3f9a Downloading 22MB / 109MB
+2024-03-10T16:34:21.417Z INFO  - f27dc4dc2fd1 Downloading 22MB / 69MB
+2024-03-10T16:34:21.446Z INFO  - 6ca1483d6e6b Downloading 24MB / 33MB
+2024-03-10T16:34:21.622Z INFO  - e455cf41eadb Downloading 24MB / 52MB
+2024-03-10T16:34:21.661Z INFO  - f27dc4dc2fd1 Downloading 22MB / 69MB
+2024-03-10T16:34:21.668Z INFO  - 5df0cf3d3f9a Downloading 22MB / 109MB
+2024-03-10T16:34:21.669Z INFO  - 2d1d783fc119 Downloading 25MB / 36MB
+2024-03-10T16:34:22.001Z INFO  - 6ca1483d6e6b Downloading 26MB / 33MB
+2024-03-10T16:34:22.011Z INFO  - f27dc4dc2fd1 Downloading 23MB / 69MB
+2024-03-10T16:34:22.024Z INFO  - 2d1d783fc119 Downloading 26MB / 36MB
+2024-03-10T16:34:22.168Z INFO  - 5df0cf3d3f9a Downloading 24MB / 109MB
+2024-03-10T16:34:22.324Z INFO  - e455cf41eadb Downloading 26MB / 52MB
+2024-03-10T16:34:22.325Z INFO  - 030a88ad1147 Downloading 28MB / 56MB
+2024-03-10T16:34:22.442Z INFO  - 2d1d783fc119 Downloading 27MB / 36MB
+2024-03-10T16:34:22.450Z INFO  - 6ca1483d6e6b Downloading 28MB / 33MB
+2024-03-10T16:34:22.451Z INFO  - f27dc4dc2fd1 Downloading 25MB / 69MB
+2024-03-10T16:34:22.474Z INFO  - 2d1d783fc119 Downloading 28MB / 36MB
+2024-03-10T16:34:22.540Z INFO  - e455cf41eadb Downloading 27MB / 52MB
+2024-03-10T16:34:22.591Z INFO  - 6ca1483d6e6b Downloading 28MB / 33MB
+2024-03-10T16:34:22.747Z INFO  - f27dc4dc2fd1 Downloading 26MB / 69MB
+2024-03-10T16:34:22.748Z INFO  - 030a88ad1147 Downloading 29MB / 56MB
+2024-03-10T16:34:22.754Z INFO  - 2d1d783fc119 Downloading 28MB / 36MB
+2024-03-10T16:34:22.755Z INFO  - 5df0cf3d3f9a Downloading 27MB / 109MB
+2024-03-10T16:34:23.154Z INFO  - 030a88ad1147 Downloading 30MB / 56MB
+2024-03-10T16:34:23.212Z INFO  - e455cf41eadb Downloading 29MB / 52MB
+2024-03-10T16:34:23.217Z INFO  - f27dc4dc2fd1 Downloading 28MB / 69MB
+2024-03-10T16:34:23.234Z INFO  - 2d1d783fc119 Downloading 31MB / 36MB
+2024-03-10T16:34:23.350Z INFO  - 5df0cf3d3f9a Downloading 28MB / 109MB
+2024-03-10T16:34:23.446Z INFO  - 030a88ad1147 Downloading 32MB / 56MB
+2024-03-10T16:34:23.593Z INFO  - e455cf41eadb Downloading 30MB / 52MB
+2024-03-10T16:34:23.595Z INFO  - f27dc4dc2fd1 Downloading 29MB / 69MB
+2024-03-10T16:34:23.596Z INFO  - 2d1d783fc119 Downloading 32MB / 36MB
+2024-03-10T16:34:23.730Z INFO  - 6ca1483d6e6b Downloading 33MB / 33MB
+2024-03-10T16:34:23.732Z INFO  - 2d1d783fc119 Downloading 33MB / 36MB
+2024-03-10T16:34:23.741Z INFO  - 6ca1483d6e6b Verifying Checksum
+2024-03-10T16:34:23.742Z INFO  - 6ca1483d6e6b Download complete
+2024-03-10T16:34:23.949Z INFO  - 5df0cf3d3f9a Downloading 29MB / 109MB
+2024-03-10T16:34:24.066Z INFO  - e455cf41eadb Downloading 31MB / 52MB
+2024-03-10T16:34:24.146Z INFO  - 030a88ad1147 Downloading 33MB / 56MB
+2024-03-10T16:34:24.181Z INFO  - 2d1d783fc119 Downloading 34MB / 36MB
+2024-03-10T16:34:24.473Z INFO  - 5df0cf3d3f9a Downloading 30MB / 109MB
+2024-03-10T16:34:24.519Z INFO  - 030a88ad1147 Downloading 34MB / 56MB
+2024-03-10T16:34:24.755Z INFO  - 5df0cf3d3f9a Downloading 31MB / 109MB
+2024-03-10T16:34:24.764Z INFO  - f27dc4dc2fd1 Downloading 33MB / 69MB
+2024-03-10T16:34:24.764Z INFO  - 2d1d783fc119 Downloading 35MB / 36MB
+2024-03-10T16:34:24.921Z INFO  - e455cf41eadb Downloading 32MB / 52MB
+2024-03-10T16:34:24.922Z INFO  - 030a88ad1147 Downloading 35MB / 56MB
+2024-03-10T16:34:25.019Z INFO  - 2d1d783fc119 Verifying Checksum
+2024-03-10T16:34:25.020Z INFO  - 2d1d783fc119 Download complete
+2024-03-10T16:34:25.243Z INFO  - 030a88ad1147 Downloading 36MB / 56MB
+2024-03-10T16:34:25.244Z INFO  - 5df0cf3d3f9a Downloading 33MB / 109MB
+2024-03-10T16:34:25.382Z INFO  - 030a88ad1147 Downloading 37MB / 56MB
+2024-03-10T16:34:25.488Z INFO  - f27dc4dc2fd1 Downloading 36MB / 69MB
+2024-03-10T16:34:25.605Z INFO  - f27dc4dc2fd1 Downloading 37MB / 69MB
+2024-03-10T16:34:25.606Z INFO  - 030a88ad1147 Downloading 38MB / 56MB
+2024-03-10T16:34:25.607Z INFO  - 5df0cf3d3f9a Downloading 35MB / 109MB
+2024-03-10T16:34:26.027Z INFO  - 030a88ad1147 Downloading 40MB / 56MB
+2024-03-10T16:34:26.028Z INFO  - f27dc4dc2fd1 Downloading 39MB / 69MB
+2024-03-10T16:34:26.029Z INFO  - 5df0cf3d3f9a Downloading 38MB / 109MB
+2024-03-10T16:34:26.029Z INFO  - e455cf41eadb Downloading 38MB / 52MB
+2024-03-10T16:34:26.196Z INFO  - 030a88ad1147 Downloading 42MB / 56MB
+2024-03-10T16:34:26.457Z INFO  - e455cf41eadb Downloading 39MB / 52MB
+2024-03-10T16:34:26.585Z INFO  - f27dc4dc2fd1 Downloading 40MB / 69MB
+2024-03-10T16:34:26.701Z INFO  - 5df0cf3d3f9a Downloading 39MB / 109MB
+2024-03-10T16:34:26.916Z INFO  - 030a88ad1147 Downloading 43MB / 56MB
+2024-03-10T16:34:26.917Z INFO  - f27dc4dc2fd1 Downloading 41MB / 69MB
+2024-03-10T16:34:27.133Z INFO  - e455cf41eadb Downloading 41MB / 52MB
+2024-03-10T16:34:27.220Z INFO  - f27dc4dc2fd1 Downloading 43MB / 69MB
+2024-03-10T16:34:27.228Z INFO  - 5df0cf3d3f9a Downloading 40MB / 109MB
+2024-03-10T16:34:27.229Z INFO  - 030a88ad1147 Downloading 44MB / 56MB
+2024-03-10T16:34:27.484Z INFO  - f27dc4dc2fd1 Downloading 44MB / 69MB
+2024-03-10T16:34:27.510Z INFO  - e455cf41eadb Downloading 42MB / 52MB
+2024-03-10T16:34:27.647Z INFO  - 030a88ad1147 Downloading 45MB / 56MB
+2024-03-10T16:34:27.648Z INFO  - e455cf41eadb Downloading 43MB / 52MB
+2024-03-10T16:34:27.649Z INFO  - 5df0cf3d3f9a Downloading 41MB / 109MB
+2024-03-10T16:34:27.764Z INFO  - 5df0cf3d3f9a Downloading 42MB / 109MB
+2024-03-10T16:34:28.057Z INFO  - e455cf41eadb Downloading 44MB / 52MB
+2024-03-10T16:34:28.341Z INFO  - f27dc4dc2fd1 Downloading 47MB / 69MB
+2024-03-10T16:34:28.368Z INFO  - 030a88ad1147 Downloading 48MB / 56MB
+2024-03-10T16:34:28.554Z INFO  - 030a88ad1147 Downloading 49MB / 56MB
+2024-03-10T16:34:28.575Z INFO  - e455cf41eadb Downloading 47MB / 52MB
+2024-03-10T16:34:28.603Z INFO  - 5df0cf3d3f9a Downloading 44MB / 109MB
+2024-03-10T16:34:28.640Z INFO  - 030a88ad1147 Downloading 50MB / 56MB
+2024-03-10T16:34:28.908Z INFO  - f27dc4dc2fd1 Downloading 48MB / 69MB
+2024-03-10T16:34:28.934Z INFO  - 030a88ad1147 Downloading 51MB / 56MB
+2024-03-10T16:34:29.091Z INFO  - e455cf41eadb Downloading 49MB / 52MB
+2024-03-10T16:34:29.177Z INFO  - 5df0cf3d3f9a Downloading 46MB / 109MB
+2024-03-10T16:34:29.217Z INFO  - 030a88ad1147 Downloading 52MB / 56MB
+2024-03-10T16:34:29.345Z INFO  - 030a88ad1147 Downloading 53MB / 56MB
+2024-03-10T16:34:29.547Z INFO  - e455cf41eadb Downloading 51MB / 52MB
+2024-03-10T16:34:29.683Z INFO  - f27dc4dc2fd1 Downloading 51MB / 69MB
+2024-03-10T16:34:29.684Z INFO  - 030a88ad1147 Downloading 54MB / 56MB
+2024-03-10T16:34:29.685Z INFO  - e455cf41eadb Verifying Checksum
+2024-03-10T16:34:29.686Z INFO  - e455cf41eadb Download complete
+2024-03-10T16:34:29.743Z INFO  - 5df0cf3d3f9a Downloading 48MB / 109MB
+2024-03-10T16:34:29.859Z INFO  - 030a88ad1147 Downloading 55MB / 56MB
+2024-03-10T16:34:30.070Z INFO  - f27dc4dc2fd1 Downloading 54MB / 69MB
+2024-03-10T16:34:30.138Z INFO  - 030a88ad1147 Downloading 56MB / 56MB
+2024-03-10T16:34:30.254Z INFO  - 5df0cf3d3f9a Downloading 50MB / 109MB
+2024-03-10T16:34:30.255Z INFO  - 030a88ad1147 Verifying Checksum
+2024-03-10T16:34:30.256Z INFO  - 030a88ad1147 Download complete
+2024-03-10T16:34:30.411Z INFO  - 5df0cf3d3f9a Downloading 51MB / 109MB
+2024-03-10T16:34:31.094Z INFO  - 5df0cf3d3f9a Downloading 53MB / 109MB
+2024-03-10T16:34:31.400Z INFO  - f27dc4dc2fd1 Downloading 58MB / 69MB
+2024-03-10T16:34:31.546Z INFO  - f27dc4dc2fd1 Downloading 58MB / 69MB
+2024-03-10T16:34:31.782Z INFO  - 5df0cf3d3f9a Downloading 57MB / 109MB
+2024-03-10T16:34:31.974Z INFO  - f27dc4dc2fd1 Downloading 61MB / 69MB
+2024-03-10T16:34:32.200Z INFO  - f27dc4dc2fd1 Downloading 61MB / 69MB
+2024-03-10T16:34:32.394Z INFO  - 5df0cf3d3f9a Downloading 61MB / 109MB
+2024-03-10T16:34:32.895Z INFO  - 5df0cf3d3f9a Downloading 63MB / 109MB
+2024-03-10T16:34:32.927Z INFO  - f27dc4dc2fd1 Downloading 65MB / 69MB
+2024-03-10T16:34:32.996Z INFO  - f27dc4dc2fd1 Downloading 65MB / 69MB
+2024-03-10T16:34:33.329Z INFO  - 5df0cf3d3f9a Downloading 66MB / 109MB
+2024-03-10T16:34:33.970Z INFO  - 5df0cf3d3f9a Downloading 68MB / 109MB
+2024-03-10T16:34:35.318Z INFO  - 5df0cf3d3f9a Downloading 70MB / 109MB
+2024-03-10T16:34:35.787Z INFO  - 5df0cf3d3f9a Downloading 72MB / 109MB
+2024-03-10T16:34:35.788Z INFO  - f27dc4dc2fd1 Verifying Checksum
+2024-03-10T16:34:35.790Z INFO  - f27dc4dc2fd1 Download complete
+2024-03-10T16:34:35.902Z INFO  - 5df0cf3d3f9a Downloading 73MB / 109MB
+2024-03-10T16:34:36.1734531Z Container is terminating. Grace period: 0 seconds.
+2024-03-10T16:34:36.3804763Z Stop and delete container. Retry 2024-03-10T16:34:36.816Z INFO  - 5df0cf3d3f9a Downloading 77MB / 109MB
+2024-03-10T16:34:36.942Z INFO  - 5df0cf3d3f9a Downloading 77MB / 109MB
+2024-03-10T16:34:37.680Z INFO  - e455cf41eadb Extracting 1MB / 52MB
+2024-03-10T16:34:37.708Z INFO  - 5df0cf3d3f9a Downloading 81MB / 109MB
+2024-03-10T16:34:38.131Z INFO  - 5df0cf3d3f9a Downloading 84MB / 109MB
+2024-03-10T16:34:38.284Z INFO  - 5df0cf3d3f9a Downloading 86MB / 109MB
+2024-03-10T16:34:38.355Z INFO  - 5df0cf3d3f9a Downloading 88MB / 109MB
+2024-03-10T16:34:38.945Z INFO  - e455cf41eadb Extracting 2MB / 52MB
+2024-03-10T16:34:39.169Z INFO  - 5df0cf3d3f9a Downloading 101MB / 109MB
+2024-03-10T16:34:39.244Z INFO  - 5df0cf3d3f9a Downloading 101MB / 109MB
+2024-03-10T16:34:39.638Z INFO  - 5df0cf3d3f9a Downloading 105MB / 109MB
+2024-03-10T16:34:39.864Z INFO  - 5df0cf3d3f9a Downloading 108MB / 109MB
+2024-03-10T16:34:40.010Z INFO  - 5df0cf3d3f9a Verifying Checksum
+2024-03-10T16:34:40.019Z INFO  - 5df0cf3d3f9a Download complete
+2024-03-10T16:34:40.702Z INFO  - e455cf41eadb Extracting 3MB / 52MB
+2024-03-10T16:34:40.703Z INFO  - e455cf41eadb Extracting 4MB / 52MB
+2024-03-10T16:34:40.887Z INFO  - e455cf41eadb Extracting 5MB / 52MB
+2024-03-10T16:34:41.288Z INFO  - e455cf41eadb Extracting 6MB / 52MB
+2024-03-10T16:34:41.620Z INFO  - e455cf41eadb Extracting 7MB / 52MB
+2024-03-10T16:34:42.217Z INFO  - e455cf41eadb Extracting 8MB / 52MB
+2024-03-10T16:34:42.575Z INFO  - e455cf41eadb Extracting 9MB / 52MB
+2024-03-10T16:34:43.004Z INFO  - e455cf41eadb Extracting 10MB / 52MB
+2024-03-10T16:34:43.383Z INFO  - e455cf41eadb Extracting 11MB / 52MB
+2024-03-10T16:34:43.951Z INFO  - e455cf41eadb Extracting 12MB / 52MB
+2024-03-10T16:34:44.579Z INFO  - e455cf41eadb Extracting 14MB / 52MB
+2024-03-10T16:34:44.783Z INFO  - e455cf41eadb Extracting 15MB / 52MB
+2024-03-10T16:34:46.053Z INFO  - e455cf41eadb Extracting 24MB / 52MB
+2024-03-10T16:34:46.192Z INFO  - e455cf41eadb Extracting 25MB / 52MB
+2024-03-10T16:34:46.446Z INFO  - e455cf41eadb Extracting 26MB / 52MB
+2024-03-10T16:34:47.120Z INFO  - e455cf41eadb Extracting 27MB / 52MB
+2024-03-10T16:34:47.570Z INFO  - e455cf41eadb Extracting 28MB / 52MB
+2024-03-10T16:34:47.823Z INFO  - e455cf41eadb Extracting 30MB / 52MB
+2024-03-10T16:34:47.976Z INFO  - e455cf41eadb Extracting 31MB / 52MB
+2024-03-10T16:34:48.184Z INFO  - e455cf41eadb Extracting 32MB / 52MB
+2024-03-10T16:34:48.350Z INFO  - e455cf41eadb Extracting 34MB / 52MB
+2024-03-10T16:34:48.639Z INFO  - e455cf41eadb Extracting 35MB / 52MB
+2024-03-10T16:34:48.909Z INFO  - e455cf41eadb Extracting 36MB / 52MB
+2024-03-10T16:34:49.432Z INFO  - e455cf41eadb Extracting 38MB / 52MB
+2024-03-10T16:34:49.961Z INFO  - e455cf41eadb Extracting 39MB / 52MB
+2024-03-10T16:34:50.429Z INFO  - e455cf41eadb Extracting 40MB / 52MB
+2024-03-10T16:34:50.808Z INFO  - e455cf41eadb Extracting 41MB / 52MB
+2024-03-10T16:34:51.086Z INFO  - e455cf41eadb Extracting 42MB / 52MB
+2024-03-10T16:34:51.348Z INFO  - e455cf41eadb Extracting 43MB / 52MB
+2024-03-10T16:34:51.600Z INFO  - e455cf41eadb Extracting 44MB / 52MB
+2024-03-10T16:34:51.712Z INFO  - e455cf41eadb Extracting 45MB / 52MB
+2024-03-10T16:34:52.181Z INFO  - e455cf41eadb Extracting 47MB / 52MB
+2024-03-10T16:34:52.485Z INFO  - e455cf41eadb Extracting 48MB / 52MB
+2024-03-10T16:34:52.960Z INFO  - e455cf41eadb Extracting 49MB / 52MB
+2024-03-10T16:34:53.437Z INFO  - e455cf41eadb Extracting 50MB / 52MB
+2024-03-10T16:34:54.653Z INFO  - e455cf41eadb Extracting 51MB / 52MB
+2024-03-10T16:34:55.156Z INFO  - e455cf41eadb Extracting 52MB / 52MB
+2024-03-10T16:34:55.334Z INFO  - e455cf41eadb Pull complete
+2024-03-10T16:34:56.608Z INFO  - 3e4531da2f06 Extracting 5MB / 15MB
+2024-03-10T16:34:56.717Z INFO  - 3e4531da2f06 Extracting 7MB / 15MB
+2024-03-10T16:34:57.771Z INFO  - 3e4531da2f06 Extracting 10MB / 15MB
+2024-03-10T16:34:57.781Z INFO  - 3e4531da2f06 Extracting 10MB / 15MB
+2024-03-10T16:34:57.782Z INFO  - 3e4531da2f06 Extracting 12MB / 15MB
+2024-03-10T16:34:57.783Z INFO  - 3e4531da2f06 Extracting 12MB / 15MB
+2024-03-10T16:34:57.783Z INFO  - 3e4531da2f06 Extracting 13MB / 15MB
+2024-03-10T16:34:57.784Z INFO  - 3e4531da2f06 Extracting 15MB / 15MB
+2024-03-10T16:34:58.778Z INFO  - 3e4531da2f06 Pull complete
+2024-03-10T16:34:58.779Z INFO  - fab276c5b688 Extracting 32KB / 316KB
+2024-03-10T16:34:58.780Z INFO  - fab276c5b688 Extracting 96KB / 316KB
+2024-03-10T16:34:58.780Z INFO  - fab276c5b688 Extracting 316KB / 316KB
+2024-03-10T16:34:58.786Z INFO  - fab276c5b688 Extracting 316KB / 316KB
+2024-03-10T16:34:58.787Z INFO  - fab276c5b688 Pull complete
+2024-03-10T16:34:58.787Z INFO  - e7627caf8387 Extracting 64KB / 77KB
+2024-03-10T16:34:58.788Z INFO  - e7627caf8387 Extracting 77KB / 77KB
+2024-03-10T16:34:58.796Z INFO  - e7627caf8387 Extracting 77KB / 77KB
+2024-03-10T16:34:58.797Z INFO  - e7627caf8387 Pull complete
+2024-03-10T16:34:58.798Z INFO  - 76cbd545fe97 Extracting 32KB / 50KB
+2024-03-10T16:34:58.798Z INFO  - 76cbd545fe97 Extracting 50KB / 50KB
+2024-03-10T16:34:58.799Z INFO  - 76cbd545fe97 Extracting 50KB / 50KB
+2024-03-10T16:34:58.805Z INFO  - 76cbd545fe97 Pull complete
+2024-03-10T16:34:58.806Z INFO  - 7e1cd48051c5 Extracting 13KB / 13KB
+2024-03-10T16:34:58.982Z INFO  - 7e1cd48051c5 Extracting 13KB / 13KB
+2024-03-10T16:34:59.008Z INFO  - 7e1cd48051c5 Pull complete
+2024-03-10T16:34:59.012Z INFO  - 2424767f91e7 Extracting 10KB / 10KB
+2024-03-10T16:34:59.050Z INFO  - 2424767f91e7 Extracting 10KB / 10KB
+2024-03-10T16:34:59.201Z INFO  - 2424767f91e7 Pull complete
+2024-03-10T16:34:59.430Z INFO  - 030a88ad1147 Extracting 544KB / 56MB
+2024-03-10T16:34:59.714Z INFO  - 030a88ad1147 Extracting 1MB / 56MB
+2024-03-10T16:34:59.861Z INFO  - 030a88ad1147 Extracting 2MB / 56MB
+2024-03-10T16:35:00.035Z INFO  - 030a88ad1147 Extracting 3MB / 56MB
+2024-03-10T16:35:00.144Z INFO  - 030a88ad1147 Extracting 4MB / 56MB
+2024-03-10T16:35:00.259Z INFO  - 030a88ad1147 Extracting 5MB / 56MB
+2024-03-10T16:35:00.393Z INFO  - 030a88ad1147 Extracting 6MB / 56MB
+2024-03-10T16:35:00.589Z INFO  - 030a88ad1147 Extracting 7MB / 56MB
+2024-03-10T16:35:01.147Z INFO  - 030a88ad1147 Extracting 11MB / 56MB
+2024-03-10T16:35:01.498Z INFO  - 030a88ad1147 Extracting 12MB / 56MB
+2024-03-10T16:35:01.769Z INFO  - 030a88ad1147 Extracting 13MB / 56MB
+2024-03-10T16:35:02.220Z INFO  - 030a88ad1147 Extracting 16MB / 56MB
+2024-03-10T16:35:02.328Z INFO  - 030a88ad1147 Extracting 17MB / 56MB
+2024-03-10T16:35:02.465Z INFO  - 030a88ad1147 Extracting 18MB / 56MB
+2024-03-10T16:35:02.575Z INFO  - 030a88ad1147 Extracting 19MB / 56MB
+2024-03-10T16:35:02.725Z INFO  - 030a88ad1147 Extracting 20MB / 56MB
+2024-03-10T16:35:02.846Z INFO  - 030a88ad1147 Extracting 21MB / 56MB
+2024-03-10T16:35:03.126Z INFO  - 030a88ad1147 Extracting 22MB / 56MB
+2024-03-10T16:35:03.522Z INFO  - 030a88ad1147 Extracting 23MB / 56MB
+2024-03-10T16:35:03.727Z INFO  - 030a88ad1147 Extracting 24MB / 56MB
+2024-03-10T16:35:04.303Z INFO  - 030a88ad1147 Extracting 25MB / 56MB
+2024-03-10T16:35:04.422Z INFO  - 030a88ad1147 Extracting 27MB / 56MB
+2024-03-10T16:35:04.689Z INFO  - 030a88ad1147 Extracting 28MB / 56MB
+2024-03-10T16:35:04.851Z INFO  - 030a88ad1147 Extracting 29MB / 56MB
+2024-03-10T16:35:04.961Z INFO  - 030a88ad1147 Extracting 30MB / 56MB
+2024-03-10T16:35:05.079Z INFO  - 030a88ad1147 Extracting 31MB / 56MB
+2024-03-10T16:35:05.764Z INFO  - 030a88ad1147 Extracting 36MB / 56MB
+2024-03-10T16:35:05.948Z INFO  - 030a88ad1147 Extracting 37MB / 56MB
+2024-03-10T16:35:06.105Z INFO  - 030a88ad1147 Extracting 38MB / 56MB
+2024-03-10T16:35:06.393Z INFO  - 030a88ad1147 Extracting 39MB / 56MB
+2024-03-10T16:35:07.592Z INFO  - 030a88ad1147 Extracting 47MB / 56MB
+2024-03-10T16:35:08.735Z INFO  - 030a88ad1147 Extracting 53MB / 56MB
+2024-03-10T16:35:09.179Z INFO  - 030a88ad1147 Extracting 55MB / 56MB
+2024-03-10T16:35:09.322Z INFO  - 030a88ad1147 Extracting 56MB / 56MB
+2024-03-10T16:35:09.490Z INFO  - 030a88ad1147 Extracting 56MB / 56MB
+2024-03-10T16:35:09.579Z INFO  - 030a88ad1147 Pull complete
+2024-03-10T16:35:09.603Z INFO  - 65b9799a7114 Extracting 19KB / 19KB
+2024-03-10T16:35:09.830Z INFO  - 65b9799a7114 Extracting 19KB / 19KB
+2024-03-10T16:35:09.860Z INFO  - 65b9799a7114 Pull complete
+2024-03-10T16:35:09.885Z INFO  - 794cd67e00af Extracting 10KB / 10KB
+2024-03-10T16:35:09.887Z INFO  - 794cd67e00af Extracting 10KB / 10KB
+2024-03-10T16:35:10.055Z INFO  - 794cd67e00af Pull complete
+2024-03-10T16:35:10.060Z INFO  - 99eb07288124 Extracting 13KB / 13KB
+2024-03-10T16:35:10.225Z INFO  - 99eb07288124 Extracting 13KB / 13KB
+2024-03-10T16:35:10.290Z INFO  - 99eb07288124 Pull complete
+2024-03-10T16:35:10.295Z INFO  - 27d8d88dc5fe Extracting 10KB / 10KB
+2024-03-10T16:35:10.316Z INFO  - 27d8d88dc5fe Extracting 10KB / 10KB
+2024-03-10T16:35:10.825Z INFO  - 27d8d88dc5fe Pull complete
+2024-03-10T16:35:10.826Z INFO  - 4f4fb700ef54 Extracting 32B / 32B
+2024-03-10T16:35:10.826Z INFO  - 4f4fb700ef54 Extracting 32B / 32B
+2024-03-10T16:35:10.827Z INFO  - 4f4fb700ef54 Pull complete
+2024-03-10T16:35:11.235Z INFO  - 8eac62777bff Extracting 1KB / 1KB
+2024-03-10T16:35:11.244Z INFO  - 8eac62777bff Extracting 1KB / 1KB
+2024-03-10T16:35:11.401Z INFO  - 8eac62777bff Pull complete
+2024-03-10T16:35:11.626Z INFO  - 1e3292972000 Extracting 2KB / 2KB
+2024-03-10T16:35:11.647Z INFO  - 1e3292972000 Extracting 2KB / 2KB
+2024-03-10T16:35:11.886Z INFO  - 1e3292972000 Pull complete
+2024-03-10T16:35:12.154Z INFO  - a4bd13f5316c Extracting 423B / 423B
+2024-03-10T16:35:12.227Z INFO  - a4bd13f5316c Extracting 423B / 423B
+2024-03-10T16:35:12.434Z INFO  - a4bd13f5316c Pull complete
+2024-03-10T16:35:12.694Z INFO  - af49b434832c Extracting 530B / 530B
+2024-03-10T16:35:12.724Z INFO  - af49b434832c Extracting 530B / 530B
+2024-03-10T16:35:12.924Z INFO  - af49b434832c Pull complete
+2024-03-10T16:35:13.136Z INFO  - 8056c343c77e Extracting 529B / 529B
+2024-03-10T16:35:13.145Z INFO  - 8056c343c77e Extracting 529B / 529B
+2024-03-10T16:35:13.370Z INFO  - 8056c343c77e Pull complete
+2024-03-10T16:35:14.123Z INFO  - 5df0cf3d3f9a Extracting 544KB / 109MB
+2024-03-10T16:35:14.380Z INFO  - 5df0cf3d3f9a Extracting 2MB / 109MB
+2024-03-10T16:35:14.625Z INFO  - 5df0cf3d3f9a Extracting 4MB / 109MB
+2024-03-10T16:35:14.898Z INFO  - 5df0cf3d3f9a Extracting 6MB / 109MB
+2024-03-10T16:35:15.250Z INFO  - 5df0cf3d3f9a Extracting 9MB / 109MB
+2024-03-10T16:35:15.364Z INFO  - 5df0cf3d3f9a Extracting 9MB / 109MB
+2024-03-10T16:35:15.761Z INFO  - 5df0cf3d3f9a Extracting 11MB / 109MB
+2024-03-10T16:35:15.878Z INFO  - 5df0cf3d3f9a Extracting 11MB / 109MB
+2024-03-10T16:35:16.212Z INFO  - 5df0cf3d3f9a Extracting 13MB / 109MB
+2024-03-10T16:35:16.701Z INFO  - 5df0cf3d3f9a Extracting 15MB / 109MB
+2024-03-10T16:35:16.850Z INFO  - 5df0cf3d3f9a Extracting 15MB / 109MB
+2024-03-10T16:35:17.294Z INFO  - 5df0cf3d3f9a Extracting 18MB / 109MB
+2024-03-10T16:35:17.586Z INFO  - 5df0cf3d3f9a Extracting 20MB / 109MB
+2024-03-10T16:35:17.890Z INFO  - 5df0cf3d3f9a Extracting 22MB / 109MB
+2024-03-10T16:35:18.132Z INFO  - 5df0cf3d3f9a Extracting 24MB / 109MB
+2024-03-10T16:35:18.422Z INFO  - 5df0cf3d3f9a Extracting 26MB / 109MB
+2024-03-10T16:35:18.763Z INFO  - 5df0cf3d3f9a Extracting 28MB / 109MB
+2024-03-10T16:35:19.015Z INFO  - 5df0cf3d3f9a Extracting 30MB / 109MB
+2024-03-10T16:35:19.241Z INFO  - 5df0cf3d3f9a Extracting 33MB / 109MB
+2024-03-10T16:35:19.358Z INFO  - 5df0cf3d3f9a Extracting 34MB / 109MB
+2024-03-10T16:35:19.605Z INFO  - 5df0cf3d3f9a Extracting 36MB / 109MB
+2024-03-10T16:35:20.061Z INFO  - 5df0cf3d3f9a Extracting 38MB / 109MB
+2024-03-10T16:35:20.297Z INFO  - 5df0cf3d3f9a Extracting 39MB / 109MB
+2024-03-10T16:35:20.568Z INFO  - 5df0cf3d3f9a Extracting 41MB / 109MB
+2024-03-10T16:35:20.869Z INFO  - 5df0cf3d3f9a Extracting 44MB / 109MB
+2024-03-10T16:35:21.115Z INFO  - 5df0cf3d3f9a Extracting 46MB / 109MB
+2024-03-10T16:35:21.271Z INFO  - 5df0cf3d3f9a Extracting 48MB / 109MB
+2024-03-10T16:35:21.512Z INFO  - 5df0cf3d3f9a Extracting 50MB / 109MB
+2024-03-10T16:35:21.618Z INFO  - 5df0cf3d3f9a Extracting 51MB / 109MB
+2024-03-10T16:35:21.861Z INFO  - 5df0cf3d3f9a Extracting 53MB / 109MB
+2024-03-10T16:35:22.235Z INFO  - 5df0cf3d3f9a Extracting 57MB / 109MB
+2024-03-10T16:35:22.366Z INFO  - 5df0cf3d3f9a Extracting 57MB / 109MB
+2024-03-10T16:35:23.466Z INFO  - 5df0cf3d3f9a Extracting 59MB / 109MB
+2024-03-10T16:35:24.394Z INFO  - 5df0cf3d3f9a Extracting 60MB / 109MB
+2024-03-10T16:35:24.395Z INFO  - 5df0cf3d3f9a Extracting 63MB / 109MB
+2024-03-10T16:35:24.541Z INFO  - 5df0cf3d3f9a Extracting 64MB / 109MB
+2024-03-10T16:35:25.324Z INFO  - 5df0cf3d3f9a Extracting 65MB / 109MB
+2024-03-10T16:35:25.462Z INFO  - 5df0cf3d3f9a Extracting 66MB / 109MB
+2024-03-10T16:35:25.940Z INFO  - 5df0cf3d3f9a Extracting 69MB / 109MB
+2024-03-10T16:35:26.287Z INFO  - 5df0cf3d3f9a Extracting 71MB / 109MB
+2024-03-10T16:35:26.852Z INFO  - 5df0cf3d3f9a Extracting 72MB / 109MB
+2024-03-10T16:35:27.913Z INFO  - 5df0cf3d3f9a Extracting 73MB / 109MB
+2024-03-10T16:35:27.925Z INFO  - 5df0cf3d3f9a Extracting 74MB / 109MB
+2024-03-10T16:35:27.932Z INFO  - 5df0cf3d3f9a Extracting 75MB / 109MB
+2024-03-10T16:35:28.915Z INFO  - 5df0cf3d3f9a Extracting 77MB / 109MB
+2024-03-10T16:35:28.995Z INFO  - 5df0cf3d3f9a Extracting 77MB / 109MB
+2024-03-10T16:35:29.859Z INFO  - 5df0cf3d3f9a Extracting 79MB / 109MB
+2024-03-10T16:35:30.138Z INFO  - 5df0cf3d3f9a Extracting 79MB / 109MB
+2024-03-10T16:35:30.869Z INFO  - 5df0cf3d3f9a Extracting 81MB / 109MB
+2024-03-10T16:35:31.199Z INFO  - 5df0cf3d3f9a Extracting 81MB / 109MB
+2024-03-10T16:35:31.991Z INFO  - 5df0cf3d3f9a Extracting 83MB / 109MB
+2024-03-10T16:35:32.208Z INFO  - 5df0cf3d3f9a Extracting 83MB / 109MB
+2024-03-10T16:35:33.169Z INFO  - 5df0cf3d3f9a Extracting 86MB / 109MB
+2024-03-10T16:35:33.441Z INFO  - 5df0cf3d3f9a Extracting 86MB / 109MB
+2024-03-10T16:35:34.149Z INFO  - 5df0cf3d3f9a Extracting 88MB / 109MB
+2024-03-10T16:35:34.430Z INFO  - 5df0cf3d3f9a Extracting 88MB / 109MB
+2024-03-10T16:35:35.115Z INFO  - 5df0cf3d3f9a Extracting 90MB / 109MB
+2024-03-10T16:35:35.609Z INFO  - 5df0cf3d3f9a Extracting 92MB / 109MB
+2024-03-10T16:35:35.747Z INFO  - 5df0cf3d3f9a Extracting 92MB / 109MB
+2024-03-10T16:35:36.067Z INFO  - 5df0cf3d3f9a Extracting 94MB / 109MB
+2024-03-10T16:35:36.291Z INFO  - 5df0cf3d3f9a Extracting 95MB / 109MB
+2024-03-10T16:35:36.731Z INFO  - 5df0cf3d3f9a Extracting 96MB / 109MB
+2024-03-10T16:35:36.849Z INFO  - 5df0cf3d3f9a Extracting 97MB / 109MB
+2024-03-10T16:35:37.365Z INFO  - 5df0cf3d3f9a Extracting 98MB / 109MB
+2024-03-10T16:35:37.592Z INFO  - 5df0cf3d3f9a Extracting 99MB / 109MB
+2024-03-10T16:35:38.485Z INFO  - 5df0cf3d3f9a Extracting 100MB / 109MB
+2024-03-10T16:35:38.492Z INFO  - 5df0cf3d3f9a Extracting 101MB / 109MB
+2024-03-10T16:35:38.582Z INFO  - 5df0cf3d3f9a Extracting 102MB / 109MB
+2024-03-10T16:35:39.237Z INFO  - 5df0cf3d3f9a Extracting 103MB / 109MB
+2024-03-10T16:35:39.540Z INFO  - 5df0cf3d3f9a Extracting 104MB / 109MB
+2024-03-10T16:35:40.972Z INFO  - 5df0cf3d3f9a Extracting 105MB / 109MB
+2024-03-10T16:35:40.981Z INFO  - 5df0cf3d3f9a Extracting 106MB / 109MB
+2024-03-10T16:35:40.989Z INFO  - 5df0cf3d3f9a Extracting 107MB / 109MB
+2024-03-10T16:35:41.981Z INFO  - 5df0cf3d3f9a Extracting 108MB / 109MB
+2024-03-10T16:35:41.982Z INFO  - 5df0cf3d3f9a Extracting 109MB / 109MB
+2024-03-10T16:35:41.982Z INFO  - 5df0cf3d3f9a Pull complete
+2024-03-10T16:35:41.983Z INFO  - 9d4e73ba95aa Extracting 4KB / 4KB
+2024-03-10T16:35:41.984Z INFO  - 9d4e73ba95aa Extracting 4KB / 4KB
+2024-03-10T16:35:42.149Z INFO  - 9d4e73ba95aa Pull complete
+2024-03-10T16:35:42.636Z INFO  - 2d1d783fc119 Extracting 1MB / 36MB
+2024-03-10T16:35:43.142Z INFO  - 2d1d783fc119 Extracting 3MB / 36MB
+2024-03-10T16:35:43.619Z INFO  - 2d1d783fc119 Extracting 4MB / 36MB
+2024-03-10T16:35:44.085Z INFO  - 2d1d783fc119 Extracting 5MB / 36MB
+2024-03-10T16:35:44.522Z INFO  - 2d1d783fc119 Extracting 6MB / 36MB
+2024-03-10T16:35:44.642Z INFO  - 2d1d783fc119 Extracting 6MB / 36MB
+2024-03-10T16:35:44.780Z INFO  - 2d1d783fc119 Extracting 7MB / 36MB
+2024-03-10T16:35:44.907Z INFO  - 2d1d783fc119 Extracting 8MB / 36MB
+2024-03-10T16:35:45.023Z INFO  - 2d1d783fc119 Extracting 9MB / 36MB
+2024-03-10T16:35:45.158Z INFO  - 2d1d783fc119 Extracting 9MB / 36MB
+2024-03-10T16:35:45.279Z INFO  - 2d1d783fc119 Extracting 10MB / 36MB
+2024-03-10T16:35:46.176Z INFO  - 2d1d783fc119 Extracting 15MB / 36MB
+2024-03-10T16:35:46.731Z INFO  - 2d1d783fc119 Extracting 16MB / 36MB
+2024-03-10T16:35:46.932Z INFO  - 2d1d783fc119 Extracting 17MB / 36MB
+2024-03-10T16:35:47.060Z INFO  - 2d1d783fc119 Extracting 18MB / 36MB
+2024-03-10T16:35:47.305Z INFO  - 2d1d783fc119 Extracting 18MB / 36MB
+2024-03-10T16:35:47.935Z INFO  - 2d1d783fc119 Extracting 20MB / 36MB
+2024-03-10T16:35:48.207Z INFO  - 2d1d783fc119 Extracting 23MB / 36MB
+2024-03-10T16:35:48.562Z INFO  - 2d1d783fc119 Extracting 25MB / 36MB
+2024-03-10T16:35:48.744Z INFO  - 2d1d783fc119 Extracting 26MB / 36MB
+2024-03-10T16:35:48.870Z INFO  - 2d1d783fc119 Extracting 27MB / 36MB
+2024-03-10T16:35:49.112Z INFO  - 2d1d783fc119 Extracting 28MB / 36MB
+2024-03-10T16:35:50.240Z INFO  - 2d1d783fc119 Extracting 31MB / 36MB
+2024-03-10T16:35:50.494Z INFO  - 2d1d783fc119 Extracting 32MB / 36MB
+2024-03-10T16:35:50.824Z INFO  - 2d1d783fc119 Extracting 33MB / 36MB
+2024-03-10T16:35:51.108Z INFO  - 2d1d783fc119 Extracting 34MB / 36MB
+2024-03-10T16:35:51.270Z INFO  - 2d1d783fc119 Extracting 34MB / 36MB
+2024-03-10T16:35:51.760Z INFO  - 2d1d783fc119 Extracting 35MB / 36MB
+2024-03-10T16:35:52.362Z INFO  - 2d1d783fc119 Extracting 36MB / 36MB
+2024-03-10T16:35:52.691Z INFO  - 2d1d783fc119 Extracting 36MB / 36MB
+2024-03-10T16:35:53.058Z INFO  - 2d1d783fc119 Pull complete
+2024-03-10T16:35:53.696Z INFO  - 6ca1483d6e6b Extracting 1MB / 33MB
+2024-03-10T16:35:53.972Z INFO  - 6ca1483d6e6b Extracting 2MB / 33MB
+2024-03-10T16:35:54.919Z INFO  - 6ca1483d6e6b Extracting 4MB / 33MB
+2024-03-10T16:35:55.432Z INFO  - 6ca1483d6e6b Extracting 6MB / 33MB
+2024-03-10T16:35:55.757Z INFO  - 6ca1483d6e6b Extracting 6MB / 33MB
+2024-03-10T16:35:56.623Z INFO  - 6ca1483d6e6b Extracting 9MB / 33MB
+2024-03-10T16:35:57.164Z INFO  - 6ca1483d6e6b Extracting 12MB / 33MB
+2024-03-10T16:35:57.259Z INFO  - 6ca1483d6e6b Extracting 12MB / 33MB
+2024-03-10T16:35:57.559Z INFO  - 6ca1483d6e6b Extracting 14MB / 33MB
+2024-03-10T16:35:57.761Z INFO  - 6ca1483d6e6b Extracting 14MB / 33MB
+2024-03-10T16:35:58.222Z INFO  - 6ca1483d6e6b Extracting 16MB / 33MB
+2024-03-10T16:35:58.369Z INFO  - 6ca1483d6e6b Extracting 16MB / 33MB
+2024-03-10T16:35:58.572Z INFO  - 6ca1483d6e6b Extracting 17MB / 33MB
+2024-03-10T16:35:58.949Z INFO  - 6ca1483d6e6b Extracting 18MB / 33MB
+2024-03-10T16:35:59.049Z INFO  - 6ca1483d6e6b Extracting 20MB / 33MB
+2024-03-10T16:35:59.154Z INFO  - 6ca1483d6e6b Extracting 24MB / 33MB
+2024-03-10T16:35:59.281Z INFO  - 6ca1483d6e6b Extracting 26MB / 33MB
+2024-03-10T16:35:59.378Z INFO  - 6ca1483d6e6b Extracting 28MB / 33MB
+2024-03-10T16:35:59.708Z INFO  - 6ca1483d6e6b Extracting 33MB / 33MB
+2024-03-10T16:35:59.850Z INFO  - 6ca1483d6e6b Pull complete
+2024-03-10T16:36:00.197Z INFO  - 318854ddcaf3 Extracting 128KB / 5MB
+2024-03-10T16:36:00.305Z INFO  - 318854ddcaf3 Extracting 896KB / 5MB
+2024-03-10T16:36:00.411Z INFO  - 318854ddcaf3 Extracting 1MB / 5MB
+2024-03-10T16:36:00.704Z INFO  - 318854ddcaf3 Extracting 5MB / 5MB
+2024-03-10T16:36:00.722Z INFO  - 318854ddcaf3 Extracting 5MB / 5MB
+2024-03-10T16:36:00.744Z INFO  - 318854ddcaf3 Pull complete
+2024-03-10T16:36:00.978Z INFO  - f27dc4dc2fd1 Extracting 544KB / 69MB
+2024-03-10T16:36:01.701Z INFO  - f27dc4dc2fd1 Extracting 3MB / 69MB
+2024-03-10T16:36:02.076Z INFO  - f27dc4dc2fd1 Extracting 4MB / 69MB
+2024-03-10T16:36:02.440Z INFO  - f27dc4dc2fd1 Extracting 5MB / 69MB
+2024-03-10T16:36:03.132Z INFO  - f27dc4dc2fd1 Extracting 7MB / 69MB
+2024-03-10T16:36:03.579Z INFO  - f27dc4dc2fd1 Extracting 11MB / 69MB
+2024-03-10T16:36:03.823Z INFO  - f27dc4dc2fd1 Extracting 11MB / 69MB
+2024-03-10T16:36:03.911Z INFO  - f27dc4dc2fd1 Extracting 14MB / 69MB
+2024-03-10T16:36:04.027Z INFO  - f27dc4dc2fd1 Extracting 15MB / 69MB
+2024-03-10T16:36:04.273Z INFO  - f27dc4dc2fd1 Extracting 18MB / 69MB
+2024-03-10T16:36:04.437Z INFO  - f27dc4dc2fd1 Extracting 19MB / 69MB
+2024-03-10T16:36:04.856Z INFO  - f27dc4dc2fd1 Extracting 22MB / 69MB
+2024-03-10T16:36:05.033Z INFO  - f27dc4dc2fd1 Extracting 23MB / 69MB
+2024-03-10T16:36:05.549Z INFO  - f27dc4dc2fd1 Extracting 28MB / 69MB
+2024-03-10T16:36:05.711Z INFO  - f27dc4dc2fd1 Extracting 29MB / 69MB
+2024-03-10T16:36:06.064Z INFO  - f27dc4dc2fd1 Extracting 32MB / 69MB
+2024-03-10T16:36:06.222Z INFO  - f27dc4dc2fd1 Extracting 33MB / 69MB
+2024-03-10T16:36:06.660Z INFO  - f27dc4dc2fd1 Extracting 36MB / 69MB
+2024-03-10T16:36:07.113Z INFO  - f27dc4dc2fd1 Extracting 39MB / 69MB
+2024-03-10T16:36:07.268Z INFO  - f27dc4dc2fd1 Extracting 40MB / 69MB
+2024-03-10T16:36:07.413Z INFO  - f27dc4dc2fd1 Extracting 41MB / 69MB
+2024-03-10T16:36:07.541Z INFO  - f27dc4dc2fd1 Extracting 43MB / 69MB
+2024-03-10T16:36:07.952Z INFO  - f27dc4dc2fd1 Extracting 44MB / 69MB
+2024-03-10T16:36:08.901Z INFO  - f27dc4dc2fd1 Extracting 47MB / 69MB
+2024-03-10T16:36:09.389Z INFO  - f27dc4dc2fd1 Extracting 48MB / 69MB
+2024-03-10T16:36:09.747Z INFO  - f27dc4dc2fd1 Extracting 50MB / 69MB
+2024-03-10T16:36:09.940Z INFO  - f27dc4dc2fd1 Extracting 51MB / 69MB
+2024-03-10T16:36:10.904Z INFO  - f27dc4dc2fd1 Extracting 54MB / 69MB
+2024-03-10T16:36:11.180Z INFO  - f27dc4dc2fd1 Extracting 54MB / 69MB
+2024-03-10T16:36:11.897Z INFO  - f27dc4dc2fd1 Extracting 61MB / 69MB
+2024-03-10T16:36:12.264Z INFO  - f27dc4dc2fd1 Extracting 64MB / 69MB
+2024-03-10T16:36:12.418Z INFO  - f27dc4dc2fd1 Extracting 65MB / 69MB
+2024-03-10T16:36:12.692Z INFO  - f27dc4dc2fd1 Extracting 68MB / 69MB
+2024-03-10T16:36:13.022Z INFO  - f27dc4dc2fd1 Extracting 69MB / 69MB
+2024-03-10T16:36:13.204Z INFO  - f27dc4dc2fd1 Pull complete
+2024-03-10T16:36:13.211Z INFO  - d01f4d564d10 Extracting 1KB / 1KB
+2024-03-10T16:36:13.217Z INFO  - d01f4d564d10 Extracting 1KB / 1KB
+2024-03-10T16:36:13.386Z INFO  - d01f4d564d10 Pull complete
+2024-03-10T16:36:13.402Z INFO  - c6631cb758bb Extracting 1KB / 1KB
+2024-03-10T16:36:13.404Z INFO  - c6631cb758bb Extracting 1KB / 1KB
+2024-03-10T16:36:13.564Z INFO  - c6631cb758bb Pull complete
+2024-03-10T16:36:13.581Z INFO  - 9b4618a4b3d7 Extracting 133B / 133B
+2024-03-10T16:36:13.676Z INFO  - 9b4618a4b3d7 Extracting 133B / 133B
+2024-03-10T16:36:13.794Z INFO  - 9b4618a4b3d7 Pull complete
+2024-03-10T16:36:13.805Z INFO  - 6abcdc071cf9 Extracting 270B / 270B
+2024-03-10T16:36:13.814Z INFO  - 6abcdc071cf9 Extracting 270B / 270B
+2024-03-10T16:36:13.963Z INFO  - 6abcdc071cf9 Pull complete
+2024-03-10T16:36:13.989Z INFO  - eb6eb10708a8 Extracting 272B / 272B
+2024-03-10T16:36:13.992Z INFO  - eb6eb10708a8 Extracting 272B / 272B
+2024-03-10T16:36:14.148Z INFO  - eb6eb10708a8 Pull complete
+2024-03-10T16:36:14.158Z INFO  - c3c0f42ae16d Extracting 836B / 836B
+2024-03-10T16:36:14.176Z INFO  - c3c0f42ae16d Extracting 836B / 836B
+2024-03-10T16:36:14.518Z INFO  - c3c0f42ae16d Pull complete
+2024-03-10T16:36:14.546Z INFO  - 19c77a8eeb05 Extracting 123B / 123B
+2024-03-10T16:36:14.548Z INFO  - 19c77a8eeb05 Extracting 123B / 123B
+2024-03-10T16:36:15.002Z INFO  - 19c77a8eeb05 Pull complete
+2024-03-10T16:36:15.023Z INFO  - 7f16a7f0cc3b Extracting 419B / 419B
+2024-03-10T16:36:15.062Z INFO  - 7f16a7f0cc3b Extracting 419B / 419B
+2024-03-10T16:36:15.368Z INFO  - 7f16a7f0cc3b Pull complete
+2024-03-10T16:36:15.399Z INFO  - eeb7a1346937 Extracting 1KB / 1KB
+2024-03-10T16:36:15.407Z INFO  - eeb7a1346937 Extracting 1KB / 1KB
+2024-03-10T16:36:15.788Z INFO  - eeb7a1346937 Pull complete
+2024-03-10T16:36:15.810Z INFO  - 0042726f9bbd Extracting 888B / 888B
+2024-03-10T16:36:15.829Z INFO  - 0042726f9bbd Extracting 888B / 888B
+2024-03-10T16:36:16.169Z INFO  - 0042726f9bbd Pull complete
+2024-03-10T16:36:16.192Z INFO  - f8c630c85fc7 Extracting 1KB / 1KB
+2024-03-10T16:36:16.200Z INFO  - f8c630c85fc7 Extracting 1KB / 1KB
+2024-03-10T16:36:16.417Z INFO  - f8c630c85fc7 Pull complete
+2024-03-10T16:36:16.436Z INFO  - 8478730f39e0 Extracting 121B / 121B
+2024-03-10T16:36:16.456Z INFO  - 8478730f39e0 Extracting 121B / 121B
+2024-03-10T16:36:16.645Z INFO  - 8478730f39e0 Pull complete
+2024-03-10T16:36:16.662Z INFO  - 70c54c808dec Extracting 1KB / 1KB
+2024-03-10T16:36:16.670Z INFO  - 70c54c808dec Extracting 1KB / 1KB
+2024-03-10T16:36:16.863Z INFO  - 70c54c808dec Pull complete
+2024-03-10T16:36:16.876Z INFO  - 4535cc496438 Extracting 1KB / 1KB
+2024-03-10T16:36:16.897Z INFO  - 4535cc496438 Extracting 1KB / 1KB
+2024-03-10T16:36:17.076Z INFO  - 4535cc496438 Pull complete
+2024-03-10T16:36:17.090Z INFO  - ff31a6bb9138 Extracting 357B / 357B
+2024-03-10T16:36:17.094Z INFO  - ff31a6bb9138 Extracting 357B / 357B
+2024-03-10T16:36:17.267Z INFO  - ff31a6bb9138 Pull complete
+2024-03-10T16:36:17.276Z INFO  - 44790a7a865d Extracting 842B / 842B
+2024-03-10T16:36:17.286Z INFO  - 44790a7a865d Extracting 842B / 842B
+2024-03-10T16:36:17.466Z INFO  - 44790a7a865d Pull complete
+2024-03-10T16:36:17.482Z INFO  - 9acaaf4b93b4 Extracting 138B / 138B
+2024-03-10T16:36:17.502Z INFO  - 9acaaf4b93b4 Extracting 138B / 138B
+2024-03-10T16:36:17.901Z INFO  - 9acaaf4b93b4 Pull complete
+2024-03-10T16:36:17.933Z INFO  - fcb164292ffa Extracting 2KB / 2KB
+2024-03-10T16:36:17.934Z INFO  - fcb164292ffa Extracting 2KB / 2KB
+2024-03-10T16:36:18.185Z INFO  - fcb164292ffa Pull complete
+2024-03-10T16:36:18.194Z INFO  - 2bac3defb6ee Extracting 143B / 143B
+2024-03-10T16:36:18.205Z INFO  - 2bac3defb6ee Extracting 143B / 143B
+2024-03-10T16:36:18.470Z INFO  - 2bac3defb6ee Pull complete
+2024-03-10T16:36:18.490Z INFO  - 7e0d6c2144d2 Extracting 11KB / 11KB
+2024-03-10T16:36:18.509Z INFO  - 7e0d6c2144d2 Extracting 11KB / 11KB
+2024-03-10T16:36:18.731Z INFO  - 7e0d6c2144d2 Pull complete
+2024-03-10T16:36:19.132Z INFO  - 282ae8d95333 Extracting 640KB / 4MB
+2024-03-10T16:36:19.357Z INFO  - 282ae8d95333 Extracting 1MB / 4MB
+2024-03-10T16:36:19.581Z INFO  - 282ae8d95333 Extracting 2MB / 4MB
+2024-03-10T16:36:20.041Z INFO  - 282ae8d95333 Extracting 3MB / 4MB
+2024-03-10T16:36:20.237Z INFO  - 282ae8d95333 Extracting 4MB / 4MB
+2024-03-10T16:36:20.254Z INFO  - 282ae8d95333 Extracting 4MB / 4MB
+2024-03-10T16:36:20.292Z INFO  - 282ae8d95333 Pull complete
+2024-03-10T16:36:20.303Z INFO  - 02c6dfab9d1d Extracting 16KB / 16KB
+2024-03-10T16:36:20.332Z INFO  - 02c6dfab9d1d Extracting 16KB / 16KB
+2024-03-10T16:36:20.478Z INFO  - 02c6dfab9d1d Pull complete
+2024-03-10T16:36:20.489Z INFO  - f223ac80ef1b Extracting 1KB / 1KB
+2024-03-10T16:36:20.497Z INFO  - f223ac80ef1b Extracting 1KB / 1KB
+2024-03-10T16:36:20.652Z INFO  - f223ac80ef1b Pull complete
+2024-03-10T16:36:20.693Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T16:36:20.702Z INFO  -  Status: Downloaded newer image for 10.1.0.5:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T16:36:20.824Z INFO  - Pull Image successful, Time taken: 129 Seconds
+2024-03-10T16:36:24.746Z INFO  - Starting container for site
+2024-03-10T16:36:24.748Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_0_a5c0148c -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T16:36:24.749Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T16:36:30.239Z INFO  - Initiating warmup request to container python-flask-webapp-t_0_a5c0148c for site python-flask-webapp-t
+2024-03-10T16:36:46.768Z ERROR - Container python-flask-webapp-t_0_a5c0148c for site python-flask-webapp-t has exited, failing site start
+2024-03-10T16:36:46.791Z ERROR - Container python-flask-webapp-t_0_a5c0148c didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
+2024-03-10T16:36:47.031Z INFO  - Stopping site python-flask-webapp-t because it failed during startup.
+2024-03-10T16:36:52.3375509Z Container is terminating. Grace period: 0 seconds.
+2024-03-10T16:36:52.3778657Z Stop and delete container. Retry count = 0
+2024-03-10T16:36:52.3947082Z Stopping container: python-flask-webapp-t_kudu_2dc1dfac.
+2024-03-10T16:36:52.7210274Z Deleting container: python-flask-webapp-t_kudu_2dc1dfac. Retry count = 0
+2024-03-10T16:36:53.3689358Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:36:53.4577419Z Container is terminated. Total time elapsed: 1106 ms.
+2024-03-10T16:36:56.030Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T16:36:56.038Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T16:36:56.039Z INFO  -  Status: Image is up to date for 10.1.0.5:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T16:36:56.057Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T16:36:56.277Z INFO  - Starting container for site
+2024-03-10T16:36:56.278Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_0_9114738e -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T16:36:56.279Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T16:36:59.351Z INFO  - Initiating warmup request to container python-flask-webapp-t_0_9114738e for site python-flask-webapp-t
+2024-03-10T16:37:16.164Z INFO  - Waiting for response to warmup request for container python-flask-webapp-t_0_9114738e. Elapsed time = 16.8129651 sec
+2024-03-10T16:37:19.413Z ERROR - Container python-flask-webapp-t_0_9114738e for site python-flask-webapp-t has exited, failing site start
+2024-03-10T16:37:19.423Z ERROR - Container python-flask-webapp-t_0_9114738e didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
+2024-03-10T16:37:19.529Z INFO  - Stopping site python-flask-webapp-t because it failed during startup.
+2024-03-10T16:37:26.980Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T16:37:26.999Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T16:37:26.999Z INFO  -  Status: Image is up to date for 10.1.0.5:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T16:37:27.056Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T16:37:28.304Z INFO  - Starting container for site
+2024-03-10T16:37:28.305Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_0_cf913cfd -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T16:37:28.306Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T16:37:31.850Z INFO  - Initiating warmup request to container python-flask-webapp-t_0_cf913cfd for site python-flask-webapp-t
+2024-03-10T16:37:46.515Z ERROR - Container python-flask-webapp-t_0_cf913cfd for site python-flask-webapp-t has exited, failing site start
+2024-03-10T16:37:46.521Z ERROR - Container python-flask-webapp-t_0_cf913cfd didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
+2024-03-10T16:37:46.532Z INFO  - Stopping site python-flask-webapp-t because it failed during startup.
+2024-03-10T16:40:23.0056293Z Container start method called.
+2024-03-10T16:40:23.1935690Z Establishing network.
+2024-03-10T16:40:23.2073448Z Pulling image: mcr.microsoft.com/appsvc/kudulite:bullseye_20240207.2.tuxprod.
+2024-03-10T16:40:24.5958729Z Container is starting.
+2024-03-10T16:40:24.5995432Z Establishing network if not established already.
+2024-03-10T16:40:24.6088930Z Mounting volumes.
+2024-03-10T16:40:24.6198292Z Nested mountpoint 
+2024-03-10T16:40:24.6480403Z Nested mountpoint volatile/logs
+2024-03-10T16:40:24.6759041Z Nested mountpoint 
+2024-03-10T16:40:24.7245611Z Nested mountpoint 
+2024-03-10T16:40:24.8314610Z Nested mountpoint 
+2024-03-10T16:40:24.8812275Z Creating container.
+2024-03-10T16:40:24.8913713Z Creating pipes for streaming container io.
+2024-03-10T16:40:24.9003836Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_kudu_bbceee4d/stdout_dba50bce4a404335914d9e5074fb7162.
+2024-03-10T16:40:24.9107112Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_kudu_bbceee4d/stdout_dba50bce4a404335914d9e5074fb7162.
+2024-03-10T16:40:24.9199464Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_kudu_bbceee4d/stdout_dba50bce4a404335914d9e5074fb7162 for reading in non-blocking mode.
+2024-03-10T16:40:24.9302241Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_kudu_bbceee4d/stdout_dba50bce4a404335914d9e5074fb7162.
+2024-03-10T16:40:24.9399347Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_kudu_bbceee4d/stdout_dba50bce4a404335914d9e5074fb7162.
+2024-03-10T16:40:24.9489467Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_kudu_bbceee4d/stderr_4be652cfe6ab4ec38c18544f8b6de47d.
+2024-03-10T16:40:24.9595338Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_kudu_bbceee4d/stderr_4be652cfe6ab4ec38c18544f8b6de47d.
+2024-03-10T16:40:24.9700670Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_kudu_bbceee4d/stderr_4be652cfe6ab4ec38c18544f8b6de47d for reading in non-blocking mode.
+2024-03-10T16:40:24.9896169Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_kudu_bbceee4d/stderr_4be652cfe6ab4ec38c18544f8b6de47d.
+2024-03-10T16:40:24.9993502Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_kudu_bbceee4d/stderr_4be652cfe6ab4ec38c18544f8b6de47d.
+2024-03-10T16:40:26.0950892Z Starting container: python-flask-webapp-t_kudu_bbceee4d.
+2024-03-10T16:40:26.3970550Z Starting watchers and probes.
+2024-03-10T16:40:26.4738928Z Starting metrics collection.
+2024-03-10T16:40:26.4926228Z Container is running.
+2024-03-10T16:40:26.5595704Z Container start method finished after 3374 ms.
+2024-03-10T16:45:14.9873941Z Container start method called.
+2024-03-10T16:45:15.0340333Z Establishing network.
+2024-03-10T16:45:15.0356136Z Pulling image: mcr.microsoft.com/appsvc/python:3.11_20240207.3.tuxprod.
+2024-03-10T16:45:17.3479707Z Container is starting.
+2024-03-10T16:45:17.3655363Z Establishing network if not established already.
+2024-03-10T16:45:17.3707885Z Mounting volumes.
+2024-03-10T16:45:17.3801535Z Nested mountpoint 
+2024-03-10T16:45:17.4180475Z Nested mountpoint volatile/logs
+2024-03-10T16:45:17.4371167Z Nested mountpoint 
+2024-03-10T16:45:17.5444712Z Creating container.
+2024-03-10T16:45:17.5610269Z Creating pipes for streaming container io.
+2024-03-10T16:45:17.5706234Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_a83b46cc/stdout_db87840903334fcfb684dd420c49712c.
+2024-03-10T16:45:17.5799390Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_a83b46cc/stdout_db87840903334fcfb684dd420c49712c.
+2024-03-10T16:45:17.5825131Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_a83b46cc/stdout_db87840903334fcfb684dd420c49712c for reading in non-blocking mode.
+2024-03-10T16:45:17.5922565Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_a83b46cc/stdout_db87840903334fcfb684dd420c49712c.
+2024-03-10T16:45:17.6009662Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_a83b46cc/stdout_db87840903334fcfb684dd420c49712c.
+2024-03-10T16:45:17.6102779Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_a83b46cc/stderr_6e54727087c84b84ba0dbcfe1517dba4.
+2024-03-10T16:45:17.6186720Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_a83b46cc/stderr_6e54727087c84b84ba0dbcfe1517dba4.
+2024-03-10T16:45:17.6274174Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_a83b46cc/stderr_6e54727087c84b84ba0dbcfe1517dba4 for reading in non-blocking mode.
+2024-03-10T16:45:17.6356648Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_a83b46cc/stderr_6e54727087c84b84ba0dbcfe1517dba4.
+2024-03-10T16:45:17.6443392Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_a83b46cc/stderr_6e54727087c84b84ba0dbcfe1517dba4.
+2024-03-10T16:45:18.6202605Z Starting container: python-flask-webapp-t_a83b46cc.
+2024-03-10T16:45:18.8954074Z Starting watchers and probes.
+2024-03-10T16:45:18.9248983Z Starting metrics collection.
+2024-03-10T16:45:18.9338831Z Container is running.
+2024-03-10T16:45:19.1407222Z Container start method finished after 4112 ms.
+2024-03-10T16:45:36.7713517Z Container has finished running with exit code: 3.
+2024-03-10T16:45:36.8996065Z Container is terminating. Grace period: 5 seconds.
+2024-03-10T16:45:36.9099908Z Stop and delete container. Retry count = 0
+2024-03-10T16:45:36.9179864Z Stopping container: python-flask-webapp-t_a83b46cc.
+2024-03-10T16:45:37.0015683Z Deleting container: python-flask-webapp-t_a83b46cc. Retry count = 0
+2024-03-10T16:45:37.5784997Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:45:37.5937232Z Container is terminated. Total time elapsed: 681 ms.
+2024-03-10T16:45:43.401Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T16:45:43.435Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T16:45:43.518Z INFO  -  Status: Downloaded newer image for 10.1.0.6:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T16:45:43.687Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T16:45:44.461Z INFO  - Starting container for site
+2024-03-10T16:45:44.462Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_0_dd181f81 -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T16:45:44.462Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T16:45:48.068Z INFO  - Initiating warmup request to container python-flask-webapp-t_0_dd181f81 for site python-flask-webapp-t
+2024-03-10T16:46:05.444Z INFO  - Waiting for response to warmup request for container python-flask-webapp-t_0_dd181f81. Elapsed time = 17.3759668 sec
+2024-03-10T16:46:10.615Z ERROR - Container python-flask-webapp-t_0_dd181f81 for site python-flask-webapp-t has exited, failing site start
+2024-03-10T16:46:10.656Z ERROR - Container python-flask-webapp-t_0_dd181f81 didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
+2024-03-10T16:46:10.790Z INFO  - Stopping site python-flask-webapp-t because it failed during startup.
+:46:06.1601093Z Nested mountpoint 
+2024-03-10T16:46:06.2673649Z Nested mountpoint 
+2024-03-10T16:46:06.2959622Z Creating container.
+2024-03-10T16:46:06.3127021Z Creating pipes for streaming container io.
+2024-03-10T16:46:06.3225031Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_kudu_e766ac4b/stdout_a23870f85ce644c99e0f23718b106a17.
+2024-03-10T16:46:06.3252940Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_kudu_e766ac4b/stdout_a23870f85ce644c99e0f23718b106a17.
+2024-03-10T16:46:06.3418394Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_kudu_e766ac4b/stdout_a23870f85ce644c99e0f23718b106a17 for reading in non-blocking mode.
+2024-03-10T16:46:06.3607170Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_kudu_e766ac4b/stdout_a23870f85ce644c99e0f23718b106a17.
+2024-03-10T16:46:06.3638725Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_kudu_e766ac4b/stdout_a23870f85ce644c99e0f23718b106a17.
+2024-03-10T16:46:06.3821054Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_kudu_e766ac4b/stderr_bb2e0e2c2d034a119c81aa9c7cf613f4.
+2024-03-10T16:46:06.3997729Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_kudu_e766ac4b/stderr_bb2e0e2c2d034a119c81aa9c7cf613f4.
+2024-03-10T16:46:06.4108382Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_kudu_e766ac4b/stderr_bb2e0e2c2d034a119c81aa9c7cf613f4 for reading in non-blocking mode.
+2024-03-10T16:46:06.4300642Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_kudu_e766ac4b/stderr_bb2e0e2c2d034a119c81aa9c7cf613f4.
+2024-03-10T16:46:06.4582133Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_kudu_e766ac4b/stderr_bb2e0e2c2d034a119c81aa9c7cf613f4.
+2024-03-10T16:46:09.0305382Z Starting container: python-flask-webapp-t_kudu_e766ac4b.
+2024-03-10T16:46:09.5639808Z Starting watchers and probes.
+2024-03-10T16:46:09.7404821Z Starting metrics collection.
+2024-03-10T16:46:09.7432277Z Container is running.
+2024-03-10T16:46:09.7921455Z Container start method finished after 9432 ms.
+2024-03-10T16:46:15.9357058Z Container is terminating. Grace period: 0 seconds.
+2024-03-10T16:46:16.0747907Z Stop and delete container. Retry count = 0
+2024-03-10T16:46:16.0937997Z Stopping container: python-flask-webapp-t_kudu_e766ac4b.
+2024-03-10T16:46:16.4170363Z Deleting container: python-flask-webapp-t_kudu_e766ac4b. Retry count = 0
+2024-03-10T16:46:17.2643392Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:46:17.2753162Z Container is terminated. Total time elapsed: 1290 ms.
+2024-03-10T16:46:17.8138890Z Container is terminating. Grace period: 0 seconds.
+2024-03-10T16:46:17.9014552Z Stop and delete container. Retry count = 0
+2024-03-10T16:46:17.9109848Z Stopping container: python-flask-webapp-t_kudu_bbceee4d.
+2024-03-10T16:46:18.2294643Z Deleting container: python-flask-webapp-t_kudu_bbceee4d. Retry count = 0
+2024-03-10T16:46:18.8890629Z Container spec TerminationMessagePolicy  path 
+2024-03-10T16:46:18.9044508Z Container is terminated. Total time elapsed: 1045 ms.
+2024-03-10T16:48:44.135Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T16:48:44.142Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T16:48:44.143Z INFO  -  Status: Image is up to date for 10.1.0.5:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T16:48:44.170Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T16:48:44.412Z INFO  - Starting container for site
+2024-03-10T16:48:44.414Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_0_87cbd02e -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T16:48:44.420Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T16:48:46.994Z INFO  - Initiating warmup request to container python-flask-webapp-t_0_87cbd02e for site python-flask-webapp-t
+2024-03-10T16:49:02.256Z ERROR - Container python-flask-webapp-t_0_87cbd02e for site python-flask-webapp-t has exited, failing site start
+2024-03-10T16:49:02.267Z ERROR - Container python-flask-webapp-t_0_87cbd02e didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
+2024-03-10T16:49:02.300Z INFO  - Stopping site python-flask-webapp-t because it failed during startup.
+2024-03-10T16:51:35.131Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T16:51:35.138Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T16:51:35.139Z INFO  -  Status: Image is up to date for 10.1.0.6:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T16:51:35.176Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T16:51:36.172Z INFO  - Starting container for site
+2024-03-10T16:51:36.172Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_0_0e40cac7 -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T16:51:36.174Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T16:51:39.300Z INFO  - Initiating warmup request to container python-flask-webapp-t_0_0e40cac7 for site python-flask-webapp-t
+2024-03-10T16:51:56.286Z ERROR - Container python-flask-webapp-t_0_0e40cac7 for site python-flask-webapp-t has exited, failing site start
+2024-03-10T16:51:56.299Z ERROR - Container python-flask-webapp-t_0_0e40cac7 didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
+2024-03-10T16:51:56.377Z INFO  - Stopping site python-flask-webapp-t because it failed during startup.
+2024-03-10T17:08:31.489Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T17:08:31.495Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T17:08:31.496Z INFO  -  Status: Image is up to date for 10.1.0.5:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T17:08:31.535Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T17:08:31.927Z INFO  - Starting container for site
+2024-03-10T17:08:31.928Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_0_a904fa0a -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T17:08:31.928Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T17:08:35.145Z INFO  - Initiating warmup request to container python-flask-webapp-t_0_a904fa0a for site python-flask-webapp-t
+2024-03-10T17:08:50.588Z ERROR - Container python-flask-webapp-t_0_a904fa0a for site python-flask-webapp-t has exited, failing site start
+2024-03-10T17:08:50.600Z ERROR - Container python-flask-webapp-t_0_a904fa0a didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
+2024-03-10T17:08:50.632Z INFO  - Stopping site python-flask-webapp-t because it failed during startup.
+2024-03-10T17:18:10.758Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T17:18:10.827Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T17:18:10.838Z INFO  -  Status: Image is up to date for 10.1.0.5:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T17:18:11.056Z INFO  - Pull Image successful, Time taken: 1 Seconds
+2024-03-10T17:18:13.431Z INFO  - Starting container for site
+2024-03-10T17:18:13.432Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_0_3b1a4eda -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T17:18:13.432Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T17:18:20.702Z INFO  - Initiating warmup request to container python-flask-webapp-t_0_3b1a4eda for site python-flask-webapp-t
+2024-03-10T17:18:32.281Z INFO  - Container python-flask-webapp-t_0_3b1a4eda for site python-flask-webapp-t initialized successfully and is ready to serve requests.
+2024-03-10T17:19:08.023Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T17:19:08.035Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T17:19:08.036Z INFO  -  Status: Image is up to date for 10.1.0.6:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T17:19:08.112Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T17:19:08.992Z INFO  - Starting container for site
+2024-03-10T17:19:09.002Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_1_23a51d57 -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T17:19:09.008Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T17:19:12.750Z INFO  - Initiating warmup request to container python-flask-webapp-t_1_23a51d57 for site python-flask-webapp-t
+2024-03-10T17:19:29.488Z INFO  - Waiting for response to warmup request for container python-flask-webapp-t_1_23a51d57. Elapsed time = 16.7378618 sec
+2024-03-10T17:19:32.238Z ERROR - Container python-flask-webapp-t_1_23a51d57 for site python-flask-webapp-t has exited, failing site start
+2024-03-10T17:19:32.253Z ERROR - Container python-flask-webapp-t_1_23a51d57 didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
+2024-03-10T17:19:56.197Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T17:19:56.202Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T17:19:56.209Z INFO  -  Status: Image is up to date for 10.1.0.5:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T17:19:56.238Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T17:19:56.415Z INFO  - Starting container for site
+2024-03-10T17:19:56.520Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_0_a38a93c0 -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T17:19:56.521Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T17:19:59.651Z INFO  - Initiating warmup request to container python-flask-webapp-t_0_a38a93c0 for site python-flask-webapp-t
+2024-03-10T17:20:15.526Z ERROR - Container python-flask-webapp-t_0_a38a93c0 for site python-flask-webapp-t has exited, failing site start
+2024-03-10T17:20:15.546Z ERROR - Container python-flask-webapp-t_0_a38a93c0 didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
+2024-03-10T17:20:15.585Z INFO  - Stopping site python-flask-webapp-t because it failed during startup.
+2024-03-10T17:20:21.690Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T17:20:21.699Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T17:20:21.700Z INFO  -  Status: Image is up to date for 10.1.0.6:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T17:20:21.719Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T17:20:21.905Z INFO  - Starting container for site
+2024-03-10T17:20:21.909Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_0_88b0f9e0 -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T17:20:21.910Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T17:20:24.944Z INFO  - Initiating warmup request to container python-flask-webapp-t_0_88b0f9e0 for site python-flask-webapp-t
+2024-03-10T17:20:41.572Z ERROR - Container python-flask-webapp-t_0_88b0f9e0 for site python-flask-webapp-t has exited, failing site start
+2024-03-10T17:20:41.634Z ERROR - Container python-flask-webapp-t_0_88b0f9e0 didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
+2024-03-10T17:20:41.658Z INFO  - Stopping site python-flask-webapp-t because it failed during startup.
+2024-03-10T17:23:34.527Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T17:23:34.529Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T17:23:34.598Z INFO  -  Status: Image is up to date for 10.1.0.5:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T17:23:34.644Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T17:23:35.018Z INFO  - Starting container for site
+2024-03-10T17:23:35.024Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_0_76c8c948 -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T17:23:35.026Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T17:23:38.967Z INFO  - Initiating warmup request to container python-flask-webapp-t_0_76c8c948 for site python-flask-webapp-t
+2024-03-10T17:23:58.160Z ERROR - Container python-flask-webapp-t_0_76c8c948 for site python-flask-webapp-t has exited, failing site start
+2024-03-10T17:23:58.180Z ERROR - Container python-flask-webapp-t_0_76c8c948 didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
+2024-03-10T17:23:58.275Z INFO  - Stopping site python-flask-webapp-t because it failed during startup.
+2024-03-10T17:24:09.691Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T17:24:09.718Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T17:24:09.719Z INFO  -  Status: Image is up to date for 10.1.0.5:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T17:24:09.799Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T17:24:10.176Z INFO  - Starting container for site
+2024-03-10T17:24:10.176Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_0_098d7203 -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T17:24:10.178Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T17:24:15.233Z INFO  - Initiating warmup request to container python-flask-webapp-t_0_098d7203 for site python-flask-webapp-t
+2024-03-10T17:24:31.047Z INFO  - Container python-flask-webapp-t_0_098d7203 for site python-flask-webapp-t initialized successfully and is ready to serve requests.
+2024-03-10T17:25:17.605Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T17:25:17.616Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T17:25:17.622Z INFO  -  Status: Image is up to date for 10.1.0.6:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T17:25:17.645Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T17:25:17.882Z INFO  - Starting container for site
+2024-03-10T17:25:17.883Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_1_253ff3fb -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T17:25:17.883Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T17:25:20.933Z INFO  - Initiating warmup request to container python-flask-webapp-t_1_253ff3fb for site python-flask-webapp-t
+2024-03-10T17:25:33.221Z INFO  - Container python-flask-webapp-t_1_253ff3fb for site python-flask-webapp-t initialized successfully and is ready to serve requests.
+2024-03-10T17:42:54.096Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T17:42:54.128Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T17:42:54.128Z INFO  -  Status: Image is up to date for 10.1.0.6:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T17:42:54.158Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T17:42:54.572Z INFO  - Starting container for site
+2024-03-10T17:42:54.573Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_2_b3412531 -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T17:42:54.574Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T17:42:59.288Z INFO  - Initiating warmup request to container python-flask-webapp-t_2_b3412531 for site python-flask-webapp-t
+2024-03-10T17:43:21.639Z ERROR - Container python-flask-webapp-t_2_b3412531 for site python-flask-webapp-t has exited, failing site start
+2024-03-10T17:43:21.708Z ERROR - Container python-flask-webapp-t_2_b3412531 didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
+2024-03-10T17:53:47.423Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T17:53:47.450Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T17:53:47.451Z INFO  -  Status: Image is up to date for 10.1.0.5:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T17:53:47.480Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T17:53:47.770Z INFO  - Starting container for site
+2024-03-10T17:53:47.771Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_0_79192361 -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T17:53:47.771Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T17:53:52.013Z INFO  - Initiating warmup request to container python-flask-webapp-t_0_79192361 for site python-flask-webapp-t
+2024-03-10T17:54:20.385Z INFO  - Container python-flask-webapp-t_0_79192361 for site python-flask-webapp-t initialized successfully and is ready to serve requests.
+2024-03-10T17:56:53.678Z INFO  - Recycling container because of CORSSettingsChanged and CORSSettingsChanged = Microsoft.Web.Hosting.CorsSettings
+2024-03-10T17:56:54.420Z INFO  - 3.11_20240207.3.tuxprod Pulling from appsvc/python
+2024-03-10T17:56:54.440Z INFO  -  Digest: sha256:6d9dcd89738bc68a6ee4424f05a51d4976414551019f521174429503141193a8
+2024-03-10T17:56:54.450Z INFO  -  Status: Image is up to date for 10.1.0.5:13209/appsvc/python:3.11_20240207.3.tuxprod
+2024-03-10T17:56:54.524Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2024-03-10T17:56:55.738Z INFO  - Starting container for site
+2024-03-10T17:56:55.746Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-t_1_c7e56de7 -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_CORS_ALLOWED_ORIGINS=https://witty-mud-09afa6410.3.azurestaticapps.net -e WEBSITE_CORS_SUPPORT_CREDENTIALS=True -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_SITE_NAME=python-flask-webapp-t -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-t.azurewebsites.net -e WEBSITE_INSTANCE_ID=e8252b7aac8c616f4523d0e298e83724f29ed838d140ac780eeaa9c45cadf4a5 appsvc/python:3.11_20240207.3.tuxprod 
+2024-03-10T17:56:55.746Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2024-03-10T17:57:18.468Z INFO  - Initiating warmup request to container python-flask-webapp-t_1_c7e56de7 for site python-flask-webapp-t
+2024-03-10T17:57:39.357Z INFO  - Waiting for response to warmup request for container python-flask-webapp-t_1_c7e56de7. Elapsed time = 20.8894019 sec
+2024-03-10T17:58:14.472Z INFO  - Container python-flask-webapp-t_1_c7e56de7 for site python-flask-webapp-t initialized successfully and is ready to serve requests.
+2024-03-10T17:58:14.479Z INFO  - Initiating warmup request to container python-flask-webapp-t_1_c7e56de7_middleware for site python-flask-webapp-t
+2024-03-10T17:58:15.674Z INFO  - Container python-flask-webapp-t_1_c7e56de7_middleware for site python-flask-webapp-t initialized successfully and is ready to serve requests.

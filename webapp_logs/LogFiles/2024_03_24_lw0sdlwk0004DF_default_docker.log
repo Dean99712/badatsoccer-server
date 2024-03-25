@@ -1,0 +1,895 @@
+2024-03-24T03:30:28.886246564Z    _____                               
+2024-03-24T03:30:28.886273065Z   /  _  \ __________ _________   ____  
+2024-03-24T03:30:28.886276965Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T03:30:28.886280265Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T03:30:28.886283265Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T03:30:28.886286465Z         \/      \/                  \/ 
+2024-03-24T03:30:28.886289365Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T03:30:28.886292065Z 
+2024-03-24T03:30:28.886294765Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T03:30:28.886297365Z Python 3.11.7
+2024-03-24T03:30:28.886300165Z Note: Any data outside '/home' is not persisted
+2024-03-24T03:30:31.399770451Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T03:30:31.663243113Z App Command Line not configured, will attempt auto-detect
+2024-03-24T03:30:31.663268314Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T03:30:31.914070004Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2024-03-24T03:30:31.932502953Z Output is compressed. Extracting it...
+2024-03-24T03:30:31.932873559Z Build Operation ID: 75ef9913c02ffce1
+2024-03-24T03:30:31.932885759Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T03:30:31.933851472Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8dc4a5f33ada8c2'...
+2024-03-24T03:30:54.864367231Z App path is set to '/tmp/8dc4a5f33ada8c2'
+2024-03-24T03:30:54.881335748Z Detected an app based on Flask
+2024-03-24T03:30:54.881357048Z Generating `gunicorn` command for 'app:app'
+2024-03-24T03:30:54.884058483Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T03:30:55.146316945Z Using packages from virtual environment antenv located at /tmp/8dc4a5f33ada8c2/antenv.
+2024-03-24T03:30:55.146344445Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages'
+2024-03-24T03:30:56.914046600Z [2024-03-24 03:30:56 +0000] [71] [INFO] Starting gunicorn 21.2.0
+2024-03-24T03:30:57.002243177Z [2024-03-24 03:30:57 +0000] [71] [INFO] Listening at: http://0.0.0.0:8000 (71)
+2024-03-24T03:30:57.003221792Z [2024-03-24 03:30:57 +0000] [71] [INFO] Using worker: sync
+2024-03-24T03:30:57.016995607Z [2024-03-24 03:30:57 +0000] [74] [INFO] Booting worker with pid: 74
+2024-03-24T03:31:08.876176328Z [2024-03-24 03:31:08 +0000] [74] [ERROR] Exception in worker process
+2024-03-24T03:31:08.876206428Z Traceback (most recent call last):
+2024-03-24T03:31:08.876211128Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+2024-03-24T03:31:08.876226128Z     worker.init_process()
+2024-03-24T03:31:08.876229428Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+2024-03-24T03:31:08.876232628Z     self.load_wsgi()
+2024-03-24T03:31:08.876235528Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+2024-03-24T03:31:08.876244529Z     self.wsgi = self.app.wsgi()
+2024-03-24T03:31:08.876247629Z                 ^^^^^^^^^^^^^^^
+2024-03-24T03:31:08.876250629Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2024-03-24T03:31:08.876253829Z     self.callable = self.load()
+2024-03-24T03:31:08.876256829Z                     ^^^^^^^^^^^
+2024-03-24T03:31:08.876259729Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+2024-03-24T03:31:08.876262929Z     return self.load_wsgiapp()
+2024-03-24T03:31:08.876265729Z            ^^^^^^^^^^^^^^^^^^^
+2024-03-24T03:31:08.876268629Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+2024-03-24T03:31:08.876271629Z     return util.import_app(self.app_uri)
+2024-03-24T03:31:08.876274629Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T03:31:08.876277629Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+2024-03-24T03:31:08.876280929Z     mod = importlib.import_module(module)
+2024-03-24T03:31:08.876283929Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T03:31:08.876286929Z   File "/opt/python/3.11.7/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2024-03-24T03:31:08.876290029Z     return _bootstrap._gcd_import(name[level:], package, level)
+2024-03-24T03:31:08.876292929Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T03:31:08.876295829Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2024-03-24T03:31:08.876299329Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2024-03-24T03:31:08.876302629Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+2024-03-24T03:31:08.876305729Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+2024-03-24T03:31:08.876308829Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2024-03-24T03:31:08.876312030Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2024-03-24T03:31:08.876315130Z   File "/tmp/8dc4a5f33ada8c2/app.py", line 10, in <module>
+2024-03-24T03:31:08.876319030Z     from applicationinsights.flask.ext import AppInsights
+2024-03-24T03:31:08.876322030Z ModuleNotFoundError: No module named 'applicationinsights'
+2024-03-24T03:31:08.885192648Z [2024-03-24 03:31:08 +0000] [74] [INFO] Worker exiting (pid: 74)
+2024-03-24T03:31:09.688467341Z [2024-03-24 03:31:09 +0000] [71] [ERROR] Worker (pid:74) exited with code 3
+2024-03-24T03:31:09.698063068Z [2024-03-24 03:31:09 +0000] [71] [ERROR] Shutting down: Master
+2024-03-24T03:31:09.698408373Z [2024-03-24 03:31:09 +0000] [71] [ERROR] Reason: Worker failed to boot.
+
+2024-03-24T07:08:07.861073239Z    _____                               
+2024-03-24T07:08:07.861100739Z   /  _  \ __________ _________   ____  
+2024-03-24T07:08:07.861104639Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T07:08:07.861107839Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T07:08:07.861111039Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T07:08:07.861114140Z         \/      \/                  \/ 
+2024-03-24T07:08:07.861117040Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T07:08:07.861119840Z 
+2024-03-24T07:08:07.861122540Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T07:08:07.861125240Z Python 3.11.7
+2024-03-24T07:08:07.861127940Z Note: Any data outside '/home' is not persisted
+2024-03-24T07:08:09.016293887Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T07:08:09.319959263Z App Command Line not configured, will attempt auto-detect
+2024-03-24T07:08:09.338462899Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T07:08:09.460329855Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2024-03-24T07:08:09.460352355Z Build Operation ID: 75ef9913c02ffce1
+2024-03-24T07:08:09.462475882Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T07:08:09.469361970Z Output is compressed. Extracting it...
+2024-03-24T07:08:09.471708400Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8dc4a5f33ada8c2'...
+2024-03-24T07:08:33.680503515Z App path is set to '/tmp/8dc4a5f33ada8c2'
+2024-03-24T07:08:33.697227935Z Detected an app based on Flask
+2024-03-24T07:08:33.697246535Z Generating `gunicorn` command for 'app:app'
+2024-03-24T07:08:33.701807095Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T07:08:33.820905963Z Using packages from virtual environment antenv located at /tmp/8dc4a5f33ada8c2/antenv.
+2024-03-24T07:08:33.820933563Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages'
+2024-03-24T07:08:34.913282745Z [2024-03-24 07:08:34 +0000] [72] [INFO] Starting gunicorn 21.2.0
+2024-03-24T07:08:34.934384423Z [2024-03-24 07:08:34 +0000] [72] [INFO] Listening at: http://0.0.0.0:8000 (72)
+2024-03-24T07:08:34.935522938Z [2024-03-24 07:08:34 +0000] [72] [INFO] Using worker: sync
+2024-03-24T07:08:34.946127277Z [2024-03-24 07:08:34 +0000] [75] [INFO] Booting worker with pid: 75
+2024-03-24T07:08:43.290351264Z [2024-03-24 07:08:43 +0000] [75] [ERROR] Exception in worker process
+2024-03-24T07:08:43.290402064Z Traceback (most recent call last):
+2024-03-24T07:08:43.290406864Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+2024-03-24T07:08:43.290410665Z     worker.init_process()
+2024-03-24T07:08:43.290422065Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+2024-03-24T07:08:43.290425465Z     self.load_wsgi()
+2024-03-24T07:08:43.290428365Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+2024-03-24T07:08:43.290431665Z     self.wsgi = self.app.wsgi()
+2024-03-24T07:08:43.290434565Z                 ^^^^^^^^^^^^^^^
+2024-03-24T07:08:43.290437465Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2024-03-24T07:08:43.290440865Z     self.callable = self.load()
+2024-03-24T07:08:43.290443865Z                     ^^^^^^^^^^^
+2024-03-24T07:08:43.290453065Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+2024-03-24T07:08:43.290456265Z     return self.load_wsgiapp()
+2024-03-24T07:08:43.290459165Z            ^^^^^^^^^^^^^^^^^^^
+2024-03-24T07:08:43.290462165Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+2024-03-24T07:08:43.290465365Z     return util.import_app(self.app_uri)
+2024-03-24T07:08:43.290468265Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T07:08:43.290471465Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+2024-03-24T07:08:43.290474665Z     mod = importlib.import_module(module)
+2024-03-24T07:08:43.290477665Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T07:08:43.290480665Z   File "/opt/python/3.11.7/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2024-03-24T07:08:43.290483765Z     return _bootstrap._gcd_import(name[level:], package, level)
+2024-03-24T07:08:43.290486666Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T07:08:43.290489566Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2024-03-24T07:08:43.290493166Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2024-03-24T07:08:43.290496466Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+2024-03-24T07:08:43.290499766Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+2024-03-24T07:08:43.290502866Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2024-03-24T07:08:43.290506066Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2024-03-24T07:08:43.290509066Z   File "/tmp/8dc4a5f33ada8c2/app.py", line 10, in <module>
+2024-03-24T07:08:43.290513266Z     from applicationinsights.flask.ext import AppInsights
+2024-03-24T07:08:43.290516266Z ModuleNotFoundError: No module named 'applicationinsights'
+2024-03-24T07:08:43.317728727Z [2024-03-24 07:08:43 +0000] [75] [INFO] Worker exiting (pid: 75)
+2024-03-24T07:08:43.965101525Z [2024-03-24 07:08:43 +0000] [72] [ERROR] Worker (pid:75) exited with code 3
+2024-03-24T07:08:43.983665372Z [2024-03-24 07:08:43 +0000] [72] [ERROR] Shutting down: Master
+2024-03-24T07:08:43.983683872Z [2024-03-24 07:08:43 +0000] [72] [ERROR] Reason: Worker failed to boot.
+
+2024-03-24T08:05:58.119172535Z    _____                               
+2024-03-24T08:05:58.119199835Z   /  _  \ __________ _________   ____  
+2024-03-24T08:05:58.119203935Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T08:05:58.119207035Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T08:05:58.119209935Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T08:05:58.119213035Z         \/      \/                  \/ 
+2024-03-24T08:05:58.119215836Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T08:05:58.119218636Z 
+2024-03-24T08:05:58.119221136Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T08:05:58.119223836Z Python 3.11.7
+2024-03-24T08:05:58.119226636Z Note: Any data outside '/home' is not persisted
+2024-03-24T08:06:02.287721089Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T08:06:02.449056685Z App Command Line not configured, will attempt auto-detect
+2024-03-24T08:06:02.449081785Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T08:06:03.050575998Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2024-03-24T08:06:03.073396894Z Output is compressed. Extracting it...
+2024-03-24T08:06:03.073418594Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8dc4a5f33ada8c2'...
+2024-03-24T08:06:03.073430894Z Build Operation ID: 75ef9913c02ffce1
+2024-03-24T08:06:03.073552496Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T08:06:27.624621486Z App path is set to '/tmp/8dc4a5f33ada8c2'
+2024-03-24T08:06:27.633144698Z Detected an app based on Flask
+2024-03-24T08:06:27.635104724Z Generating `gunicorn` command for 'app:app'
+2024-03-24T08:06:27.644180343Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T08:06:27.773430043Z Using packages from virtual environment antenv located at /tmp/8dc4a5f33ada8c2/antenv.
+2024-03-24T08:06:27.784397987Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages'
+2024-03-24T08:06:28.798481421Z [2024-03-24 08:06:28 +0000] [72] [INFO] Starting gunicorn 21.2.0
+2024-03-24T08:06:28.820920816Z [2024-03-24 08:06:28 +0000] [72] [INFO] Listening at: http://0.0.0.0:8000 (72)
+2024-03-24T08:06:28.821804928Z [2024-03-24 08:06:28 +0000] [72] [INFO] Using worker: sync
+2024-03-24T08:06:28.830757346Z [2024-03-24 08:06:28 +0000] [75] [INFO] Booting worker with pid: 75
+2024-03-24T08:06:40.346723100Z [2024-03-24 08:06:40 +0000] [75] [ERROR] Exception in worker process
+2024-03-24T08:06:40.346758201Z Traceback (most recent call last):
+2024-03-24T08:06:40.346763101Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+2024-03-24T08:06:40.346779801Z     worker.init_process()
+2024-03-24T08:06:40.346783101Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+2024-03-24T08:06:40.346791901Z     self.load_wsgi()
+2024-03-24T08:06:40.346795201Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+2024-03-24T08:06:40.346798401Z     self.wsgi = self.app.wsgi()
+2024-03-24T08:06:40.346801301Z                 ^^^^^^^^^^^^^^^
+2024-03-24T08:06:40.346804201Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2024-03-24T08:06:40.346807401Z     self.callable = self.load()
+2024-03-24T08:06:40.346810501Z                     ^^^^^^^^^^^
+2024-03-24T08:06:40.346813501Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+2024-03-24T08:06:40.346820101Z     return self.load_wsgiapp()
+2024-03-24T08:06:40.346823002Z            ^^^^^^^^^^^^^^^^^^^
+2024-03-24T08:06:40.346826002Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+2024-03-24T08:06:40.346829002Z     return util.import_app(self.app_uri)
+2024-03-24T08:06:40.346832002Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T08:06:40.346835002Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+2024-03-24T08:06:40.346838302Z     mod = importlib.import_module(module)
+2024-03-24T08:06:40.346841302Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T08:06:40.346844402Z   File "/opt/python/3.11.7/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2024-03-24T08:06:40.346847402Z     return _bootstrap._gcd_import(name[level:], package, level)
+2024-03-24T08:06:40.346850402Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T08:06:40.346853302Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2024-03-24T08:06:40.346857302Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2024-03-24T08:06:40.346860702Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+2024-03-24T08:06:40.346864002Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+2024-03-24T08:06:40.346867102Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2024-03-24T08:06:40.346870302Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2024-03-24T08:06:40.346873402Z   File "/tmp/8dc4a5f33ada8c2/app.py", line 10, in <module>
+2024-03-24T08:06:40.346877202Z     from applicationinsights.flask.ext import AppInsights
+2024-03-24T08:06:40.346880302Z ModuleNotFoundError: No module named 'applicationinsights'
+2024-03-24T08:06:40.356214524Z [2024-03-24 08:06:40 +0000] [75] [INFO] Worker exiting (pid: 75)
+2024-03-24T08:06:41.806030863Z [2024-03-24 08:06:41 +0000] [72] [ERROR] Worker (pid:75) exited with code 3
+2024-03-24T08:06:41.814021667Z [2024-03-24 08:06:41 +0000] [72] [ERROR] Shutting down: Master
+2024-03-24T08:06:41.815390385Z [2024-03-24 08:06:41 +0000] [72] [ERROR] Reason: Worker failed to boot.
+
+2024-03-24T08:17:47.825329318Z    _____                               
+2024-03-24T08:17:47.825354118Z   /  _  \ __________ _________   ____  
+2024-03-24T08:17:47.825358318Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T08:17:47.835104946Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T08:17:47.835118146Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T08:17:47.835122147Z         \/      \/                  \/ 
+2024-03-24T08:17:47.835125147Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T08:17:47.835128047Z 
+2024-03-24T08:17:47.835130647Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T08:17:47.835133547Z Python 3.11.7
+2024-03-24T08:17:47.835136247Z Note: Any data outside '/home' is not persisted
+2024-03-24T08:17:50.009811968Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T08:17:50.330946079Z App Command Line not configured, will attempt auto-detect
+2024-03-24T08:17:50.332734803Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T08:17:50.551511372Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2024-03-24T08:17:50.581211761Z Build Operation ID: 75ef9913c02ffce1
+2024-03-24T08:17:50.611424258Z Output is compressed. Extracting it...
+2024-03-24T08:17:50.611452858Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8dc4a5f33ada8c2'...
+2024-03-24T08:17:50.611465358Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T08:18:15.492807237Z App path is set to '/tmp/8dc4a5f33ada8c2'
+2024-03-24T08:18:15.522488929Z Detected an app based on Flask
+2024-03-24T08:18:15.522879134Z Generating `gunicorn` command for 'app:app'
+2024-03-24T08:18:15.532574163Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T08:18:15.834178564Z Using packages from virtual environment antenv located at /tmp/8dc4a5f33ada8c2/antenv.
+2024-03-24T08:18:15.834209464Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages'
+2024-03-24T08:18:17.159066167Z [2024-03-24 08:18:17 +0000] [72] [INFO] Starting gunicorn 21.2.0
+2024-03-24T08:18:17.179442239Z [2024-03-24 08:18:17 +0000] [72] [INFO] Listening at: http://0.0.0.0:8000 (72)
+2024-03-24T08:18:17.180613755Z [2024-03-24 08:18:17 +0000] [72] [INFO] Using worker: sync
+2024-03-24T08:18:17.208936333Z [2024-03-24 08:18:17 +0000] [75] [INFO] Booting worker with pid: 75
+2024-03-24T08:18:28.636119984Z [2024-03-24 08:18:28 +0000] [75] [ERROR] Exception in worker process
+2024-03-24T08:18:28.636174585Z Traceback (most recent call last):
+2024-03-24T08:18:28.636179585Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+2024-03-24T08:18:28.636192285Z     worker.init_process()
+2024-03-24T08:18:28.636195885Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+2024-03-24T08:18:28.636199185Z     self.load_wsgi()
+2024-03-24T08:18:28.636202085Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+2024-03-24T08:18:28.636205285Z     self.wsgi = self.app.wsgi()
+2024-03-24T08:18:28.636208185Z                 ^^^^^^^^^^^^^^^
+2024-03-24T08:18:28.636211085Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2024-03-24T08:18:28.636220685Z     self.callable = self.load()
+2024-03-24T08:18:28.636223785Z                     ^^^^^^^^^^^
+2024-03-24T08:18:28.636226685Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+2024-03-24T08:18:28.636229685Z     return self.load_wsgiapp()
+2024-03-24T08:18:28.636232586Z            ^^^^^^^^^^^^^^^^^^^
+2024-03-24T08:18:28.636235486Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+2024-03-24T08:18:28.636238586Z     return util.import_app(self.app_uri)
+2024-03-24T08:18:28.636241486Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T08:18:28.636244586Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+2024-03-24T08:18:28.636247886Z     mod = importlib.import_module(module)
+2024-03-24T08:18:28.636250886Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T08:18:28.636253986Z   File "/opt/python/3.11.7/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2024-03-24T08:18:28.636257086Z     return _bootstrap._gcd_import(name[level:], package, level)
+2024-03-24T08:18:28.636259986Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T08:18:28.636262986Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2024-03-24T08:18:28.636266486Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2024-03-24T08:18:28.636269786Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+2024-03-24T08:18:28.636272986Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+2024-03-24T08:18:28.636276086Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2024-03-24T08:18:28.636279286Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2024-03-24T08:18:28.636282386Z   File "/tmp/8dc4a5f33ada8c2/app.py", line 10, in <module>
+2024-03-24T08:18:28.636286586Z     from applicationinsights.flask.ext import AppInsights
+2024-03-24T08:18:28.636289586Z ModuleNotFoundError: No module named 'applicationinsights'
+2024-03-24T08:18:28.643882688Z [2024-03-24 08:18:28 +0000] [75] [INFO] Worker exiting (pid: 75)
+2024-03-24T08:18:29.529153792Z [2024-03-24 08:18:29 +0000] [72] [ERROR] Worker (pid:75) exited with code 3
+2024-03-24T08:18:29.530097104Z [2024-03-24 08:18:29 +0000] [72] [ERROR] Shutting down: Master
+2024-03-24T08:18:29.530439309Z [2024-03-24 08:18:29 +0000] [72] [ERROR] Reason: Worker failed to boot.
+
+2024-03-24T08:24:43.459500084Z    _____                               
+2024-03-24T08:24:43.459526285Z   /  _  \ __________ _________   ____  
+2024-03-24T08:24:43.459530785Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T08:24:43.459534085Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T08:24:43.459569885Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T08:24:43.459573085Z         \/      \/                  \/ 
+2024-03-24T08:24:43.459575885Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T08:24:43.459578685Z 
+2024-03-24T08:24:43.459581485Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T08:24:43.459584385Z Python 3.11.7
+2024-03-24T08:24:43.459587185Z Note: Any data outside '/home' is not persisted
+2024-03-24T08:24:44.874119269Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T08:24:45.076062351Z App Command Line not configured, will attempt auto-detect
+2024-03-24T08:24:45.077112665Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T08:24:45.176510585Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2024-03-24T08:24:45.188296341Z Build Operation ID: 75ef9913c02ffce1
+2024-03-24T08:24:45.188871249Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T08:24:45.189186353Z Output is compressed. Extracting it...
+2024-03-24T08:24:45.197095458Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8dc4a5f33ada8c2'...
+2024-03-24T08:25:11.628357163Z App path is set to '/tmp/8dc4a5f33ada8c2'
+2024-03-24T08:25:11.649315843Z Detected an app based on Flask
+2024-03-24T08:25:11.651814276Z Generating `gunicorn` command for 'app:app'
+2024-03-24T08:25:11.661549006Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T08:25:11.853486771Z Using packages from virtual environment antenv located at /tmp/8dc4a5f33ada8c2/antenv.
+2024-03-24T08:25:11.880600433Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages'
+2024-03-24T08:25:13.112539251Z [2024-03-24 08:25:13 +0000] [70] [INFO] Starting gunicorn 21.2.0
+2024-03-24T08:25:13.140467519Z [2024-03-24 08:25:13 +0000] [70] [INFO] Listening at: http://0.0.0.0:8000 (70)
+2024-03-24T08:25:13.141446132Z [2024-03-24 08:25:13 +0000] [70] [INFO] Using worker: sync
+2024-03-24T08:25:13.160536284Z [2024-03-24 08:25:13 +0000] [74] [INFO] Booting worker with pid: 74
+2024-03-24T08:25:22.887491126Z [2024-03-24 08:25:22 +0000] [74] [ERROR] Exception in worker process
+2024-03-24T08:25:22.887543926Z Traceback (most recent call last):
+2024-03-24T08:25:22.887548727Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+2024-03-24T08:25:22.887561327Z     worker.init_process()
+2024-03-24T08:25:22.887564527Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+2024-03-24T08:25:22.887567727Z     self.load_wsgi()
+2024-03-24T08:25:22.887570727Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+2024-03-24T08:25:22.887573727Z     self.wsgi = self.app.wsgi()
+2024-03-24T08:25:22.887576627Z                 ^^^^^^^^^^^^^^^
+2024-03-24T08:25:22.887579527Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2024-03-24T08:25:22.887582827Z     self.callable = self.load()
+2024-03-24T08:25:22.887591727Z                     ^^^^^^^^^^^
+2024-03-24T08:25:22.887595227Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+2024-03-24T08:25:22.887598427Z     return self.load_wsgiapp()
+2024-03-24T08:25:22.887601327Z            ^^^^^^^^^^^^^^^^^^^
+2024-03-24T08:25:22.887604227Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+2024-03-24T08:25:22.887607427Z     return util.import_app(self.app_uri)
+2024-03-24T08:25:22.887610427Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T08:25:22.887613527Z   File "/tmp/8dc4a5f33ada8c2/antenv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+2024-03-24T08:25:22.887616727Z     mod = importlib.import_module(module)
+2024-03-24T08:25:22.887619727Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T08:25:22.887622728Z   File "/opt/python/3.11.7/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2024-03-24T08:25:22.887626128Z     return _bootstrap._gcd_import(name[level:], package, level)
+2024-03-24T08:25:22.887629728Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-24T08:25:22.887632628Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2024-03-24T08:25:22.887636028Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2024-03-24T08:25:22.887639328Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+2024-03-24T08:25:22.887642528Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+2024-03-24T08:25:22.887645628Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2024-03-24T08:25:22.887648728Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2024-03-24T08:25:22.887651728Z   File "/tmp/8dc4a5f33ada8c2/app.py", line 10, in <module>
+2024-03-24T08:25:22.887656128Z     from applicationinsights.flask.ext import AppInsights
+2024-03-24T08:25:22.887659128Z ModuleNotFoundError: No module named 'applicationinsights'
+2024-03-24T08:25:22.897054552Z [2024-03-24 08:25:22 +0000] [74] [INFO] Worker exiting (pid: 74)
+2024-03-24T08:25:23.480958379Z [2024-03-24 08:25:23 +0000] [70] [ERROR] Worker (pid:74) exited with code 3
+2024-03-24T08:25:23.490558506Z [2024-03-24 08:25:23 +0000] [70] [ERROR] Shutting down: Master
+2024-03-24T08:25:23.490904410Z [2024-03-24 08:25:23 +0000] [70] [ERROR] Reason: Worker failed to boot.
+
+2024-03-24T08:30:51.557535667Z    _____                               
+2024-03-24T08:30:51.695033416Z   /  _  \ __________ _________   ____  
+2024-03-24T08:30:51.695041316Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T08:30:51.695044616Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T08:30:51.695047516Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T08:30:51.695050616Z         \/      \/                  \/ 
+2024-03-24T08:30:51.695053416Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T08:30:51.695056316Z 
+2024-03-24T08:30:51.695058816Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T08:30:51.695061816Z Python 3.11.7
+2024-03-24T08:30:51.695064616Z Note: Any data outside '/home' is not persisted
+2024-03-24T08:31:01.934951753Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T08:31:02.239122353Z App Command Line not configured, will attempt auto-detect
+2024-03-24T08:31:02.247855077Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T08:31:02.590124415Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2024-03-24T08:31:02.591379232Z Could not find operation ID in manifest. Generating an operation id...
+2024-03-24T08:31:02.599223043Z Build Operation ID: 19d3e5f7-b5e7-4caa-ac29-477d92e4e222
+2024-03-24T08:31:05.073194704Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T08:31:05.171252189Z No framework detected; using default app from /opt/defaultsite
+2024-03-24T08:31:05.172455406Z Generating `gunicorn` command for 'application:app'
+2024-03-24T08:31:05.190973368Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T08:31:05.344252433Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2024-03-24T08:31:05.344279233Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2024-03-24T08:31:10.359274695Z [2024-03-24 08:31:10 +0000] [68] [INFO] Starting gunicorn 21.2.0
+2024-03-24T08:31:10.490398202Z [2024-03-24 08:31:10 +0000] [68] [INFO] Listening at: http://0.0.0.0:8000 (68)
+2024-03-24T08:31:10.497637697Z [2024-03-24 08:31:10 +0000] [68] [INFO] Using worker: sync
+2024-03-24T08:31:10.520279691Z [2024-03-24 08:31:10 +0000] [72] [INFO] Booting worker with pid: 72
+2024-03-24T08:31:15.271691213Z 169.254.130.1 - - [24/Mar/2024:08:31:15 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T08:31:26.634481380Z 169.254.130.13 - - [24/Mar/2024:08:31:26 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T08:31:27.517192402Z 169.254.130.13 - - [24/Mar/2024:08:31:27 +0000] "GET / HTTP/1.1" 200 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:31:29.804056962Z 169.254.130.13 - - [24/Mar/2024:08:31:29 +0000] "GET / HTTP/1.1" 200 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T08:32:00.219553285Z 169.254.130.13 - - [24/Mar/2024:08:32:00 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:32:00.634588756Z 169.254.130.13 - - [24/Mar/2024:08:32:00 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T08:33:24.725367096Z 169.254.130.13 - - [24/Mar/2024:08:33:24 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:33:25.160766695Z 169.254.130.13 - - [24/Mar/2024:08:33:25 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T08:33:28.850280104Z 169.254.130.13 - - [24/Mar/2024:08:33:28 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:33:29.281195774Z 169.254.130.13 - - [24/Mar/2024:08:33:29 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:33:30.599152622Z 169.254.130.13 - - [24/Mar/2024:08:33:30 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:33:31.070274329Z 169.254.130.13 - - [24/Mar/2024:08:33:30 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:33:31.522628505Z 169.254.130.13 - - [24/Mar/2024:08:33:31 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T08:33:32.056386739Z 169.254.130.13 - - [24/Mar/2024:08:33:32 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:33:32.496823694Z 169.254.130.13 - - [24/Mar/2024:08:33:32 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:33:32.858605258Z 169.254.130.13 - - [24/Mar/2024:08:33:32 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:33:34.590464197Z 169.254.130.13 - - [24/Mar/2024:08:33:34 +0000] "GET / HTTP/1.1" 304 0 "https://sandbox-45-2.reactblade.portal.azure.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:33:35.083761717Z 169.254.130.13 - - [24/Mar/2024:08:33:35 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T08:33:37.182953476Z 169.254.130.13 - - [24/Mar/2024:08:33:37 +0000] "GET / HTTP/1.1" 304 0 "https://sandbox-45-2.reactblade.portal.azure.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:33:37.536933337Z 169.254.130.13 - - [24/Mar/2024:08:33:37 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T08:33:10.329250351Z    _____                               
+2024-03-24T08:33:10.329277851Z   /  _  \ __________ _________   ____  
+2024-03-24T08:33:10.329281651Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T08:33:10.329284851Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T08:33:10.329292151Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T08:33:10.329295251Z         \/      \/                  \/ 
+2024-03-24T08:33:10.329298151Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T08:33:10.329300851Z 
+2024-03-24T08:33:10.329303752Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T08:33:10.329306552Z Python 3.11.7
+2024-03-24T08:33:10.329309252Z Note: Any data outside '/home' is not persisted
+2024-03-24T08:33:15.255747435Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T08:33:15.538537635Z App Command Line not configured, will attempt auto-detect
+2024-03-24T08:33:15.546251155Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T08:33:16.072069936Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2024-03-24T08:33:16.099603064Z Build Operation ID: 3a33d48f96b46d1b
+2024-03-24T08:33:16.099626964Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T08:33:16.102804814Z Output is compressed. Extracting it...
+2024-03-24T08:33:16.102822914Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8dc4bdc740757bb'...
+2024-03-24T08:33:42.101454769Z App path is set to '/tmp/8dc4bdc740757bb'
+2024-03-24T08:33:42.111143493Z Detected an app based on Flask
+2024-03-24T08:33:42.118153582Z Generating `gunicorn` command for 'app:app'
+2024-03-24T08:33:42.120316910Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T08:33:42.251866695Z Using packages from virtual environment antenv located at /tmp/8dc4bdc740757bb/antenv.
+2024-03-24T08:33:42.251894196Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8dc4bdc740757bb/antenv/lib/python3.11/site-packages'
+2024-03-24T08:33:43.515775584Z [2024-03-24 08:33:43 +0000] [72] [INFO] Starting gunicorn 21.2.0
+2024-03-24T08:33:43.562006976Z [2024-03-24 08:33:43 +0000] [72] [INFO] Listening at: http://0.0.0.0:8000 (72)
+2024-03-24T08:33:43.565663223Z [2024-03-24 08:33:43 +0000] [72] [INFO] Using worker: sync
+2024-03-24T08:33:43.578263884Z [2024-03-24 08:33:43 +0000] [75] [INFO] Booting worker with pid: 75
+2024-03-24T08:33:53.799197769Z 169.254.130.1 - - [24/Mar/2024:08:33:53 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T08:33:54.562412957Z 169.254.130.15 - - [24/Mar/2024:08:33:54 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T08:33:58.139412080Z 169.254.130.15 - - [24/Mar/2024:08:33:58 +0000] "GET / HTTP/1.1" 200 33 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:33:58.377096058Z 169.254.130.15 - - [24/Mar/2024:08:33:58 +0000] "GET / HTTP/1.1" 200 33 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:33:58.466964859Z 169.254.130.15 - - [24/Mar/2024:08:33:58 +0000] "GET /favicon.ico HTTP/1.1" 404 207 "https://python-flask-webapp-t.azurewebsites.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T08:34:08.021208559Z 169.254.130.15 - - [24/Mar/2024:08:34:08 +0000] "GET /LogFiles HTTP/1.1" 404 207 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:34:08.555684960Z 169.254.130.15 - - [24/Mar/2024:08:34:08 +0000] "GET /LogFiles HTTP/1.1" 404 207 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T08:34:31.077019965Z    _____                               
+2024-03-24T08:34:31.077048265Z   /  _  \ __________ _________   ____  
+2024-03-24T08:34:31.077052165Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T08:34:31.077055165Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T08:34:31.077066066Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T08:34:31.077069466Z         \/      \/                  \/ 
+2024-03-24T08:34:31.077072266Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T08:34:31.077075166Z 
+2024-03-24T08:34:31.077077966Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T08:34:31.077080666Z Python 3.11.7
+2024-03-24T08:34:31.077083366Z Note: Any data outside '/home' is not persisted
+2024-03-24T08:34:35.108753121Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T08:34:36.012300938Z App Command Line not configured, will attempt auto-detect
+2024-03-24T08:34:36.012324138Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T08:34:36.443389126Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2024-03-24T08:34:36.443431226Z Build Operation ID: 3a33d48f96b46d1b
+2024-03-24T08:34:36.443436026Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T08:34:36.443448927Z Output is compressed. Extracting it...
+2024-03-24T08:34:36.443452727Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8dc4bdc740757bb'...
+2024-03-24T08:35:15.203445068Z App path is set to '/tmp/8dc4bdc740757bb'
+2024-03-24T08:35:15.225504756Z Detected an app based on Flask
+2024-03-24T08:35:15.226608471Z Generating `gunicorn` command for 'app:app'
+2024-03-24T08:35:15.231697637Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T08:35:15.352721721Z Using packages from virtual environment antenv located at /tmp/8dc4bdc740757bb/antenv.
+2024-03-24T08:35:15.352749421Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8dc4bdc740757bb/antenv/lib/python3.11/site-packages'
+2024-03-24T08:35:16.829060778Z [2024-03-24 08:35:16 +0000] [72] [INFO] Starting gunicorn 21.2.0
+2024-03-24T08:35:16.858955948Z [2024-03-24 08:35:16 +0000] [72] [INFO] Listening at: http://0.0.0.0:8000 (72)
+2024-03-24T08:35:16.860180363Z [2024-03-24 08:35:16 +0000] [72] [INFO] Using worker: sync
+2024-03-24T08:35:16.879203798Z [2024-03-24 08:35:16 +0000] [75] [INFO] Booting worker with pid: 75
+2024-03-24T08:35:26.354784170Z 169.254.130.1 - - [24/Mar/2024:08:35:26 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T08:35:42.514114870Z 169.254.130.13 - - [24/Mar/2024:08:35:42 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T08:36:52.200300426Z 169.254.130.13 - - [24/Mar/2024:08:36:52 +0000] "GET /home/LogFiles HTTP/1.1" 404 207 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T08:36:53.573242573Z 169.254.130.13 - - [24/Mar/2024:08:36:53 +0000] "GET /home/LogFiles HTTP/1.1" 404 207 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T08:37:08.890426830Z 169.254.130.13 - - [24/Mar/2024:08:37:08 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:37:09.012082002Z 169.254.130.13 - - [24/Mar/2024:08:37:09 +0000] "GET /get_all_fields HTTP/1.1" 200 158 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:37:09.204047561Z 169.254.130.13 - - [24/Mar/2024:08:37:09 +0000] "GET /get_field?field=%D7%9E%D7%92%D7%A8%D7%A9+4 HTTP/1.1" 200 59 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:37:09.324920217Z 169.254.130.13 - - [24/Mar/2024:08:37:09 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T08:41:26.799071700Z 169.254.130.13 - - [24/Mar/2024:08:41:26 +0000] "GET /home/LogFiles HTTP/1.1" 404 207 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T08:41:29.648109354Z 169.254.130.13 - - [24/Mar/2024:08:41:29 +0000] "GET /home/LogFiles HTTP/1.1" 404 207 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T08:48:01.104737053Z 169.254.130.13 - - [24/Mar/2024:08:48:00 +0000] "GET /api/vfs/LogFiles HTTP/1.1" 404 207 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:48:01.152825881Z 169.254.130.13 - - [24/Mar/2024:08:48:00 +0000] "GET /api/vfs/LogFiles HTTP/1.1" 404 207 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T08:48:02.170340063Z 169.254.130.13 - - [24/Mar/2024:08:48:02 +0000] "GET /api/vfs/LogFiles HTTP/1.1" 404 207 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T08:51:23.424886083Z 169.254.130.13 - - [24/Mar/2024:08:51:23 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T08:52:20.481248264Z 169.254.130.13 - - [24/Mar/2024:08:52:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T08:51:14.514673969Z    _____                               
+2024-03-24T08:51:14.514703869Z   /  _  \ __________ _________   ____  
+2024-03-24T08:51:14.514707770Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T08:51:14.514711170Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T08:51:14.514713970Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T08:51:14.514726170Z         \/      \/                  \/ 
+2024-03-24T08:51:14.514729070Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T08:51:14.514732070Z 
+2024-03-24T08:51:14.514734670Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T08:51:14.514737470Z Python 3.11.7
+2024-03-24T08:51:14.514740270Z Note: Any data outside '/home' is not persisted
+2024-03-24T08:51:23.142197782Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T08:51:23.868099786Z App Command Line not configured, will attempt auto-detect
+2024-03-24T08:51:23.868738895Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T08:51:24.609856398Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2024-03-24T08:51:24.609876598Z Could not find operation ID in manifest. Generating an operation id...
+2024-03-24T08:51:24.609880298Z Build Operation ID: c1d5347b-2af0-482f-9898-7b0eecbf1560
+2024-03-24T08:51:27.378309044Z No framework detected; using default app from /opt/defaultsite
+2024-03-24T08:51:27.378328544Z Generating `gunicorn` command for 'application:app'
+2024-03-24T08:51:27.408366037Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T08:51:27.408392338Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T08:51:27.408396138Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2024-03-24T08:51:27.408399738Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2024-03-24T08:51:34.132049809Z [2024-03-24 08:51:34 +0000] [48] [INFO] Starting gunicorn 21.2.0
+2024-03-24T08:51:34.614569805Z [2024-03-24 08:51:34 +0000] [48] [INFO] Listening at: http://0.0.0.0:8000 (48)
+2024-03-24T08:51:34.614589205Z [2024-03-24 08:51:34 +0000] [48] [INFO] Using worker: sync
+2024-03-24T08:51:35.539733175Z [2024-03-24 08:51:35 +0000] [51] [INFO] Booting worker with pid: 51
+2024-03-24T08:52:25.806831197Z 169.254.130.1 - - [24/Mar/2024:08:52:25 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T08:52:31.032827805Z 169.254.130.11 - - [24/Mar/2024:08:52:31 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T08:53:20.365822726Z 169.254.130.11 - - [24/Mar/2024:08:53:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T08:54:20.414381880Z 169.254.130.11 - - [24/Mar/2024:08:54:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T08:55:21.980587409Z 169.254.130.11 - - [24/Mar/2024:08:55:21 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T08:56:20.135939627Z 169.254.130.11 - - [24/Mar/2024:08:56:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T08:57:20.169209662Z 169.254.130.11 - - [24/Mar/2024:08:57:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T08:58:20.175099775Z 169.254.130.11 - - [24/Mar/2024:08:58:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T08:59:20.198747666Z 169.254.130.11 - - [24/Mar/2024:08:59:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:00:20.125653910Z 169.254.130.11 - - [24/Mar/2024:09:00:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T09:00:20.449662807Z 169.254.130.11 - - [24/Mar/2024:09:00:20 +0000] "GET / HTTP/1.1" 200 0 "https://sandbox-78-6.reactblade.portal.azure.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T09:00:21.488797871Z 169.254.130.11 - - [24/Mar/2024:09:00:21 +0000] "GET / HTTP/1.1" 200 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T09:00:31.348343441Z 169.254.130.11 - - [24/Mar/2024:09:00:31 +0000] "GET / HTTP/1.1" 304 0 "https://sandbox-78-6.reactblade.portal.azure.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T09:00:31.624184005Z 169.254.130.11 - - [24/Mar/2024:09:00:31 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T09:01:20.133221066Z 169.254.130.11 - - [24/Mar/2024:09:01:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:02:20.190104277Z 169.254.130.11 - - [24/Mar/2024:09:02:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:03:20.152127692Z 169.254.130.11 - - [24/Mar/2024:09:03:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:04:20.136295967Z 169.254.130.11 - - [24/Mar/2024:09:04:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:05:20.155987007Z 169.254.130.11 - - [24/Mar/2024:09:05:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:06:20.152510623Z 169.254.130.11 - - [24/Mar/2024:09:06:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:07:20.159284664Z 169.254.130.11 - - [24/Mar/2024:09:07:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:08:20.115886117Z 169.254.130.11 - - [24/Mar/2024:09:08:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:09:20.133904266Z 169.254.130.11 - - [24/Mar/2024:09:09:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:10:20.114856445Z 169.254.130.11 - - [24/Mar/2024:09:10:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:11:20.272245190Z 169.254.130.11 - - [24/Mar/2024:09:11:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:11:32.061892737Z 169.254.130.11 - - [24/Mar/2024:09:11:32 +0000] "GET / HTTP/1.1" 304 0 "https://sandbox-67-7.reactblade.portal.azure.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T09:11:34.043650684Z 169.254.130.11 - - [24/Mar/2024:09:11:33 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T09:11:39.069495604Z 169.254.130.11 - - [24/Mar/2024:09:11:38 +0000] "GET / HTTP/1.1" 304 0 "https://sandbox-67-7.reactblade.portal.azure.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T09:11:39.770730447Z 169.254.130.11 - - [24/Mar/2024:09:11:39 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T09:11:41.288899423Z 169.254.130.11 - - [24/Mar/2024:09:11:41 +0000] "GET / HTTP/1.1" 304 0 "https://sandbox-67-7.reactblade.portal.azure.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T09:11:41.898976935Z 169.254.130.11 - - [24/Mar/2024:09:11:41 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T09:12:20.219629433Z 169.254.130.11 - - [24/Mar/2024:09:12:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:13:20.124124356Z 169.254.130.11 - - [24/Mar/2024:09:13:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:14:20.078417555Z 169.254.130.11 - - [24/Mar/2024:09:14:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:15:20.468123057Z 169.254.130.11 - - [24/Mar/2024:09:15:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:16:20.139544447Z 169.254.130.11 - - [24/Mar/2024:09:16:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:17:20.290994474Z 169.254.130.11 - - [24/Mar/2024:09:17:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:18:21.498455708Z 169.254.130.11 - - [24/Mar/2024:09:18:21 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:19:07.588102631Z 169.254.130.11 - - [24/Mar/2024:09:19:07 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T09:19:08.733526885Z 169.254.130.11 - - [24/Mar/2024:09:19:08 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T09:19:09.557106309Z 169.254.130.11 - - [24/Mar/2024:09:19:09 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T09:19:10.079277171Z 169.254.130.11 - - [24/Mar/2024:09:19:10 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T09:19:13.695768388Z 169.254.130.11 - - [24/Mar/2024:09:19:13 +0000] "GET / HTTP/1.1" 304 0 "https://sandbox-67-7.reactblade.portal.azure.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T09:19:14.250159620Z 169.254.130.11 - - [24/Mar/2024:09:19:14 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T09:19:20.129653107Z 169.254.130.11 - - [24/Mar/2024:09:19:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:19:24.492063899Z 169.254.130.11 - - [24/Mar/2024:09:19:24 +0000] "GET / HTTP/1.1" 304 0 "https://sandbox-69-2.reactblade.portal.azure.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T09:19:24.864139465Z 169.254.130.11 - - [24/Mar/2024:09:19:24 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T09:19:02.209629811Z    _____                               
+2024-03-24T09:19:02.209680312Z   /  _  \ __________ _________   ____  
+2024-03-24T09:19:02.209685312Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T09:19:02.209688512Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T09:19:02.209691412Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T09:19:02.209694612Z         \/      \/                  \/ 
+2024-03-24T09:19:02.209697412Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T09:19:02.209700512Z 
+2024-03-24T09:19:02.209703112Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T09:19:02.209705912Z Python 3.11.7
+2024-03-24T09:19:02.209708712Z Note: Any data outside '/home' is not persisted
+2024-03-24T09:19:04.290984236Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T09:19:04.433440519Z App Command Line not configured, will attempt auto-detect
+2024-03-24T09:19:04.442544178Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T09:19:04.565575423Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2024-03-24T09:19:04.569018283Z Build Operation ID: 3b19ef5d59ef5307
+2024-03-24T09:19:04.571425025Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T09:19:04.571673629Z Output is compressed. Extracting it...
+2024-03-24T09:19:04.576796418Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8dc4be2def13a65'...
+2024-03-24T09:19:34.154256588Z App path is set to '/tmp/8dc4be2def13a65'
+2024-03-24T09:19:34.159081045Z Detected an app based on Flask
+2024-03-24T09:19:34.159870154Z Generating `gunicorn` command for 'app:app'
+2024-03-24T09:19:34.166885737Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T09:19:34.287025659Z Using packages from virtual environment antenv located at /tmp/8dc4be2def13a65/antenv.
+2024-03-24T09:19:34.287055959Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8dc4be2def13a65/antenv/lib/python3.11/site-packages'
+2024-03-24T09:19:35.512872644Z [2024-03-24 09:19:35 +0000] [73] [INFO] Starting gunicorn 21.2.0
+2024-03-24T09:19:35.611953223Z [2024-03-24 09:19:35 +0000] [73] [INFO] Listening at: http://0.0.0.0:8000 (73)
+2024-03-24T09:19:35.611980923Z [2024-03-24 09:19:35 +0000] [73] [INFO] Using worker: sync
+2024-03-24T09:19:35.664322999Z [2024-03-24 09:19:35 +0000] [76] [INFO] Booting worker with pid: 76
+2024-03-24T09:19:45.087341408Z 169.254.130.1 - - [24/Mar/2024:09:19:45 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T09:19:45.941395781Z 169.254.130.16 - - [24/Mar/2024:09:19:45 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T09:19:46.311129461Z 169.254.130.16 - - [24/Mar/2024:09:19:46 +0000] "GET / HTTP/1.1" 200 33 "https://sandbox-69-2.reactblade.portal.azure.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T09:19:46.606341257Z 169.254.130.16 - - [24/Mar/2024:09:19:46 +0000] "GET / HTTP/1.1" 200 33 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T09:20:08.406926262Z    _____                               
+2024-03-24T09:20:08.406962463Z   /  _  \ __________ _________   ____  
+2024-03-24T09:20:08.406966263Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T09:20:08.406969463Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T09:20:08.406972563Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T09:20:08.406975763Z         \/      \/                  \/ 
+2024-03-24T09:20:08.406978563Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T09:20:08.406981363Z 
+2024-03-24T09:20:08.406983963Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T09:20:08.406986763Z Python 3.11.7
+2024-03-24T09:20:08.406989363Z Note: Any data outside '/home' is not persisted
+2024-03-24T09:20:15.630948662Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T09:20:16.116640319Z App Command Line not configured, will attempt auto-detect
+2024-03-24T09:20:16.116670819Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T09:20:16.486125831Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2024-03-24T09:20:16.576604834Z Build Operation ID: 3b19ef5d59ef5307
+2024-03-24T09:20:16.576634834Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T09:20:16.576649235Z Output is compressed. Extracting it...
+2024-03-24T09:20:16.576653035Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8dc4be2def13a65'...
+2024-03-24T09:20:43.343552964Z App path is set to '/tmp/8dc4be2def13a65'
+2024-03-24T09:20:43.362040902Z Detected an app based on Flask
+2024-03-24T09:20:43.362052303Z Generating `gunicorn` command for 'app:app'
+2024-03-24T09:20:43.361750899Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T09:20:43.504588542Z Using packages from virtual environment antenv located at /tmp/8dc4be2def13a65/antenv.
+2024-03-24T09:20:43.513371255Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8dc4be2def13a65/antenv/lib/python3.11/site-packages'
+2024-03-24T09:20:44.660309954Z [2024-03-24 09:20:44 +0000] [72] [INFO] Starting gunicorn 21.2.0
+2024-03-24T09:20:44.730696562Z [2024-03-24 09:20:44 +0000] [72] [INFO] Listening at: http://0.0.0.0:8000 (72)
+2024-03-24T09:20:44.730727162Z [2024-03-24 09:20:44 +0000] [72] [INFO] Using worker: sync
+2024-03-24T09:20:44.790464833Z [2024-03-24 09:20:44 +0000] [76] [INFO] Booting worker with pid: 76
+2024-03-24T09:20:53.738899795Z 169.254.130.1 - - [24/Mar/2024:09:20:53 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T09:21:10.234425253Z 169.254.130.13 - - [24/Mar/2024:09:21:10 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T09:21:10.495612227Z 169.254.130.13 - - [24/Mar/2024:09:21:10 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:21:20.129007551Z 169.254.130.13 - - [24/Mar/2024:09:21:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:22:20.122234882Z 169.254.130.13 - - [24/Mar/2024:09:22:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:23:20.115072752Z 169.254.130.13 - - [24/Mar/2024:09:23:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:24:20.103180655Z 169.254.130.13 - - [24/Mar/2024:09:24:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:24:38.595233208Z 169.254.130.13 - - [24/Mar/2024:09:24:38 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T09:24:38.707429777Z 169.254.130.13 - - [24/Mar/2024:09:24:38 +0000] "GET /get_all_fields HTTP/1.1" 200 158 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T09:24:38.799418282Z 169.254.130.13 - - [24/Mar/2024:09:24:38 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T09:24:38.904659460Z 169.254.130.13 - - [24/Mar/2024:09:24:38 +0000] "GET /get_field?field=%D7%9E%D7%92%D7%A8%D7%A9+4 HTTP/1.1" 200 59 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T09:24:39.002404040Z 169.254.130.13 - - [24/Mar/2024:09:24:39 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+2024-03-24T09:24:39.134488569Z 169.254.130.13 - - [24/Mar/2024:09:24:39 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+
+2024-03-24T09:24:42.965517850Z 169.254.130.13 - - [24/Mar/2024:09:24:42 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:24:43.046504811Z 169.254.130.13 - - [24/Mar/2024:09:24:43 +0000] "GET /get_all_fields HTTP/1.1" 200 158 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:24:43.139141425Z 169.254.130.13 - - [24/Mar/2024:09:24:43 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:24:45.175075694Z 169.254.130.13 - - [24/Mar/2024:09:24:45 +0000] "GET /sheet_log HTTP/1.1" 500 265 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T09:24:46.453342238Z 169.254.130.13 - - [24/Mar/2024:09:24:46 +0000] "GET /sheet_log HTTP/1.1" 500 265 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:24:48.737528005Z 169.254.130.13 - - [24/Mar/2024:09:24:48 +0000] "GET /sheet_log HTTP/1.1" 500 265 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T09:24:53.001446294Z 169.254.130.13 - - [24/Mar/2024:09:24:52 +0000] "GET /sheet_log HTTP/1.1" 500 265 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T09:24:56.317613331Z 169.254.130.13 - - [24/Mar/2024:09:24:56 +0000] "GET /sheet_log HTTP/1.1" 500 265 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:24:57.612405168Z 169.254.130.13 - - [24/Mar/2024:09:24:57 +0000] "GET /sheet_log HTTP/1.1" 500 265 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:24:59.867328486Z 169.254.130.13 - - [24/Mar/2024:09:24:59 +0000] "GET /sheet_log HTTP/1.1" 500 265 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T09:25:03.197061309Z 169.254.130.13 - - [24/Mar/2024:09:25:03 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 224 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:03.483140817Z 169.254.130.13 - - [24/Mar/2024:09:25:03 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 224 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T09:25:06.020096029Z 169.254.130.13 - - [24/Mar/2024:09:25:06 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+3&entered_date=2024-02-11 HTTP/1.1" 200 422 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:06.295167312Z 169.254.130.13 - - [24/Mar/2024:09:25:06 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+3&entered_date=2024-02-11 HTTP/1.1" 200 422 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:07.548391492Z 169.254.130.13 - - [24/Mar/2024:09:25:07 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+2&entered_date=2024-02-11 HTTP/1.1" 200 537 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:07.845414969Z 169.254.130.13 - - [24/Mar/2024:09:25:07 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+2&entered_date=2024-02-11 HTTP/1.1" 200 537 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:08.985300931Z 169.254.130.13 - - [24/Mar/2024:09:25:08 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+1&entered_date=2024-02-11 HTTP/1.1" 200 3 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:09.818957793Z 169.254.130.13 - - [24/Mar/2024:09:25:09 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+1&entered_date=2024-02-11 HTTP/1.1" 200 3 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T09:25:11.317999663Z 169.254.130.13 - - [24/Mar/2024:09:25:11 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+2&entered_date=2024-02-11 HTTP/1.1" 200 537 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:11.721468164Z 169.254.130.13 - - [24/Mar/2024:09:25:11 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+2&entered_date=2024-02-11 HTTP/1.1" 200 537 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:12.546998283Z 169.254.130.13 - - [24/Mar/2024:09:25:12 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+3&entered_date=2024-02-11 HTTP/1.1" 200 422 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:12.851552928Z 169.254.130.13 - - [24/Mar/2024:09:25:12 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+3&entered_date=2024-02-11 HTTP/1.1" 200 422 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:13.666614051Z 169.254.130.13 - - [24/Mar/2024:09:25:13 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 224 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:13.949781212Z 169.254.130.13 - - [24/Mar/2024:09:25:13 +0000] "GET /get_games_statistics_by_team_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 224 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T09:25:15.728161227Z 169.254.130.13 - - [24/Mar/2024:09:25:15 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:15.812166642Z 169.254.130.13 - - [24/Mar/2024:09:25:15 +0000] "GET /get_field?field=%D7%9E%D7%92%D7%A8%D7%A9+4 HTTP/1.1" 200 59 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:15.912210271Z 169.254.130.13 - - [24/Mar/2024:09:25:15 +0000] "GET /get_all_fields HTTP/1.1" 200 158 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:16.004020290Z 169.254.130.13 - - [24/Mar/2024:09:25:15 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:16.155749205Z 169.254.130.13 - - [24/Mar/2024:09:25:16 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:17.307427997Z 169.254.130.13 - - [24/Mar/2024:09:25:17 +0000] "GET /get_field?field=%D7%9E%D7%92%D7%A8%D7%A9+4 HTTP/1.1" 200 59 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:18.134042073Z 169.254.130.13 - - [24/Mar/2024:09:25:18 +0000] "GET /get_field?field=%D7%9E%D7%92%D7%A8%D7%A9+4 HTTP/1.1" 200 59 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:20.091078358Z 169.254.130.13 - - [24/Mar/2024:09:25:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:25:27.718759349Z 169.254.130.13 - - [24/Mar/2024:09:25:27 +0000] "GET /get_all_fields HTTP/1.1" 200 158 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:27.802755548Z 169.254.130.13 - - [24/Mar/2024:09:25:27 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:25:27.902680754Z 169.254.130.13 - - [24/Mar/2024:09:25:27 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T09:26:20.095727908Z 169.254.130.13 - - [24/Mar/2024:09:26:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:27:20.138952970Z 169.254.130.13 - - [24/Mar/2024:09:27:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:28:20.109574773Z 169.254.130.13 - - [24/Mar/2024:09:28:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:29:20.139142424Z 169.254.130.13 - - [24/Mar/2024:09:29:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:30:20.075194569Z 169.254.130.13 - - [24/Mar/2024:09:30:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:31:20.088882028Z 169.254.130.13 - - [24/Mar/2024:09:31:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:32:20.087559820Z 169.254.130.13 - - [24/Mar/2024:09:32:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:32:25.033770168Z 169.254.130.13 - - [24/Mar/2024:09:32:25 +0000] "GET /wp-login.php HTTP/1.1" 404 207 "http://python-flask-webapp-t.azurewebsites.net/wp-login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0"
+
+2024-03-24T09:33:20.095432575Z 169.254.130.13 - - [24/Mar/2024:09:33:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:34:20.102793109Z 169.254.130.13 - - [24/Mar/2024:09:34:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:35:20.092889571Z 169.254.130.13 - - [24/Mar/2024:09:35:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:36:20.077602761Z 169.254.130.13 - - [24/Mar/2024:09:36:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:38:20.103752374Z 169.254.130.13 - - [24/Mar/2024:09:38:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:40:20.108854259Z 169.254.130.13 - - [24/Mar/2024:09:40:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:41:20.086901207Z 169.254.130.13 - - [24/Mar/2024:09:41:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:42:20.294429958Z 169.254.130.13 - - [24/Mar/2024:09:42:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:43:20.077321767Z 169.254.130.13 - - [24/Mar/2024:09:43:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:43:55.420833411Z 169.254.130.13 - - [24/Mar/2024:09:43:55 +0000] "GET /get_scores_by_field_name_and_date?field=%D7%9E%D7%92%D7%A8%D7%A9+4&entered_date=2024-02-11 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:43:55.571587683Z 169.254.130.13 - - [24/Mar/2024:09:43:55 +0000] "GET /get_all_fields HTTP/1.1" 200 158 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:43:55.722476156Z 169.254.130.13 - - [24/Mar/2024:09:43:55 +0000] "GET /get_games_dates HTTP/1.1" 200 68 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:43:55.754350594Z 169.254.130.13 - - [24/Mar/2024:09:43:55 +0000] "GET /sheet_log HTTP/1.1" 500 265 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:43:57.293370443Z 169.254.130.13 - - [24/Mar/2024:09:43:57 +0000] "GET /sheet_log HTTP/1.1" 500 265 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+2024-03-24T09:43:59.695048044Z 169.254.130.13 - - [24/Mar/2024:09:43:59 +0000] "GET /sheet_log HTTP/1.1" 500 265 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+
+2024-03-24T09:44:20.088136785Z 169.254.130.13 - - [24/Mar/2024:09:44:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:45:20.063020716Z 169.254.130.13 - - [24/Mar/2024:09:45:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:46:20.090509332Z 169.254.130.13 - - [24/Mar/2024:09:46:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:47:20.134509193Z 169.254.130.13 - - [24/Mar/2024:09:47:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:48:20.097228596Z 169.254.130.13 - - [24/Mar/2024:09:48:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:49:20.233739781Z 169.254.130.13 - - [24/Mar/2024:09:49:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:50:20.264834215Z 169.254.130.13 - - [24/Mar/2024:09:50:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:51:20.433382331Z 169.254.130.13 - - [24/Mar/2024:09:51:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:52:20.235389216Z 169.254.130.13 - - [24/Mar/2024:09:52:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:53:20.641648212Z 169.254.130.13 - - [24/Mar/2024:09:53:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:52:54.494098065Z    _____                               
+2024-03-24T09:52:54.494176866Z   /  _  \ __________ _________   ____  
+2024-03-24T09:52:54.494183966Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T09:52:54.494187166Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T09:52:54.494190566Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T09:52:54.494193566Z         \/      \/                  \/ 
+2024-03-24T09:52:54.494196366Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T09:52:54.494199166Z 
+2024-03-24T09:52:54.494201766Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T09:52:54.494204566Z Python 3.11.7
+2024-03-24T09:52:54.494207366Z Note: Any data outside '/home' is not persisted
+2024-03-24T09:53:06.352802809Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T09:53:07.247800806Z App Command Line not configured, will attempt auto-detect
+2024-03-24T09:53:07.305087161Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T09:53:08.741644796Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2024-03-24T09:53:08.741673897Z Build Operation ID: f900ca222c6c217f
+2024-03-24T09:53:08.741678897Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T09:53:08.791765557Z Output is compressed. Extracting it...
+2024-03-24T09:53:08.852149853Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8dc4be79d113284'...
+2024-03-24T09:53:46.944950973Z App path is set to '/tmp/8dc4be79d113284'
+2024-03-24T09:53:46.977272221Z Detected an app based on Flask
+2024-03-24T09:53:46.977293822Z Generating `gunicorn` command for 'app:app'
+2024-03-24T09:53:46.985139531Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T09:53:47.165675833Z Using packages from virtual environment antenv located at /tmp/8dc4be79d113284/antenv.
+2024-03-24T09:53:47.176345881Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8dc4be79d113284/antenv/lib/python3.11/site-packages'
+2024-03-24T09:53:49.067439492Z [2024-03-24 09:53:49 +0000] [73] [INFO] Starting gunicorn 21.2.0
+2024-03-24T09:53:49.104904911Z [2024-03-24 09:53:49 +0000] [73] [INFO] Listening at: http://0.0.0.0:8000 (73)
+2024-03-24T09:53:49.104930712Z [2024-03-24 09:53:49 +0000] [73] [INFO] Using worker: sync
+2024-03-24T09:53:49.145889579Z [2024-03-24 09:53:49 +0000] [77] [INFO] Booting worker with pid: 77
+2024-03-24T09:53:59.769698243Z 169.254.130.1 - - [24/Mar/2024:09:53:59 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T09:54:00.663738402Z 169.254.130.17 - - [24/Mar/2024:09:54:00 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:54:20.383326304Z 169.254.130.17 - - [24/Mar/2024:09:54:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:54:03.936134907Z    _____                               
+2024-03-24T09:54:03.936165507Z   /  _  \ __________ _________   ____  
+2024-03-24T09:54:03.936169507Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T09:54:03.936172607Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T09:54:03.936175508Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T09:54:03.936178708Z         \/      \/                  \/ 
+2024-03-24T09:54:03.936181908Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T09:54:03.936184708Z 
+2024-03-24T09:54:03.936187308Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T09:54:03.936190208Z Python 3.11.7
+2024-03-24T09:54:03.936193708Z Note: Any data outside '/home' is not persisted
+2024-03-24T09:54:11.053277713Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T09:54:11.465760805Z App Command Line not configured, will attempt auto-detect
+2024-03-24T09:54:11.465787705Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T09:54:11.680991905Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2024-03-24T09:54:11.689983660Z Build Operation ID: f900ca222c6c217f
+2024-03-24T09:54:11.689993960Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T09:54:11.685392181Z Output is compressed. Extracting it...
+2024-03-24T09:54:11.697210584Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8dc4be79d113284'...
+2024-03-24T09:54:36.436750185Z App path is set to '/tmp/8dc4be79d113284'
+2024-03-24T09:54:36.448930915Z Detected an app based on Flask
+2024-03-24T09:54:36.455113182Z Generating `gunicorn` command for 'app:app'
+2024-03-24T09:54:36.456304294Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T09:54:36.537564065Z Using packages from virtual environment antenv located at /tmp/8dc4be79d113284/antenv.
+2024-03-24T09:54:36.537592766Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8dc4be79d113284/antenv/lib/python3.11/site-packages'
+2024-03-24T09:54:37.771751320Z [2024-03-24 09:54:37 +0000] [72] [INFO] Starting gunicorn 21.2.0
+2024-03-24T09:54:37.794773529Z [2024-03-24 09:54:37 +0000] [72] [INFO] Listening at: http://0.0.0.0:8000 (72)
+2024-03-24T09:54:37.795674541Z [2024-03-24 09:54:37 +0000] [72] [INFO] Using worker: sync
+2024-03-24T09:54:37.810727443Z [2024-03-24 09:54:37 +0000] [76] [INFO] Booting worker with pid: 76
+2024-03-24T09:54:48.203357688Z 169.254.130.1 - - [24/Mar/2024:09:54:48 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T09:54:49.291416211Z 169.254.130.14 - - [24/Mar/2024:09:54:49 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:55:20.093131789Z 169.254.130.14 - - [24/Mar/2024:09:55:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:56:20.146055283Z 169.254.130.14 - - [24/Mar/2024:09:56:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:57:20.573420670Z 169.254.130.14 - - [24/Mar/2024:09:57:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:58:20.244714631Z 169.254.130.14 - - [24/Mar/2024:09:58:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T09:59:20.586916611Z 169.254.130.14 - - [24/Mar/2024:09:59:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:00:20.747060971Z 169.254.130.14 - - [24/Mar/2024:10:00:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:01:21.596916512Z 169.254.130.14 - - [24/Mar/2024:10:01:21 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:00:41.298682950Z    _____                               
+2024-03-24T10:00:41.298730950Z   /  _  \ __________ _________   ____  
+2024-03-24T10:00:41.298734850Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-03-24T10:00:41.298737950Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-03-24T10:00:41.298740750Z \____|__  /_____ \____/ |__|    \___  >
+2024-03-24T10:00:41.298743850Z         \/      \/                  \/ 
+2024-03-24T10:00:41.298746750Z A P P   S E R V I C E   O N   L I N U X
+2024-03-24T10:00:41.298749550Z 
+2024-03-24T10:00:41.298752351Z Documentation: http://aka.ms/webapp-linux
+2024-03-24T10:00:41.298755051Z Python 3.11.7
+2024-03-24T10:00:41.298757851Z Note: Any data outside '/home' is not persisted
+2024-03-24T10:00:43.956534054Z Starting OpenBSD Secure Shell server: sshd.
+2024-03-24T10:00:44.188891409Z App Command Line not configured, will attempt auto-detect
+2024-03-24T10:00:44.188917209Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2024-03-24T10:00:44.393047229Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2024-03-24T10:00:44.393113929Z Build Operation ID: 1de42617de7329d8
+2024-03-24T10:00:44.393120629Z Oryx Version: 0.2.20240127.1, Commit: 4b7f2dffcc69c214f9806d67a85ec8926e2393e1, ReleaseTagName: 20240127.1
+2024-03-24T10:00:44.399845109Z Output is compressed. Extracting it...
+2024-03-24T10:00:44.440946496Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8dc4be8ad70b123'...
+2024-03-24T10:01:08.464168306Z App path is set to '/tmp/8dc4be8ad70b123'
+2024-03-24T10:01:08.474104137Z Detected an app based on Flask
+2024-03-24T10:01:08.474121838Z Generating `gunicorn` command for 'app:app'
+2024-03-24T10:01:08.482541849Z Writing output script to '/opt/startup/startup.sh'
+2024-03-24T10:01:08.606020580Z Using packages from virtual environment antenv located at /tmp/8dc4be8ad70b123/antenv.
+2024-03-24T10:01:08.606053681Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8dc4be8ad70b123/antenv/lib/python3.11/site-packages'
+2024-03-24T10:01:09.870938892Z [2024-03-24 10:01:09 +0000] [73] [INFO] Starting gunicorn 21.2.0
+2024-03-24T10:01:09.901235092Z [2024-03-24 10:01:09 +0000] [73] [INFO] Listening at: http://0.0.0.0:8000 (73)
+2024-03-24T10:01:09.901647398Z [2024-03-24 10:01:09 +0000] [73] [INFO] Using worker: sync
+2024-03-24T10:01:09.961259485Z [2024-03-24 10:01:09 +0000] [76] [INFO] Booting worker with pid: 76
+2024-03-24T10:01:20.143324403Z 169.254.130.1 - - [24/Mar/2024:10:01:20 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2024-03-24T10:01:24.213875205Z 169.254.130.19 - - [24/Mar/2024:10:01:24 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:02:20.431672442Z 169.254.130.19 - - [24/Mar/2024:10:02:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:03:20.147727736Z 169.254.130.19 - - [24/Mar/2024:10:03:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+2024-03-24T10:04:20.114628898Z 169.254.130.19 - - [24/Mar/2024:10:04:20 +0000] "GET /home HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+

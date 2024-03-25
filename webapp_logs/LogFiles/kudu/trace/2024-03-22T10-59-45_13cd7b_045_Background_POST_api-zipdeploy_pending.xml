@@ -1,0 +1,64 @@
+<step title="BackgroundTrace" date="2024-03-22T10:59:45.653" instance="13cd7b" url="/api/zipdeploy" method="POST">
+    <step title="Creating temporary deployment - FetchDeploymentManager"
+          date="2024-03-22T10:59:45.990"/><!-- duration: 3ms -->
+    <step title="Creating temporary deployment" date="2024-03-22T10:59:45.998"/><!-- duration: 96ms -->
+    <step title="Before sending BuildRequestReceived status to /api/updatedeploystatus"
+          date="2024-03-22T10:59:46.106"/><!-- duration: 21ms -->
+    <step title="DeploymentStatusAPI: Trying to send BuildRequestReceived deployment status to /api/app/updatedeploystatus. DeploymentId is 1156bb00-8fd3-4bb9-b9ea-2faa714e9ed3"
+          date="2024-03-22T10:59:46.145"/><!-- duration: 40ms -->
+    <step title="Performing fetch based deployment" date="2024-03-22T10:59:47.163">
+        <step title="Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/a38fa502-ea84-4e2a-9791-d0042dfd2833.zip (0.08 MB) to /tmp/zipdeploy/extracted"
+              date="2024-03-22T10:59:48.437">
+            <step title="ChmodRecursive Process exited with total time taken in ms: 106"
+                  date="2024-03-22T10:59:48.724"/><!-- duration: 6ms -->
+        </step><!-- duration: 300ms -->
+        <step title="DeploymentStatusAPI: Trying to send BuildInProgress deployment status to /api/app/updatedeploystatus. DeploymentId is 1156bb00-8fd3-4bb9-b9ea-2faa714e9ed3"
+              date="2024-03-22T10:59:50.746"/><!-- duration: 11ms -->
+        <step title="Deployment timer started" date="2024-03-22T10:59:51.048">
+            <step title="DeploymentManager.Deploy(id:1156bb00-8fd3-4bb9-b9ea-2faa714e9ed3)"
+                  date="2024-03-22T10:59:51.079">
+                <step title="Collecting changeset information" date="2024-03-22T10:59:51.220"/><!-- duration: 164ms -->
+                <step title="Updating submodules" date="2024-03-22T10:59:51.391"/><!-- duration: 1298ms -->
+                <step title="Determining deployment builder" date="2024-03-22T10:59:52.879">
+                    <step title="Builder is OryxBuilder" date="2024-03-22T10:59:52.893"/><!-- duration: 5ms -->
+                </step><!-- duration: 30ms -->
+                <step title="PreDeployment: context.CleanOutputPath False" date="2024-03-22T10:59:53.010">
+                    <step title="PreDeployment: context.OutputPath /home/site/wwwroot" date="2024-03-22T10:59:53.155">
+                        <step title="Building" date="2024-03-22T10:59:53.325">
+                            <step title="Executing external process" date="2024-03-22T10:59:53.693" type="process"
+                                  path="bash"
+                                  arguments="-c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8dc4a5f33ada8c2 --compress-destination-dir | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;">
+                                <step title="Cpu: python(3668,40.240s)+ts(3669,0.110s)+build.sh(3667,0.000s)+build.sh(3666,0.000s)+build.sh(3580,0.050s)+oryx(3561,3.520s)+tee(3562,0.000s)+bash(3560,0.000s)=total(43.880s)"
+                                      date="2024-03-22T11:01:27.987"/><!-- duration: 22ms -->
+                                <step title="bash: no io activity for 61s, prev-cpu=-1.000s, current-cpu=43.880s"
+                                      date="2024-03-22T11:01:28.047"/><!-- duration: 12ms -->
+                                <step title="Cpu: gzip(3721,32.280s)+sh(3720,0.000s)+tar(3719,1.890s)+build.sh(3580,0.070s)+oryx(3561,4.140s)+tee(3562,0.000s)+bash(3560,0.000s)=total(38.370s)"
+                                      date="2024-03-22T11:03:01.868"/><!-- duration: 61ms -->
+                                <step title="bash: no io activity for 60s, prev-cpu=-1.000s, current-cpu=38.370s"
+                                      date="2024-03-22T11:03:02.008"/><!-- duration: 42ms -->
+                            </step><!-- duration: 204737ms -->
+                            <step title="Using PythonDeploymentLogParser"
+                                  date="2024-03-22T11:03:18.896"/><!-- duration: 7ms -->
+                            <step title="Triggering recycle (preview mode disabled)."
+                                  date="2024-03-22T11:03:19.891"/><!-- duration: 7ms -->
+                            <step title="Modified file to trigger a restart of the app container."
+                                  date="2024-03-22T11:03:19.928"/><!-- duration: 3ms -->
+                            <step title="Skip function trigger and logicapp sync because function is not enabled."
+                                  date="2024-03-22T11:03:19.941"/><!-- duration: 14ms -->
+                        </step><!-- duration: 207418ms -->
+                    </step><!-- duration: 207592ms -->
+                    <step title="Cleaning up temp files" date="2024-03-22T11:03:20.751"/><!-- duration: 3267ms -->
+                    <step title="Cleaning up temp files" date="2024-03-22T11:03:24.031"/><!-- duration: 525ms -->
+                    <step title="Reloading status file with latest updates" date="2024-03-22T11:03:24.593">
+                        <step title="WebHooksManager.PublishEventAsync: PostDeployment"
+                              date="2024-03-22T11:03:24.604"/><!-- duration: 57ms -->
+                    </step><!-- duration: 72ms -->
+                    <step title="DeploymentStatusAPI: Trying to send BuildSuccessful deployment status to /api/app/updatedeploystatus. DeploymentId is 1156bb00-8fd3-4bb9-b9ea-2faa714e9ed3"
+                          date="2024-03-22T11:03:24.679"/><!-- duration: 4ms -->
+                    <step title="Begin HttpPost https://python-flask-webapp-t.scm.azurewebsites.net/api/app/updatedeploystatus, x-ms-request-id: 00000000-0000-0000-0000-000000000000"
+                          date="2024-03-22T11:03:24.708"/><!-- duration: 4ms -->
+                    <step title="End HttpPost, status: OK" date="2024-03-22T11:03:24.916"/><!-- duration: 6ms -->
+                    <step title="Cleaning up temporary deployment - fetch deployment was successful"
+                          date="2024-03-22T11:03:24.927"/><!-- duration: 3ms -->
+                </step><!-- duration: 211966ms -->
+            </step><!-- duration: 213918ms -->

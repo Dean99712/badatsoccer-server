@@ -1,0 +1,14 @@
+<step title="Incoming Request" date="2024-03-24T12:49:21.507" instance="0fe1e5" url="/api/logs/docker" method="GET"
+      type="request" pid="86,1,37" Host="python-flask-webapp-t.scm.azurewebsites.net" Authorization="Bas..."
+      X-ARR-LOG-ID="b91d20f1-f1ba-48c2-817e-e5b9601a86ba" CLIENT-IP="20.119.16.34:6168" X-Client-IP="20.119.16.34"
+      X-SITE-DEPLOYMENT-ID="python-flask-webapp-t" WAS-DEFAULT-HOSTNAME="python-flask-webapp-t.scm.azurewebsites.net"
+      X-MS-PLATFORM-INTERNAL="True" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.2"
+      X-WAWS-Unencoded-URL="/api/logs/docker" X-Client-Port="6168">
+    <step title="Cleanup Xml Logs" date="2024-03-24T12:49:21.510">
+        <step title="Cleanup Infos" date="2024-03-24T12:49:21.536" totalFiles="697"
+              totalCleanup="537"/><!-- duration: 3ms -->
+    </step><!-- duration: 32ms -->
+    <step title="DiagnosticsController.GetDockerLogs" date="2024-03-24T12:49:21.555"/><!-- duration: 15ms -->
+    <step title="Outgoing response" date="2024-03-24T12:49:21.583" type="response" statusCode="200"
+          statusText="OK"/><!-- duration: 2ms -->
+</step><!-- duration: 80ms -->

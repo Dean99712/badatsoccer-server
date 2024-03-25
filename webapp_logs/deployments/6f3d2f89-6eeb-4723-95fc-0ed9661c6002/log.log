@@ -1,0 +1,213 @@
+2024-03-24T15:55:09.6220065Z,Updating submodules.,5bf9d08b-2efa-4e47-a799-0a6183dbde4c,0
+2024-03-24T15:55:10.7069804Z,Preparing deployment for commit id '6f3d2f89-6'.,76f03eaa-0e08-4b94-9c8a-98ef04a1c0e2,0
+2024-03-24T15:55:11.0419837Z,PreDeployment: context.CleanOutputPath False,8e750b45-670b-4d00-940a-74bd636a36cc,0
+2024-03-24T15:55:11.1169921Z,PreDeployment: context.OutputPath /home/site/wwwroot,d61dddb5-d96d-48f5-98fb-82702c08c0cf,0
+2024-03-24T15:55:11.2581524Z,Repository path is /tmp/zipdeploy/extracted,3ac490b5-3440-4ee3-8f5c-7cd299510ef7,0
+2024-03-24T15:55:11.3229777Z,Running oryx build...,6412451d-b6e9-4f17-b25b-b17b0523ddd2,0
+	2024-03-24T15:55:11.3296481Z,Command: oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8dc4c1ac93ae8e0 --compress-destination-dir | tee /tmp/oryx-build.log,,0
+	2024-03-24T15:55:14.0041380Z,Operation performed by Microsoft Oryx&comma; https://github.com/Microsoft/Oryx,,0
+	2024-03-24T15:55:14.0333615Z,You can report issues at https://github.com/Microsoft/Oryx/issues,,0
+	2024-03-24T15:55:14.0598085Z,,,0
+	2024-03-24T15:55:14.0796080Z,Oryx Version: 0.2.20230508.1&comma; Commit: 7fe2bf39b357dd68572b438a85ca50b5ecfb4592&comma; ReleaseTagName: 20230508.1,,0
+	2024-03-24T15:55:14.0998708Z,,,0
+	2024-03-24T15:55:14.1102238Z,Build Operation ID: 4fb599cec913f5d1,,0
+	2024-03-24T15:55:14.1269039Z,Repository Commit : 6f3d2f89-6eeb-4723-95fc-0ed9661c6002,,0
+	2024-03-24T15:55:14.1663823Z,OS Type           : bullseye,,0
+	2024-03-24T15:55:14.2019741Z,Image Type        : githubactions,,0
+	2024-03-24T15:55:14.2207780Z,,,0
+	2024-03-24T15:55:14.2315499Z,Detecting platforms...,,0
+	2024-03-24T15:55:16.0726315Z,Detected following platforms:,,0
+	2024-03-24T15:55:16.1117320Z,  python: 3.11.8,,0
+	2024-03-24T15:55:16.9860411Z,,,0
+	2024-03-24T15:55:17.1322565Z,Using intermediate directory '/tmp/8dc4c1ac93ae8e0'.,,0
+	2024-03-24T15:55:17.1899611Z,,,0
+	2024-03-24T15:55:17.2007775Z,Copying files to the intermediate directory...,,0
+	2024-03-24T15:55:17.2436021Z,Done in 0 sec(s).,,0
+	2024-03-24T15:55:17.2610327Z,,,0
+	2024-03-24T15:55:17.2730042Z,Source directory     : /tmp/8dc4c1ac93ae8e0,,0
+	2024-03-24T15:55:17.2847200Z,Destination directory: /home/site/wwwroot,,0
+	2024-03-24T15:55:17.3005064Z,,,0
+	2024-03-24T15:55:17.7212595Z,Python Version: /tmp/oryx/platforms/python/3.11.8/bin/python3.11,,0
+	2024-03-24T15:55:17.7331452Z,Creating directory for command manifest file if it does not exist,,0
+	2024-03-24T15:55:17.7639097Z,Removing existing manifest file,,0
+	2024-03-24T15:55:17.8200014Z,Python Virtual Environment: antenv,,0
+	2024-03-24T15:55:17.8388264Z,Creating virtual environment...,,0
+	2024-03-24T15:55:39.5305287Z,Activating virtual environment...,,0
+	2024-03-24T15:55:39.6333141Z,Running pip install...,,0
+	2024-03-24T15:57:13.9639681Z,[15:55:43+0000] Collecting blinker==1.6.2 (from -r requirements.txt (line 1)),,0
+	2024-03-24T15:57:13.9936229Z,[15:55:43+0000]   Using cached blinker-1.6.2-py3-none-any.whl.metadata (2.0 kB),,0
+	2024-03-24T15:57:14.0101986Z,[15:55:43+0000] Collecting cachetools==5.3.1 (from -r requirements.txt (line 2)),,0
+	2024-03-24T15:57:14.0326104Z,[15:55:43+0000]   Using cached cachetools-5.3.1-py3-none-any.whl.metadata (5.2 kB),,0
+	2024-03-24T15:57:14.0440893Z,[15:55:43+0000] Collecting certifi==2023.7.22 (from -r requirements.txt (line 3)),,0
+	2024-03-24T15:57:14.0627176Z,[15:55:43+0000]   Using cached certifi-2023.7.22-py3-none-any.whl.metadata (2.2 kB),,0
+	2024-03-24T15:57:14.0741184Z,[15:55:44+0000] Collecting charset-normalizer==3.2.0 (from -r requirements.txt (line 4)),,0
+	2024-03-24T15:57:14.0895264Z,[15:55:44+0000]   Using cached charset_normalizer-3.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (31 kB),,0
+	2024-03-24T15:57:14.1022856Z,[15:55:44+0000] Collecting click==8.1.7 (from -r requirements.txt (line 5)),,0
+	2024-03-24T15:57:14.1122225Z,[15:55:44+0000]   Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB),,0
+	2024-03-24T15:57:14.1224276Z,[15:55:44+0000] Collecting colorama==0.4.6 (from -r requirements.txt (line 6)),,0
+	2024-03-24T15:57:14.1414907Z,[15:55:44+0000]   Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB),,0
+	2024-03-24T15:57:14.1499094Z,[15:55:44+0000] Collecting config==0.5.1 (from -r requirements.txt (line 7)),,0
+	2024-03-24T15:57:14.1608597Z,[15:55:44+0000]   Using cached config-0.5.1-py2.py3-none-any.whl.metadata (1.4 kB),,0
+	2024-03-24T15:57:14.2162577Z,[15:55:44+0000] Collecting DateTime==5.4 (from -r requirements.txt (line 8)),,0
+	2024-03-24T15:57:14.2926929Z,[15:55:44+0000]   Using cached DateTime-5.4-py3-none-any.whl.metadata (33 kB),,0
+	2024-03-24T15:57:14.3400761Z,[15:55:45+0000] Collecting Flask==2.3.2 (from -r requirements.txt (line 9)),,0
+	2024-03-24T15:57:14.3531006Z,[15:55:45+0000]   Using cached Flask-2.3.2-py3-none-any.whl.metadata (3.7 kB),,0
+	2024-03-24T15:57:14.3996107Z,[15:55:45+0000] Collecting Flask-Cors==4.0.0 (from -r requirements.txt (line 10)),,0
+	2024-03-24T15:57:14.4389186Z,[15:55:45+0000]   Using cached Flask_Cors-4.0.0-py2.py3-none-any.whl.metadata (5.4 kB),,0
+	2024-03-24T15:57:14.4770774Z,[15:55:45+0000] Collecting Flask-SQLAlchemy==3.0.5 (from -r requirements.txt (line 11)),,0
+	2024-03-24T15:57:14.4992562Z,[15:55:45+0000]   Using cached flask_sqlalchemy-3.0.5-py3-none-any.whl.metadata (3.3 kB),,0
+	2024-03-24T15:57:14.5160576Z,[15:55:46+0000] Collecting google-api-core==2.11.1 (from -r requirements.txt (line 12)),,0
+	2024-03-24T15:57:14.5256232Z,[15:55:46+0000]   Using cached google_api_core-2.11.1-py3-none-any.whl.metadata (2.7 kB),,0
+	2024-03-24T15:57:14.5648209Z,[15:55:46+0000] Collecting google-api-python-client==2.100.0 (from -r requirements.txt (line 13)),,0
+	2024-03-24T15:57:14.5945036Z,[15:55:46+0000]   Using cached google_api_python_client-2.100.0-py2.py3-none-any.whl.metadata (6.6 kB),,0
+	2024-03-24T15:57:14.6049948Z,[15:55:47+0000] Collecting google-auth==2.23.0 (from -r requirements.txt (line 14)),,0
+	2024-03-24T15:57:14.6224992Z,[15:55:47+0000]   Using cached google_auth-2.23.0-py2.py3-none-any.whl.metadata (4.2 kB),,0
+	2024-03-24T15:57:14.6356312Z,[15:55:47+0000] Collecting google-auth-httplib2==0.1.1 (from -r requirements.txt (line 15)),,0
+	2024-03-24T15:57:14.6839405Z,[15:55:47+0000]   Using cached google_auth_httplib2-0.1.1-py2.py3-none-any.whl.metadata (2.1 kB),,0
+	2024-03-24T15:57:14.7112692Z,[15:55:48+0000] Collecting google-auth-oauthlib==1.1.0 (from -r requirements.txt (line 16)),,0
+	2024-03-24T15:57:14.7434723Z,[15:55:48+0000]   Using cached google_auth_oauthlib-1.1.0-py2.py3-none-any.whl.metadata (2.7 kB),,0
+	2024-03-24T15:57:14.7621065Z,[15:55:48+0000] Collecting googleapis-common-protos==1.60.0 (from -r requirements.txt (line 17)),,0
+	2024-03-24T15:57:14.8401705Z,[15:55:48+0000]   Using cached googleapis_common_protos-1.60.0-py2.py3-none-any.whl.metadata (1.5 kB),,0
+	2024-03-24T15:57:14.8988341Z,[15:55:48+0000] Collecting greenlet==2.0.2 (from -r requirements.txt (line 18)),,0
+	2024-03-24T15:57:14.9288189Z,[15:55:48+0000]   Using cached greenlet-2.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB),,0
+	2024-03-24T15:57:14.9690392Z,[15:55:49+0000] Collecting gspread==5.11.2 (from -r requirements.txt (line 19)),,0
+	2024-03-24T15:57:15.0641026Z,[15:55:49+0000]   Using cached gspread-5.11.2-py3-none-any.whl.metadata (7.0 kB),,0
+	2024-03-24T15:57:15.1133993Z,[15:55:49+0000] Collecting gunicorn==21.2.0 (from -r requirements.txt (line 20)),,0
+	2024-03-24T15:57:15.1522924Z,[15:55:49+0000]   Using cached gunicorn-21.2.0-py3-none-any.whl.metadata (4.1 kB),,0
+	2024-03-24T15:57:15.2372487Z,[15:55:49+0000] Collecting httplib2==0.22.0 (from -r requirements.txt (line 21)),,0
+	2024-03-24T15:57:15.3179010Z,[15:55:49+0000]   Using cached httplib2-0.22.0-py3-none-any.whl.metadata (2.6 kB),,0
+	2024-03-24T15:57:15.3955113Z,[15:55:49+0000] Collecting idna==3.4 (from -r requirements.txt (line 22)),,0
+	2024-03-24T15:57:15.4144205Z,[15:55:49+0000]   Using cached idna-3.4-py3-none-any.whl.metadata (9.8 kB),,0
+	2024-03-24T15:57:15.4715217Z,[15:55:49+0000] Collecting itsdangerous==2.1.2 (from -r requirements.txt (line 23)),,0
+	2024-03-24T15:57:15.4828209Z,[15:55:49+0000]   Using cached itsdangerous-2.1.2-py3-none-any.whl.metadata (2.9 kB),,0
+	2024-03-24T15:57:15.5398269Z,[15:55:49+0000] Collecting Jinja2==3.1.2 (from -r requirements.txt (line 24)),,0
+	2024-03-24T15:57:15.5813769Z,[15:55:49+0000]   Using cached Jinja2-3.1.2-py3-none-any.whl.metadata (3.5 kB),,0
+	2024-03-24T15:57:15.5927176Z,[15:55:50+0000] Collecting MarkupSafe==2.1.3 (from -r requirements.txt (line 25)),,0
+	2024-03-24T15:57:15.7162296Z,[15:55:50+0000]   Using cached MarkupSafe-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.0 kB),,0
+	2024-03-24T15:57:15.7758970Z,[15:55:51+0000] Collecting numpy==1.26.4 (from -r requirements.txt (line 26)),,0
+	2024-03-24T15:57:15.8156390Z,[15:55:51+0000]   Using cached numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB),,0
+	2024-03-24T15:57:15.8542325Z,[15:55:51+0000] Collecting oauth2client==4.1.3 (from -r requirements.txt (line 27)),,0
+	2024-03-24T15:57:15.8825608Z,[15:55:51+0000]   Using cached oauth2client-4.1.3-py2.py3-none-any.whl.metadata (1.2 kB),,0
+	2024-03-24T15:57:15.9386140Z,[15:55:51+0000] Collecting oauthlib==3.2.2 (from -r requirements.txt (line 28)),,0
+	2024-03-24T15:57:15.9787942Z,[15:55:51+0000]   Using cached oauthlib-3.2.2-py3-none-any.whl.metadata (7.5 kB),,0
+	2024-03-24T15:57:16.1297203Z,[15:55:51+0000] Collecting packaging==23.2 (from -r requirements.txt (line 29)),,0
+	2024-03-24T15:57:16.2073270Z,[15:55:51+0000]   Using cached packaging-23.2-py3-none-any.whl.metadata (3.2 kB),,0
+	2024-03-24T15:57:16.2924089Z,[15:55:52+0000] Collecting pandas==2.2.1 (from -r requirements.txt (line 30)),,0
+	2024-03-24T15:57:16.3293569Z,[15:55:52+0000]   Using cached pandas-2.2.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (19 kB),,0
+	2024-03-24T15:57:16.4050955Z,[15:55:53+0000] Collecting protobuf==4.24.3 (from -r requirements.txt (line 31)),,0
+	2024-03-24T15:57:16.4349196Z,[15:55:53+0000]   Using cached protobuf-4.24.3-cp37-abi3-manylinux2014_x86_64.whl.metadata (540 bytes),,0
+	2024-03-24T15:57:16.4550181Z,[15:55:53+0000] Collecting pyasn1==0.5.0 (from -r requirements.txt (line 32)),,0
+	2024-03-24T15:57:16.4828723Z,[15:55:53+0000]   Using cached pyasn1-0.5.0-py2.py3-none-any.whl.metadata (8.5 kB),,0
+	2024-03-24T15:57:16.5013401Z,[15:55:53+0000] Collecting pyasn1-modules==0.3.0 (from -r requirements.txt (line 33)),,0
+	2024-03-24T15:57:16.5191755Z,[15:55:53+0000]   Using cached pyasn1_modules-0.3.0-py2.py3-none-any.whl.metadata (3.6 kB),,0
+	2024-03-24T15:57:16.5365046Z,[15:55:53+0000] Collecting pyodbc==4.0.39 (from -r requirements.txt (line 34)),,0
+	2024-03-24T15:57:16.5652668Z,[15:55:53+0000]   Using cached pyodbc-4.0.39-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.2 kB),,0
+	2024-03-24T15:57:16.5841816Z,[15:55:54+0000] Collecting pyparsing==3.1.1 (from -r requirements.txt (line 35)),,0
+	2024-03-24T15:57:16.6216400Z,[15:55:54+0000]   Using cached pyparsing-3.1.1-py3-none-any.whl.metadata (5.1 kB),,0
+	2024-03-24T15:57:16.6887780Z,[15:55:54+0000] Collecting python-dateutil==2.9.0.post0 (from -r requirements.txt (line 36)),,0
+	2024-03-24T15:57:16.7352122Z,[15:55:54+0000]   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB),,0
+	2024-03-24T15:57:16.7552269Z,[15:55:54+0000] Collecting pytz==2024.1 (from -r requirements.txt (line 37)),,0
+	2024-03-24T15:57:16.8122924Z,[15:55:54+0000]   Using cached pytz-2024.1-py2.py3-none-any.whl.metadata (22 kB),,0
+	2024-03-24T15:57:16.8396569Z,[15:55:54+0000] Collecting requests==2.31.0 (from -r requirements.txt (line 38)),,0
+	2024-03-24T15:57:16.8688213Z,[15:55:54+0000]   Using cached requests-2.31.0-py3-none-any.whl.metadata (4.6 kB),,0
+	2024-03-24T15:57:16.9268751Z,[15:55:54+0000] Collecting requests-oauthlib==1.3.1 (from -r requirements.txt (line 39)),,0
+	2024-03-24T15:57:16.9553122Z,[15:55:54+0000]   Using cached requests_oauthlib-1.3.1-py2.py3-none-any.whl.metadata (10 kB),,0
+	2024-03-24T15:57:16.9750112Z,[15:55:55+0000] Collecting rsa==4.9 (from -r requirements.txt (line 40)),,0
+	2024-03-24T15:57:16.9911033Z,[15:55:55+0000]   Using cached rsa-4.9-py3-none-any.whl.metadata (4.2 kB),,0
+	2024-03-24T15:57:17.0210006Z,[15:55:55+0000] Collecting six==1.16.0 (from -r requirements.txt (line 41)),,0
+	2024-03-24T15:57:17.0501579Z,[15:55:55+0000]   Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB),,0
+	2024-03-24T15:57:17.1351026Z,[15:55:57+0000] Collecting SQLAlchemy==2.0.20 (from -r requirements.txt (line 42)),,0
+	2024-03-24T15:57:17.1903755Z,[15:55:57+0000]   Using cached SQLAlchemy-2.0.20-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.4 kB),,0
+	2024-03-24T15:57:17.3292664Z,[15:55:57+0000] Collecting StrEnum==0.4.15 (from -r requirements.txt (line 43)),,0
+	2024-03-24T15:57:17.3669362Z,[15:55:57+0000]   Using cached StrEnum-0.4.15-py3-none-any.whl.metadata (5.3 kB),,0
+	2024-03-24T15:57:17.4789512Z,[15:55:57+0000] Collecting typing_extensions==4.7.1 (from -r requirements.txt (line 44)),,0
+	2024-03-24T15:57:17.4918357Z,[15:55:57+0000]   Using cached typing_extensions-4.7.1-py3-none-any.whl.metadata (3.1 kB),,0
+	2024-03-24T15:57:17.5297681Z,[15:55:57+0000] Collecting tzdata==2024.1 (from -r requirements.txt (line 45)),,0
+	2024-03-24T15:57:17.5857451Z,[15:55:57+0000]   Using cached tzdata-2024.1-py2.py3-none-any.whl.metadata (1.4 kB),,0
+	2024-03-24T15:57:17.6136063Z,[15:55:57+0000] Collecting uritemplate==4.1.1 (from -r requirements.txt (line 46)),,0
+	2024-03-24T15:57:17.6323409Z,[15:55:57+0000]   Using cached uritemplate-4.1.1-py2.py3-none-any.whl.metadata (2.9 kB),,0
+	2024-03-24T15:57:17.6437560Z,[15:55:57+0000] Collecting urllib3==1.26.16 (from -r requirements.txt (line 47)),,0
+	2024-03-24T15:57:17.6612987Z,[15:55:57+0000]   Using cached urllib3-1.26.16-py2.py3-none-any.whl.metadata (48 kB),,0
+	2024-03-24T15:57:17.6885617Z,[15:55:57+0000] Collecting Werkzeug==2.3.7 (from -r requirements.txt (line 48)),,0
+	2024-03-24T15:57:17.7072736Z,[15:55:57+0000]   Using cached werkzeug-2.3.7-py3-none-any.whl.metadata (4.1 kB),,0
+	2024-03-24T15:57:17.7381998Z,[15:55:58+0000] Collecting zope.interface==6.2 (from -r requirements.txt (line 49)),,0
+	2024-03-24T15:57:17.7651541Z,[15:55:58+0000]   Using cached zope.interface-6.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB),,0
+	2024-03-24T15:57:17.7873060Z,[15:56:02+0000] Requirement already satisfied: setuptools in ./antenv/lib/python3.11/site-packages (from zope.interface==6.2->-r requirements.txt (line 49)) (65.5.0),,0
+	2024-03-24T15:57:17.8996785Z,[15:56:03+0000] Using cached blinker-1.6.2-py3-none-any.whl (13 kB),,0
+	2024-03-24T15:57:17.9206378Z,[15:56:03+0000] Using cached cachetools-5.3.1-py3-none-any.whl (9.3 kB),,0
+	2024-03-24T15:57:18.0158446Z,[15:56:03+0000] Using cached certifi-2023.7.22-py3-none-any.whl (158 kB),,0
+	2024-03-24T15:57:18.0611982Z,[15:56:03+0000] Using cached charset_normalizer-3.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (199 kB),,0
+	2024-03-24T15:57:18.1012932Z,[15:56:03+0000] Using cached click-8.1.7-py3-none-any.whl (97 kB),,0
+	2024-03-24T15:57:18.1195601Z,[15:56:03+0000] Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB),,0
+	2024-03-24T15:57:18.1463936Z,[15:56:03+0000] Using cached config-0.5.1-py2.py3-none-any.whl (20 kB),,0
+	2024-03-24T15:57:18.1580101Z,[15:56:03+0000] Using cached DateTime-5.4-py3-none-any.whl (52 kB),,0
+	2024-03-24T15:57:18.1680135Z,[15:56:03+0000] Using cached Flask-2.3.2-py3-none-any.whl (96 kB),,0
+	2024-03-24T15:57:18.1858252Z,[15:56:03+0000] Using cached Flask_Cors-4.0.0-py2.py3-none-any.whl (14 kB),,0
+	2024-03-24T15:57:18.2240568Z,[15:56:03+0000] Using cached flask_sqlalchemy-3.0.5-py3-none-any.whl (24 kB),,0
+	2024-03-24T15:57:18.2531240Z,[15:56:03+0000] Using cached google_api_core-2.11.1-py3-none-any.whl (120 kB),,0
+	2024-03-24T15:57:18.3375654Z,[15:56:03+0000] Using cached google_api_python_client-2.100.0-py2.py3-none-any.whl (12.2 MB),,0
+	2024-03-24T15:57:18.3853393Z,[15:56:03+0000] Using cached google_auth-2.23.0-py2.py3-none-any.whl (181 kB),,0
+	2024-03-24T15:57:18.4338649Z,[15:56:03+0000] Using cached google_auth_httplib2-0.1.1-py2.py3-none-any.whl (9.3 kB),,0
+	2024-03-24T15:57:18.4791013Z,[15:56:03+0000] Using cached google_auth_oauthlib-1.1.0-py2.py3-none-any.whl (19 kB),,0
+	2024-03-24T15:57:18.5169899Z,[15:56:03+0000] Using cached googleapis_common_protos-1.60.0-py2.py3-none-any.whl (227 kB),,0
+	2024-03-24T15:57:18.5561769Z,[15:56:03+0000] Using cached greenlet-2.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (618 kB),,0
+	2024-03-24T15:57:18.5969914Z,[15:56:03+0000] Using cached gspread-5.11.2-py3-none-any.whl (46 kB),,0
+	2024-03-24T15:57:18.6538802Z,[15:56:03+0000] Using cached gunicorn-21.2.0-py3-none-any.whl (80 kB),,0
+	2024-03-24T15:57:18.6897717Z,[15:56:03+0000] Using cached httplib2-0.22.0-py3-none-any.whl (96 kB),,0
+	2024-03-24T15:57:18.7009018Z,[15:56:03+0000] Using cached idna-3.4-py3-none-any.whl (61 kB),,0
+	2024-03-24T15:57:18.7213461Z,[15:56:03+0000] Using cached itsdangerous-2.1.2-py3-none-any.whl (15 kB),,0
+	2024-03-24T15:57:18.7397501Z,[15:56:03+0000] Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB),,0
+	2024-03-24T15:57:18.7611019Z,[15:56:03+0000] Using cached MarkupSafe-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (28 kB),,0
+	2024-03-24T15:57:18.8161816Z,[15:56:03+0000] Using cached numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB),,0
+	2024-03-24T15:57:18.8726228Z,[15:56:03+0000] Using cached oauth2client-4.1.3-py2.py3-none-any.whl (98 kB),,0
+	2024-03-24T15:57:18.9217662Z,[15:56:03+0000] Using cached oauthlib-3.2.2-py3-none-any.whl (151 kB),,0
+	2024-03-24T15:57:18.9584182Z,[15:56:03+0000] Using cached packaging-23.2-py3-none-any.whl (53 kB),,0
+	2024-03-24T15:57:19.0083893Z,[15:56:03+0000] Using cached pandas-2.2.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.0 MB),,0
+	2024-03-24T15:57:19.0660981Z,[15:56:04+0000] Using cached protobuf-4.24.3-cp37-abi3-manylinux2014_x86_64.whl (311 kB),,0
+	2024-03-24T15:57:19.1119865Z,[15:56:04+0000] Using cached pyasn1-0.5.0-py2.py3-none-any.whl (83 kB),,0
+	2024-03-24T15:57:19.1340883Z,[15:56:04+0000] Using cached pyasn1_modules-0.3.0-py2.py3-none-any.whl (181 kB),,0
+	2024-03-24T15:57:19.2060504Z,[15:56:04+0000] Using cached pyodbc-4.0.39-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (352 kB),,0
+	2024-03-24T15:57:19.2623812Z,[15:56:04+0000] Using cached pyparsing-3.1.1-py3-none-any.whl (103 kB),,0
+	2024-03-24T15:57:19.2930054Z,[15:56:04+0000] Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB),,0
+	2024-03-24T15:57:19.3768969Z,[15:56:04+0000] Using cached pytz-2024.1-py2.py3-none-any.whl (505 kB),,0
+	2024-03-24T15:57:19.4348835Z,[15:56:04+0000] Using cached requests-2.31.0-py3-none-any.whl (62 kB),,0
+	2024-03-24T15:57:19.4802343Z,[15:56:04+0000] Using cached requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB),,0
+	2024-03-24T15:57:19.5190355Z,[15:56:04+0000] Using cached rsa-4.9-py3-none-any.whl (34 kB),,0
+	2024-03-24T15:57:19.5471633Z,[15:56:04+0000] Using cached six-1.16.0-py2.py3-none-any.whl (11 kB),,0
+	2024-03-24T15:57:19.5850947Z,[15:56:04+0000] Using cached SQLAlchemy-2.0.20-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB),,0
+	2024-03-24T15:57:19.6071690Z,[15:56:04+0000] Using cached StrEnum-0.4.15-py3-none-any.whl (8.9 kB),,0
+	2024-03-24T15:57:19.6352402Z,[15:56:04+0000] Using cached typing_extensions-4.7.1-py3-none-any.whl (33 kB),,0
+	2024-03-24T15:57:19.6817349Z,[15:56:04+0000] Using cached tzdata-2024.1-py2.py3-none-any.whl (345 kB),,0
+	2024-03-24T15:57:19.6996039Z,[15:56:04+0000] Using cached uritemplate-4.1.1-py2.py3-none-any.whl (10 kB),,0
+	2024-03-24T15:57:19.7110869Z,[15:56:04+0000] Using cached urllib3-1.26.16-py2.py3-none-any.whl (143 kB),,0
+	2024-03-24T15:57:19.7287505Z,[15:56:04+0000] Using cached werkzeug-2.3.7-py3-none-any.whl (242 kB),,0
+	2024-03-24T15:57:19.7574898Z,[15:56:04+0000] Using cached zope.interface-6.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (249 kB),,0
+	2024-03-24T15:57:19.7982711Z,[15:56:07+0000] Installing collected packages: StrEnum&comma; pytz&comma; config&comma; zope.interface&comma; urllib3&comma; uritemplate&comma; tzdata&comma; typing_extensions&comma; six&comma; pyparsing&comma; pyodbc&comma; pyasn1&comma; protobuf&comma; packaging&comma; oauthlib&comma; numpy&comma; MarkupSafe&comma; itsdangerous&comma; idna&comma; greenlet&comma; colorama&comma; click&comma; charset-normalizer&comma; certifi&comma; cachetools&comma; blinker&comma; Werkzeug&comma; SQLAlchemy&comma; rsa&comma; requests&comma; python-dateutil&comma; pyasn1-modules&comma; Jinja2&comma; httplib2&comma; gunicorn&comma; googleapis-common-protos&comma; DateTime&comma; requests-oauthlib&comma; pandas&comma; oauth2client&comma; google-auth&comma; Flask&comma; google-auth-oauthlib&comma; google-auth-httplib2&comma; google-api-core&comma; Flask-SQLAlchemy&comma; Flask-Cors&comma; gspread&comma; google-api-python-client,,0
+	2024-03-24T15:57:19.8807555Z,[15:57:08+0000] Successfully installed DateTime-5.4 Flask-2.3.2 Flask-Cors-4.0.0 Flask-SQLAlchemy-3.0.5 Jinja2-3.1.2 MarkupSafe-2.1.3 SQLAlchemy-2.0.20 StrEnum-0.4.15 Werkzeug-2.3.7 blinker-1.6.2 cachetools-5.3.1 certifi-2023.7.22 charset-normalizer-3.2.0 click-8.1.7 colorama-0.4.6 config-0.5.1 google-api-core-2.11.1 google-api-python-client-2.100.0 google-auth-2.23.0 google-auth-httplib2-0.1.1 google-auth-oauthlib-1.1.0 googleapis-common-protos-1.60.0 greenlet-2.0.2 gspread-5.11.2 gunicorn-21.2.0 httplib2-0.22.0 idna-3.4 itsdangerous-2.1.2 numpy-1.26.4 oauth2client-4.1.3 oauthlib-3.2.2 packaging-23.2 pandas-2.2.1 protobuf-4.24.3 pyasn1-0.5.0 pyasn1-modules-0.3.0 pyodbc-4.0.39 pyparsing-3.1.1 python-dateutil-2.9.0.post0 pytz-2024.1 requests-2.31.0 requests-oauthlib-1.3.1 rsa-4.9 six-1.16.0 typing_extensions-4.7.1 tzdata-2024.1 uritemplate-4.1.1 urllib3-1.26.16 zope.interface-6.2,,0
+	2024-03-24T15:57:19.9189512Z,Not a vso image&comma; so not writing build commands,,0
+	2024-03-24T15:57:19.9850141Z,Preparing output...,,0
+	2024-03-24T15:57:21.3902118Z,,,0
+	2024-03-24T15:57:21.4304753Z,Copying files to destination directory '/tmp/_preCompressedDestinationDir'...,,0
+	2024-03-24T15:57:58.9037992Z,Done in 37 sec(s).,,0
+	2024-03-24T15:57:58.9241049Z,Compressing content of directory '/tmp/_preCompressedDestinationDir'...,,0
+	2024-03-24T15:59:13.8693716Z,Copied the compressed output to '/home/site/wwwroot',,0
+	2024-03-24T15:59:14.0049808Z,,,0
+	2024-03-24T15:59:14.0166935Z,Removing existing manifest file,,0
+	2024-03-24T15:59:14.0728118Z,Creating a manifest file...,,0
+	2024-03-24T15:59:14.1105830Z,Manifest file created.,,0
+	2024-03-24T15:59:14.1239239Z,Copying .ostype to manifest output directory.,,0
+	2024-03-24T15:59:14.2201509Z,,,0
+	2024-03-24T15:59:14.2471748Z,Done in 237 sec(s).,,0
+2024-03-24T15:59:14.7355073Z,Running post deployment command(s)...,92aea1e4-a395-4a0b-877d-c100e1f4c8c2,0
+2024-03-24T15:59:14.8439118Z,,65a8439a-6097-4bd8-bb43-c18b4587d86f,0
+2024-03-24T15:59:14.9130514Z,Generating summary of Oryx build,78123681-a4e9-4a3b-8fff-65100ca4cbc0,0
+2024-03-24T15:59:15.0625310Z,Parsing the build logs,1bb5ea67-b033-443d-90c5-95d3c2948bc8,0
+2024-03-24T15:59:15.2035028Z,Found 0 issue(s),46ae3126-86f5-40c3-a6af-eb920fb84ba2,0
+2024-03-24T15:59:15.3274313Z,,915f7471-e1e5-4ecd-a503-f366bd250b5d,0
+2024-03-24T15:59:15.4551409Z,Build Summary :,c79e2ba4-d179-4aa7-bc90-3cab9285011c,0
+2024-03-24T15:59:15.5811954Z,===============,b596e831-5c2e-4c32-8681-8a7904ff9994,0
+2024-03-24T15:59:15.7654054Z,Errors (0),de0b6a3f-7932-42de-bcd1-0a776689d68a,0
+2024-03-24T15:59:15.8962362Z,Warnings (0),2c8a33d4-4452-475d-97dc-a914ccc5e891,0
+2024-03-24T15:59:16.0787355Z,,3dc2341b-cff5-463f-9af0-ee4bac6e885a,0
+2024-03-24T15:59:16.1960036Z,Triggering recycle (preview mode disabled).,ac7bc0e2-bf5d-4544-85f7-3a2459fdda56,0
+2024-03-24T15:59:16.3771845Z,Deployment successful. deployer = GITHUB_ZIP_DEPLOY deploymentPath = ZipDeploy. Extract zip. Remote build.,3095f96c-8fbb-4b4f-af94-3a3153854b9f,0

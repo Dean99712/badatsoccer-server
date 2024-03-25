@@ -1,0 +1,61 @@
+<step title="BackgroundTrace" date="2024-03-10T17:23:49.278" instance="e8252b" url="/api/zipdeploy" method="POST">
+    <step title="Creating temporary deployment - FetchDeploymentManager"
+          date="2024-03-10T17:23:49.432"/><!-- duration: 8ms -->
+    <step title="Creating temporary deployment" date="2024-03-10T17:23:49.444"/><!-- duration: 258ms -->
+    <step title="Before sending BuildRequestReceived status to /api/updatedeploystatus"
+          date="2024-03-10T17:23:49.724"/><!-- duration: 8ms -->
+    <step title="DeploymentStatusAPI: Trying to send BuildRequestReceived deployment status to /api/app/updatedeploystatus. DeploymentId is d2576133-efb7-422d-b294-1368925b973c"
+          date="2024-03-10T17:23:49.735"/><!-- duration: 28ms -->
+    <step title="Performing fetch based deployment" date="2024-03-10T17:23:51.980">
+        <step title="Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/991915cb-0e28-4816-94d6-c12db1970ed7.zip (0.06 MB) to /tmp/zipdeploy/extracted"
+              date="2024-03-10T17:23:53.310">
+            <step title="ChmodRecursive Process exited with total time taken in ms: 167"
+                  date="2024-03-10T17:23:53.692"/><!-- duration: 3ms -->
+        </step><!-- duration: 424ms -->
+        <step title="DeploymentStatusAPI: Trying to send BuildInProgress deployment status to /api/app/updatedeploystatus. DeploymentId is d2576133-efb7-422d-b294-1368925b973c"
+              date="2024-03-10T17:23:55.801"/><!-- duration: 9ms -->
+        <step title="Deployment timer started" date="2024-03-10T17:23:56.110">
+            <step title="DeploymentManager.Deploy(id:d2576133-efb7-422d-b294-1368925b973c)"
+                  date="2024-03-10T17:23:56.121">
+                <step title="Collecting changeset information" date="2024-03-10T17:23:56.159"/><!-- duration: 293ms -->
+                <step title="Updating submodules" date="2024-03-10T17:23:56.464"/><!-- duration: 1298ms -->
+                <step title="Determining deployment builder" date="2024-03-10T17:23:58.099">
+                    <step title="Builder is OryxBuilder" date="2024-03-10T17:23:58.131"/><!-- duration: 9ms -->
+                </step><!-- duration: 64ms -->
+                <step title="PreDeployment: context.CleanOutputPath False" date="2024-03-10T17:23:58.257">
+                    <step title="PreDeployment: context.OutputPath /home/site/wwwroot" date="2024-03-10T17:23:58.441">
+                        <step title="Building" date="2024-03-10T17:23:59.233">
+                            <step title="Executing external process" date="2024-03-10T17:23:59.644" type="process"
+                                  path="bash"
+                                  arguments="-c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8dc4126dec4ecee --compress-destination-dir | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;"/><!-- duration: 70535ms -->
+                            <step title="Using PythonDeploymentLogParser"
+                                  date="2024-03-10T17:25:10.792"/><!-- duration: 16ms -->
+                            <step title="Triggering recycle (preview mode disabled)."
+                                  date="2024-03-10T17:25:12.803"/><!-- duration: 2ms -->
+                            <step title="Modified file to trigger a restart of the app container."
+                                  date="2024-03-10T17:25:12.829"/><!-- duration: 11ms -->
+                            <step title="Skip function trigger and logicapp sync because function is not enabled."
+                                  date="2024-03-10T17:25:12.848"/><!-- duration: 3ms -->
+                        </step><!-- duration: 74431ms -->
+                    </step><!-- duration: 75228ms -->
+                    <step title="Cleaning up temp files" date="2024-03-10T17:25:13.671"/><!-- duration: 446ms -->
+                    <step title="Cleaning up temp files" date="2024-03-10T17:25:14.125"/><!-- duration: 512ms -->
+                    <step title="Reloading status file with latest updates" date="2024-03-10T17:25:14.792">
+                        <step title="WebHooksManager.PublishEventAsync: PostDeployment"
+                              date="2024-03-10T17:25:14.799"/><!-- duration: 42ms -->
+                    </step><!-- duration: 50ms -->
+                    <step title="DeploymentStatusAPI: Trying to send BuildSuccessful deployment status to /api/app/updatedeploystatus. DeploymentId is d2576133-efb7-422d-b294-1368925b973c"
+                          date="2024-03-10T17:25:14.846"/><!-- duration: 3ms -->
+                    <step title="Begin HttpPost https://python-flask-webapp-t.scm.azurewebsites.net/api/app/updatedeploystatus, x-ms-request-id: 00000000-0000-0000-0000-000000000000"
+                          date="2024-03-10T17:25:14.890"/><!-- duration: 2ms -->
+                    <step title="End HttpPost, status: OK" date="2024-03-10T17:25:15.023"/><!-- duration: 2ms -->
+                    <step title="Cleaning up temporary deployment - fetch deployment was successful"
+                          date="2024-03-10T17:25:15.029"/><!-- duration: 2ms -->
+                </step><!-- duration: 76821ms -->
+            </step><!-- duration: 78972ms -->
+            <step title="Begin HttpPost https://python-flask-webapp-t.scm.azurewebsites.net/api/app/updatedeploystatus, x-ms-request-id: 00000000-0000-0000-0000-000000000000"
+                  date="2024-03-10T17:39:33.706"/><!-- duration: 5ms -->
+            <step title="End HttpPost, status: OK" date="2024-03-10T17:39:34.434"/><!-- duration: 5ms -->
+            <step title="Begin HttpPost https://python-flask-webapp-t.scm.azurewebsites.net/api/app/updatedeploystatus, x-ms-request-id: 00000000-0000-0000-0000-000000000000"
+                  date="2024-03-10T17:39:37.986"/><!-- duration: 3ms -->
+            <step title="End HttpPost, status: OK" date="2024-03-10T17:39:38.133"/><!-- duration: 2ms -->

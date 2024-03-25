@@ -1,0 +1,26 @@
+<step title="Incoming Request" date="2024-03-24T12:57:06.439" instance="0fe1e5"
+      url="/api/deployments/latest?deployer=GITHUB_ZIP_DEPLOY&amp;time=2024-03-24_12-54-14Z" method="GET" type="request"
+      pid="86,1,31" Host="python-flask-webapp-t.scm.azurewebsites.net"
+      User-Agent="GITHUBACTIONS_DeployWebAppToAzure_cc89b21438b02de564a4dc08852f9df2c502643db9e806b29bc1ef2b741b9b6d"
+      Authorization="Bas..." Content-Type="application/json; charset=utf-8"
+      Cookie="ARRAffinity=0fe1e59899343760e874df09464bea20bcaf305629db644825fe57ceb27d120b;Path=/;HttpOnly;Secure;Domain=python-flask-webapp-t.scm.azurewebsites.net; ARRAffinitySameSite=0fe1e59899343760e874df09464bea20bcaf305629db644825fe57ceb27d120b;Path=/;HttpOnly;SameSite=None;Secure;Domain=python-flask-webapp-t.scm.azurewebsites.net"
+      Content-Length="0" X-ARR-LOG-ID="0435a4ed-eeed-4220-a684-ad391b8eba9f" CLIENT-IP="20.55.15.41:26688"
+      X-Client-IP="20.55.15.41" X-SITE-DEPLOYMENT-ID="python-flask-webapp-t"
+      WAS-DEFAULT-HOSTNAME="python-flask-webapp-t.scm.azurewebsites.net" X-Forwarded-Proto="https"
+      X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3"
+      X-WAWS-Unencoded-URL="/api/deployments/latest?deployer=GITHUB_ZIP_DEPLOY&amp;time=2024-03-24_12-54-14Z"
+      X-Client-Port="26688">
+    <step title="Cleanup Xml Logs" date="2024-03-24T12:57:06.447">
+        <step title="Cleanup Infos" date="2024-03-24T12:57:06.595" totalFiles="749"
+              totalCleanup="589"/><!-- duration: 18ms -->
+    </step><!-- duration: 169ms -->
+    <step title="DeploymentService.GetResult" date="2024-03-24T12:57:06.652">
+        <step title="DeploymentService.GetLatestDeployment" date="2024-03-24T12:57:06.655">
+            <step title="DeploymentManager.GetResults" date="2024-03-24T12:57:06.663"/><!-- duration: 1328ms -->
+            <step title="Deployment 7b2e926d-c4c3-408b-a5df-266a84be00dd is Building"
+                  date="2024-03-24T12:57:08.002"/><!-- duration: 17ms -->
+        </step><!-- duration: 1385ms -->
+    </step><!-- duration: 1427ms -->
+    <step title="Outgoing response" date="2024-03-24T12:57:08.098" type="response" statusCode="202"
+          statusText="Accepted"/><!-- duration: 27ms -->
+</step><!-- duration: 1689ms -->

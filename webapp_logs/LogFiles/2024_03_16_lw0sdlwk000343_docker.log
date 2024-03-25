@@ -1,0 +1,26 @@
+2024-03-16T16:56:35.4584768Z Container start method called.
+2024-03-16T16:56:35.5663406Z Establishing network.
+2024-03-16T16:56:35.5723714Z Pulling image: mcr.microsoft.com/appsvc/python:3.11_20240207.3.tuxprod.
+2024-03-16T16:58:19.0896057Z Container is starting.
+2024-03-16T16:58:19.1411790Z Establishing network if not established already.
+2024-03-16T16:58:19.1599826Z Mounting volumes.
+2024-03-16T16:58:19.2253717Z Nested mountpoint 
+2024-03-16T16:58:19.2839072Z Nested mountpoint volatile/logs
+2024-03-16T16:58:19.3624902Z Nested mountpoint 
+2024-03-16T16:58:19.4294147Z Creating container.
+2024-03-16T16:58:19.4330342Z Creating pipes for streaming container io.
+2024-03-16T16:58:19.4568857Z Creating stdout named pipe at /podr/container/pipe/python-flask-webapp-t_b62e62c9/stdout_91f05873bbed454b8a86a30a78b91ae3.
+2024-03-16T16:58:19.4797938Z Successfully created stdout named pipe at: /podr/container/pipe/python-flask-webapp-t_b62e62c9/stdout_91f05873bbed454b8a86a30a78b91ae3.
+2024-03-16T16:58:19.4945749Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_b62e62c9/stdout_91f05873bbed454b8a86a30a78b91ae3 for reading in non-blocking mode.
+2024-03-16T16:58:19.4983653Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_b62e62c9/stdout_91f05873bbed454b8a86a30a78b91ae3.
+2024-03-16T16:58:19.5063716Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_b62e62c9/stdout_91f05873bbed454b8a86a30a78b91ae3.
+2024-03-16T16:58:19.5223726Z Creating stderr named pipe at /podr/container/pipe/python-flask-webapp-t_b62e62c9/stderr_aa6df89de8ca4d94b5d0c9b2d886056c.
+2024-03-16T16:58:19.5317000Z Successfully created stderr named pipe at: /podr/container/pipe/python-flask-webapp-t_b62e62c9/stderr_aa6df89de8ca4d94b5d0c9b2d886056c.
+2024-03-16T16:58:19.5354104Z Opening named pipe /podr/container/pipe/python-flask-webapp-t_b62e62c9/stderr_aa6df89de8ca4d94b5d0c9b2d886056c for reading in non-blocking mode.
+2024-03-16T16:58:19.5438181Z Successfully opened named pipe: /podr/container/pipe/python-flask-webapp-t_b62e62c9/stderr_aa6df89de8ca4d94b5d0c9b2d886056c.
+2024-03-16T16:58:19.5528506Z Successfully removed non-blocking flag from /podr/container/pipe/python-flask-webapp-t_b62e62c9/stderr_aa6df89de8ca4d94b5d0c9b2d886056c.
+2024-03-16T16:58:20.6861458Z Starting container: python-flask-webapp-t_b62e62c9.
+2024-03-16T16:58:21.0231422Z Starting watchers and probes.
+2024-03-16T16:58:21.0787660Z Starting metrics collection.
+2024-03-16T16:58:21.1617170Z Container is running.
+2024-03-16T16:58:21.4695010Z Container start method finished after 105926 ms.

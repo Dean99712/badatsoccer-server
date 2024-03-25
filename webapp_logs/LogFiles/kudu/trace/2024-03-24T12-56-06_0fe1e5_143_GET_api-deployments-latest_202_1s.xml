@@ -1,0 +1,22 @@
+<step title="Incoming Request" date="2024-03-24T12:56:06.898" instance="0fe1e5"
+      url="/api/deployments/latest?deployer=GITHUB_ZIP_DEPLOY&amp;time=2024-03-24_12-54-14Z" method="GET" type="request"
+      pid="86,1,31" Host="python-flask-webapp-t.scm.azurewebsites.net"
+      User-Agent="GITHUBACTIONS_DeployWebAppToAzure_cc89b21438b02de564a4dc08852f9df2c502643db9e806b29bc1ef2b741b9b6d"
+      Authorization="Bas..." Content-Type="application/json; charset=utf-8"
+      Cookie="ARRAffinity=0fe1e59899343760e874df09464bea20bcaf305629db644825fe57ceb27d120b;Path=/;HttpOnly;Secure;Domain=python-flask-webapp-t.scm.azurewebsites.net; ARRAffinitySameSite=0fe1e59899343760e874df09464bea20bcaf305629db644825fe57ceb27d120b;Path=/;HttpOnly;SameSite=None;Secure;Domain=python-flask-webapp-t.scm.azurewebsites.net"
+      Content-Length="0" X-ARR-LOG-ID="d0ef00bc-8f20-4c67-b8d4-cbb522c2e370" CLIENT-IP="20.55.15.41:26688"
+      X-Client-IP="20.55.15.41" X-SITE-DEPLOYMENT-ID="python-flask-webapp-t"
+      WAS-DEFAULT-HOSTNAME="python-flask-webapp-t.scm.azurewebsites.net" X-Forwarded-Proto="https"
+      X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3"
+      X-WAWS-Unencoded-URL="/api/deployments/latest?deployer=GITHUB_ZIP_DEPLOY&amp;time=2024-03-24_12-54-14Z"
+      X-Client-Port="26688">
+    <step title="DeploymentService.GetResult" date="2024-03-24T12:56:06.945">
+        <step title="DeploymentService.GetLatestDeployment" date="2024-03-24T12:56:06.964">
+            <step title="DeploymentManager.GetResults" date="2024-03-24T12:56:06.984"/><!-- duration: 1054ms -->
+            <step title="Deployment 7b2e926d-c4c3-408b-a5df-266a84be00dd is Building"
+                  date="2024-03-24T12:56:08.053"/><!-- duration: 22ms -->
+        </step><!-- duration: 1122ms -->
+    </step><!-- duration: 1149ms -->
+    <step title="Outgoing response" date="2024-03-24T12:56:08.112" type="response" statusCode="202"
+          statusText="Accepted"/><!-- duration: 11ms -->
+</step><!-- duration: 1227ms -->
