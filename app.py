@@ -35,7 +35,7 @@ def home():
 def logs():
     with open(f'{log.LOGS_DIR}/{log.LOG_NAME}', 'r') as log_file:
         log_contents = log_file.read()
-    return jsonify(log_contents)
+    return jsonify({"data": log_contents, "log_name": log.LOG_NAME})
 
 
 @app.route('/logs/clear', methods=['POST'])
