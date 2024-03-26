@@ -1,7 +1,2 @@
-2024-03-26 16:00:46,494 - logger - INFO - Fields retrieved successfully!
-2024-03-26 16:04:34,118 - logger - INFO - Fields retrieved successfully!
-2024-03-26 16:09:46,823 - logger - INFO - Fields retrieved successfully!
-2024-03-26 16:09:52,145 - logger - INFO - Fields retrieved successfully!
-2024-03-26 16:16:36,526 - logger - INFO - Fields retrieved successfully!
-2024-03-26 16:17:37,901 - logger - INFO - Fields retrieved successfully!
-2024-03-26 16:21:33,836 - logger - INFO - Fields retrieved successfully!
+2024-03-26 18:21:42,207 - logger - INFO - "POST /logs/clear  HTTP/1.1" 200
+2024-03-26 18:21:42,208 - logger - INFO - Log file cleared
