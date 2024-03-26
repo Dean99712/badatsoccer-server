@@ -1,13 +1,11 @@
-import datetime
 import logging
 import os
 from logging.handlers import RotatingFileHandler
 
 LOGS_DIR = 'logs'
 os.makedirs(LOGS_DIR, exist_ok=True)
-formatted_datetime = datetime.datetime.now().strftime('%Y-%m-%d')
 
-LOG_NAME = f'{formatted_datetime}-app.log'
+LOG_NAME = 'app-log.log'
 
 LOG_FILE = os.path.join(LOGS_DIR, LOG_NAME)
 logger = logging.getLogger(__name__)

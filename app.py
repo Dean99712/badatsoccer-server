@@ -43,8 +43,12 @@ def clear_log():
     try:
         with open(os.path.join(f'{log.LOGS_DIR}', secure_filename(log.LOG_NAME)), 'w'):
             pass
+        log.log_message(request, 200)
+        log.logger.info('Log file cleared')
         return jsonify({"success": True, "message": "Log file cleared"})
     except Exception as e:
+        log.logger.error(e)
+        log.log_message(request, 500)
         return jsonify({"error": str(e)}), 500
 
 
@@ -70,10 +74,13 @@ def insert_data_from_sheet():
 
         cursor.commit()
         cursor.close()
-
+        log.logger.info('Sheet data inserted successfully!')
+        log.log_message(request, 200)
         return "Sheet loaded successfully!", 200
 
     except Exception as e:
+        log.logger.error(e)
+        log.log_message(request, 400)
         return jsonify({"error": str(e)}), 400
 
 
