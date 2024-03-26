@@ -1,6 +1,9 @@
+import os
+
 import pyodbc
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Blueprint
 from flask_cors import CORS
+from werkzeug.utils import secure_filename
 
 import game_service as gs
 import logger as log
@@ -9,6 +12,8 @@ from auth import get_google_sheet, get_data_from_sheet
 from config import Config as cnf
 
 app = Flask(__name__)
+api_v1 = Blueprint('api_v1', __name__, url_prefix='/api/v1/')
+app.register_blueprint(api_v1)
 
 CORS(app,
      resources={r"/*": {"origins": ["http://localhost:3000", "https://witty-mud-09afa6410.3.azurestaticapps.net"]}})
@@ -23,26 +28,24 @@ def connection():
 @app.route('/')
 def home():
     message = 'Welcome to the Bad at Soccer API!'
-    log.logger.info(message)
     return message
-
-
-@app.route('/logs')
-def get_logs():
-    with open(log.LOG_PATH, 'r') as log_file:
-        log_lines = log_file.readlines()[-100:]
-    return jsonify(log_lines)
 
 
 @app.route('/log')
 def logs():
-    with open(f'{log.LOGS_DIR}/{log.LOG_PATH}', 'r') as log_file:
+    with open(f'{log.LOGS_DIR}/{log.LOG_NAME}', 'r') as log_file:
         log_contents = log_file.read()
     return jsonify(log_contents)
-    # with open(log.log_path, 'r') as log_file:
-    #     # Tail the log file, adjust as needed
-    #     log_data = log_file.readlines()[-100:]
-    # return jsonify(log_data)
+
+
+@app.route('/logs/clear', methods=['POST'])
+def clear_log():
+    try:
+        with open(os.path.join(f'{log.LOGS_DIR}', secure_filename(log.LOG_NAME)), 'w'):
+            pass
+        return jsonify({"success": True, "message": "Log file cleared"})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 @app.route('/insert_sheet_data')
@@ -135,7 +138,7 @@ def get_team_by_field():
 
 @app.route('/add_score', methods=['POST'])
 def add_score():
-    return scs.add_score(connection())
+    return scs.add_score(connection(), log)
 
 
 @app.route('/get_scores')
@@ -316,24 +319,6 @@ def get_games_statistics_by_team_and_date():
     return gs.get_games_statistics_by_team_and_date(connection())
 
 
-# @app.route('/read_sheet')
-# def index():
-#     try:
-#         spreadsheet_id = '18XJbsh2uWjwSd2JfPV9HcWgzJBL3jLyJi09l4jthkeA'
-#         sheets = service.spreadsheets()
-#         result = sheets.get(spreadsheetId=spreadsheet_id).execute()
-#         cell_date = result.get("sheets")
-#
-#         for row in cell_date:
-#             for column in row:
-#                 print(column)
-#             print(row)
-#         return jsonify(cell_date)
-#     except Exception as e:
-#         log.logger.error(e)
-#         return jsonify({"error": str(e)}), 400
-
-
 @app.route('/create_user', methods=['POST'])
 def create_user():
     if request.method == 'POST':
@@ -359,4 +344,8 @@ def create_user():
 
 
 if __name__ == '__main__':
+    # Production mode
+    # app.run()
+
+    # Development mode
     app.run(debug=True)

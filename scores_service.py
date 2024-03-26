@@ -24,7 +24,7 @@ def get_scores(con):
         return jsonify({"error": str(e)}), 400
 
 
-def add_score(con):
+def add_score(con, log):
     if request.method == 'POST':
 
         try:
@@ -46,9 +46,11 @@ def add_score(con):
             cursor.close()
 
             response = {"message": "Data inserted successfully"}
+            log.log_message(request, 200)
             return jsonify(response), 200
 
         except Exception as e:
+            log.log_message(request, 400)
             return jsonify({"error": str(e)}), 400
 
 
