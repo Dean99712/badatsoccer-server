@@ -58,29 +58,30 @@ def insert_data_from_sheet():
         con = connection()
         cursor = con.cursor()
 
-        sheet_id = "1TnsWwX_n2nXTDvZAGVQ_tnrKKk8oZZoYggy8fSF8b9Q"
+        sheet_id = "1BL1KkNbhp4cn8WrFByKYUId0Xm10eMqncMdtAMLqkgA"
 
         sheet = get_google_sheet(sheet_id)
 
-        data = get_data_from_sheet(sheet)
+        sheet_data = get_data_from_sheet(sheet)
 
-        for i, row in data.iterrows():
+        cursor.execute('TRUNCATE TABLE team_selection')
+
+        for i, row in sheet_data.iterrows():
             columns = ', '.join(row.keys())
-            placeholders = ', '.join('?' for _ in row)
+            placeholders = ', '.join('?' * len(row))
             values = tuple(row)
-
             insert_query = f"INSERT INTO team_selection ({columns}) VALUES ({placeholders})"
             cursor.execute(insert_query, values)
 
         cursor.commit()
         cursor.close()
         log.logger.info('Sheet data inserted successfully!')
-        log.log_message(request, 200)
+        # log.log_message(request, 200)
         return "Sheet loaded successfully!", 200
 
     except Exception as e:
         log.logger.error(e)
-        log.log_message(request, 400)
+        # log.log_message(request, 400)
         return jsonify({"error": str(e)}), 400
 
 

@@ -9,7 +9,11 @@ def get_google_sheet(sheet_id):
 
 
 def get_data_from_sheet(sheet):
-    data = sheet.get_all_records()
-    df = pd.DataFrame(data)
-    with pd.option_context('display.max_rows', None, 'display.max_columns', None):
-        return df
+    start_column = 'A'
+    end_column = 'L'
+
+    range_str = f"{start_column}:{end_column}"
+    data = sheet.get(range_str)
+
+    df = pd.DataFrame(data[1:], columns=data[0], index=None)
+    return df

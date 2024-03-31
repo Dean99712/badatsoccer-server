@@ -28,6 +28,8 @@ CREATE TABLE team_selection
     version            varchar(50),
     tournament_to_pick varchar(255),
     team_to_pick       varchar(255),
+    field_auto nvarchar(50),
+    date       varchar(50),
     primary key (player_id)
 );
 

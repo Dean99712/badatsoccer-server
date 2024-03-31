@@ -1,2 +1,3 @@
-2024-03-26 18:21:42,207 - logger - INFO - "POST /logs/clear  HTTP/1.1" 200
-2024-03-26 18:21:42,208 - logger - INFO - Log file cleared
+2024-03-31 13:54:18,835 - logger - INFO - "POST /logs/clear  HTTP/1.1" 200
+2024-03-31 13:54:18,835 - logger - INFO - Log file cleared
+2024-03-31 13:54:39,640 - logger - INFO - Sheet data inserted successfully!
