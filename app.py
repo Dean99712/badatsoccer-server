@@ -1,7 +1,7 @@
 import os
 
 import pyodbc
-from flask import Flask, request, jsonify, json
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 
@@ -9,7 +9,6 @@ import game_service as gs
 import logger as log
 import scores_service as scs
 from auth import get_google_sheet, get_data_from_sheet
-from config import Config as cnf
 
 app = Flask(__name__)
 
@@ -18,18 +17,15 @@ CORS(app,
 
 
 def connection():
-    con = pyodbc.connect(
-        f'DRIVER={cnf.driver};SERVER={cnf.server}, {cnf.port};DATABASE={cnf.database};Uid={cnf.uid};Pwd={cnf.password};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=60;"Trusted_Connection=yes;" "Auto_Commit=true;"')
+    connection_string = os.environ.get('AZURE_SQL_CONNECTION_STRING')
+    con = pyodbc.connect(connection_string)
     return con
 
 
 @app.route('/')
 def home():
-    with open('credentials.json', 'r') as file:
-        credentials_dict = json.load(file)
-
     message = 'Welcome to the Bad at Soccer API!'
-    return jsonify(credentials_dict)
+    return jsonify(message)
 
 
 @app.route('/log')
