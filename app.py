@@ -1,7 +1,7 @@
 import os
 
 import pyodbc
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, json
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 
@@ -25,10 +25,11 @@ def connection():
 
 @app.route('/')
 def home():
-    google_acc = os.getenv('APPSETTING_applicationSettings')
-    print(google_acc)
+    with open('credentials.json', 'r') as file:
+        credentials_dict = json.load(file)
+
     message = 'Welcome to the Bad at Soccer API!'
-    return jsonify(message)
+    return jsonify(credentials_dict)
 
 
 @app.route('/log')

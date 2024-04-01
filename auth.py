@@ -4,28 +4,19 @@ import os
 import gspread as gs
 import pandas as pd
 from dotenv import load_dotenv
-from google.oauth2 import service_account
 
 load_dotenv()
 
 
 def load_credentials():
-
-    google_acc = os.getenv('GOOGLE_APPLICATION_CREDENTIALS_JSON')
-
-    if google_acc is None:
-        raise ValueError(
-            "Failed to find 'GOOGLE_APPLICATION_CREDENTIALS_JSON' environment variable. Make sure it is set in Azure Web App Configuration.")
-
-    credentials_dict = json.loads(google_acc)
-    print(credentials_dict)
-    credentials = service_account.Credentials.from_service_account_info(credentials_dict)
-    return credentials
+    credentials_json_str = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS_JSON')
+    creds = json.loads(credentials_json_str)
+    return creds
 
 
 def get_google_sheet(sheet_id):
     creds = load_credentials()
-    client = gs.service_account(creds)
+    client = gs.service_account_from_dict(creds)
     worksheet = client.open_by_key(sheet_id).sheet1
     return worksheet
 
