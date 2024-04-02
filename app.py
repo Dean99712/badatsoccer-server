@@ -17,11 +17,11 @@ CORS(app,
 
 
 def connection():
-    connection_string = os.environ.get('AZURE_SQL')
+    connection_string = os.environ.get('SQLCONNSTR_AZURE_SQL')
     if connection_string is not None:
         connection_string = str(connection_string)
     else:
-        message = '"AZURE_SQL_CONNECTION_STRING not found in environment variables"'
+        message = f'"{connection_string} not found in environment variables"'
         log.logger.error(message)
         return message
     log.logger.info('Connection string retrieved successfully!')

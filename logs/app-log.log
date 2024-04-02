@@ -1,10 +1,4 @@
-2024-04-02 08:06:02,517 - logger - INFO - "POST /logs/clear  HTTP/1.1" 200
-2024-04-02 08:06:02,518 - logger - INFO - Log file cleared
-2024-04-02 08:06:05,468 - logger - INFO - Connection string retrieved successfully!
-2024-04-02 08:06:05,783 - logger - INFO - Connection string retrieved successfully!
-2024-04-02 08:06:05,784 - logger - INFO - Connection string retrieved successfully!
-2024-04-02 08:06:05,784 - logger - INFO - Connection string retrieved successfully!
-2024-04-02 08:06:07,387 - logger - INFO - Fields retrieved successfully!
-2024-04-02 08:06:07,710 - logger - INFO - Connection string retrieved successfully!
-2024-04-02 08:06:07,895 - logger - INFO - Connection string retrieved successfully!
-2024-04-02 08:06:08,048 - logger - INFO - Connection string retrieved successfully!
+2024-04-02 08:24:56,303 - logger - INFO - "POST /logs/clear  HTTP/1.1" 200
+2024-04-02 08:24:56,304 - logger - INFO - Log file cleared
+2024-04-02 08:24:59,232 - logger - INFO - Connection string retrieved successfully!
+2024-04-02 08:25:16,761 - logger - INFO - Sheet data inserted successfully!
