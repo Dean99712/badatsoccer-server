@@ -1,6 +1,5 @@
 import os
 
-import pyodbc
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
@@ -17,9 +16,15 @@ CORS(app,
 
 
 def connection():
-    connection_string = os.environ.get('AZURE_SQL_CONNECTION_STRING')
-    con = pyodbc.connect(connection_string)
-    return con
+    connection_string = os.getenv('AZURE_SQL_CONNECTION_STRING')
+    if connection_string is not None:
+        connection_string = str(connection_string)
+    else:
+        message = '"AZURE_SQL_CONNECTION_STRING not found in environment variables"'
+        log.logger.error(message)
+        return message
+    log.logger.info('Connection string retrieved successfully!')
+    return connection_string
 
 
 @app.route('/')

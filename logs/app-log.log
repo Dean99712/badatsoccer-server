@@ -20,3 +20,6 @@
 2024-04-01 21:47:48,871 - logger - ERROR - ('HY000', '[HY000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Windows logins are not supported in this version of SQL Server. (40607) (SQLDriverConnect); [HY000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0); [HY000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Windows logins are not supported in this version of SQL Server. (40607); [HY000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0)')
 2024-04-01 21:48:15,196 - logger - ERROR - ('HY000', '[HY000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Windows logins are not supported in this version of SQL Server. (40607) (SQLDriverConnect); [HY000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0); [HY000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Windows logins are not supported in this version of SQL Server. (40607); [HY000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0)')
 2024-04-01 21:52:52,005 - logger - INFO - Fields retrieved successfully!
+2024-04-02 07:15:24,744 - logger - INFO - Fields retrieved successfully!
+2024-04-02 07:16:14,184 - logger - INFO - Fields retrieved successfully!
+2024-04-02 07:16:16,182 - logger - INFO - Fields retrieved successfully!
