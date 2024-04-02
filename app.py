@@ -17,7 +17,7 @@ CORS(app,
 
 
 def connection():
-    connection_string = os.getenv('AZURE_SQL')
+    connection_string = os.environ.get('AZURE_SQL')
     if connection_string is not None:
         connection_string = str(connection_string)
     else:
