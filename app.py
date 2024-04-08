@@ -5,9 +5,11 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 
+import fields_service as fs
 import game_service as gs
 import logger as log
 import scores_service as scs
+import teams_service as ts
 from auth import get_google_sheet, get_data_from_sheet
 
 app = Flask(__name__)
@@ -21,10 +23,9 @@ def connection():
     if connection_string is not None:
         connection_string = str(connection_string)
     else:
-        message = f'"{connection_string} not found in environment variables"'
+        message = '"SQLCONNSTR_AZURE_SQL not found in environment variables"'
         log.logger.error(message)
         return message
-    log.logger.info('Connection string retrieved successfully!')
     con = pyodbc.connect(connection_string)
     return con
 
@@ -68,9 +69,11 @@ def insert_data_from_sheet():
 
         sheet_data = get_data_from_sheet(sheet)
 
-        cursor.execute('TRUNCATE TABLE team_selection')
-
         for i, row in sheet_data.iterrows():
+            # Check if any value in the row is empty or null
+            if not all(row):
+                continue
+
             columns = ', '.join(row.keys())
             placeholders = ', '.join('?' * len(row))
             values = tuple(row)
@@ -80,72 +83,60 @@ def insert_data_from_sheet():
         cursor.commit()
         cursor.close()
         log.logger.info('Sheet data inserted successfully!')
-        # log.log_message(request, 200)
         return "Sheet loaded successfully!", 200
 
     except Exception as e:
         log.logger.error(e)
-        # log.log_message(request, 400)
         return jsonify({"error": str(e)}), 400
+
+
+# @app.route('/insert_sheet_data')
+# def insert_data_from_sheet():
+#     try:
+#         con = connection()
+#         cursor = con.cursor()
+#
+#         sheet_id = "1BL1KkNbhp4cn8WrFByKYUId0Xm10eMqncMdtAMLqkgA"
+#
+#         sheet = get_google_sheet(sheet_id)
+#
+#         sheet_data = get_data_from_sheet(sheet)
+#
+#         for i, row in sheet_data.iterrows():
+#             columns = ', '.join(row.keys())
+#             placeholders = ', '.join('?' * len(row))
+#             values = tuple(row)
+#             insert_query = f"INSERT INTO team_selection ({columns}) VALUES ({placeholders})"
+#             cursor.execute(insert_query, values)
+#
+#         cursor.commit()
+#         cursor.close()
+#         log.logger.info('Sheet data inserted successfully!')
+#         return "Sheet loaded successfully!", 200
+#
+#     except Exception as e:
+#         log.logger.error(e)
+#         return jsonify({"error": str(e)}), 400
 
 
 @app.route('/get_all_fields')
 def get_all_fields():
-    try:
-        con = connection()
-        cursor = con.cursor()
-        query = 'SELECT DISTINCT field FROM [dbo].[games]'
-        cursor.execute(query)
-
-        rows = cursor.fetchall()
-
-        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-
-        con.close()
-        log.logger.info('Fields retrieved successfully!')
-        return jsonify(result), 200
-
-    except Exception as e:
-        log.logger.error(e)
-        return jsonify({"error": str(e)}), 400
+    return fs.get_all_fields(connection())
 
 
 @app.route('/get_field')
-def get_fields():
-    try:
-        con = connection()
-        cursor = con.cursor()
-        query = 'SELECT DISTINCT team_1, team_2, team_3 FROM [dbo].[games] WHERE field = ?'
-        value = request.args.get("field")
-        cursor.execute(query, value)
-        rows = cursor.fetchall()
-
-        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-        con.close()
-        return jsonify(result), 200
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
+def get_field():
+    return fs.get_field(connection())
 
 
 @app.route('/get_team_by_field')
 def get_team_by_field():
-    try:
-        con = connection()
+    return gs.get_team_by_field(connection())
 
-        cursor = con.cursor()
-        query = 'SELECT DISTINCT team_1, team_2, team_3 from [dbo].[games] WHERE field = ?'
-        value = request.args.get("field")
-        cursor.execute(query, value)
 
-        rows = cursor.fetchall()
-
-        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-        con.close()
-        return jsonify(result), 200
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
+@app.route('/get_teams_by_field_and_date')
+def get_teams_by_field_and_date():
+    return ts.get_teams_by_field_and_date(connection())
 
 
 @app.route('/add_score', methods=['POST'])
@@ -163,167 +154,29 @@ def get_score_by_id():
     return scs.get_score_by_id(connection())
 
 
-@app.route('/get_scores_by_field_name_and_date')
-def get_scores_by_field_name():
-    try:
-        con = connection()
-        cursor = con.cursor()
-        query = 'SELECT * FROM [dbo].[scores] WHERE field = ? AND entered_date = ? ORDER BY entered_time DESC'
-        field = request.args.get("field")
-        entered_date = request.args.get("entered_date")
-        cursor.execute(query, (field, entered_date))
-
-        rows = cursor.fetchall()
-
-        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-        con.close()
-        return jsonify(result), 200
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
-
-
-@app.route('/get_scores_by_date')
-def get_scores_by_date():
-    try:
-        con = connection()
-
-        cursor = con.cursor()
-        query = 'SELECT * FROM [dbo].[scores] WHERE entered_date = ? ORDER BY entered_time DESC'
-        value = request.args.get("entered_date")
-        cursor.execute(query, value)
-
-        rows = cursor.fetchall()
-
-        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-        con.close()
-
-        return jsonify(result), 200
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
+@app.route('/get_scores_by_field_and_date')
+def get_scores_by_field_and_date():
+    return scs.get_scores_by_field_and_date(connection())
 
 
 @app.route('/delete_score', methods=['DELETE'])
 def delete_score():
-    score_id = request.args.get("score_id")
-
-    score_id = int(score_id)
-    try:
-        con = connection()
-
-        cursor = con.cursor()
-        query = 'DELETE FROM [dbo].[scores] WHERE score_id = ?'
-        cursor.execute(query, score_id)
-
-        con.commit()
-
-        message = "The score has been deleted successfully!"
-        if cursor.rowcount == 0:
-            return jsonify({"error": "Score not found!"}), 404
-        con.close()
-
-        return jsonify(message), 200
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
+    return scs.delete_score(connection())
 
 
 @app.route('/update_score', methods=['PATCH'])
 def update_score():
-    try:
-        con = connection()
-
-        score_id = request.args.get('score_id')
-
-        data = request.get_json()
-
-        score_id = int(score_id)
-
-        update_columns = []
-        params = []
-
-        if 'score_a' in data:
-            update_columns.append('score_a = ?')
-            params.append(data['score_a'])
-        if 'score_b' in data:
-            update_columns.append('score_b = ?')
-            params.append(data['score_b'])
-        if 'entered_date' in data:
-            update_columns.append('entered_date = ?')
-            params.append(data['entered_date'])
-        if 'entered_time' in data:
-            update_columns.append('entered_time = ?')
-            params.append(data['entered_time'])
-
-        if not update_columns:
-            return jsonify({'error': 'No valid fields provided'}), 400
-
-        sql_query = f"""
-            UPDATE [dbo].[scores]
-            SET {', '.join(update_columns)}
-            WHERE score_id = ?
-        """
-        params.append(score_id)
-        cursor = con.cursor()
-        cursor.execute(sql_query, *params)
-        con.commit()
-
-        con.close()
-        if cursor.rowcount == 0:
-            return jsonify({'error': 'Score not found'}), 404
-        return jsonify({'message': 'Score updated successfully'}), 200
-
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
+    return scs.update_score(connection())
 
 
 @app.route('/add_game', methods=['POST'])
 def add_game():
-    if request.method == 'POST':
-        try:
-            con = connection()
-
-            data = request.get_json()
-
-            cursor = con.cursor()
-
-            insert_query = (
-                "INSERT INTO [dbo].[games] (date, field, team_1, team_2, team_3)"
-                " VALUES (?, ?, ?, ?, ?)")
-
-            cursor.execute(insert_query, (data['date'], data['field'], data['team_1'], data['team_2'], data['team_3']))
-
-            con.commit()
-            cursor.close()
-            message = "Data inserted successfully"
-            response = {message}
-            return jsonify(response), 200
-
-        except Exception as e:
-            return jsonify({"error": str(e)}), 400
+    return gs.add_game(connection())
 
 
 @app.route('/get_games_dates')
 def get_games_dates():
-    try:
-        con = connection()
-        cursor = con.cursor()
-        query = ('SELECT * FROM '
-                 '(SELECT DISTINCT date FROM [dbo].[games])'
-                 ' AS subquery'
-                 ' ORDER BY date;')
-
-        cursor.execute(query)
-
-        rows = cursor.fetchall()
-
-        result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
-        con.close()
-        return jsonify(result), 200
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
+    return gs.get_games_dates(connection())
 
 
 @app.route('/get_games_statistics_by_team_and_date')

@@ -19,7 +19,7 @@ CREATE TABLE team_selection
 (
     player_id int not null identity(1,1),
     player_name varchar(255) not null,
-    team varchar(255),
+    team       varchar(255),
     stamina            int not null,
     technique          int not null,
     ball_leader        int not null,
