@@ -15,7 +15,8 @@ from auth import get_google_sheet, get_data_from_sheet
 app = Flask(__name__)
 
 CORS(app,
-     resources={r"/*": {"origins": ["http://localhost:3000", "https://witty-mud-09afa6410.3.azurestaticapps.net"]}})
+     resources={r"/*": {"origins": ["http://localhost:3000", "https://witty-mud-09afa6410.3.azurestaticapps.net",
+                                    'https://www.bad-at-soccer.in/']}})
 
 
 def connection():
