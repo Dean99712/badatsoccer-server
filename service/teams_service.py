@@ -40,13 +40,13 @@ def get_all_players(con):
 def get_team_by_player_name(con):
     try:
         cursor = con.cursor()
-        query = ("SELECT DISTINCT p2.player_id, p2.player_name AS player_name, p1.team "
+        query = ("SELECT DISTINCT p2.player_id, p2.player_name AS player_name, p1.team_to_pick, p1.team "
                  "FROM team_selection p1"
                  " JOIN team_selection p2 ON p1.team = p2.team"
                  " WHERE p1.player_name = ? "
                  "AND p1.date = ? "
                  "AND p2.date = p1.date "
-                 "GROUP BY p2.player_id, p2.player_name, p1.team "
+                 "GROUP BY p2.player_id, p2.player_name, p1.team, p1.team_to_pick "
                  "ORDER BY p2.player_id;")
 
         player_name = request.args.get("player_name")

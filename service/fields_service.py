@@ -19,13 +19,14 @@ def get_all_fields(con):
         return jsonify({"error": str(e)}), 400
 
 
-def get_field(con):
+def get_field_by_date_and_team(con):
     try:
         cursor = con.cursor()
 
-        query = 'SELECT DISTINCT team_to_pick FROM [dbo].[team_selection] WHERE field_auto = ?'
-        value = request.args.get("field_auto")
-        cursor.execute(query, value)
+        query = 'SELECT DISTINCT team_to_pick FROM [dbo].[team_selection] WHERE field_auto = ? AND date = ?'
+        field = request.args.get("field_auto")
+        date = request.args.get("date")
+        cursor.execute(query, [field, date])
         rows = cursor.fetchall()
 
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]

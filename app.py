@@ -122,7 +122,7 @@ def get_all_fields():
 
 @app.route('/get_field')
 def get_field():
-    return fs.get_field(connection())
+    return fs.get_field_by_date_and_team(connection())
 
 
 @app.route('/get_teams_by_field_and_date')
