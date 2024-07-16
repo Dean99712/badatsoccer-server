@@ -1,5 +1,6 @@
 import os
 
+import pandas as pd
 import pyodbc
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -8,7 +9,7 @@ from werkzeug.utils import secure_filename
 import azure_services
 import logger as log
 from google_services import get_google_sheet, get_data_from_sheet
-from service import scores_service as scs, game_service as gs, teams_service as ts, fields_service as fs
+from services import scores_service as scs, game_service as gs, teams_service as ts, fields_service as fs
 
 app = Flask(__name__)
 
@@ -65,25 +66,43 @@ def insert_data_from_sheet():
         cursor = con.cursor()
 
         sheet_id = "1BL1KkNbhp4cn8WrFByKYUId0Xm10eMqncMdtAMLqkgA"
-
         sheet = get_google_sheet(sheet_id)
-
         sheet_data = get_data_from_sheet(sheet)
 
+        # Extract all unique dates from the sheet
+        unique_dates = sheet_data['date'].unique()
+
+        # Check if any of these dates exist in the database
+        placeholders = ', '.join('?' * len(unique_dates))
+        check_query = f"SELECT COUNT(1) FROM team_selection WHERE date IN ({placeholders})"
+        cursor.execute(check_query, tuple(unique_dates))
+        count = cursor.fetchone()[0]
+
+        if count > 0:
+            return jsonify({"message": "Data already exists"}), 200
+
+        # If no existing records found, proceed to insert data
+        results = []
+
         for i, row in sheet_data.iterrows():
-            if not all(row):
+            # Check for empty values in all columns except 'date'
+            if row.drop('date').apply(lambda x: pd.isna(x) or x == '').any():
                 continue
 
-            columns = ', '.join(row.keys())
-            placeholders = ', '.join('?' * len(row))
-            values = tuple(row)
-            insert_query = f"INSERT INTO team_selection ({columns}) VALUES ({placeholders})"
-            cursor.execute(insert_query, values)
+            try:
+                columns = ', '.join(row.keys())
+                placeholders = ', '.join('?' * len(row))
+                values = tuple(row)
+                insert_query = f"INSERT INTO team_selection ({columns}) VALUES ({placeholders})"
+                cursor.execute(insert_query, values)
+            except Exception as insert_error:
+                log.logger.error(f"Insertion error for row {i + 2}: {insert_error}")
 
         cursor.commit()
         cursor.close()
-        log.logger.info('Sheet data inserted successfully!')
-        return "Sheet loaded successfully!", 200
+        log.logger.info('Sheet data processed successfully!')
+
+        return jsonify({"message": "Sheet processed successfully", "results": results}), 200
 
     except Exception as e:
         log.logger.error(e)
@@ -95,8 +114,9 @@ def search_players_by_name():
     try:
         cursor = connection().cursor()
         search_text = request.args.get('query')
-        query = "SELECT DISTINCT player_name FROM team_selection WHERE player_name LIKE '%{}%'".format(search_text)
-        cursor.execute(query)
+        query = "SELECT * FROM team_selection WHERE date = ? AND player_name LIKE '%{}%'".format(search_text)
+        params = (request.args.get('date'),)
+        cursor.execute(query, params)
         rows = cursor.fetchall()
         data = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
         return jsonify(data), 200
@@ -130,7 +150,7 @@ def get_teams_by_field_and_date():
     return ts.get_teams_by_field_and_date(connection())
 
 
-@app.route('/get_all_player')
+@app.route('/get_all_players')
 def get_all_players():
     return ts.get_all_players(connection())
 

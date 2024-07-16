@@ -25,10 +25,12 @@ def get_teams_by_field_and_date(con):
 def get_all_players(con):
     try:
         cursor = con.cursor()
-        query = 'SELECT * FROM team_selection WHERE date = ?'
-        value = request.args.get("date")
+        query = 'SELECT * FROM team_selection WHERE date = ? AND field_auto = ?'
+        date = request.args.get("date")
+        field = request.args.get("field")
 
-        cursor.execute(query, value)
+        cursor.execute(query, (date, field))
+
         rows = cursor.fetchall()
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
         con.close()
