@@ -1,3 +1,25 @@
 2024-07-15 09:27:16,479 - logger - INFO - "POST /logs/clear  HTTP/1.1" 200
 2024-07-15 09:27:16,479 - logger - INFO - Log file cleared
 2024-07-16 19:48:11,450 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:05:11,162 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:05:58,567 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:21:29,214 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:27:48,910 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:33:09,670 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:34:01,998 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:34:53,685 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:37:59,728 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:39:08,104 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:39:27,921 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:42:41,906 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:43:50,124 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:49:11,054 - logger - ERROR - ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]An expression of non-boolean type specified in a context where a condition is expected, near ','. (4145) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2024-07-17 10:50:35,084 - logger - ERROR - ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]An expression of non-boolean type specified in a context where a condition is expected, near ','. (4145) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2024-07-17 10:56:14,178 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:57:24,374 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:57:48,399 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:58:45,334 - logger - INFO - Sheet data processed successfully!
+2024-07-17 10:59:41,369 - logger - INFO - Sheet data processed successfully!
+2024-07-17 11:00:40,585 - logger - INFO - Sheet data processed successfully!
+2024-07-17 11:08:26,734 - logger - INFO - Sheet data processed successfully!
+2024-07-17 11:10:19,062 - logger - INFO - Sheet data processed successfully!

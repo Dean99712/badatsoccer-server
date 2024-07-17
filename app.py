@@ -69,34 +69,48 @@ def insert_data_from_sheet():
         sheet = get_google_sheet(sheet_id)
         sheet_data = get_data_from_sheet(sheet)
 
-        # Extract all unique dates from the sheet
-        unique_dates = sheet_data['date'].unique()
+        unique_pairs = sheet_data[['date', 'player_name']].drop_duplicates()
 
-        # Check if any of these dates exist in the database
-        placeholders = ', '.join('?' * len(unique_dates))
-        check_query = f"SELECT COUNT(1) FROM team_selection WHERE date IN ({placeholders})"
-        cursor.execute(check_query, tuple(unique_dates))
-        count = cursor.fetchone()[0]
+        or_conditions = ' OR '.join(['(date = ? AND player_name = ?)' for _ in range(len(unique_pairs))])
+        check_query = f"SELECT date, player_name FROM team_selection WHERE {or_conditions}"
+        cursor.execute(check_query, tuple(unique_pairs.values.flatten()))
+        existing_pairs = {(row[0], row[1]) for row in cursor.fetchall()}
 
-        if count > 0:
-            return jsonify({"message": "Data already exists"}), 200
-
-        # If no existing records found, proceed to insert data
         results = []
 
         for i, row in sheet_data.iterrows():
-            # Check for empty values in all columns except 'date'
-            if row.drop('date').apply(lambda x: pd.isna(x) or x == '').any():
+            # Check for empty values in all columns except 'date' and 'player_name'
+            if row.drop(['date', 'player_name']).apply(lambda x: pd.isna(x) or x == '').any():
+                results.append({"row": i + 2, "status": "skipped",
+                                "message": "Row contains empty values except for date and player_name"})
                 continue
 
-            try:
-                columns = ', '.join(row.keys())
-                placeholders = ', '.join('?' * len(row))
-                values = tuple(row)
-                insert_query = f"INSERT INTO team_selection ({columns}) VALUES ({placeholders})"
-                cursor.execute(insert_query, values)
-            except Exception as insert_error:
-                log.logger.error(f"Insertion error for row {i + 2}: {insert_error}")
+            date_field = row['date']
+            player_name_field = row['player_name']
+
+            if (date_field, player_name_field) in existing_pairs:
+                try:
+                    # Construct the SET clause for the update statement
+                    set_clause = ', '.join([f"{col} = ?" for col in row.keys() if col not in ['date', 'player_name']])
+                    values = tuple(row[col] for col in row.keys() if col not in ['date', 'player_name']) + (
+                    date_field, player_name_field)
+                    update_query = f"UPDATE team_selection SET {set_clause} WHERE date = ? AND player_name = ?"
+                    cursor.execute(update_query, values)
+                    results.append({"row": i + 2, "status": "updated", "message": "Row updated successfully"})
+                except Exception as update_error:
+                    results.append({"row": i + 2, "status": "failed", "message": f"Update error: {update_error}"})
+                    log.logger.error(f"Update error for row {i + 2}: {update_error}")
+            else:
+                try:
+                    columns = ', '.join(row.keys())
+                    placeholders = ', '.join('?' * len(row))
+                    values = tuple(row)
+                    insert_query = f"INSERT INTO team_selection ({columns}) VALUES ({placeholders})"
+                    cursor.execute(insert_query, values)
+                    results.append({"row": i + 2, "status": "success", "message": "Row inserted successfully"})
+                except Exception as insert_error:
+                    results.append({"row": i + 2, "status": "failed", "message": f"Insertion error: {insert_error}"})
+                    log.logger.error(f"Insertion error for row {i + 2}: {insert_error}")
 
         cursor.commit()
         cursor.close()
@@ -107,6 +121,119 @@ def insert_data_from_sheet():
     except Exception as e:
         log.logger.error(e)
         return jsonify({"error": str(e)}), 400
+
+
+# @app.route('/insert_sheet_data')
+# def insert_data_from_sheet():
+#     try:
+#         con = connection()
+#         cursor = con.cursor()
+#
+#         sheet_id = "1BL1KkNbhp4cn8WrFByKYUId0Xm10eMqncMdtAMLqkgA"
+#         sheet = get_google_sheet(sheet_id)
+#         sheet_data = get_data_from_sheet(sheet)
+#
+#         # Extract all unique dates from the sheet
+#         unique_dates = sheet_data['date'].unique()
+#
+#         # Check if any of these dates exist in the database
+#         placeholders = ', '.join('?' * len(unique_dates))
+#         check_query = f"SELECT date FROM team_selection WHERE date IN ({placeholders})"
+#         cursor.execute(check_query, tuple(unique_dates))
+#         existing_dates = {row[0] for row in cursor.fetchall()}
+#
+#         results = []
+#
+#         for i, row in sheet_data.iterrows():
+#             # Check for empty values in all columns except 'date'
+#             if row.drop('date').apply(lambda x: pd.isna(x) or x == '').any():
+#                 results.append({"row": i+2, "status": "skipped", "message": "Row contains empty values except for date"})
+#                 continue
+#
+#             date_field = row['date']
+#
+#             if date_field in existing_dates:
+#                 try:
+#                     # Construct the SET clause for the update statement
+#                     set_clause = ', '.join([f"{col} = ?" for col in row.keys() if col != 'date'])
+#                     values = tuple(row[col] for col in row.keys() if col != 'date') + (date_field,)
+#                     update_query = f"UPDATE team_selection SET {set_clause} WHERE date = ?"
+#                     cursor.execute(update_query, values)
+#                     results.append({"row": i+2, "status": "updated", "message": "Row updated successfully"})
+#                 except Exception as update_error:
+#                     results.append({"row": i+2, "status": "failed", "message": f"Update error: {update_error}"})
+#                     log.logger.error(f"Update error for row {i+2}: {update_error}")
+#             else:
+#                 try:
+#                     columns = ', '.join(row.keys())
+#                     placeholders = ', '.join('?' * len(row))
+#                     values = tuple(row)
+#                     insert_query = f"INSERT INTO team_selection ({columns}) VALUES ({placeholders})"
+#                     cursor.execute(insert_query, values)
+#                     results.append({"row": i+2, "status": "success", "message": "Row inserted successfully"})
+#                 except Exception as insert_error:
+#                     results.append({"row": i+2, "status": "failed", "message": f"Insertion error: {insert_error}"})
+#                     log.logger.error(f"Insertion error for row {i+2}: {insert_error}")
+#
+#         cursor.commit()
+#         cursor.close()
+#         log.logger.info('Sheet data processed successfully!')
+#
+#         return jsonify({"message": "Sheet processed successfully", "results": results}), 200
+#
+#     except Exception as e:
+#         log.logger.error(e)
+#         return jsonify({"error": str(e)}), 400
+
+# @app.route('/insert_sheet_data')
+# def insert_data_from_sheet():
+#     try:
+#         con = connection()
+#         cursor = con.cursor()
+#
+#         sheet_id = "1BL1KkNbhp4cn8WrFByKYUId0Xm10eMqncMdtAMLqkgA"
+#         sheet = get_google_sheet(sheet_id)
+#         sheet_data = get_data_from_sheet(sheet)
+#
+#         # Extract all unique dates from the sheet
+#         unique_dates = sheet_data['date'].unique()
+#
+#         # Check if any of these dates exist in the database
+#         placeholders = ', '.join('?' * len(unique_dates))
+#         check_query = f"SELECT COUNT(1) FROM team_selection WHERE date IN ({placeholders})"
+#         cursor.execute(check_query, tuple(unique_dates))
+#         count = cursor.fetchone()[0]
+#
+#         if count > 0:
+#             print(placeholders)
+#             # return jsonify({"message": "Data already exists"}), 200
+#
+#         # If no existing records found, proceed to insert data
+#         results = []
+#
+#         for i, row in sheet_data.iterrows():
+#             # Check for empty values in all columns except 'date'
+#             if row.drop('date').apply(lambda x: pd.isna(x) or x == '').any():
+#                 continue
+#
+#             try:
+#                 columns = ', '.join(row.keys())
+#                 placeholders = ', '.join('?' * len(row))
+#                 values = tuple(row)
+#                 insert_query = f"INSERT INTO team_selection ({columns}) VALUES ({placeholders})"
+#                 cursor.execute(insert_query, values)
+#             except Exception as insert_error:
+#                 log.logger.error(f"Insertion error for row {i + 2}: {insert_error}")
+#
+#         cursor.commit()
+#         cursor.close()
+#         log.logger.info('Sheet data processed successfully!')
+#
+#         return jsonify({"message": "Sheet processed successfully", "results": results}), 200
+#
+#     except Exception as e:
+#         log.logger.error(e)
+#         return jsonify({"error": str(e)}), 400
 
 
 @app.route('/search_players_by_name')
