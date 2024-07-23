@@ -314,7 +314,7 @@ def login():
 
 if __name__ == '__main__':
     # Production mode
-    # app.run()
+    app.run()
 
     # Development mode
-    app.run(debug=True)
+    # app.run(debug=True)
