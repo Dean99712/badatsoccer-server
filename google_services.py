@@ -27,9 +27,7 @@ def get_google_sheet(sheet_id):
     return worksheet
 
 
-def get_data_from_sheet(sheet):
-    start_column = 'A'
-    end_column = 'L'
+def get_data_from_sheet(sheet, start_column, end_column):
 
     range_str = f"{start_column}:{end_column}"
     data = sheet.get(range_str)

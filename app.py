@@ -1,9 +1,11 @@
 import os
 
+import bcrypt
 import pandas as pd
 import pyodbc
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from flask_login import UserMixin
 from werkzeug.utils import secure_filename
 
 import azure_services
@@ -12,11 +14,21 @@ from google_services import get_google_sheet, get_data_from_sheet
 from services import scores_service as scs, game_service as gs, teams_service as ts, fields_service as fs
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'secret-key'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
+app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 
 CORS(app,
      resources={r"/*": {"origins": ["http://localhost:3000", "https://witty-mud-09afa6410.3.azurestaticapps.net",
                                     'https://www.bad-at-soccer.in', 'https://bad-at-soccer.in',
                                     'https://python-flask-webapp-t.azurewebsites.net']}})
+
+
+class User(UserMixin):
+    def __init__(self, id, email, password):
+        self.id = id
+        self.email = email
+        self.password = password
 
 
 def connection():
@@ -59,15 +71,15 @@ def clear_log():
         return jsonify({"error": str(e)}), 500
 
 
-@app.route('/insert_sheet_data')
-def insert_data_from_sheet():
+@app.route('/insert_team_selection_sheet_data')
+def insert_team_selection_sheet_data():
     try:
         con = connection()
         cursor = con.cursor()
 
         sheet_id = "1BL1KkNbhp4cn8WrFByKYUId0Xm10eMqncMdtAMLqkgA"
         sheet = get_google_sheet(sheet_id)
-        sheet_data = get_data_from_sheet(sheet)
+        sheet_data = get_data_from_sheet(sheet, 'A', 'L')
 
         unique_pairs = sheet_data[['date', 'player_name']].drop_duplicates()
 
@@ -79,7 +91,6 @@ def insert_data_from_sheet():
         results = []
 
         for i, row in sheet_data.iterrows():
-            # Check for empty values in all columns except 'date' and 'player_name'
             if row.drop(['date', 'player_name']).apply(lambda x: pd.isna(x) or x == '').any():
                 results.append({"row": i + 2, "status": "skipped",
                                 "message": "Row contains empty values except for date and player_name"})
@@ -90,10 +101,9 @@ def insert_data_from_sheet():
 
             if (date_field, player_name_field) in existing_pairs:
                 try:
-                    # Construct the SET clause for the update statement
                     set_clause = ', '.join([f"{col} = ?" for col in row.keys() if col not in ['date', 'player_name']])
                     values = tuple(row[col] for col in row.keys() if col not in ['date', 'player_name']) + (
-                    date_field, player_name_field)
+                        date_field, player_name_field)
                     update_query = f"UPDATE team_selection SET {set_clause} WHERE date = ? AND player_name = ?"
                     cursor.execute(update_query, values)
                     results.append({"row": i + 2, "status": "updated", "message": "Row updated successfully"})
@@ -123,117 +133,62 @@ def insert_data_from_sheet():
         return jsonify({"error": str(e)}), 400
 
 
-# @app.route('/insert_sheet_data')
-# def insert_data_from_sheet():
-#     try:
-#         con = connection()
-#         cursor = con.cursor()
-#
-#         sheet_id = "1BL1KkNbhp4cn8WrFByKYUId0Xm10eMqncMdtAMLqkgA"
-#         sheet = get_google_sheet(sheet_id)
-#         sheet_data = get_data_from_sheet(sheet)
-#
-#         # Extract all unique dates from the sheet
-#         unique_dates = sheet_data['date'].unique()
-#
-#         # Check if any of these dates exist in the database
-#         placeholders = ', '.join('?' * len(unique_dates))
-#         check_query = f"SELECT date FROM team_selection WHERE date IN ({placeholders})"
-#         cursor.execute(check_query, tuple(unique_dates))
-#         existing_dates = {row[0] for row in cursor.fetchall()}
-#
-#         results = []
-#
-#         for i, row in sheet_data.iterrows():
-#             # Check for empty values in all columns except 'date'
-#             if row.drop('date').apply(lambda x: pd.isna(x) or x == '').any():
-#                 results.append({"row": i+2, "status": "skipped", "message": "Row contains empty values except for date"})
-#                 continue
-#
-#             date_field = row['date']
-#
-#             if date_field in existing_dates:
-#                 try:
-#                     # Construct the SET clause for the update statement
-#                     set_clause = ', '.join([f"{col} = ?" for col in row.keys() if col != 'date'])
-#                     values = tuple(row[col] for col in row.keys() if col != 'date') + (date_field,)
-#                     update_query = f"UPDATE team_selection SET {set_clause} WHERE date = ?"
-#                     cursor.execute(update_query, values)
-#                     results.append({"row": i+2, "status": "updated", "message": "Row updated successfully"})
-#                 except Exception as update_error:
-#                     results.append({"row": i+2, "status": "failed", "message": f"Update error: {update_error}"})
-#                     log.logger.error(f"Update error for row {i+2}: {update_error}")
-#             else:
-#                 try:
-#                     columns = ', '.join(row.keys())
-#                     placeholders = ', '.join('?' * len(row))
-#                     values = tuple(row)
-#                     insert_query = f"INSERT INTO team_selection ({columns}) VALUES ({placeholders})"
-#                     cursor.execute(insert_query, values)
-#                     results.append({"row": i+2, "status": "success", "message": "Row inserted successfully"})
-#                 except Exception as insert_error:
-#                     results.append({"row": i+2, "status": "failed", "message": f"Insertion error: {insert_error}"})
-#                     log.logger.error(f"Insertion error for row {i+2}: {insert_error}")
-#
-#         cursor.commit()
-#         cursor.close()
-#         log.logger.info('Sheet data processed successfully!')
-#
-#         return jsonify({"message": "Sheet processed successfully", "results": results}), 200
-#
-#     except Exception as e:
-#         log.logger.error(e)
-#         return jsonify({"error": str(e)}), 400
+@app.route('/insert_players_sheet_data')
+def insert_players_sheet_data():
+    try:
+        con = connection()
+        cursor = con.cursor()
 
-# @app.route('/insert_sheet_data')
-# def insert_data_from_sheet():
-#     try:
-#         con = connection()
-#         cursor = con.cursor()
-#
-#         sheet_id = "1BL1KkNbhp4cn8WrFByKYUId0Xm10eMqncMdtAMLqkgA"
-#         sheet = get_google_sheet(sheet_id)
-#         sheet_data = get_data_from_sheet(sheet)
-#
-#         # Extract all unique dates from the sheet
-#         unique_dates = sheet_data['date'].unique()
-#
-#         # Check if any of these dates exist in the database
-#         placeholders = ', '.join('?' * len(unique_dates))
-#         check_query = f"SELECT COUNT(1) FROM team_selection WHERE date IN ({placeholders})"
-#         cursor.execute(check_query, tuple(unique_dates))
-#         count = cursor.fetchone()[0]
-#
-#         if count > 0:
-#             print(placeholders)
-#             # return jsonify({"message": "Data already exists"}), 200
-#
-#         # If no existing records found, proceed to insert data
-#         results = []
-#
-#         for i, row in sheet_data.iterrows():
-#             # Check for empty values in all columns except 'date'
-#             if row.drop('date').apply(lambda x: pd.isna(x) or x == '').any():
-#                 continue
-#
-#             try:
-#                 columns = ', '.join(row.keys())
-#                 placeholders = ', '.join('?' * len(row))
-#                 values = tuple(row)
-#                 insert_query = f"INSERT INTO team_selection ({columns}) VALUES ({placeholders})"
-#                 cursor.execute(insert_query, values)
-#             except Exception as insert_error:
-#                 log.logger.error(f"Insertion error for row {i + 2}: {insert_error}")
-#
-#         cursor.commit()
-#         cursor.close()
-#         log.logger.info('Sheet data processed successfully!')
-#
-#         return jsonify({"message": "Sheet processed successfully", "results": results}), 200
-#
-#     except Exception as e:
-#         log.logger.error(e)
-#         return jsonify({"error": str(e)}), 400
+        sheet_id = "11j5LnCerz_RhTYrVZoksFBLHyFVFq23TyItJt70x2MY"
+        sheet = get_google_sheet(sheet_id)
+        sheet_data = get_data_from_sheet(sheet, 'A', 'N')
+
+        results = []
+
+        for i, row in sheet_data.iterrows():
+            try:
+                # Handle password logic
+                password = row.get('password', '')
+                if not password:
+                    password = f"{row['player_name'][0]}{row['phone_number']}"
+                hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+
+                row['password'] = hashed_password
+
+                player_name = row['player_name']
+                cursor.execute("SELECT * FROM players WHERE player_name = ?", player_name)
+                existing_player = cursor.fetchone()
+
+                if existing_player:
+                    # Update existing player
+                    set_clause = ', '.join([f"{col} = ?" for col in row.keys() if col not in ['player_name']])
+                    values = tuple(row[col] for col in row.keys() if col not in ['player_name']) + (player_name,)
+                    update_query = f"UPDATE players SET {set_clause} WHERE player_name = ?"
+                    cursor.execute(update_query, values)
+                    results.append({"row": i + 2, "status": "updated", "message": "Player updated successfully"})
+                else:
+                    # Insert new player
+                    columns = ', '.join(row.keys())
+                    placeholders = ', '.join('?' * len(row))
+                    values = tuple(row)
+                    insert_query = f"INSERT INTO players ({columns}) VALUES ({placeholders})"
+                    cursor.execute(insert_query, values)
+                    results.append({"row": i + 2, "status": "success", "message": "Player inserted successfully"})
+
+                con.commit()
+            except Exception as insert_error:
+                results.append({"row": i + 2, "status": "failed", "message": f"Insertion error: {insert_error}"})
+                log.logger.error(f"Insertion error for row {i + 2}: {insert_error}")
+
+        cursor.close()
+        con.close()
+        log.logger.info('Sheet data processed successfully!')
+
+        return jsonify({"message": "Sheet processed successfully", "results": results}), 200
+
+    except Exception as e:
+        log.logger.error(e)
+        return jsonify({"error": str(e)}), 400
 
 
 @app.route('/search_players_by_name')
@@ -327,30 +282,34 @@ def get_games_statistics_by_team_and_date():
     return gs.get_games_statistics_by_team_and_date(connection())
 
 
-# Add a new route to create a user
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    email = data['gmail']
+    password = data['password']
 
-# @app.route('/create_user', methods=['POST'])
-# def create_user():
-#     if request.method == 'POST':
-#         try:
-#             con = connection()
-#
-#             data = request.get_json()
-#
-#             cursor = con.cursor()
-#             insert_query = "INSERT INTO user (user_id, email, name, password) VALUES (?, ?, ?, ?)"
-#             cursor.execute(insert_query, (
-#                 data['user_id'], data['email'], data['name'], data['password']))
-#
-#             con.commit()
-#             cursor.close()
-#
-#             response = {"message": "Data inserted successfully"}
-#
-#             return jsonify(response), 200
-#
-#         except Exception as e:
-#             return jsonify({"error": str(e)}), 400
+    con = connection()
+    if con is None:
+        return jsonify({"message": "Connection to database failed"}), 500
+
+    cursor = con.cursor()
+    cursor.execute("SELECT id, gmail, password, type, player_name FROM players WHERE gmail = ?", email)
+    user = cursor.fetchone()
+    cursor.close()
+    con.close()
+
+    if user and bcrypt.checkpw(password.encode('utf-8'), user[2].encode('utf-8')):
+        user_data = {
+            'id': user.id,
+            'gmail': user.gmail,
+            'password': user.password,
+            'roles': [user.type],
+            "player_name": user.player_name
+        }
+
+        return jsonify({'data': user_data, 'status_code': 200, 'message': 'Player retrieved successfully !'}), 200
+    else:
+        return jsonify({"message": "Invalid credentials!"}), 401
 
 
 if __name__ == '__main__':
