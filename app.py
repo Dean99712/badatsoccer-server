@@ -9,6 +9,7 @@ from flask_login import UserMixin
 from werkzeug.utils import secure_filename
 
 import azure_services
+import google_services as gos
 import logger as log
 from google_services import get_google_sheet, get_data_from_sheet
 from services import scores_service as scs, game_service as gs, teams_service as ts, fields_service as fs
@@ -46,7 +47,7 @@ def connection():
 @app.route('/')
 def home():
     message = 'Welcome to the Bad at Soccer API!'
-    # gos.transfer_files('1sMREp7bbwho-oijNBonRI8r1BEp0lOwI', 'players-photos')
+    gos.transfer_files('1sMREp7bbwho-oijNBonRI8r1BEp0lOwI', 'players-photos')
     return jsonify(message)
 
 
@@ -197,7 +198,7 @@ def search_players_by_name():
         cursor = connection().cursor()
         search_text = request.args.get('query')
         query = "SELECT * FROM team_selection WHERE date = ? AND player_name LIKE '%{}%'".format(search_text)
-        params = (request.args.get('date'),)
+        params = (request.args.get('date'))
         cursor.execute(query, params)
         rows = cursor.fetchall()
         data = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
@@ -237,9 +238,9 @@ def get_all_players():
     return ts.get_all_players(connection())
 
 
-@app.route('/get_team_by_player_name')
-def get_team_by_player_name():
-    return ts.get_team_by_player_name(connection())
+@app.route('/get_team')
+def get_team():
+    return ts.get_team(connection())
 
 
 @app.route('/add_score', methods=['POST'])

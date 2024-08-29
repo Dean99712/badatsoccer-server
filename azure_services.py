@@ -24,7 +24,8 @@ def container_exists(blob_service, name):
         container_client = blob_service.create_container(name)
         print(f"Container '{name}' created.")
         return container_client
-    except Exception as e:
+
+    except Exception as _:
         print(f"Container '{name}' already exists.")
         return blob_service.get_container_client(name)
 

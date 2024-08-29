@@ -51,3 +51,9 @@ CREATE TABLE players
 );
 
 DROP TABLE IF EXISTS players;
+
+
+SELECT *
+FROM team_selection
+WHERE date = '17/07/2024'
+  AND player_name LIKE 'or%';

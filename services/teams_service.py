@@ -39,22 +39,19 @@ def get_all_players(con):
         return jsonify({"error": str(e)}), 400
 
 
-def get_team_by_player_name(con):
+def get_team(con):
     try:
         cursor = con.cursor()
-        query = ("SELECT DISTINCT p2.player_id, p2.player_name AS player_name, p1.team_to_pick, p1.team "
-                 "FROM team_selection p1"
-                 " JOIN team_selection p2 ON p1.team = p2.team"
-                 " WHERE p1.player_name = ? "
-                 "AND p1.date = ? "
-                 "AND p2.date = p1.date "
-                 "GROUP BY p2.player_id, p2.player_name, p1.team, p1.team_to_pick "
-                 "ORDER BY p2.player_id;")
+        query = ("SELECT * FROM [dbo].[team_selection] "
+                 "WHERE team_to_pick = ? "
+                 "AND field_auto = ? "
+                 "AND date = ?")
 
-        player_name = request.args.get("player_name")
+        team_to_pick = request.args.get("team_to_pick")
+        field_auto = request.args.get("field_auto")
         date = request.args.get("date")
 
-        cursor.execute(query, (player_name, date))
+        cursor.execute(query, (team_to_pick, field_auto, date))
         rows = cursor.fetchall()
         result = [dict(zip([column[0] for column in cursor.description], row)) for row in rows]
         con.close()
