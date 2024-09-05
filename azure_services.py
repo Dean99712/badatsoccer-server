@@ -2,7 +2,6 @@ import os
 
 from azure.storage.blob import BlobServiceClient
 
-container_name = 'players-photos'
 conn_string = os.environ.get('AZURE_STORAGE_CONNECTION_STRING')
 
 
@@ -30,7 +29,7 @@ def container_exists(blob_service, name):
         return blob_service.get_container_client(name)
 
 
-def connect_to_azure_storage():
+def connect_to_azure_storage(container_name):
     blob_service = create_blob_service()
     container_client = container_exists(blob_service, container_name)
 
@@ -41,6 +40,6 @@ def connect_to_azure_storage():
             return container_client
         return container_client
 
-    except Exception:
+    except Exception as e:
         container_client = blob_service.create_container(container_name)
         return container_client

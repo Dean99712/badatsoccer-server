@@ -24,6 +24,8 @@ CORS(app,
                                     'https://www.bad-at-soccer.in', 'https://bad-at-soccer.in',
                                     'https://python-flask-webapp-t.azurewebsites.net']}})
 
+CONTAINER_NAME = 'player-photo'
+
 
 class User(UserMixin):
     def __init__(self, id, email, password):
@@ -47,7 +49,6 @@ def connection():
 @app.route('/')
 def home():
     message = 'Welcome to the Bad at Soccer API!'
-    gos.transfer_files('1sMREp7bbwho-oijNBonRI8r1BEp0lOwI', 'players-photos')
     return jsonify(message)
 
 
@@ -210,7 +211,7 @@ def search_players_by_name():
 @app.route('/get_images_from_azure')
 def get_images_from_azure():
     blob_list = []
-    container_client = azure_services.connect_to_azure_storage()
+    container_client = azure_services.connect_to_azure_storage('player-photo')
     blob_items = container_client.list_blobs()
     for blob in blob_items:
         blob_item = container_client.get_blob_client(blob=blob.name)
@@ -283,6 +284,12 @@ def get_games_statistics_by_team_and_date():
     return gs.get_games_statistics_by_team_and_date(connection())
 
 
+@app.route('/update_players_images')
+def update_players_images():
+    gos.transfer_files('1VhVxbMnRgsP44sQGSrIETabD4eBhkfLV', container_name=CONTAINER_NAME)
+    return jsonify('Players images updated successfully!'), 200
+
+
 @app.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
@@ -315,7 +322,7 @@ def login():
 
 if __name__ == '__main__':
     # Production mode
-    app.run()
+    # app.run()
 
     # Development mode
-    # app.run(debug=True)
+    app.run(debug=True)

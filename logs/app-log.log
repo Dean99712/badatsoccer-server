@@ -1,8 +1,2 @@
-2024-07-22 20:01:02,845 - logger - INFO - "POST /logs/clear  HTTP/1.1" 200
-2024-07-22 20:01:02,845 - logger - INFO - Log file cleared
-2024-07-23 17:14:12,674 - logger - INFO - "POST /add_score  HTTP/1.1" 200
-2024-07-25 11:22:29,412 - logger - INFO - "POST /add_score  HTTP/1.1" 200
-2024-07-25 11:23:04,155 - logger - INFO - "POST /add_score  HTTP/1.1" 200
-2024-07-25 12:02:05,971 - logger - INFO - "POST /add_score  HTTP/1.1" 200
-2024-08-29 20:27:16,086 - logger - INFO - Sheet data processed successfully!
-2024-08-29 20:27:45,941 - logger - INFO - "POST /add_score  HTTP/1.1" 200
+2024-09-05 15:03:25,053 - logger - INFO - "POST /logs/clear  HTTP/1.1" 200
+2024-09-05 15:03:25,053 - logger - INFO - Log file cleared
