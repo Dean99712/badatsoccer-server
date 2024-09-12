@@ -287,6 +287,7 @@ def get_games_statistics_by_team_and_date():
 @app.route('/update_players_images')
 def update_players_images():
     gos.transfer_files('1VhVxbMnRgsP44sQGSrIETabD4eBhkfLV', container_name=CONTAINER_NAME)
+    log.logger.info('Players images updated successfully!'), 200
     return jsonify('Players images updated successfully!'), 200
 
 

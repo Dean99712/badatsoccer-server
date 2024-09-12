@@ -39,7 +39,6 @@ def connect_to_azure_storage(container_name):
             container_client.get_container_properties()
             return container_client
         return container_client
-
-    except Exception as e:
+    except:
         container_client = blob_service.create_container(container_name)
         return container_client

@@ -55,31 +55,46 @@ def correct_extension(filename):
 
 
 def transfer_files(folder_id, container_name):
+    # Create the Google Drive and Azure Blob services
     drive_service = create_drive_service()
     blob_service = azs.create_blob_service()
+
+    # Check if the Azure Blob container exists, or create it if it doesn't
     container_client = azs.container_exists(blob_service, container_name)
 
+    # Retrieve the list of blobs (files) already in the container
+    blobs_list = container_client.list_blobs()
+    existing_blobs = {blob.name for blob in blobs_list}
+
+    # Retrieve the list of files from the specified Google Drive folder
     results = drive_service.files().list(
         q=f"'{folder_id}' in parents and trashed=false",
-        fields="files(id, name)").execute()
+        fields="files(id, name)"
+    ).execute()
     items = results.get('files', [])
 
     if not items:
-        print('No files found.')
+        print('No files found in the Google Drive folder.')
     else:
         for item in items:
             correct_name = correct_extension(item['name'])
-            if not azs.blob_exists(container_client, correct_name):
-                request = drive_service.files().get_media(fileId=item['id'])
-                fh = io.BytesIO()
-                downloader = MediaIoBaseDownload(fh, request)
-                done = False
-                while not done:
-                    status, done = downloader.next_chunk()
-                fh.seek(0)
 
-                blob_client = container_client.get_blob_client(correct_name)
-                blob_client.upload_blob(fh, blob_type="BlockBlob", overwrite=True)
-                print(f'Uploaded {correct_name} to Azure Blob Storage.')
+            # Check if the file exists in the blob container
+            if correct_name in existing_blobs:
+                print(f'File {correct_name} already exists in the Azure Blob. Updating...')
             else:
-                print(f'File {correct_name} already exists. Not uploaded.')
+                print(f'Uploading new file: {correct_name}')
+
+            # Download the file from Google Drive
+            request = drive_service.files().get_media(fileId=item['id'])
+            fh = io.BytesIO()
+            downloader = MediaIoBaseDownload(fh, request)
+            done = False
+            while not done:
+                status, done = downloader.next_chunk()
+            fh.seek(0)
+
+            # Upload or overwrite the file in Azure Blob Storage
+            blob_client = container_client.get_blob_client(correct_name)
+            blob_client.upload_blob(fh, blob_type="BlockBlob", overwrite=True, timeout=300)
+            print(f'Successfully uploaded/updated {correct_name} to Azure Blob Storage.')
