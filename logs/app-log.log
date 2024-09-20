@@ -1,3 +1,4 @@
 2024-09-13 01:09:54,797 - logger - INFO - "POST /logs/clear  HTTP/1.1" 200
 2024-09-13 01:09:54,797 - logger - INFO - Log file cleared
 2024-09-13 01:10:15,358 - logger - INFO - Sheet data processed successfully!
+2024-09-17 19:36:16,946 - logger - INFO - Players images updated successfully!
