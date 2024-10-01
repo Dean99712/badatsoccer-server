@@ -76,11 +76,8 @@ def clear_log():
 @app.route('/insert_team_selection_sheet_data')
 def insert_team_selection_sheet_data():
     try:
-        con = connection()
+        con = connection()  # Get the database connection
         cursor = con.cursor()
-
-        # Start transaction
-        con.begin()
 
         sheet_id = "1BL1KkNbhp4cn8WrFByKYUId0Xm10eMqncMdtAMLqkgA"
         sheet = get_google_sheet(sheet_id)
