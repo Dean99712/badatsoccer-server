@@ -86,8 +86,9 @@ def insert_team_selection_sheet_data():
         # Fetch unique combinations of date and player_name from sheet data
         unique_pairs = sheet_data[['date', 'player_name']].drop_duplicates()
 
-        # Prepare the WHERE condition to find existing records using IN with tuples
-        check_query = f"SELECT date, player_name FROM team_selection WHERE (date, player_name) IN ({','.join(['(?, ?)' for _ in range(len(unique_pairs))])})"
+        # Build the WHERE condition with multiple OR conditions
+        or_conditions = ' OR '.join(['(date = ? AND player_name = ?)' for _ in range(len(unique_pairs))])
+        check_query = f"SELECT date, player_name FROM team_selection WHERE {or_conditions}"
         cursor.execute(check_query, tuple(unique_pairs.values.flatten()))
         existing_pairs = {(row[0], row[1]) for row in cursor.fetchall()}
 
