@@ -76,15 +76,17 @@ def clear_log():
 @app.route('/insert_team_selection_sheet_data')
 def insert_team_selection_sheet_data():
     try:
-        con = connection()
+        con = connection()  # Get the database connection
         cursor = con.cursor()
 
         sheet_id = "1BL1KkNbhp4cn8WrFByKYUId0Xm10eMqncMdtAMLqkgA"
         sheet = get_google_sheet(sheet_id)
         sheet_data = get_data_from_sheet(sheet, 'A', 'L')
 
+        # Fetch unique combinations of date and player_name from sheet data
         unique_pairs = sheet_data[['date', 'player_name']].drop_duplicates()
 
+        # Build the WHERE condition with multiple OR conditions
         or_conditions = ' OR '.join(['(date = ? AND player_name = ?)' for _ in range(len(unique_pairs))])
         check_query = f"SELECT date, player_name FROM team_selection WHERE {or_conditions}"
         cursor.execute(check_query, tuple(unique_pairs.values.flatten()))
@@ -92,7 +94,9 @@ def insert_team_selection_sheet_data():
 
         results = []
 
+        # Loop through sheet data rows
         for i, row in sheet_data.iterrows():
+            # Skip rows with empty values (except date and player_name)
             if row.drop(['date', 'player_name']).apply(lambda x: pd.isna(x) or x == '').any():
                 results.append({"row": i + 2, "status": "skipped",
                                 "message": "Row contains empty values except for date and player_name"})
@@ -102,6 +106,7 @@ def insert_team_selection_sheet_data():
             player_name_field = row['player_name']
 
             if (date_field, player_name_field) in existing_pairs:
+                # Update existing record
                 try:
                     set_clause = ', '.join([f"{col} = ?" for col in row.keys() if col not in ['date', 'player_name']])
                     values = tuple(row[col] for col in row.keys() if col not in ['date', 'player_name']) + (
@@ -113,6 +118,7 @@ def insert_team_selection_sheet_data():
                     results.append({"row": i + 2, "status": "failed", "message": f"Update error: {update_error}"})
                     log.logger.error(f"Update error for row {i + 2}: {update_error}")
             else:
+                # Insert new record
                 try:
                     columns = ', '.join(row.keys())
                     placeholders = ', '.join('?' * len(row))
@@ -124,13 +130,16 @@ def insert_team_selection_sheet_data():
                     results.append({"row": i + 2, "status": "failed", "message": f"Insertion error: {insert_error}"})
                     log.logger.error(f"Insertion error for row {i + 2}: {insert_error}")
 
-        cursor.commit()
+        # Commit the transaction
+        con.commit()
         cursor.close()
         log.logger.info('Sheet data processed successfully!')
 
         return jsonify({"message": "Sheet processed successfully", "results": results}), 200
 
     except Exception as e:
+        # Rollback the transaction in case of an error
+        con.rollback()
         log.logger.error(e)
         return jsonify({"error": str(e)}), 400
 

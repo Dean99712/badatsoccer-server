@@ -46,12 +46,11 @@ def get_score_by_id(con):
 def get_scores_by_field_and_date(con):
     try:
         cursor = con.cursor()
-
-        count = request.args.get("count", 5)
+        count = request.args.get("count", 3)
         field = request.args.get("field")
         entered_date = request.args.get("entered_date")
         query = f'SELECT TOP({count}) * FROM [dbo].[scores] WHERE field = ? AND entered_date = ? ORDER BY entered_time DESC'
-
+ 
         cursor.execute(query, (field, entered_date))
 
         rows = cursor.fetchall()
