@@ -30,11 +30,9 @@ def get_games_dates(con):
 def get_games_statistics_by_team_and_date(con):
     try:
         cursor = con.cursor()
-        query = 'SELECT * FROM scores where entered_date = ? and field = ?'
-
         entered_date = request.args.get("entered_date")
         field = request.args.get("field")
-
+        query = 'SELECT * FROM scores where entered_date = ? and field = ?'
         cursor.execute(query, (entered_date, field))
 
         rows = cursor.fetchall()
